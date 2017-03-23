@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.CustomerAccountDAO">
+
+	<!--此处定义所有的列，全部用大写 -->
+	<sql id="allColumnAlias">
+			ID                       	id            	,       
+			customerId                  customerId      	,       
+			allMoney                  allMoney      	,       
+			extraMoney                       extraMoney        
+
+
+
+
+	</sql>
+
+
+	<sql id="allColumn">
+			id                             	,     
+			customerId                        ,     
+			allMoney                        ,     
+			extraMoney                         
+
+
+
+
+	</sql>
+
+
+
+
+
+	<insert id="insert" parameterType="customerAccountVO">
+		INSERT INTO CUSTOMERACCOUNT
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<include refid="allColumn"/>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">		
+			#{id                ,jdbcType=NUMERIC},  
+			#{customerId                ,jdbcType=NUMERIC}, 
+			#{allMoney                ,jdbcType=NUMERIC}, 
+		
+			#{extraMoney                ,jdbcType=NUMERIC} 
+            
+
+ 
+		</trim>
+	</insert>
+
+	
+	<select id="find" parameterType="customerAccountVO" resultType="customerAccountVO" >
+		select
+		<include refid="allColumnAlias" /> 
+
+		FROM CUSTOMERACCOUNT   T 
+
+		
+		
+		WHERE 1=1 
+		
+		<if test="id != null">
+			AND T.ID  = #{id}
+		</if>
+
+
+
+	</select>
+	
+	<select id="findPageList" parameterType="page" resultType="customerAccountVO" >
+		select
+		<include refid="allColumnAlias" /> 
+		FROM CUSTOMERACCOUNT T   
+		WHERE 1=1
+
+
+		<if test="objectT.customerId!= null">
+			AND T.CUSTOMERID  = #{objectT.customerId}
+		</if>
+
+
+
+
+	</select>
+	
+
+	<delete id="delete" parameterType="customerAccountVO" >
+		DELETE FROM CUSTOMERACCOUNT WHERE  
+		
+		
+		ID  = #{id}  
+		
+	</delete>
+
+
+	
+
+	
+	
+	
+	<update id="update" parameterType="customerAccountVO" >
+		UPDATE CUSTOMERACCOUNT T SET 
+	
+	
+		<trim prefix="" suffix="" suffixOverrides=",">
+
+
+			<if test="customerId != null">
+				CUSTOMERID  = #{customerId},
+			</if>
+			
+
+
+			
+		</trim>
+
+         WHERE ID=#{id}
+ 
+         
+	</update>
+	
+
+
+</mapper>

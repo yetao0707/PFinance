@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.NewsDAO">
+
+	<!--此处定义所有的列，全部用大写 -->
+	<sql id="allColumnAlias">
+			ID                       	id            	,       
+			content                  content      	,           
+			addtime                       addtime        
+
+	</sql>
+
+
+	<sql id="allColumn">
+			id                             	,     
+			content                        ,      
+			addtime                         
+
+
+
+
+	</sql>
+
+
+
+
+
+	<insert id="insert" parameterType="newsVO">
+		INSERT INTO NEWS
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<include refid="allColumn"/>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">		
+			#{id                ,jdbcType=NUMERIC},  
+			#{content                ,jdbcType=VARCHAR}, 
+		
+			#{addtime                ,jdbcType=TIMESTAMP} 
+
+
+		</trim>
+	</insert>
+
+	
+	<select id="find" parameterType="newsVO" resultType="newsVO" >
+		select
+		<include refid="allColumnAlias" /> 
+
+		FROM NEWS   T 
+
+		
+		
+		WHERE 1=1 
+		
+		<if test="id != null">
+			AND T.ID  = #{id}
+		</if>
+
+
+
+	</select>
+	
+	<select id="findPageList" parameterType="page" resultType="newsVO" >
+		select
+		<include refid="allColumnAlias" /> 
+		FROM NEWS T   
+		WHERE 1=1
+
+
+		<if test="objectT.content!= null">
+			AND T.CONTENT  = #{objectT.content}
+		</if>
+
+
+
+
+	</select>
+	
+
+	<delete id="delete" parameterType="newsVO" >
+		DELETE FROM NEWS WHERE  
+		
+		
+		ID  = #{id}  
+		
+	</delete>
+
+
+	
+
+	
+	
+	
+	<update id="update" parameterType="newsVO" >
+		UPDATE NEWS T SET 
+	
+	
+		<trim prefix="" suffix="" suffixOverrides=",">
+
+
+			<if test="content != null">
+				CONTENT  = #{content},
+			</if>
+			
+
+
+			
+		</trim>
+
+         WHERE ID=#{id}
+ 
+         
+	</update>
+	
+
+
+</mapper>

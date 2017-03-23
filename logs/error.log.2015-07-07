@@ -1,0 +1,5 @@
+2015-07-07 22:39:22,339 WARN org.mybatis.spring.mapper.MapperScannerConfigurer$Scanner.doScan() - No MyBatis mapper was found in 'com.app' package. Please check your configuration.
+2015-07-07 22:39:29,655 WARN org.springframework.web.servlet.PageNotFound.noHandlerFound() - No mapping found for HTTP request with URI [/mvc_mybat/diamondUserController/showDiamondUserList.xhtml] in DispatcherServlet with name 'SpringMVC'
+2015-07-07 22:41:54,952 WARN org.mybatis.spring.mapper.MapperScannerConfigurer$Scanner.doScan() - No MyBatis mapper was found in 'com.app' package. Please check your configuration.
+2015-07-07 22:42:51,785 WARN org.mybatis.spring.mapper.MapperScannerConfigurer$Scanner.doScan() - No MyBatis mapper was found in 'com.app' package. Please check your configuration.
+2015-07-07 23:07:08,022 WARN org.mybatis.spring.mapper.MapperScannerConfigurer$Scanner.doScan() - No MyBatis mapper was found in 'com.app' package. Please check your configuration.

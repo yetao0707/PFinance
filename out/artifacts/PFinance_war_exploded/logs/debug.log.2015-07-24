@@ -1,0 +1,14 @@
+2015-07-24 00:00:00,096 ERROR cache.getJedis() - Cache server error,hostname can't be null
+2015-07-24 00:00:01,138 ERROR cache.getJedis() - Cache server error,hostname can't be null
+2015-07-24 00:00:13,579 INFO com.web.base.FileUtil.getClassPath() - 项目路径：/F:/workspace/mvc_mybat/WebContent/WEB-INF/classes/com/web/base/
+2015-07-24 00:00:13,584 INFO com.web.base.FileUtil.getClassPath() - 项目路径：/F:/workspace/mvc_mybat/WebContent/WEB-INF/classes/com/web/base/
+2015-07-24 00:00:13,585 INFO com.web.base.FileUtil.getClassPath() - 项目路径：/F:/workspace/mvc_mybat/WebContent/WEB-INF/classes/com/web/base/
+2015-07-24 00:00:13,587 INFO com.web.base.FileUtil.getClassPath() - 项目路径：/F:/workspace/mvc_mybat/WebContent/WEB-INF/classes/com/web/base/
+2015-07-24 00:00:21,591 INFO com.web.base.FileUtil.getClassPath() - 项目路径：/F:/workspace/mvc_mybat/WebContent/WEB-INF/classes/com/web/base/
+2015-07-24 00:00:21,594 INFO com.web.base.FileUtil.getClassPath() - 项目路径：/F:/workspace/mvc_mybat/WebContent/WEB-INF/classes/com/web/base/
+2015-07-24 00:00:21,597 INFO com.web.base.FileUtil.getClassPath() - 项目路径：/F:/workspace/mvc_mybat/WebContent/WEB-INF/classes/com/web/base/
+2015-07-24 00:00:21,599 INFO com.web.base.FileUtil.getClassPath() - 项目路径：/F:/workspace/mvc_mybat/WebContent/WEB-INF/classes/com/web/base/
+2015-07-24 00:03:14,093 INFO com.web.base.FileUtil.getClassPath() - 项目路径：/F:/workspace/mvc_mybat/WebContent/WEB-INF/classes/com/web/base/
+2015-07-24 00:03:14,097 INFO com.web.base.FileUtil.getClassPath() - 项目路径：/F:/workspace/mvc_mybat/WebContent/WEB-INF/classes/com/web/base/
+2015-07-24 00:03:14,097 INFO com.web.base.FileUtil.getClassPath() - 项目路径：/F:/workspace/mvc_mybat/WebContent/WEB-INF/classes/com/web/base/
+2015-07-24 00:03:14,097 INFO com.web.base.FileUtil.getClassPath() - 项目路径：/F:/workspace/mvc_mybat/WebContent/WEB-INF/classes/com/web/base/

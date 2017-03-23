@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.AccountListDAO">
+
+	<!--此处定义所有的列，全部用大写 -->
+	<sql id="allColumnAlias">
+			ID						id            ,
+			ACCOUNTID     accountId     ,
+			ITEMDATE      itemDate      ,
+			ITEMCONTENT   itemContent   ,
+			ITEMVOLUME    itemVolume 		
+
+
+
+
+	</sql>
+
+
+	<sql id="allColumn">
+		id            ,   
+		accountid     ,   
+		itemdate      ,   
+		itemcontent   ,   
+		itemvolume 		  
+
+
+	</sql>
+
+
+
+
+
+	<insert id="insert" parameterType="accountListVO">
+		INSERT INTO ACCOUNTLIST
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<include refid="allColumn"/>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">		
+			#{id                ,jdbcType=NUMERIC},  
+			#{accountId       		,jdbcType=NUMERIC},
+			now(),
+			#{itemContent       		,jdbcType=VARCHAR},
+			#{itemVolume       		,jdbcType=NUMERIC}
+
+		</trim>
+	</insert>
+
+	
+	<select id="find" parameterType="accountListVO" resultType="accountListVO" >
+		select
+		<include refid="allColumnAlias" /> 
+
+		FROM ACCOUNTLIST   T 
+
+		
+		
+		WHERE 1=1 
+		
+		<if test="id != null">
+			AND T.ID  = #{id}
+		</if>
+
+
+
+	</select>
+	
+	<select id="findPageList" parameterType="page" resultType="accountListVO" >
+		select
+		<include refid="allColumnAlias" /> 
+		FROM ACCOUNTLIST T   
+		WHERE 1=1
+
+
+		<if test="objectT.accountId != null">
+			AND T.ACCOUNTID  = #{objectT.accountId}
+		</if>
+
+
+
+
+	</select>
+	
+
+	<delete id="delete" parameterType="accountListVO" >
+		DELETE FROM ACCOUNTLIST WHERE  
+		
+		
+		ID  = #{id}  
+		
+	</delete>
+
+
+	
+
+	
+	
+	
+	<update id="update" parameterType="accountListVO" >
+		UPDATE D_DIAMOND_GOOD_C T SET 
+	
+	
+		<trim prefix="" suffix="" suffixOverrides=",">
+
+
+			<if test="ACCOUNTLIST != null">
+				ITEMCONTENT  = #{itemcontent},
+			</if>
+			
+
+
+			
+		</trim>
+
+         WHERE ID=#{id}
+ 
+         
+	</update>
+	
+
+
+</mapper>

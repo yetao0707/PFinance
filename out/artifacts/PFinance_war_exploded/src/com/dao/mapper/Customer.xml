@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.CustomerDAO">
+
+	<!--此处定义所有的列，全部用大写 -->
+	<sql id="allColumnAlias">
+			ID                       	id            	,       
+			USERNAME                  userName      	,       
+			PASSWORD                  password      	,       
+			SEX                       sex           	,       
+			AGE                       age           	,       
+			PHONENUM                  phoneNnum      	,       
+			EMAIL                     email         	,       
+			ADDERSS                   adderss       	,       
+			IDNUM                     idNum         	,       
+			EVALUATERESULT            evaluateResult	      
+
+
+
+
+
+
+	</sql>
+
+
+	<sql id="allColumn">
+			id                             	,     
+			userName                        ,     
+			password                        ,     
+			sex                             ,     
+			age                             ,     
+			phoneNum                        ,     
+			email                           ,     
+			adderss                         ,     
+			IDnum                           ,     
+			evaluateResult                     
+
+
+
+
+
+	</sql>
+
+
+
+
+
+	<insert id="insert" parameterType="customerVO">
+		INSERT INTO CUSTOMER
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<include refid="allColumn"/>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">		
+			#{id                ,jdbcType=NUMERIC},  
+			#{userName                ,jdbcType=VARCHAR}, 
+			#{password                ,jdbcType=VARCHAR}, 
+			#{sex                ,jdbcType=VARCHAR}, 
+			#{age                ,jdbcType=NUMERIC}, 
+			#{phoneNum                ,jdbcType=VARCHAR}, 
+			#{email                ,jdbcType=VARCHAR}, 
+			#{adderss                ,jdbcType=VARCHAR}, 
+			#{idNum                ,jdbcType=VARCHAR}, 
+			#{evaluateResult                ,jdbcType=VARCHAR} 
+
+			
+			
+
+ 
+		</trim>
+	</insert>
+
+	
+	<select id="find" parameterType="customerVO" resultType="customerVO" >
+		select
+		<include refid="allColumnAlias" /> 
+
+		FROM CUSTOMER   T 
+
+		
+		
+		WHERE 1=1 
+		
+		<if test="id != null">
+			AND T.ID  = #{id}
+		</if>
+
+
+
+	</select>
+	
+	<select id="findPageList" parameterType="page" resultType="customerVO" >
+		select
+		<include refid="allColumnAlias" /> 
+		FROM CUSTOMER T   
+		WHERE 1=1
+
+
+		<if test="objectT.userName != null">
+			AND T.USERNAME  = #{objectT.userName}
+		</if>
+
+
+
+
+	</select>
+	
+
+	<delete id="delete" parameterType="customerVO" >
+		DELETE FROM CUSTOMER WHERE  
+		
+		
+		ID  = #{id}  
+		
+	</delete>
+
+
+	
+
+	
+	
+	
+	<update id="update" parameterType="customerVO" >
+		UPDATE CUSTOMER T SET 
+	
+	
+		<trim prefix="" suffix="" suffixOverrides=",">
+
+
+			<if test="username != null">
+				USERNAME  = #{userName},
+			</if>
+			
+
+
+			
+		</trim>
+
+         WHERE ID=#{id}
+ 
+         
+	</update>
+	
+
+
+</mapper>

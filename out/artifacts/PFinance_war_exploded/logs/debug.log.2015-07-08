@@ -1,0 +1,630 @@
+2015-07-08 22:35:17,357 INFO org.springframework.web.context.ContextLoader.initWebApplicationContext() - Root WebApplicationContext: initialization started
+2015-07-08 22:35:17,591 INFO org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh() - Refreshing Root WebApplicationContext: startup date [Wed Jul 08 22:35:17 CST 2015]; root of context hierarchy
+2015-07-08 22:35:17,685 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\config\spring\ApplicationContext.xml]
+2015-07-08 22:35:18,701 INFO org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.loadProperties() - Loading properties file from class path resource [config/mysql.properties]
+2015-07-08 22:35:18,774 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@13c8540: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,baseDao,diamondUserDAO,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-07-08 22:35:18,790 INFO com.mchange.v2.log.MLog.<clinit>() - MLog clients using log4j logging.
+2015-07-08 22:35:18,899 INFO com.mchange.v2.c3p0.C3P0Registry.banner() - Initializing c3p0-0.9.2-pre4 [built 16-June-2012 20:16:37 -0400; debug? true; trace: 10]
+2015-07-08 22:35:19,555 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons() - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@13c8540: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,baseDao,diamondUserDAO,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-07-08 22:35:19,555 ERROR org.springframework.web.context.ContextLoader.initWebApplicationContext() - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\config\spring\ApplicationContext.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [config/configuration.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'page'.  Cause: java.lang.ClassNotFoundException: Cannot find class: page
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1455)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:591)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:469)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:389)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:294)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:112)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:3843)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4342)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:719)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:443)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:516)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:710)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:578)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:288)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)
+Caused by: org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [config/configuration.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'page'.  Cause: java.lang.ClassNotFoundException: Cannot find class: page
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:380)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:295)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1452)
+	... 27 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'page'.  Cause: java.lang.ClassNotFoundException: Cannot find class: page
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:105)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:88)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:374)
+	... 30 more
+Caused by: java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'page'.  Cause: java.lang.ClassNotFoundException: Cannot find class: page
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:113)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:88)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.mapperElement(XMLConfigBuilder.java:311)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:103)
+	... 32 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'page'.  Cause: java.lang.ClassNotFoundException: Cannot find class: page
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:94)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:79)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:128)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:121)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:111)
+	... 35 more
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'page'.  Cause: java.lang.ClassNotFoundException: Cannot find class: page
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:109)
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:115)
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:92)
+	... 39 more
+Caused by: java.lang.ClassNotFoundException: Cannot find class: page
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:188)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:87)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:250)
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:105)
+	... 41 more
+2015-07-08 22:37:13,696 INFO org.springframework.web.context.ContextLoader.initWebApplicationContext() - Root WebApplicationContext: initialization started
+2015-07-08 22:37:13,790 INFO org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh() - Refreshing Root WebApplicationContext: startup date [Wed Jul 08 22:37:13 CST 2015]; root of context hierarchy
+2015-07-08 22:37:13,868 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\config\spring\ApplicationContext.xml]
+2015-07-08 22:37:14,260 INFO org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.loadProperties() - Loading properties file from class path resource [config/mysql.properties]
+2015-07-08 22:37:14,308 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@889c4e: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,baseDao,diamondUserDAO,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-07-08 22:37:14,323 INFO com.mchange.v2.log.MLog.<clinit>() - MLog clients using log4j logging.
+2015-07-08 22:37:14,386 INFO com.mchange.v2.c3p0.C3P0Registry.banner() - Initializing c3p0-0.9.2-pre4 [built 16-June-2012 20:16:37 -0400; debug? true; trace: 10]
+2015-07-08 22:37:14,901 INFO com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager() - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> true, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 60000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge15x9aujqzub554wxe|acf892, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15x9aujqzub554wxe|acf892, idleConnectionTestPeriod -> 18000, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/diamonds, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 30, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2015-07-08 22:37:15,339 INFO org.springframework.web.context.ContextLoader.initWebApplicationContext() - Root WebApplicationContext: initialization completed in 1643 ms
+2015-07-08 22:37:15,408 INFO org.springframework.web.servlet.DispatcherServlet.initServletBean() - FrameworkServlet 'SpringMVC': initialization started
+2015-07-08 22:37:15,411 INFO org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh() - Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 08 22:37:15 CST 2015]; parent: Root WebApplicationContext
+2015-07-08 22:37:15,411 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from ServletContext resource [/WEB-INF/SpringMVC.xml]
+2015-07-08 22:37:15,505 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@a31398: defining beans [viewResolver,org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping#0,multipartResolver,diamondUserController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@889c4e
+2015-07-08 22:37:15,583 INFO org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping.registerHandler() - Mapped URL path [/diamondUser] onto handler 'diamondUserController'
+2015-07-08 22:37:15,583 INFO org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping.registerHandler() - Mapped URL path [/diamondUser/*] onto handler 'diamondUserController'
+2015-07-08 22:37:15,880 INFO org.springframework.web.servlet.DispatcherServlet.initServletBean() - FrameworkServlet 'SpringMVC': initialization completed in 470 ms
+2015-07-08 22:38:29,860 INFO com.web.base.ControllerInterceptor.preHandle() - preHandle-----
+2015-07-08 22:38:30,048 INFO com.web.base.ControllerInterceptor.afterCompletion() - afterCompletion-----
+2015-07-08 22:39:08,848 INFO com.web.base.ControllerInterceptor.preHandle() - preHandle-----
+2015-07-08 22:39:08,862 INFO com.web.base.ControllerInterceptor.afterCompletion() - afterCompletion-----
+2015-07-08 22:39:18,398 INFO com.web.base.ControllerInterceptor.preHandle() - preHandle-----
+2015-07-08 22:39:38,603 INFO com.web.base.ControllerInterceptor.afterCompletion() - afterCompletion-----
+2015-07-08 22:40:06,828 INFO com.web.base.ControllerInterceptor.preHandle() - preHandle-----
+2015-07-08 22:40:08,798 INFO com.web.base.ControllerInterceptor.afterCompletion() - afterCompletion-----
+2015-07-08 22:41:01,656 INFO com.web.base.ControllerInterceptor.preHandle() - preHandle-----
+2015-07-08 22:41:01,668 INFO com.web.base.ControllerInterceptor.afterCompletion() - afterCompletion-----
+2015-07-08 22:41:49,849 INFO org.springframework.web.context.ContextLoader.initWebApplicationContext() - Root WebApplicationContext: initialization started
+2015-07-08 22:41:49,974 INFO org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh() - Refreshing Root WebApplicationContext: startup date [Wed Jul 08 22:41:49 CST 2015]; root of context hierarchy
+2015-07-08 22:41:50,067 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\config\spring\ApplicationContext.xml]
+2015-07-08 22:41:50,437 INFO org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.loadProperties() - Loading properties file from class path resource [config/mysql.properties]
+2015-07-08 22:41:50,484 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@562791: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,baseDao,diamondUserDAO,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-07-08 22:41:50,500 INFO com.mchange.v2.log.MLog.<clinit>() - MLog clients using log4j logging.
+2015-07-08 22:41:50,547 INFO com.mchange.v2.c3p0.C3P0Registry.banner() - Initializing c3p0-0.9.2-pre4 [built 16-June-2012 20:16:37 -0400; debug? true; trace: 10]
+2015-07-08 22:41:51,031 INFO com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager() - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> true, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 60000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge15x9aujwwxg14gxffn|174aee5, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15x9aujwwxg14gxffn|174aee5, idleConnectionTestPeriod -> 18000, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/diamonds, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 30, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2015-07-08 22:41:51,375 INFO org.springframework.web.context.ContextLoader.initWebApplicationContext() - Root WebApplicationContext: initialization completed in 1526 ms
+2015-07-08 22:41:51,417 INFO org.springframework.web.servlet.DispatcherServlet.initServletBean() - FrameworkServlet 'SpringMVC': initialization started
+2015-07-08 22:41:51,431 INFO org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh() - Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 08 22:41:51 CST 2015]; parent: Root WebApplicationContext
+2015-07-08 22:41:51,431 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from ServletContext resource [/WEB-INF/SpringMVC.xml]
+2015-07-08 22:41:51,478 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@22dd4d: defining beans [viewResolver,org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping#0,multipartResolver,diamondUserController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@562791
+2015-07-08 22:41:51,541 INFO org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping.registerHandler() - Mapped URL path [/diamondUser] onto handler 'diamondUserController'
+2015-07-08 22:41:51,541 INFO org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping.registerHandler() - Mapped URL path [/diamondUser/*] onto handler 'diamondUserController'
+2015-07-08 22:41:51,728 INFO org.springframework.web.servlet.DispatcherServlet.initServletBean() - FrameworkServlet 'SpringMVC': initialization completed in 298 ms
+2015-07-08 22:42:32,033 INFO com.web.base.ControllerInterceptor.preHandle() - preHandle-----
+2015-07-08 22:42:35,347 INFO com.web.base.ControllerInterceptor.afterCompletion() - afterCompletion-----
+2015-07-08 22:49:12,056 INFO org.springframework.web.context.support.XmlWebApplicationContext.doClose() - Closing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 08 22:41:51 CST 2015]; parent: Root WebApplicationContext
+2015-07-08 22:49:12,057 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons() - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@22dd4d: defining beans [viewResolver,org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping#0,multipartResolver,diamondUserController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@562791
+2015-07-08 22:49:12,057 INFO org.springframework.web.context.support.XmlWebApplicationContext.doClose() - Closing Root WebApplicationContext: startup date [Wed Jul 08 22:41:49 CST 2015]; root of context hierarchy
+2015-07-08 22:49:12,057 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons() - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@562791: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,baseDao,diamondUserDAO,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-07-08 22:49:12,582 INFO org.springframework.web.context.ContextLoader.initWebApplicationContext() - Root WebApplicationContext: initialization started
+2015-07-08 22:49:12,711 INFO org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh() - Refreshing Root WebApplicationContext: startup date [Wed Jul 08 22:49:12 CST 2015]; root of context hierarchy
+2015-07-08 22:49:12,796 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\config\spring\ApplicationContext.xml]
+2015-07-08 22:49:13,140 INFO org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.loadProperties() - Loading properties file from class path resource [config/mysql.properties]
+2015-07-08 22:49:13,197 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@59f38: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,baseDao,diamondUserDAO,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-07-08 22:49:13,205 INFO com.mchange.v2.log.MLog.<clinit>() - MLog clients using log4j logging.
+2015-07-08 22:49:13,252 INFO com.mchange.v2.c3p0.C3P0Registry.banner() - Initializing c3p0-0.9.2-pre4 [built 16-June-2012 20:16:37 -0400; debug? true; trace: 10]
+2015-07-08 22:49:13,252 WARN com.mchange.v2.c3p0.management.ActiveManagementCoordinator.attemptManageC3P0Registry() - A C3P0Registry mbean is already registered. This probably means that an application using c3p0 was undeployed, but not all PooledDataSources were closed prior to undeployment. This may lead to resource leaks over time. Please take care to close all PooledDataSources.
+2015-07-08 22:49:13,968 INFO com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager() - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> true, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 60000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge15x9auk6ej91hda0jf|1f3ab6a, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15x9auk6ej91hda0jf|1f3ab6a, idleConnectionTestPeriod -> 18000, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/diamonds, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 30, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2015-07-08 22:49:14,378 INFO org.springframework.web.context.ContextLoader.initWebApplicationContext() - Root WebApplicationContext: initialization completed in 1780 ms
+2015-07-08 22:49:14,454 INFO org.springframework.web.servlet.DispatcherServlet.initServletBean() - FrameworkServlet 'SpringMVC': initialization started
+2015-07-08 22:49:14,460 INFO org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh() - Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 08 22:49:14 CST 2015]; parent: Root WebApplicationContext
+2015-07-08 22:49:14,462 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from ServletContext resource [/WEB-INF/SpringMVC.xml]
+2015-07-08 22:49:14,507 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@826c0a: defining beans [viewResolver,org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping#0,multipartResolver,diamondUserController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@59f38
+2015-07-08 22:49:14,591 INFO org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping.registerHandler() - Mapped URL path [/diamondUser] onto handler 'diamondUserController'
+2015-07-08 22:49:14,591 INFO org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping.registerHandler() - Mapped URL path [/diamondUser/*] onto handler 'diamondUserController'
+2015-07-08 22:49:14,763 INFO org.springframework.web.servlet.DispatcherServlet.initServletBean() - FrameworkServlet 'SpringMVC': initialization completed in 309 ms
+2015-07-08 22:50:16,395 INFO org.springframework.web.context.ContextLoader.initWebApplicationContext() - Root WebApplicationContext: initialization started
+2015-07-08 22:50:16,489 INFO org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh() - Refreshing Root WebApplicationContext: startup date [Wed Jul 08 22:50:16 CST 2015]; root of context hierarchy
+2015-07-08 22:50:16,573 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\config\spring\ApplicationContext.xml]
+2015-07-08 22:50:17,050 INFO org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.loadProperties() - Loading properties file from class path resource [config/mysql.properties]
+2015-07-08 22:50:17,095 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@b07af1: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,baseDao,diamondUserDAO,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-07-08 22:50:17,113 INFO com.mchange.v2.log.MLog.<clinit>() - MLog clients using log4j logging.
+2015-07-08 22:50:17,174 INFO com.mchange.v2.c3p0.C3P0Registry.banner() - Initializing c3p0-0.9.2-pre4 [built 16-June-2012 20:16:37 -0400; debug? true; trace: 10]
+2015-07-08 22:50:17,625 INFO com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager() - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> true, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 60000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge15x9auk7rub1gfmu6e|93e86f, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15x9auk7rub1gfmu6e|93e86f, idleConnectionTestPeriod -> 18000, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/diamonds, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 30, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2015-07-08 22:50:17,990 INFO org.springframework.web.context.ContextLoader.initWebApplicationContext() - Root WebApplicationContext: initialization completed in 1595 ms
+2015-07-08 22:50:18,037 INFO org.springframework.web.servlet.DispatcherServlet.initServletBean() - FrameworkServlet 'SpringMVC': initialization started
+2015-07-08 22:50:18,043 INFO org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh() - Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 08 22:50:18 CST 2015]; parent: Root WebApplicationContext
+2015-07-08 22:50:18,043 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from ServletContext resource [/WEB-INF/SpringMVC.xml]
+2015-07-08 22:50:18,092 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@158e458: defining beans [viewResolver,org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping#0,multipartResolver,diamondUserController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@b07af1
+2015-07-08 22:50:18,146 INFO org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping.registerHandler() - Mapped URL path [/diamondUser] onto handler 'diamondUserController'
+2015-07-08 22:50:18,146 INFO org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping.registerHandler() - Mapped URL path [/diamondUser/*] onto handler 'diamondUserController'
+2015-07-08 22:50:18,337 INFO org.springframework.web.servlet.DispatcherServlet.initServletBean() - FrameworkServlet 'SpringMVC': initialization completed in 295 ms
+2015-07-08 22:50:21,424 INFO com.web.base.ControllerInterceptor.preHandle() - preHandle-----
+2015-07-08 22:50:23,782 INFO com.web.base.ControllerInterceptor.afterCompletion() - afterCompletion-----
+2015-07-08 22:53:06,909 INFO org.springframework.web.context.ContextLoader.initWebApplicationContext() - Root WebApplicationContext: initialization started
+2015-07-08 22:53:07,003 INFO org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh() - Refreshing Root WebApplicationContext: startup date [Wed Jul 08 22:53:07 CST 2015]; root of context hierarchy
+2015-07-08 22:53:07,081 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\config\spring\ApplicationContext.xml]
+2015-07-08 22:53:07,456 INFO org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.loadProperties() - Loading properties file from class path resource [config/mysql.properties]
+2015-07-08 22:53:07,500 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@718e31: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,baseDao,diamondUserDAO,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-07-08 22:53:07,516 INFO com.mchange.v2.log.MLog.<clinit>() - MLog clients using log4j logging.
+2015-07-08 22:53:07,578 INFO com.mchange.v2.c3p0.C3P0Registry.banner() - Initializing c3p0-0.9.2-pre4 [built 16-June-2012 20:16:37 -0400; debug? true; trace: 10]
+2015-07-08 22:53:08,078 INFO com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager() - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> true, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 60000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge15x9aukbfbv1sckhxb|1a0a87c, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15x9aukbfbv1sckhxb|1a0a87c, idleConnectionTestPeriod -> 18000, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/diamonds, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 30, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2015-07-08 22:53:08,406 INFO org.springframework.web.context.ContextLoader.initWebApplicationContext() - Root WebApplicationContext: initialization completed in 1497 ms
+2015-07-08 22:53:08,509 INFO org.springframework.web.servlet.DispatcherServlet.initServletBean() - FrameworkServlet 'SpringMVC': initialization started
+2015-07-08 22:53:08,513 INFO org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh() - Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 08 22:53:08 CST 2015]; parent: Root WebApplicationContext
+2015-07-08 22:53:08,513 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from ServletContext resource [/WEB-INF/SpringMVC.xml]
+2015-07-08 22:53:08,544 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@2b96c7: defining beans [viewResolver,org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping#0,multipartResolver,diamondUserController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@718e31
+2015-07-08 22:53:08,607 INFO org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping.registerHandler() - Mapped URL path [/diamondUser] onto handler 'diamondUserController'
+2015-07-08 22:53:08,624 INFO org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping.registerHandler() - Mapped URL path [/diamondUser/*] onto handler 'diamondUserController'
+2015-07-08 22:53:08,824 INFO org.springframework.web.servlet.DispatcherServlet.initServletBean() - FrameworkServlet 'SpringMVC': initialization completed in 314 ms
+2015-07-08 22:53:12,176 INFO com.web.base.ControllerInterceptor.preHandle() - preHandle-----
+2015-07-08 22:53:13,668 INFO com.web.base.ControllerInterceptor.afterCompletion() - afterCompletion-----
+2015-07-08 22:55:28,916 INFO org.springframework.web.context.support.XmlWebApplicationContext.doClose() - Closing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 08 22:53:08 CST 2015]; parent: Root WebApplicationContext
+2015-07-08 22:55:28,917 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons() - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@2b96c7: defining beans [viewResolver,org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping#0,multipartResolver,diamondUserController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@718e31
+2015-07-08 22:55:28,922 INFO org.springframework.web.context.support.XmlWebApplicationContext.doClose() - Closing Root WebApplicationContext: startup date [Wed Jul 08 22:53:07 CST 2015]; root of context hierarchy
+2015-07-08 22:55:28,922 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons() - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@718e31: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,baseDao,diamondUserDAO,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-07-08 22:55:29,238 INFO org.springframework.web.context.ContextLoader.initWebApplicationContext() - Root WebApplicationContext: initialization started
+2015-07-08 22:55:29,346 INFO org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh() - Refreshing Root WebApplicationContext: startup date [Wed Jul 08 22:55:29 CST 2015]; root of context hierarchy
+2015-07-08 22:55:29,425 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\config\spring\ApplicationContext.xml]
+2015-07-08 22:55:29,820 INFO org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.loadProperties() - Loading properties file from class path resource [config/mysql.properties]
+2015-07-08 22:55:29,862 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1adb258: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,baseDao,diamondUserDAO,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-07-08 22:55:29,882 INFO com.mchange.v2.log.MLog.<clinit>() - MLog clients using log4j logging.
+2015-07-08 22:55:29,920 INFO com.mchange.v2.c3p0.C3P0Registry.banner() - Initializing c3p0-0.9.2-pre4 [built 16-June-2012 20:16:37 -0400; debug? true; trace: 10]
+2015-07-08 22:55:29,922 WARN com.mchange.v2.c3p0.management.ActiveManagementCoordinator.attemptManageC3P0Registry() - A C3P0Registry mbean is already registered. This probably means that an application using c3p0 was undeployed, but not all PooledDataSources were closed prior to undeployment. This may lead to resource leaks over time. Please take care to close all PooledDataSources.
+2015-07-08 22:55:30,570 INFO com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager() - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> true, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 60000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge15x9aukeh69175zgq1|17297a2, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15x9aukeh69175zgq1|17297a2, idleConnectionTestPeriod -> 18000, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/diamonds, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 30, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2015-07-08 22:55:30,951 INFO org.springframework.web.context.ContextLoader.initWebApplicationContext() - Root WebApplicationContext: initialization completed in 1711 ms
+2015-07-08 22:55:31,011 INFO org.springframework.web.servlet.DispatcherServlet.initServletBean() - FrameworkServlet 'SpringMVC': initialization started
+2015-07-08 22:55:31,016 INFO org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh() - Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 08 22:55:31 CST 2015]; parent: Root WebApplicationContext
+2015-07-08 22:55:31,018 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from ServletContext resource [/WEB-INF/SpringMVC.xml]
+2015-07-08 22:55:31,062 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@17909f5: defining beans [viewResolver,org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping#0,multipartResolver,diamondUserController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@1adb258
+2015-07-08 22:55:31,147 INFO org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping.registerHandler() - Mapped URL path [/diamondUser] onto handler 'diamondUserController'
+2015-07-08 22:55:31,147 INFO org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping.registerHandler() - Mapped URL path [/diamondUser/*] onto handler 'diamondUserController'
+2015-07-08 22:55:31,306 INFO org.springframework.web.servlet.DispatcherServlet.initServletBean() - FrameworkServlet 'SpringMVC': initialization completed in 295 ms
+2015-07-08 22:56:10,173 INFO org.springframework.web.context.ContextLoader.initWebApplicationContext() - Root WebApplicationContext: initialization started
+2015-07-08 22:56:10,278 INFO org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh() - Refreshing Root WebApplicationContext: startup date [Wed Jul 08 22:56:10 CST 2015]; root of context hierarchy
+2015-07-08 22:56:10,354 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\config\spring\ApplicationContext.xml]
+2015-07-08 22:56:10,729 INFO org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.loadProperties() - Loading properties file from class path resource [config/mysql.properties]
+2015-07-08 22:56:10,772 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1493995: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,baseDao,diamondUserDAO,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-07-08 22:56:10,789 INFO com.mchange.v2.log.MLog.<clinit>() - MLog clients using log4j logging.
+2015-07-08 22:56:10,854 INFO com.mchange.v2.c3p0.C3P0Registry.banner() - Initializing c3p0-0.9.2-pre4 [built 16-June-2012 20:16:37 -0400; debug? true; trace: 10]
+2015-07-08 22:56:11,359 INFO com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager() - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> true, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 60000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge15x9aukfcqlxrivmj|1076683, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15x9aukfcqlxrivmj|1076683, idleConnectionTestPeriod -> 18000, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/diamonds, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 30, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2015-07-08 22:56:11,707 INFO org.springframework.web.context.ContextLoader.initWebApplicationContext() - Root WebApplicationContext: initialization completed in 1532 ms
+2015-07-08 22:56:11,752 INFO org.springframework.web.servlet.DispatcherServlet.initServletBean() - FrameworkServlet 'SpringMVC': initialization started
+2015-07-08 22:56:11,758 INFO org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh() - Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 08 22:56:11 CST 2015]; parent: Root WebApplicationContext
+2015-07-08 22:56:11,761 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from ServletContext resource [/WEB-INF/SpringMVC.xml]
+2015-07-08 22:56:11,811 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@b86b4f: defining beans [viewResolver,org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping#0,multipartResolver,diamondUserController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@1493995
+2015-07-08 22:56:11,884 INFO org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping.registerHandler() - Mapped URL path [/diamondUser] onto handler 'diamondUserController'
+2015-07-08 22:56:11,885 INFO org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping.registerHandler() - Mapped URL path [/diamondUser/*] onto handler 'diamondUserController'
+2015-07-08 22:56:12,082 INFO org.springframework.web.servlet.DispatcherServlet.initServletBean() - FrameworkServlet 'SpringMVC': initialization completed in 329 ms
+2015-07-08 22:56:29,846 INFO com.web.base.ControllerInterceptor.preHandle() - preHandle-----
+2015-07-08 22:56:32,969 DEBUG java.sql.Connection.debug() - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@5df8f3]
+2015-07-08 22:56:37,383 DEBUG java.sql.Connection.debug() - ==>  Preparing: SELECT COUNT(1) from (select ID id,ACCOUNTNO accountNo,PASSWORD password,NAME name,TEL tel,EMAIL email,COMPANY company,COMPANYADDRESS companyAddress,TTIME ttime,CONTENT content,MANAGERID manager FROM DIAMONDUSER T WHERE 1=1) 
+2015-07-08 22:56:37,411 DEBUG java.sql.PreparedStatement.debug() - ==> Parameters: 
+2015-07-08 22:56:37,473 ERROR com.app.commons.page.PageInterceptor.setTotalRecord() - PageInterceptor sql error
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Every derived table must have its own alias
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+	at com.mysql.jdbc.Util.getInstance(Util.java:383)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1062)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4226)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4158)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2615)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2776)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2840)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2082)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2212)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.executeQuery(NewProxyPreparedStatement.java:446)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:51)
+	at $Proxy16.executeQuery(Unknown Source)
+	at com.app.commons.page.PageInterceptor.setTotalRecord(PageInterceptor.java:151)
+	at com.app.commons.page.PageInterceptor.intercept(PageInterceptor.java:63)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:57)
+	at $Proxy14.prepare(Unknown Source)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:70)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:56)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:141)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:105)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:81)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:101)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:95)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:355)
+	at $Proxy6.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:195)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:124)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:90)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:40)
+	at $Proxy7.findEntity(Unknown Source)
+	at com.app.diamonduser.DiamondUserService.findEntity(DiamondUserService.java:17)
+	at com.web.module.diamonduser.DiamondUserController.showDiamondUserList(DiamondUserController.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.springframework.web.bind.annotation.support.HandlerMethodInvoker.invokeHandlerMethod(HandlerMethodInvoker.java:176)
+	at org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter.invokeHandlerMethod(AnnotationMethodHandlerAdapter.java:440)
+	at org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter.handle(AnnotationMethodHandlerAdapter.java:428)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:856)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:936)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:827)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:812)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:286)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:845)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:583)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:447)
+	at java.lang.Thread.run(Thread.java:619)
+2015-07-08 22:56:37,473 DEBUG java.sql.Connection.debug() - ==>  Preparing: select ID id,ACCOUNTNO accountNo,PASSWORD password,NAME name,TEL tel,EMAIL email,COMPANY company,COMPANYADDRESS companyAddress,TTIME ttime,CONTENT content,MANAGERID manager FROM DIAMONDUSER T WHERE 1=1 limit 0,3 
+2015-07-08 22:56:37,473 DEBUG java.sql.PreparedStatement.debug() - ==> Parameters: 
+2015-07-08 22:56:48,224 INFO com.web.base.ControllerInterceptor.postHandle() - postHandle-----
+2015-07-08 22:56:48,327 INFO com.web.base.ControllerInterceptor.afterCompletion() - afterCompletion-----
+2015-07-08 22:57:27,291 INFO com.web.base.ControllerInterceptor.preHandle() - preHandle-----
+2015-07-08 22:57:29,861 DEBUG java.sql.Connection.debug() - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@16397db]
+2015-07-08 22:57:43,667 DEBUG java.sql.Connection.debug() - ==>  Preparing: SELECT COUNT(1) from (select ID id,ACCOUNTNO accountNo,PASSWORD password,NAME name,TEL tel,EMAIL email,COMPANY company,COMPANYADDRESS companyAddress,TTIME ttime,CONTENT content,MANAGERID manager FROM DIAMONDUSER T WHERE 1=1) 
+2015-07-08 22:57:43,680 DEBUG java.sql.PreparedStatement.debug() - ==> Parameters: 
+2015-07-08 22:57:43,680 ERROR com.app.commons.page.PageInterceptor.setTotalRecord() - PageInterceptor sql error
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Every derived table must have its own alias
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+	at com.mysql.jdbc.Util.getInstance(Util.java:383)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1062)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4226)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4158)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2615)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2776)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2840)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2082)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2212)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.executeQuery(NewProxyPreparedStatement.java:446)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:51)
+	at $Proxy16.executeQuery(Unknown Source)
+	at com.app.commons.page.PageInterceptor.setTotalRecord(PageInterceptor.java:151)
+	at com.app.commons.page.PageInterceptor.intercept(PageInterceptor.java:63)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:57)
+	at $Proxy14.prepare(Unknown Source)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:70)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:56)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:141)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:105)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:81)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:101)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:95)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:355)
+	at $Proxy6.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:195)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:124)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:90)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:40)
+	at $Proxy7.findEntity(Unknown Source)
+	at com.app.diamonduser.DiamondUserService.findEntity(DiamondUserService.java:17)
+	at com.web.module.diamonduser.DiamondUserController.showDiamondUserList(DiamondUserController.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.springframework.web.bind.annotation.support.HandlerMethodInvoker.invokeHandlerMethod(HandlerMethodInvoker.java:176)
+	at org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter.invokeHandlerMethod(AnnotationMethodHandlerAdapter.java:440)
+	at org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter.handle(AnnotationMethodHandlerAdapter.java:428)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:856)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:936)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:827)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:812)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:286)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:845)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:583)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:447)
+	at java.lang.Thread.run(Thread.java:619)
+2015-07-08 22:57:49,104 DEBUG java.sql.Connection.debug() - ==>  Preparing: select ID id,ACCOUNTNO accountNo,PASSWORD password,NAME name,TEL tel,EMAIL email,COMPANY company,COMPANYADDRESS companyAddress,TTIME ttime,CONTENT content,MANAGERID manager FROM DIAMONDUSER T WHERE 1=1 limit 0,3 
+2015-07-08 22:57:49,119 DEBUG java.sql.PreparedStatement.debug() - ==> Parameters: 
+2015-07-08 22:57:50,057 INFO com.web.base.ControllerInterceptor.postHandle() - postHandle-----
+2015-07-08 22:57:50,057 INFO com.web.base.ControllerInterceptor.afterCompletion() - afterCompletion-----
+2015-07-08 22:57:52,753 INFO com.web.base.ControllerInterceptor.preHandle() - preHandle-----
+2015-07-08 22:57:52,755 DEBUG java.sql.Connection.debug() - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@56a02e]
+2015-07-08 22:58:32,747 DEBUG java.sql.Connection.debug() - ==>  Preparing: SELECT COUNT(1) from (select ID id,ACCOUNTNO accountNo,PASSWORD password,NAME name,TEL tel,EMAIL email,COMPANY company,COMPANYADDRESS companyAddress,TTIME ttime,CONTENT content,MANAGERID manager FROM DIAMONDUSER T WHERE 1=1) 
+2015-07-08 22:58:43,296 DEBUG java.sql.PreparedStatement.debug() - ==> Parameters: 
+2015-07-08 22:59:44,757 ERROR com.app.commons.page.PageInterceptor.setTotalRecord() - PageInterceptor sql error
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Every derived table must have its own alias
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+	at com.mysql.jdbc.Util.getInstance(Util.java:383)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1062)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4226)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4158)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2615)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2776)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2840)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2082)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2212)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.executeQuery(NewProxyPreparedStatement.java:446)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:51)
+	at $Proxy16.executeQuery(Unknown Source)
+	at com.app.commons.page.PageInterceptor.setTotalRecord(PageInterceptor.java:151)
+	at com.app.commons.page.PageInterceptor.intercept(PageInterceptor.java:63)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:57)
+	at $Proxy14.prepare(Unknown Source)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:70)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:56)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:141)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:105)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:81)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:101)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:95)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:355)
+	at $Proxy6.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:195)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:124)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:90)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:40)
+	at $Proxy7.findEntity(Unknown Source)
+	at com.app.diamonduser.DiamondUserService.findEntity(DiamondUserService.java:17)
+	at com.web.module.diamonduser.DiamondUserController.showDiamondUserList(DiamondUserController.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.springframework.web.bind.annotation.support.HandlerMethodInvoker.invokeHandlerMethod(HandlerMethodInvoker.java:176)
+	at org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter.invokeHandlerMethod(AnnotationMethodHandlerAdapter.java:440)
+	at org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter.handle(AnnotationMethodHandlerAdapter.java:428)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:856)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:936)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:827)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:812)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:286)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:845)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:583)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:447)
+	at java.lang.Thread.run(Thread.java:619)
+2015-07-08 22:59:44,758 DEBUG java.sql.Connection.debug() - ==>  Preparing: select ID id,ACCOUNTNO accountNo,PASSWORD password,NAME name,TEL tel,EMAIL email,COMPANY company,COMPANYADDRESS companyAddress,TTIME ttime,CONTENT content,MANAGERID manager FROM DIAMONDUSER T WHERE 1=1 limit 0,3 
+2015-07-08 22:59:44,759 DEBUG java.sql.PreparedStatement.debug() - ==> Parameters: 
+2015-07-08 22:59:45,525 INFO com.web.base.ControllerInterceptor.postHandle() - postHandle-----
+2015-07-08 22:59:45,527 INFO com.web.base.ControllerInterceptor.afterCompletion() - afterCompletion-----
+2015-07-08 23:00:08,092 INFO com.web.base.ControllerInterceptor.preHandle() - preHandle-----
+2015-07-08 23:00:08,099 DEBUG java.sql.Connection.debug() - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@6b1047]
+2015-07-08 23:01:27,475 DEBUG java.sql.Connection.debug() - ==>  Preparing: SELECT COUNT(1) from (select ID id,ACCOUNTNO accountNo,PASSWORD password,NAME name,TEL tel,EMAIL email,COMPANY company,COMPANYADDRESS companyAddress,TTIME ttime,CONTENT content,MANAGERID manager FROM DIAMONDUSER T WHERE 1=1) 
+2015-07-08 23:01:27,488 DEBUG java.sql.PreparedStatement.debug() - ==> Parameters: 
+2015-07-08 23:01:27,488 ERROR com.app.commons.page.PageInterceptor.setTotalRecord() - PageInterceptor sql error
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Every derived table must have its own alias
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+	at com.mysql.jdbc.Util.getInstance(Util.java:383)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1062)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4226)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4158)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2615)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2776)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2840)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2082)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2212)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.executeQuery(NewProxyPreparedStatement.java:446)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:51)
+	at $Proxy16.executeQuery(Unknown Source)
+	at com.app.commons.page.PageInterceptor.setTotalRecord(PageInterceptor.java:151)
+	at com.app.commons.page.PageInterceptor.intercept(PageInterceptor.java:63)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:57)
+	at $Proxy14.prepare(Unknown Source)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:70)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:56)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:141)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:105)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:81)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:101)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:95)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:355)
+	at $Proxy6.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:195)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:124)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:90)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:40)
+	at $Proxy7.findEntity(Unknown Source)
+	at com.app.diamonduser.DiamondUserService.findEntity(DiamondUserService.java:17)
+	at com.web.module.diamonduser.DiamondUserController.showDiamondUserList(DiamondUserController.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.springframework.web.bind.annotation.support.HandlerMethodInvoker.invokeHandlerMethod(HandlerMethodInvoker.java:176)
+	at org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter.invokeHandlerMethod(AnnotationMethodHandlerAdapter.java:440)
+	at org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter.handle(AnnotationMethodHandlerAdapter.java:428)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:856)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:936)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:827)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:812)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:286)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:845)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:583)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:447)
+	at java.lang.Thread.run(Thread.java:619)
+2015-07-08 23:01:27,488 DEBUG java.sql.Connection.debug() - ==>  Preparing: select ID id,ACCOUNTNO accountNo,PASSWORD password,NAME name,TEL tel,EMAIL email,COMPANY company,COMPANYADDRESS companyAddress,TTIME ttime,CONTENT content,MANAGERID manager FROM DIAMONDUSER T WHERE 1=1 limit 0,3 
+2015-07-08 23:01:27,488 DEBUG java.sql.PreparedStatement.debug() - ==> Parameters: 
+2015-07-08 23:02:17,005 INFO org.springframework.web.context.ContextLoader.initWebApplicationContext() - Root WebApplicationContext: initialization started
+2015-07-08 23:02:17,111 INFO org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh() - Refreshing Root WebApplicationContext: startup date [Wed Jul 08 23:02:17 CST 2015]; root of context hierarchy
+2015-07-08 23:02:17,203 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\config\spring\ApplicationContext.xml]
+2015-07-08 23:02:17,712 INFO org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.loadProperties() - Loading properties file from class path resource [config/mysql.properties]
+2015-07-08 23:02:17,764 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4e94a4: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,baseDao,diamondUserDAO,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-07-08 23:02:17,781 INFO com.mchange.v2.log.MLog.<clinit>() - MLog clients using log4j logging.
+2015-07-08 23:02:17,853 INFO com.mchange.v2.c3p0.C3P0Registry.banner() - Initializing c3p0-0.9.2-pre4 [built 16-June-2012 20:16:37 -0400; debug? true; trace: 10]
+2015-07-08 23:02:18,376 INFO com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager() - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> true, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 60000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge15x9aukn7wv1cg9q60|15b9f9a, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15x9aukn7wv1cg9q60|15b9f9a, idleConnectionTestPeriod -> 18000, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/diamonds, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 30, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2015-07-08 23:02:18,776 INFO org.springframework.web.context.ContextLoader.initWebApplicationContext() - Root WebApplicationContext: initialization completed in 1769 ms
+2015-07-08 23:02:18,830 INFO org.springframework.web.servlet.DispatcherServlet.initServletBean() - FrameworkServlet 'SpringMVC': initialization started
+2015-07-08 23:02:18,835 INFO org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh() - Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 08 23:02:18 CST 2015]; parent: Root WebApplicationContext
+2015-07-08 23:02:18,837 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from ServletContext resource [/WEB-INF/SpringMVC.xml]
+2015-07-08 23:02:18,907 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@129a843: defining beans [viewResolver,org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping#0,multipartResolver,diamondUserController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@4e94a4
+2015-07-08 23:02:18,995 INFO org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping.registerHandler() - Mapped URL path [/diamondUser] onto handler 'diamondUserController'
+2015-07-08 23:02:18,995 INFO org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping.registerHandler() - Mapped URL path [/diamondUser/*] onto handler 'diamondUserController'
+2015-07-08 23:02:19,185 INFO org.springframework.web.servlet.DispatcherServlet.initServletBean() - FrameworkServlet 'SpringMVC': initialization completed in 355 ms
+2015-07-08 23:02:20,224 INFO com.web.base.ControllerInterceptor.preHandle() - preHandle-----
+2015-07-08 23:02:20,433 DEBUG java.sql.Connection.debug() - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@174dd2a]
+2015-07-08 23:03:09,643 DEBUG java.sql.Connection.debug() - ==>  Preparing: SELECT COUNT(1) from (select ID id,ACCOUNTNO accountNo,PASSWORD password,NAME name,TEL tel,EMAIL email,COMPANY company,COMPANYADDRESS companyAddress,TTIME ttime,CONTENT content,MANAGERID manager FROM DIAMONDUSER T WHERE 1=1) as total 
+2015-07-08 23:03:09,680 DEBUG java.sql.PreparedStatement.debug() - ==> Parameters: 
+2015-07-08 23:03:09,696 DEBUG java.sql.Connection.debug() - ==>  Preparing: select ID id,ACCOUNTNO accountNo,PASSWORD password,NAME name,TEL tel,EMAIL email,COMPANY company,COMPANYADDRESS companyAddress,TTIME ttime,CONTENT content,MANAGERID manager FROM DIAMONDUSER T WHERE 1=1 limit 0,3 
+2015-07-08 23:03:09,696 DEBUG java.sql.PreparedStatement.debug() - ==> Parameters: 
+2015-07-08 23:03:11,198 INFO com.web.base.ControllerInterceptor.postHandle() - postHandle-----
+2015-07-08 23:03:11,220 INFO com.web.base.ControllerInterceptor.afterCompletion() - afterCompletion-----
+2015-07-08 23:03:11,282 INFO org.springframework.web.context.support.XmlWebApplicationContext.doClose() - Closing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 08 23:02:18 CST 2015]; parent: Root WebApplicationContext
+2015-07-08 23:03:11,282 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons() - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@129a843: defining beans [viewResolver,org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping#0,multipartResolver,diamondUserController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@4e94a4
+2015-07-08 23:03:11,282 INFO org.springframework.web.context.support.XmlWebApplicationContext.doClose() - Closing Root WebApplicationContext: startup date [Wed Jul 08 23:02:17 CST 2015]; root of context hierarchy
+2015-07-08 23:03:11,282 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons() - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4e94a4: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,baseDao,diamondUserDAO,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-07-08 23:03:11,564 INFO org.springframework.web.context.ContextLoader.initWebApplicationContext() - Root WebApplicationContext: initialization started
+2015-07-08 23:03:11,689 INFO org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh() - Refreshing Root WebApplicationContext: startup date [Wed Jul 08 23:03:11 CST 2015]; root of context hierarchy
+2015-07-08 23:03:11,767 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\config\spring\ApplicationContext.xml]
+2015-07-08 23:03:12,111 INFO org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.loadProperties() - Loading properties file from class path resource [config/mysql.properties]
+2015-07-08 23:03:12,174 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1caae8: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,baseDao,diamondUserDAO,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-07-08 23:03:12,189 INFO com.mchange.v2.log.MLog.<clinit>() - MLog clients using log4j logging.
+2015-07-08 23:03:12,220 INFO com.mchange.v2.c3p0.C3P0Registry.banner() - Initializing c3p0-0.9.2-pre4 [built 16-June-2012 20:16:37 -0400; debug? true; trace: 10]
+2015-07-08 23:03:12,231 WARN com.mchange.v2.c3p0.management.ActiveManagementCoordinator.attemptManageC3P0Registry() - A C3P0Registry mbean is already registered. This probably means that an application using c3p0 was undeployed, but not all PooledDataSources were closed prior to undeployment. This may lead to resource leaks over time. Please take care to close all PooledDataSources.
+2015-07-08 23:03:12,794 INFO com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager() - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> true, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 60000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge15x9aukodvx16ayslu|1078b2e, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15x9aukodvx16ayslu|1078b2e, idleConnectionTestPeriod -> 18000, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/diamonds, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 30, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2015-07-08 23:03:13,090 INFO org.springframework.web.context.ContextLoader.initWebApplicationContext() - Root WebApplicationContext: initialization completed in 1526 ms
+2015-07-08 23:03:13,153 INFO org.springframework.web.servlet.DispatcherServlet.initServletBean() - FrameworkServlet 'SpringMVC': initialization started
+2015-07-08 23:03:13,160 INFO org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh() - Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 08 23:03:13 CST 2015]; parent: Root WebApplicationContext
+2015-07-08 23:03:13,160 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from ServletContext resource [/WEB-INF/SpringMVC.xml]
+2015-07-08 23:03:13,191 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@ec2524: defining beans [viewResolver,org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping#0,multipartResolver,diamondUserController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@1caae8
+2015-07-08 23:03:13,285 INFO org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping.registerHandler() - Mapped URL path [/diamondUser] onto handler 'diamondUserController'
+2015-07-08 23:03:13,285 INFO org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping.registerHandler() - Mapped URL path [/diamondUser/*] onto handler 'diamondUserController'
+2015-07-08 23:03:13,435 INFO org.springframework.web.servlet.DispatcherServlet.initServletBean() - FrameworkServlet 'SpringMVC': initialization completed in 277 ms
+2015-07-08 23:03:17,028 INFO com.web.base.ControllerInterceptor.preHandle() - preHandle-----
+2015-07-08 23:03:17,185 DEBUG java.sql.Connection.debug() - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@978d3d]
+2015-07-08 23:03:18,623 DEBUG java.sql.Connection.debug() - ==>  Preparing: SELECT COUNT(1) from (select ID id,ACCOUNTNO accountNo,PASSWORD password,NAME name,TEL tel,EMAIL email,COMPANY company,COMPANYADDRESS companyAddress,TTIME ttime,CONTENT content,MANAGERID manager FROM DIAMONDUSER T WHERE 1=1) as total 
+2015-07-08 23:03:18,662 DEBUG java.sql.PreparedStatement.debug() - ==> Parameters: 
+2015-07-08 23:03:18,678 DEBUG java.sql.Connection.debug() - ==>  Preparing: select ID id,ACCOUNTNO accountNo,PASSWORD password,NAME name,TEL tel,EMAIL email,COMPANY company,COMPANYADDRESS companyAddress,TTIME ttime,CONTENT content,MANAGERID manager FROM DIAMONDUSER T WHERE 1=1 limit 0,3 
+2015-07-08 23:03:18,678 DEBUG java.sql.PreparedStatement.debug() - ==> Parameters: 
+2015-07-08 23:03:24,304 INFO com.web.base.ControllerInterceptor.postHandle() - postHandle-----
+2015-07-08 23:03:24,458 INFO com.web.base.ControllerInterceptor.afterCompletion() - afterCompletion-----
+2015-07-08 23:03:31,842 INFO org.springframework.web.context.ContextLoader.initWebApplicationContext() - Root WebApplicationContext: initialization started
+2015-07-08 23:03:31,935 INFO org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh() - Refreshing Root WebApplicationContext: startup date [Wed Jul 08 23:03:31 CST 2015]; root of context hierarchy
+2015-07-08 23:03:32,029 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\config\spring\ApplicationContext.xml]
+2015-07-08 23:03:32,373 INFO org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.loadProperties() - Loading properties file from class path resource [config/mysql.properties]
+2015-07-08 23:03:32,414 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@562791: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,baseDao,diamondUserDAO,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-07-08 23:03:32,445 INFO com.mchange.v2.log.MLog.<clinit>() - MLog clients using log4j logging.
+2015-07-08 23:03:32,507 INFO com.mchange.v2.c3p0.C3P0Registry.banner() - Initializing c3p0-0.9.2-pre4 [built 16-June-2012 20:16:37 -0400; debug? true; trace: 10]
+2015-07-08 23:03:32,992 INFO com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager() - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> true, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 60000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge15x9aukotilbm63am|ad25d0, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15x9aukotilbm63am|ad25d0, idleConnectionTestPeriod -> 18000, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/diamonds, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 30, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2015-07-08 23:03:33,336 INFO org.springframework.web.context.ContextLoader.initWebApplicationContext() - Root WebApplicationContext: initialization completed in 1494 ms
+2015-07-08 23:03:33,382 INFO org.springframework.web.servlet.DispatcherServlet.initServletBean() - FrameworkServlet 'SpringMVC': initialization started
+2015-07-08 23:03:33,393 INFO org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh() - Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 08 23:03:33 CST 2015]; parent: Root WebApplicationContext
+2015-07-08 23:03:33,393 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from ServletContext resource [/WEB-INF/SpringMVC.xml]
+2015-07-08 23:03:33,440 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1d98616: defining beans [viewResolver,org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping#0,multipartResolver,diamondUserController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@562791
+2015-07-08 23:03:33,502 INFO org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping.registerHandler() - Mapped URL path [/diamondUser] onto handler 'diamondUserController'
+2015-07-08 23:03:33,502 INFO org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping.registerHandler() - Mapped URL path [/diamondUser/*] onto handler 'diamondUserController'
+2015-07-08 23:03:33,690 INFO org.springframework.web.servlet.DispatcherServlet.initServletBean() - FrameworkServlet 'SpringMVC': initialization completed in 298 ms
+2015-07-08 23:03:35,985 INFO com.web.base.ControllerInterceptor.preHandle() - preHandle-----
+2015-07-08 23:03:36,208 DEBUG java.sql.Connection.debug() - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@1d67edd]
+2015-07-08 23:03:41,366 DEBUG java.sql.Connection.debug() - ==>  Preparing: SELECT COUNT(1) from (select ID id,ACCOUNTNO accountNo,PASSWORD password,NAME name,TEL tel,EMAIL email,COMPANY company,COMPANYADDRESS companyAddress,TTIME ttime,CONTENT content,MANAGERID manager FROM DIAMONDUSER T WHERE 1=1) as total 
+2015-07-08 23:03:43,172 DEBUG java.sql.PreparedStatement.debug() - ==> Parameters: 
+2015-07-08 23:04:42,821 DEBUG java.sql.Connection.debug() - ==>  Preparing: select ID id,ACCOUNTNO accountNo,PASSWORD password,NAME name,TEL tel,EMAIL email,COMPANY company,COMPANYADDRESS companyAddress,TTIME ttime,CONTENT content,MANAGERID manager FROM DIAMONDUSER T WHERE 1=1 limit 0,3 
+2015-07-08 23:04:44,775 DEBUG java.sql.PreparedStatement.debug() - ==> Parameters: 
+2015-07-08 23:04:46,357 INFO com.web.base.ControllerInterceptor.postHandle() - postHandle-----
+2015-07-08 23:04:46,424 INFO com.web.base.ControllerInterceptor.afterCompletion() - afterCompletion-----

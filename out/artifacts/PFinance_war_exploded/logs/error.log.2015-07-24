@@ -1,0 +1,2 @@
+2015-07-24 00:00:00,096 ERROR cache.getJedis() - Cache server error,hostname can't be null
+2015-07-24 00:00:01,138 ERROR cache.getJedis() - Cache server error,hostname can't be null

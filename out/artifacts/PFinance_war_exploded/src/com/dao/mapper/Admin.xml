@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.AdminDAO">
+
+	<!--此处定义所有的列，全部用大写 -->
+	<sql id="allColumnAlias">
+			ID        	id        ,  
+			USERNAME    userName   , 
+			PASSWORD    password   , 
+			ADDTIME     addTime    , 
+			UPDATETIME  updateTime	
+	
+
+
+
+
+	</sql>
+
+
+	<sql id="allColumn">
+		id        ,
+		username  ,
+		password  ,
+		addtime   ,
+		updatetime
+
+
+
+	</sql>
+
+
+
+
+
+	<insert id="insert" parameterType="adminVO">
+		INSERT INTO ADMIN
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<include refid="allColumn"/>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">		
+			#{id                ,jdbcType=NUMERIC},  
+			#{userName       		,jdbcType=VARCHAR},
+			#{password       		,jdbcType=VARCHAR},
+			now(),
+			now()
+
+		</trim>
+	</insert>
+
+	
+	<select id="find" parameterType="adminVO" resultType="adminVO" >
+		select
+		<include refid="allColumnAlias" /> 
+
+		FROM ADMIN   T 
+
+		
+		
+		WHERE 1=1 
+		
+		<if test="id != null">
+			AND T.ID  = #{id}
+		</if>
+
+
+
+	</select>
+	
+	<select id="findPageList" parameterType="page" resultType="adminVO" >
+		select
+		<include refid="allColumnAlias" /> 
+		FROM ADMIN T   
+		WHERE 1=1
+
+
+		<if test="objectT.userName != null">
+			AND T.USERNAME  = #{objectT.Nsername}
+		</if>
+
+
+
+
+	</select>
+	
+
+	<delete id="delete" parameterType="adminVO" >
+		DELETE FROM ADMIN WHERE  
+		
+		
+		ID  = #{id}  
+		
+	</delete>
+
+
+	
+
+	
+	
+	
+	<update id="update" parameterType="adminVO" >
+		UPDATE ADMIN T SET 
+	
+	
+		<trim prefix="" suffix="" suffixOverrides=",">
+
+
+			<if test="password != null">
+				PASSWORD  = #{password},
+			</if>
+			
+
+
+			
+		</trim>
+
+         WHERE ID=#{id}
+ 
+         
+	</update>
+	
+
+
+</mapper>

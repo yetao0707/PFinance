@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.FundDAO">
+
+	<!--此处定义所有的列，全部用大写 -->
+	<sql id="allColumnAlias">
+			ID              				id              			, 
+			FUNDNAME                fundName              , 
+			FUNDTYPE                fundType              , 
+			NETASSETVALUE           netassetValue         , 
+			ACCUMULATEDVALUE        accumulatedValue      , 
+			WEEKVALUE               weekValue             , 
+			MONTHVALUE              monthValue            , 
+			FOUNDINGDATE            foundingDate          , 
+			PLANTYPE                planType              , 
+			CUSTODIAN               custodian             , 
+			TRUSTEE                 trustee               , 
+			STARTDATE               startDate             , 
+			ENDDATE                 endDate               , 
+			DURATION                duration              , 
+			TOTALRECRUITMENT        totalRecruitment      , 
+			PURCHASEAMOUNT          purchaseAmount        , 
+			OBJECTIVE               objective             
+     
+
+
+
+
+	</sql>
+
+
+	<sql id="allColumn">
+			id              			,
+			fundNAME              ,
+			fundtype              ,
+			netassetvalue         ,
+			accumulatedvalue      ,
+			weekvalue             ,
+			monthvalue            ,
+			foundingdate          ,
+			plantype              ,
+			custodian             ,
+			trustee               ,
+			startdate             ,
+			enddate               ,
+			duration              ,
+			totalrecruitment      ,
+			purchaseamount        ,
+			objective             
+
+
+
+
+	</sql>
+
+
+
+
+
+	<insert id="insert" parameterType="fundVO">
+		INSERT INTO FUND
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<include refid="allColumn"/>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">		
+			#{id                ,jdbcType=NUMERIC},  
+			#{fundName                ,jdbcType=VARCHAR}, 
+			#{fundType                ,jdbcType=NUMERIC}, 
+			#{netassetValue                ,jdbcType=NUMERIC}, 
+			#{accumulatedValue                ,jdbcType=NUMERIC}, 
+			#{weekValue                ,jdbcType=NUMERIC}, 
+			#{monthValue                ,jdbcType=NUMERIC}, 
+			#{foundingDate                ,jdbcType=TIMESTAMP}, 
+			#{planType                ,jdbcType=NUMERIC}, 
+			#{custodian                ,jdbcType=VARCHAR}, 
+			#{trustee                ,jdbcType=VARCHAR}, 
+			#{startDate                ,jdbcType=TIMESTAMP}, 
+			#{endDate                ,jdbcType=TIMESTAMP}, 
+			#{duration                ,jdbcType=TIMESTAMP}, 
+			#{totalRecruitment                ,jdbcType=NUMERIC}, 		
+			#{purchaseAmount                ,jdbcType=NUMERIC}, 
+            #{objective                ,jdbcType=NUMERIC}
+	
+    
+
+		</trim>
+	</insert>
+
+	
+	<select id="find" parameterType="fundVO" resultType="fundVO" >
+		select
+		<include refid="allColumnAlias" /> 
+
+		FROM FUND   T 
+
+		
+		
+		WHERE 1=1 
+		
+		<if test="id != null">
+			AND T.ID  = #{id}
+		</if>
+
+
+
+	</select>
+	
+	<select id="findPageList" parameterType="page" resultType="fundVO" >
+		select
+		<include refid="allColumnAlias" /> 
+		FROM FUND T   
+		WHERE 1=1
+
+
+		<if test="objectT.fundName!= null">
+			AND T.FUNDNAME  = #{objectT.fundName}
+		</if>
+
+
+
+
+	</select>
+	
+
+	<delete id="delete" parameterType="fundVO" >
+		DELETE FROM FUND WHERE  
+		
+		
+		ID  = #{id}  
+		
+	</delete>
+
+
+	
+
+	
+	
+	
+	<update id="update" parameterType="fundVO" >
+		UPDATE FUND T SET 
+	
+	
+		<trim prefix="" suffix="" suffixOverrides=",">
+
+
+			<if test="fundName != null">
+				FUNDNAME  = #{fundName},
+			</if>
+			
+
+
+			
+		</trim>
+
+         WHERE ID=#{id}
+ 
+         
+	</update>
+	
+
+
+</mapper>

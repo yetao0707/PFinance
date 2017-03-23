@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.CurrencyDAO">
+
+	<!--此处定义所有的列，全部用大写 -->
+	<sql id="allColumnAlias">
+		ID                         id                   		,  
+		currencyName               currencyName             ,  
+		REGISTERID                 registerId               ,  
+		SUBSCRIPTIONSTARTDATE      subscriptionStartDate    ,  
+		SUBSCRIPTIONENDDATE        subscriptionEndDate      ,  
+		FOUNDINGDATE               foundingDate             ,  
+		DUEDATE                    dueDate                  ,  
+		CASHINGDAY                 cashingDay               ,  
+		DURATIONDAYS               durationDays             ,  
+		PRODUCTTYPE                productType              ,  
+		PURCHASEAMOUNT             purchaseAmount           ,  
+		INCREMENTALAMOUNT          incrementalAmount        ,  
+		PROFITYIELD                profitYield              ,  
+		TRADERATE                  tradeRate                ,  
+		PURCHASECHANNEL            purchaseChannel          ,  
+		RECRUITMENTSCALE           recruitmentScale         
+
+	
+
+
+
+
+	</sql>
+
+
+	<sql id="allColumn">
+			id                   				,
+			currencyName                ,
+			registerId                  ,
+			SubscriptionStartDate       ,
+			subscriptionEndDate         ,
+			foundingDate                ,
+			dueDate                     ,
+			cashingDay                  ,
+			durationDays                ,
+			productType                 ,
+			purchaseAmount              ,
+			incrementalAmount           ,
+			profitYield                 ,
+			tradeRate                   ,
+			purchaseChannel             ,
+			recruitmentScale            
+
+
+
+
+	</sql>
+
+
+
+
+
+	<insert id="insert" parameterType="currencyVO">
+		INSERT INTO CURRENCY
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<include refid="allColumn"/>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">		
+			#{id                ,jdbcType=NUMERIC},  
+			#{currencyName       		,jdbcType=VARCHAR},
+			#{registerId       		,jdbcType=VARCHAR},
+			#{subscriptionStartDate       		,jdbcType=TIMESTAMP},
+			#{subscriptionEndDate       		,jdbcType=TIMESTAMP},
+			#{foundingDate       		,jdbcType=TIMESTAMP},
+			#{dueDate       		,jdbcType=TIMESTAMP},
+			#{cashingDay       		,jdbcType=TIMESTAMP},
+			#{durationDays       		,jdbcType=NUMERIC},
+			#{productType       		,jdbcType=NUMERIC},
+			#{purchaseAmount       		,jdbcType=NUMERIC},
+			#{incrementalAmount       		,jdbcType=NUMERIC},
+			#{profitYield       		,jdbcType=NUMERIC},
+			#{tradeRate       		,jdbcType=NUMERIC},
+			#{purchaseChannel       		,jdbcType=NUMERIC},
+			#{recruitmentScale       		,jdbcType=NUMERIC}
+		</trim>
+	</insert>
+
+	
+	<select id="find" parameterType="currencyVO" resultType="currencyVO" >
+		select
+		<include refid="allColumnAlias" /> 
+
+		FROM CURRENCY   T 
+
+		
+		
+		WHERE 1=1 
+		
+		<if test="id != null">
+			AND T.ID  = #{id}
+		</if>
+
+
+
+	</select>
+	
+	<select id="findPageList" parameterType="map" resultType="currencyVO" >
+		select
+		<include refid="allColumnAlias" /> 
+		FROM CURRENCY T   
+		limit #{leftIndex},#{rightIndex};
+	</select>
+
+	<select id="queryTotalNum" parameterType="pageUtils" resultType="int" >
+		select
+		count(*)
+		FROM CURRENCY
+	</select>
+	
+
+	<delete id="delete" parameterType="currencyVO" >
+		DELETE FROM CURRENCY WHERE  
+		
+		
+		ID  = #{id}  
+		
+	</delete>
+
+	<delete id="batchDelete" parameterType="java.util.List">
+		DELETE FROM CURRENCY WHERE id in (
+		<foreach collection="list" item="item" separator=",">
+			#{item}
+		</foreach>
+
+		)
+	</delete>
+
+
+	
+
+	
+	
+	
+	<update id="update" parameterType="currencyVO"  >
+		UPDATE CURRENCY T SET 
+	
+	
+		<trim prefix="" suffix="" suffixOverrides=",">
+
+
+			<if test="currencyName != null">
+				CURRENCYNAME  = #{currencyName},
+			</if>
+			
+
+
+			
+		</trim>
+
+         WHERE ID=#{id}
+ 
+         
+	</update>
+	
+
+
+</mapper>

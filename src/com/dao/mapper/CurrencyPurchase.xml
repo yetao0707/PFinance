@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.CurrencyPurchaseDAO">
+
+	<!--此处定义所有的列，全部用大写 -->
+	<sql id="allColumnAlias">
+		ID                         id                   		,  
+		CUSTOMERID               customerId             ,  
+		CURRENCYID                 currencyId               ,  
+		NUM      num    ,  
+     
+
+
+
+
+
+	</sql>
+
+
+	<sql id="allColumn">
+			id                   				,
+			customerId                ,
+			currencyId                  ,
+			num            
+
+
+
+
+	</sql>
+
+
+
+
+
+	<insert id="insert" parameterType="currencyPurchaseVO">
+		INSERT INTO CURRENCYPURCHASE
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<include refid="allColumn"/>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">		
+			#{id                ,jdbcType=NUMERIC},  
+			#{customerId                ,jdbcType=NUMERIC}, 
+			#{currencyId                ,jdbcType=NUMERIC}, 
+
+			#{num       		,jdbcType=NUMERIC}
+		</trim>
+	</insert>
+
+	
+	<select id="find" parameterType="currencyPurchaseVO" resultType="currencyPurchaseVO" >
+		select
+		<include refid="allColumnAlias" /> 
+
+		FROM CURRENCYPURCHASE   T 
+
+		
+		
+		WHERE 1=1 
+		
+		<if test="id != null">
+			AND T.ID  = #{id}
+		</if>
+
+
+
+	</select>
+	
+	<select id="findPageList" parameterType="page" resultType="currencyPurchaseVO" >
+		select
+		<include refid="allColumnAlias" /> 
+		FROM CURRENCYPURCHASE T   
+		WHERE 1=1
+
+
+		<if test="objectT.customerId != null">
+			AND T.CUSTOMERID  = #{objectT.customerId}
+		</if>
+
+
+
+
+	</select>
+	
+
+	<delete id="delete" parameterType="currencyPurchaseVO" >
+		DELETE FROM CURRENCYPURCHASE WHERE  
+		
+		
+		ID  = #{id}  
+		
+	</delete>
+
+
+	
+
+	
+	
+	
+	<update id="update" parameterType="currencyPurchaseVO" >
+		UPDATE CURRENCYPURCHASE T SET 
+	
+	
+		<trim prefix="" suffix="" suffixOverrides=",">
+
+
+			<if test="customerId != null">
+				CUSTOMERID  = #{customerId},
+			</if>
+			
+
+
+			
+		</trim>
+
+         WHERE ID=#{id}
+ 
+         
+	</update>
+	
+
+
+</mapper>

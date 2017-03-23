@@ -1,0 +1,17 @@
+2015-07-22 00:05:49,752 INFO com.web.base.ControllerInterceptor.preHandle() - preHandle-----
+2015-07-22 00:05:49,756 DEBUG java.sql.Connection.debug() - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@11c653]
+2015-07-22 00:05:49,757 DEBUG java.sql.Connection.debug() - ==>  Preparing: SELECT COUNT(1) from (select ID id,ACCOUNTNO accountNo,PASSWORD password,NAME name,TEL tel,EMAIL email,COMPANY company,COMPANYADDRESS companyAddress,TTIME ttime,CONTENT content,MANAGERID managerId FROM DIAMONDUSER T WHERE 1=1) as total 
+2015-07-22 00:05:49,758 DEBUG java.sql.PreparedStatement.debug() - ==> Parameters: 
+2015-07-22 00:05:49,760 DEBUG java.sql.Connection.debug() - ==>  Preparing: select ID id,ACCOUNTNO accountNo,PASSWORD password,NAME name,TEL tel,EMAIL email,COMPANY company,COMPANYADDRESS companyAddress,TTIME ttime,CONTENT content,MANAGERID managerId FROM DIAMONDUSER T WHERE 1=1 limit 0,3 
+2015-07-22 00:05:49,761 DEBUG java.sql.PreparedStatement.debug() - ==> Parameters: 
+2015-07-22 00:05:49,762 DEBUG java.sql.Connection.debug() - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@11c653]
+2015-07-22 00:05:49,763 DEBUG java.sql.Connection.debug() - ==>  Preparing: select ID ,ACCOUNTNO , PASSWORD , TEL , EMAIL , QQ , LINKADDRESS , POWER from manager t where 1 = 1 and t.ID = ? 
+2015-07-22 00:05:49,764 DEBUG java.sql.PreparedStatement.debug() - ==> Parameters: 1(Integer)
+2015-07-22 00:05:49,765 DEBUG java.sql.Connection.debug() - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@11c653]
+2015-07-22 00:05:49,766 DEBUG java.sql.Connection.debug() - ==>  Preparing: select ID ,ACCOUNTNO , PASSWORD , TEL , EMAIL , QQ , LINKADDRESS , POWER from manager t where 1 = 1 and t.ID = ? 
+2015-07-22 00:05:49,767 DEBUG java.sql.PreparedStatement.debug() - ==> Parameters: 2(Integer)
+2015-07-22 00:05:49,769 DEBUG java.sql.Connection.debug() - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@11c653]
+2015-07-22 00:05:49,770 DEBUG java.sql.Connection.debug() - ==>  Preparing: select ID ,ACCOUNTNO , PASSWORD , TEL , EMAIL , QQ , LINKADDRESS , POWER from manager t where 1 = 1 and t.ID = ? 
+2015-07-22 00:05:49,770 DEBUG java.sql.PreparedStatement.debug() - ==> Parameters: 3(Integer)
+2015-07-22 00:05:49,772 INFO com.web.base.ControllerInterceptor.postHandle() - postHandle-----
+2015-07-22 00:05:49,774 INFO com.web.base.ControllerInterceptor.afterCompletion() - afterCompletion-----

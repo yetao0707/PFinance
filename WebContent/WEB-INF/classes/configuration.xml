@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <typeAliases>
+    	 <package name="com.vo" />
+    	 <package name="com.commons.page" />
+    </typeAliases> 
+    
+	<!-- 注册拦截器 -->
+	<plugins>
+		<plugin interceptor="com.commons.page.PageInterceptor">
+			<property name="dataBaseType" value="mysql" />
+		</plugin>
+	</plugins>
+	
+	<!-- 注册 ibaste 配置文件 -->
+	<mappers>
+	    <mapper resource="com/dao/mapper/Admin.xml"/>
+		<mapper resource="com/dao/mapper/AccountList.xml"/>
+		<mapper resource="com/dao/mapper/Currency.xml"/>
+		<mapper resource="com/dao/mapper/CurrencyPurchase.xml"/>
+		<mapper resource="com/dao/mapper/Customer.xml"/>
+		<mapper resource="com/dao/mapper/CustomerAccount.xml"/>
+		<mapper resource="com/dao/mapper/CustomerComment.xml"/>
+		<mapper resource="com/dao/mapper/Fund.xml"/>
+		<mapper resource="com/dao/mapper/FundPurchase.xml"/>
+		<mapper resource="com/dao/mapper/News.xml"/>
+		
+	</mappers>
+	
+</configuration>

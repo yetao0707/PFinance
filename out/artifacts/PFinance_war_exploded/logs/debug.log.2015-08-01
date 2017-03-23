@@ -1,0 +1,992 @@
+2015-08-01 19:07:21,201 INFO org.springframework.web.context.ContextLoader.initWebApplicationContext() - Root WebApplicationContext: initialization started
+2015-08-01 19:07:21,529 INFO org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh() - Refreshing Root WebApplicationContext: startup date [Sat Aug 01 19:07:21 CST 2015]; root of context hierarchy
+2015-08-01 19:07:21,701 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\config\spring\ApplicationContext.xml]
+2015-08-01 19:07:22,279 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\config\spring\spring-mongo.xml]
+2015-08-01 19:07:22,784 INFO org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.loadProperties() - Loading properties file from class path resource [config/mysql.properties]
+2015-08-01 19:07:22,800 INFO org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.loadProperties() - Loading properties file from class path resource [mongodb.properties]
+2015-08-01 19:07:22,800 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons() - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1cd1d94: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,managerService,mongoDBService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,mongo,mongoTemplate,mongodao,baseDao,diamondUserDAO,managerDAO,hashFunction,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-08-01 19:07:22,800 ERROR org.springframework.web.context.ContextLoader.initWebApplicationContext() - Context initialization failed
+org.springframework.beans.factory.BeanInitializationException: Could not load properties; nested exception is java.io.FileNotFoundException: class path resource [mongodb.properties] cannot be opened because it does not exist
+	at org.springframework.beans.factory.config.PropertyResourceConfigurer.postProcessBeanFactory(PropertyResourceConfigurer.java:87)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:686)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:661)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:451)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:389)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:294)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:112)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:3843)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4342)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:719)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:443)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:516)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:710)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:578)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:288)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)
+Caused by: java.io.FileNotFoundException: class path resource [mongodb.properties] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:157)
+	at org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:181)
+	at org.springframework.core.io.support.PropertiesLoaderSupport.mergeProperties(PropertiesLoaderSupport.java:161)
+	at org.springframework.beans.factory.config.PropertyResourceConfigurer.postProcessBeanFactory(PropertyResourceConfigurer.java:78)
+	... 21 more
+2015-08-01 19:07:22,997 INFO com.mchange.v2.log.MLog.<clinit>() - MLog clients using log4j logging.
+2015-08-01 19:07:50,249 INFO org.springframework.web.context.ContextLoader.initWebApplicationContext() - Root WebApplicationContext: initialization started
+2015-08-01 19:07:50,343 INFO org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh() - Refreshing Root WebApplicationContext: startup date [Sat Aug 01 19:07:50 CST 2015]; root of context hierarchy
+2015-08-01 19:07:50,415 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\config\spring\ApplicationContext.xml]
+2015-08-01 19:07:50,634 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\config\spring\spring-mongo.xml]
+2015-08-01 19:07:50,853 INFO org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.loadProperties() - Loading properties file from class path resource [config/mysql.properties]
+2015-08-01 19:07:51,009 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@157816a: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,managerService,mongoDBService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mongo,mongoTemplate,mongodao,baseDao,diamondUserDAO,managerDAO,hashFunction,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-08-01 19:07:51,025 INFO com.mchange.v2.log.MLog.<clinit>() - MLog clients using log4j logging.
+2015-08-01 19:07:51,118 INFO com.mchange.v2.c3p0.C3P0Registry.banner() - Initializing c3p0-0.9.2-pre4 [built 16-June-2012 20:16:37 -0400; debug? true; trace: 10]
+2015-08-01 19:07:51,697 INFO com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager() - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> true, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 60000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge15x9a1smu5y81vlsu43|1fe8884, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15x9a1smu5y81vlsu43|1fe8884, idleConnectionTestPeriod -> 18000, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/diamonds, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 30, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2015-08-01 19:08:21,054 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons() - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@157816a: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,managerService,mongoDBService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mongo,mongoTemplate,mongodao,baseDao,diamondUserDAO,managerDAO,hashFunction,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-08-01 19:08:21,068 ERROR org.springframework.web.context.ContextLoader.initWebApplicationContext() - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'diamondUserService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.app.diamonduser.DiamondUserDAO com.app.diamonduser.DiamondUserService.diamondUserDAO; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mongo' defined in file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\config\spring\spring-mongo.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [org.springframework.data.document.mongodb.MongoFactoryBean]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/data/document/UncategorizedDocumentStoreException
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:287)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1106)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:609)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:469)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:389)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:294)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:112)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:3843)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4342)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:719)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:443)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:516)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:710)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:578)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:288)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.app.diamonduser.DiamondUserDAO com.app.diamonduser.DiamondUserService.diamondUserDAO; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mongo' defined in file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\config\spring\spring-mongo.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [org.springframework.data.document.mongodb.MongoFactoryBean]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/data/document/UncategorizedDocumentStoreException
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:512)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:92)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:284)
+	... 28 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mongo' defined in file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\config\spring\spring-mongo.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [org.springframework.data.document.mongodb.MongoFactoryBean]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/data/document/UncategorizedDocumentStoreException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:997)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:943)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getSingletonFactoryBeanForTypeCheck(AbstractAutowireCapableBeanFactory.java:767)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryBean(AbstractAutowireCapableBeanFactory.java:697)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isTypeMatch(AbstractBeanFactory.java:519)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:342)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:320)
+	at org.springframework.beans.factory.BeanFactoryUtils.beanNamesForTypeIncludingAncestors(BeanFactoryUtils.java:187)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:861)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:818)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:735)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:484)
+	... 30 more
+Caused by: org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [org.springframework.data.document.mongodb.MongoFactoryBean]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/data/document/UncategorizedDocumentStoreException
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:162)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:76)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:990)
+	... 41 more
+Caused by: java.lang.NoClassDefFoundError: org/springframework/data/document/UncategorizedDocumentStoreException
+	at org.springframework.data.document.mongodb.MongoFactoryBean.<init>(MongoFactoryBean.java:54)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:147)
+	... 43 more
+Caused by: java.lang.ClassNotFoundException: org.springframework.data.document.UncategorizedDocumentStoreException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1387)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1233)
+	... 49 more
+2015-08-01 19:08:32,925 INFO org.springframework.web.context.ContextLoader.initWebApplicationContext() - Root WebApplicationContext: initialization started
+2015-08-01 19:08:33,050 INFO org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh() - Refreshing Root WebApplicationContext: startup date [Sat Aug 01 19:08:33 CST 2015]; root of context hierarchy
+2015-08-01 19:08:33,128 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\config\spring\ApplicationContext.xml]
+2015-08-01 19:08:33,338 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\config\spring\spring-mongo.xml]
+2015-08-01 19:08:33,573 INFO org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.loadProperties() - Loading properties file from class path resource [config/mysql.properties]
+2015-08-01 19:08:33,620 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@129df79: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,managerService,mongoDBService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mongo,mongoTemplate,mongodao,baseDao,diamondUserDAO,managerDAO,hashFunction,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-08-01 19:08:33,635 INFO com.mchange.v2.log.MLog.<clinit>() - MLog clients using log4j logging.
+2015-08-01 19:08:33,698 INFO com.mchange.v2.c3p0.C3P0Registry.banner() - Initializing c3p0-0.9.2-pre4 [built 16-June-2012 20:16:37 -0400; debug? true; trace: 10]
+2015-08-01 19:08:34,198 INFO com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager() - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> true, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 60000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge15x9a1smv2te1vruxn1|1ccb1ae, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15x9a1smv2te1vruxn1|1ccb1ae, idleConnectionTestPeriod -> 18000, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/diamonds, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 30, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2015-08-01 19:08:34,503 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons() - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@129df79: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,managerService,mongoDBService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mongo,mongoTemplate,mongodao,baseDao,diamondUserDAO,managerDAO,hashFunction,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-08-01 19:08:34,503 ERROR org.springframework.web.context.ContextLoader.initWebApplicationContext() - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'diamondUserService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.app.diamonduser.DiamondUserDAO com.app.diamonduser.DiamondUserService.diamondUserDAO; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mongo' defined in file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\config\spring\spring-mongo.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [org.springframework.data.document.mongodb.MongoFactoryBean]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/data/document/UncategorizedDocumentStoreException
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:287)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1106)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:609)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:469)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:389)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:294)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:112)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:3843)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4342)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:719)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:443)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:516)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:710)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:578)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:288)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.app.diamonduser.DiamondUserDAO com.app.diamonduser.DiamondUserService.diamondUserDAO; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mongo' defined in file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\config\spring\spring-mongo.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [org.springframework.data.document.mongodb.MongoFactoryBean]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/data/document/UncategorizedDocumentStoreException
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:512)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:92)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:284)
+	... 28 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mongo' defined in file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\config\spring\spring-mongo.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [org.springframework.data.document.mongodb.MongoFactoryBean]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/data/document/UncategorizedDocumentStoreException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:997)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:943)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getSingletonFactoryBeanForTypeCheck(AbstractAutowireCapableBeanFactory.java:767)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryBean(AbstractAutowireCapableBeanFactory.java:697)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isTypeMatch(AbstractBeanFactory.java:519)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:342)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:320)
+	at org.springframework.beans.factory.BeanFactoryUtils.beanNamesForTypeIncludingAncestors(BeanFactoryUtils.java:187)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:861)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:818)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:735)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:484)
+	... 30 more
+Caused by: org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [org.springframework.data.document.mongodb.MongoFactoryBean]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/data/document/UncategorizedDocumentStoreException
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:162)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:76)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:990)
+	... 41 more
+Caused by: java.lang.NoClassDefFoundError: org/springframework/data/document/UncategorizedDocumentStoreException
+	at org.springframework.data.document.mongodb.MongoFactoryBean.<init>(MongoFactoryBean.java:54)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:147)
+	... 43 more
+Caused by: java.lang.ClassNotFoundException: org.springframework.data.document.UncategorizedDocumentStoreException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1387)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1233)
+	... 49 more
+2015-08-01 19:11:26,916 INFO org.springframework.web.context.ContextLoader.initWebApplicationContext() - Root WebApplicationContext: initialization started
+2015-08-01 19:11:27,025 INFO org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh() - Refreshing Root WebApplicationContext: startup date [Sat Aug 01 19:11:27 CST 2015]; root of context hierarchy
+2015-08-01 19:11:27,094 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\config\spring\ApplicationContext.xml]
+2015-08-01 19:11:27,312 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\config\spring\spring-mongo.xml]
+2015-08-01 19:11:27,531 INFO org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.loadProperties() - Loading properties file from class path resource [config/mysql.properties]
+2015-08-01 19:11:27,578 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@157816a: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,managerService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mongo,mongoTemplate,mongodao,baseDao,diamondUserDAO,managerDAO,hashFunction,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-08-01 19:11:27,594 INFO com.mchange.v2.log.MLog.<clinit>() - MLog clients using log4j logging.
+2015-08-01 19:11:27,656 INFO com.mchange.v2.c3p0.C3P0Registry.banner() - Initializing c3p0-0.9.2-pre4 [built 16-June-2012 20:16:37 -0400; debug? true; trace: 10]
+2015-08-01 19:11:28,156 INFO com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager() - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> true, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 60000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge15x9a1smyt1l1ullgo5|119015b, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15x9a1smyt1l1ullgo5|119015b, idleConnectionTestPeriod -> 18000, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/diamonds, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 30, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2015-08-01 19:11:28,467 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons() - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@157816a: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,managerService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mongo,mongoTemplate,mongodao,baseDao,diamondUserDAO,managerDAO,hashFunction,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-08-01 19:11:28,467 ERROR org.springframework.web.context.ContextLoader.initWebApplicationContext() - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'diamondUserService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.app.diamonduser.DiamondUserDAO com.app.diamonduser.DiamondUserService.diamondUserDAO; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mongo' defined in file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\config\spring\spring-mongo.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [org.springframework.data.document.mongodb.MongoFactoryBean]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/data/document/UncategorizedDocumentStoreException
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:287)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1106)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:609)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:469)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:389)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:294)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:112)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:3843)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4342)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:719)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:443)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:516)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:710)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:578)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:288)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.app.diamonduser.DiamondUserDAO com.app.diamonduser.DiamondUserService.diamondUserDAO; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mongo' defined in file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\config\spring\spring-mongo.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [org.springframework.data.document.mongodb.MongoFactoryBean]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/data/document/UncategorizedDocumentStoreException
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:512)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:92)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:284)
+	... 28 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mongo' defined in file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\config\spring\spring-mongo.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [org.springframework.data.document.mongodb.MongoFactoryBean]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/data/document/UncategorizedDocumentStoreException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:997)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:943)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getSingletonFactoryBeanForTypeCheck(AbstractAutowireCapableBeanFactory.java:767)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryBean(AbstractAutowireCapableBeanFactory.java:697)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isTypeMatch(AbstractBeanFactory.java:519)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:342)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:320)
+	at org.springframework.beans.factory.BeanFactoryUtils.beanNamesForTypeIncludingAncestors(BeanFactoryUtils.java:187)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:861)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:818)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:735)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:484)
+	... 30 more
+Caused by: org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [org.springframework.data.document.mongodb.MongoFactoryBean]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/data/document/UncategorizedDocumentStoreException
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:162)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:76)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:990)
+	... 41 more
+Caused by: java.lang.NoClassDefFoundError: org/springframework/data/document/UncategorizedDocumentStoreException
+	at org.springframework.data.document.mongodb.MongoFactoryBean.<init>(MongoFactoryBean.java:54)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:147)
+	... 43 more
+Caused by: java.lang.ClassNotFoundException: org.springframework.data.document.UncategorizedDocumentStoreException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1387)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1233)
+	... 49 more
+2015-08-01 19:12:54,511 INFO org.springframework.web.context.ContextLoader.initWebApplicationContext() - Root WebApplicationContext: initialization started
+2015-08-01 19:12:54,607 INFO org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh() - Refreshing Root WebApplicationContext: startup date [Sat Aug 01 19:12:54 CST 2015]; root of context hierarchy
+2015-08-01 19:12:54,701 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\config\spring\ApplicationContext.xml]
+2015-08-01 19:12:54,893 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\config\spring\spring-mongo.xml]
+2015-08-01 19:12:55,096 INFO org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.loadProperties() - Loading properties file from class path resource [config/mysql.properties]
+2015-08-01 19:12:55,127 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@5d174f: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,managerService,mongoDBService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mongo,mongoTemplate,mongodao,baseDao,diamondUserDAO,managerDAO,hashFunction,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-08-01 19:12:55,158 INFO com.mchange.v2.log.MLog.<clinit>() - MLog clients using log4j logging.
+2015-08-01 19:12:55,221 INFO com.mchange.v2.c3p0.C3P0Registry.banner() - Initializing c3p0-0.9.2-pre4 [built 16-June-2012 20:16:37 -0400; debug? true; trace: 10]
+2015-08-01 19:12:55,752 INFO com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager() - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> true, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 60000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge15x9a1sn0olyomgoi3|1c78000, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15x9a1sn0olyomgoi3|1c78000, idleConnectionTestPeriod -> 18000, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/diamonds, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 30, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2015-08-01 19:12:56,542 INFO org.springframework.web.context.ContextLoader.initWebApplicationContext() - Root WebApplicationContext: initialization completed in 2031 ms
+2015-08-01 19:12:56,621 INFO org.springframework.web.servlet.DispatcherServlet.initServletBean() - FrameworkServlet 'SpringMVC': initialization started
+2015-08-01 19:12:56,626 INFO org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh() - Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Sat Aug 01 19:12:56 CST 2015]; parent: Root WebApplicationContext
+2015-08-01 19:12:56,626 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from ServletContext resource [/WEB-INF/SpringMVC.xml]
+2015-08-01 19:12:56,704 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@513014: defining beans [viewResolver,org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping#0,multipartResolver,redisCacheService,commonService,diamondUserController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@5d174f
+2015-08-01 19:12:56,782 INFO org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping.registerHandler() - Mapped URL path [/diamondUser] onto handler 'diamondUserController'
+2015-08-01 19:12:56,782 INFO org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping.registerHandler() - Mapped URL path [/diamondUser/*] onto handler 'diamondUserController'
+2015-08-01 19:12:56,978 INFO org.springframework.web.servlet.DispatcherServlet.initServletBean() - FrameworkServlet 'SpringMVC': initialization completed in 353 ms
+2015-08-01 20:30:22,599 INFO org.springframework.web.context.ContextLoader.initWebApplicationContext() - Root WebApplicationContext: initialization started
+2015-08-01 20:30:22,739 INFO org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh() - Refreshing Root WebApplicationContext: startup date [Sat Aug 01 20:30:22 CST 2015]; root of context hierarchy
+2015-08-01 20:30:22,849 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\config\spring\ApplicationContext.xml]
+2015-08-01 20:30:23,083 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\config\spring\spring-mongo.xml]
+2015-08-01 20:30:23,333 INFO org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.loadProperties() - Loading properties file from class path resource [config/mysql.properties]
+2015-08-01 20:30:23,380 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1389244: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,managerService,mongoDBService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mongo,mongoTemplate,mongodao,baseDao,diamondUserDAO,managerDAO,hashFunction,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-08-01 20:30:23,411 INFO com.mchange.v2.log.MLog.<clinit>() - MLog clients using log4j logging.
+2015-08-01 20:30:23,489 INFO com.mchange.v2.c3p0.C3P0Registry.banner() - Initializing c3p0-0.9.2-pre4 [built 16-June-2012 20:16:37 -0400; debug? true; trace: 10]
+2015-08-01 20:30:24,067 INFO com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager() - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> true, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 60000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge15x9a1spsb8217nrv6k|547854, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15x9a1spsb8217nrv6k|547854, idleConnectionTestPeriod -> 18000, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/diamonds, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 30, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2015-08-01 20:30:24,700 INFO org.springframework.web.context.ContextLoader.initWebApplicationContext() - Root WebApplicationContext: initialization completed in 2101 ms
+2015-08-01 20:30:24,746 INFO org.springframework.web.servlet.DispatcherServlet.initServletBean() - FrameworkServlet 'SpringMVC': initialization started
+2015-08-01 20:30:24,761 INFO org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh() - Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Sat Aug 01 20:30:24 CST 2015]; parent: Root WebApplicationContext
+2015-08-01 20:30:24,761 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from ServletContext resource [/WEB-INF/SpringMVC.xml]
+2015-08-01 20:30:24,823 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@fe6b32: defining beans [viewResolver,org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping#0,multipartResolver,redisCacheService,commonService,diamondUserController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@1389244
+2015-08-01 20:30:24,901 INFO org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping.registerHandler() - Mapped URL path [/diamondUser] onto handler 'diamondUserController'
+2015-08-01 20:30:24,901 INFO org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping.registerHandler() - Mapped URL path [/diamondUser/*] onto handler 'diamondUserController'
+2015-08-01 20:30:25,120 INFO org.springframework.web.servlet.DispatcherServlet.initServletBean() - FrameworkServlet 'SpringMVC': initialization completed in 360 ms
+2015-08-01 23:34:45,629 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from class path resource [spring-conf/ApplicationContext.xml]
+2015-08-01 23:34:45,831 INFO org.springframework.context.support.GenericApplicationContext.prepareRefresh() - Refreshing org.springframework.context.support.GenericApplicationContext@109ea96: startup date [Sat Aug 01 23:34:45 CST 2015]; root of context hierarchy
+2015-08-01 23:34:45,952 INFO org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.loadProperties() - Loading properties file from class path resource [mysql.properties]
+2015-08-01 23:34:45,985 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@17cff66: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,managerService,mongoDBService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,baseDao,diamondUserDAO,managerDAO,mongoDBBaseDao,hashFunction,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-08-01 23:34:45,998 INFO com.mchange.v2.log.MLog.<clinit>() - MLog clients using log4j logging.
+2015-08-01 23:34:46,055 INFO com.mchange.v2.c3p0.C3P0Registry.banner() - Initializing c3p0-0.9.2-pre4 [built 16-June-2012 20:16:37 -0400; debug? true; trace: 10]
+2015-08-01 23:34:46,442 INFO com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager() - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> true, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 60000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge15x9a1swdf5u1gxsvki|1af7c57, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15x9a1swdf5u1gxsvki|1af7c57, idleConnectionTestPeriod -> 18000, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/diamonds, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 30, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2015-08-01 23:34:46,873 WARN org.springframework.test.context.transaction.TransactionalTestExecutionListener.getTransactionManager() - Caught exception while retrieving transaction manager with bean name [transactionManager] for test context [[TestContext@10cceb3 testClass = MongoDBTest, testInstance = com.app.mongodb.MongoDBTest@1d66d2f, testMethod = init@MongoDBTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@9a4f8e testClass = MongoDBTest, locations = '{classpath:spring-conf/ApplicationContext.xml}', classes = '{}', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader']]]
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'transactionManager' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1095)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:277)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1102)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.getTransactionManager(TransactionalTestExecutionListener.java:311)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:161)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:358)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+2015-08-01 23:34:46,875 WARN org.springframework.test.context.TestContextManager.beforeTestMethod() - Caught exception while allowing TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener@1f17060] to process 'before' execution of test method [public void com.app.mongodb.MongoDBTest.init()] for test instance [com.app.mongodb.MongoDBTest@1d66d2f]
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'transactionManager' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1095)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:277)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1102)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.getTransactionManager(TransactionalTestExecutionListener.java:311)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:161)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:358)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+2015-08-01 23:34:46,887 INFO org.springframework.context.support.GenericApplicationContext.doClose() - Closing org.springframework.context.support.GenericApplicationContext@109ea96: startup date [Sat Aug 01 23:34:45 CST 2015]; root of context hierarchy
+2015-08-01 23:34:46,889 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons() - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@17cff66: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,managerService,mongoDBService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,baseDao,diamondUserDAO,managerDAO,mongoDBBaseDao,hashFunction,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-08-01 23:35:34,946 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from class path resource [spring-conf/ApplicationContext.xml]
+2015-08-01 23:35:35,118 INFO org.springframework.context.support.GenericApplicationContext.prepareRefresh() - Refreshing org.springframework.context.support.GenericApplicationContext@1e78fc6: startup date [Sat Aug 01 23:35:35 CST 2015]; root of context hierarchy
+2015-08-01 23:35:35,225 INFO org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.loadProperties() - Loading properties file from class path resource [mysql.properties]
+2015-08-01 23:35:35,251 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1a61172: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,managerService,mongoDBService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,baseDao,diamondUserDAO,managerDAO,mongoDBBaseDao,hashFunction,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-08-01 23:35:35,263 INFO com.mchange.v2.log.MLog.<clinit>() - MLog clients using log4j logging.
+2015-08-01 23:35:35,328 INFO com.mchange.v2.c3p0.C3P0Registry.banner() - Initializing c3p0-0.9.2-pre4 [built 16-June-2012 20:16:37 -0400; debug? true; trace: 10]
+2015-08-01 23:35:35,591 INFO com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager() - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> true, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 60000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge15x9a1sweh6hx5ok90|3e97df, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15x9a1sweh6hx5ok90|3e97df, idleConnectionTestPeriod -> 18000, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/diamonds, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 30, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2015-08-01 23:35:35,803 WARN org.springframework.test.context.transaction.TransactionalTestExecutionListener.getTransactionManager() - Caught exception while retrieving transaction manager with bean name [transactionManager] for test context [[TestContext@1f51e5c testClass = MongoDBTest, testInstance = com.app.mongodb.MongoDBTest@19c6163, testMethod = init@MongoDBTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1bdbfec testClass = MongoDBTest, locations = '{classpath:spring-conf/ApplicationContext.xml}', classes = '{}', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader']]]
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'transactionManager' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1095)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:277)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1102)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.getTransactionManager(TransactionalTestExecutionListener.java:311)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:161)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:358)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+2015-08-01 23:35:35,806 WARN org.springframework.test.context.TestContextManager.beforeTestMethod() - Caught exception while allowing TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener@db38a4] to process 'before' execution of test method [public void com.app.mongodb.MongoDBTest.init()] for test instance [com.app.mongodb.MongoDBTest@19c6163]
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'transactionManager' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1095)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:277)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1102)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.getTransactionManager(TransactionalTestExecutionListener.java:311)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:161)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:358)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+2015-08-01 23:35:35,811 INFO org.springframework.context.support.GenericApplicationContext.doClose() - Closing org.springframework.context.support.GenericApplicationContext@1e78fc6: startup date [Sat Aug 01 23:35:35 CST 2015]; root of context hierarchy
+2015-08-01 23:35:35,821 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons() - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1a61172: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,managerService,mongoDBService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,baseDao,diamondUserDAO,managerDAO,mongoDBBaseDao,hashFunction,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-08-01 23:37:23,134 INFO org.springframework.web.context.ContextLoader.initWebApplicationContext() - Root WebApplicationContext: initialization started
+2015-08-01 23:37:23,233 INFO org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh() - Refreshing Root WebApplicationContext: startup date [Sat Aug 01 23:37:23 CST 2015]; root of context hierarchy
+2015-08-01 23:37:23,312 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\spring-conf\ApplicationContext.xml]
+2015-08-01 23:37:23,558 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\spring-conf\spring-mongo.xml]
+2015-08-01 23:37:23,841 INFO org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.loadProperties() - Loading properties file from class path resource [mysql.properties]
+2015-08-01 23:37:23,902 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1ebf1eb: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,managerService,mongoDBService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mongo,mongoTemplate,mongodao,baseDao,diamondUserDAO,managerDAO,mongoDBBaseDao,hashFunction,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-08-01 23:37:23,927 INFO com.mchange.v2.log.MLog.<clinit>() - MLog clients using log4j logging.
+2015-08-01 23:37:24,015 INFO com.mchange.v2.c3p0.C3P0Registry.banner() - Initializing c3p0-0.9.2-pre4 [built 16-June-2012 20:16:37 -0400; debug? true; trace: 10]
+2015-08-01 23:37:24,524 INFO com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager() - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> true, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 60000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge15x9a1swgt1er50hs3|663731, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15x9a1swgt1er50hs3|663731, idleConnectionTestPeriod -> 18000, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/diamonds, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 30, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2015-08-01 23:37:25,050 INFO org.springframework.web.context.ContextLoader.initWebApplicationContext() - Root WebApplicationContext: initialization completed in 1914 ms
+2015-08-01 23:37:25,102 INFO org.springframework.web.servlet.DispatcherServlet.initServletBean() - FrameworkServlet 'SpringMVC': initialization started
+2015-08-01 23:37:25,107 INFO org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh() - Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Sat Aug 01 23:37:25 CST 2015]; parent: Root WebApplicationContext
+2015-08-01 23:37:25,109 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from ServletContext resource [/WEB-INF/SpringMVC.xml]
+2015-08-01 23:37:25,163 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@c863dd: defining beans [viewResolver,org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping#0,multipartResolver,redisCacheService,commonService,diamondUserController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@1ebf1eb
+2015-08-01 23:37:25,236 INFO org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping.registerHandler() - Mapped URL path [/diamondUser] onto handler 'diamondUserController'
+2015-08-01 23:37:25,237 INFO org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping.registerHandler() - Mapped URL path [/diamondUser/*] onto handler 'diamondUserController'
+2015-08-01 23:37:25,445 INFO org.springframework.web.servlet.DispatcherServlet.initServletBean() - FrameworkServlet 'SpringMVC': initialization completed in 343 ms
+2015-08-01 23:37:41,381 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from class path resource [spring-conf/ApplicationContext.xml]
+2015-08-01 23:37:41,560 INFO org.springframework.context.support.GenericApplicationContext.prepareRefresh() - Refreshing org.springframework.context.support.GenericApplicationContext@109ea96: startup date [Sat Aug 01 23:37:41 CST 2015]; root of context hierarchy
+2015-08-01 23:37:41,678 INFO org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.loadProperties() - Loading properties file from class path resource [mysql.properties]
+2015-08-01 23:37:41,710 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6ac615: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,managerService,mongoDBService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,baseDao,diamondUserDAO,managerDAO,mongoDBBaseDao,hashFunction,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-08-01 23:37:41,725 INFO com.mchange.v2.log.MLog.<clinit>() - MLog clients using log4j logging.
+2015-08-01 23:37:41,783 INFO com.mchange.v2.c3p0.C3P0Registry.banner() - Initializing c3p0-0.9.2-pre4 [built 16-June-2012 20:16:37 -0400; debug? true; trace: 10]
+2015-08-01 23:37:42,180 INFO com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager() - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> true, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 60000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge15x9a1swh6r71rxf25b|1d86a73, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15x9a1swh6r71rxf25b|1d86a73, idleConnectionTestPeriod -> 18000, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/diamonds, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 30, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2015-08-01 23:37:42,472 WARN org.springframework.test.context.transaction.TransactionalTestExecutionListener.getTransactionManager() - Caught exception while retrieving transaction manager with bean name [transactionManager] for test context [[TestContext@1c94b51 testClass = MongoDBTest, testInstance = com.app.mongodb.MongoDBTest@6fee3a, testMethod = init@MongoDBTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@813486 testClass = MongoDBTest, locations = '{classpath:spring-conf/ApplicationContext.xml}', classes = '{}', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader']]]
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'transactionManager' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1095)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:277)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1102)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.getTransactionManager(TransactionalTestExecutionListener.java:311)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:161)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:358)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+2015-08-01 23:37:42,473 WARN org.springframework.test.context.TestContextManager.beforeTestMethod() - Caught exception while allowing TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener@4c5b3] to process 'before' execution of test method [public void com.app.mongodb.MongoDBTest.init()] for test instance [com.app.mongodb.MongoDBTest@6fee3a]
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'transactionManager' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1095)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:277)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1102)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.getTransactionManager(TransactionalTestExecutionListener.java:311)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:161)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:358)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+2015-08-01 23:37:42,490 INFO org.springframework.context.support.GenericApplicationContext.doClose() - Closing org.springframework.context.support.GenericApplicationContext@109ea96: startup date [Sat Aug 01 23:37:41 CST 2015]; root of context hierarchy
+2015-08-01 23:37:42,491 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons() - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6ac615: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,managerService,mongoDBService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,baseDao,diamondUserDAO,managerDAO,mongoDBBaseDao,hashFunction,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-08-01 23:44:03,381 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from class path resource [spring-conf/ApplicationContext.xml]
+2015-08-01 23:44:03,607 INFO org.springframework.context.support.GenericApplicationContext.prepareRefresh() - Refreshing org.springframework.context.support.GenericApplicationContext@109ea96: startup date [Sat Aug 01 23:44:03 CST 2015]; root of context hierarchy
+2015-08-01 23:44:03,744 INFO org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.loadProperties() - Loading properties file from class path resource [mysql.properties]
+2015-08-01 23:44:03,778 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@163a320: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,managerService,mongoDBService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,baseDao,diamondUserDAO,managerDAO,mongoDBBaseDao,hashFunction,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-08-01 23:44:03,795 INFO com.mchange.v2.log.MLog.<clinit>() - MLog clients using log4j logging.
+2015-08-01 23:44:03,873 INFO com.mchange.v2.c3p0.C3P0Registry.banner() - Initializing c3p0-0.9.2-pre4 [built 16-June-2012 20:16:37 -0400; debug? true; trace: 10]
+2015-08-01 23:44:04,331 INFO com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager() - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> true, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 60000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge15x9a1swpdko1omjdm2|1d86a73, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15x9a1swpdko1omjdm2|1d86a73, idleConnectionTestPeriod -> 18000, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/diamonds, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 30, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2015-08-01 23:44:04,712 WARN org.springframework.test.context.transaction.TransactionalTestExecutionListener.getTransactionManager() - Caught exception while retrieving transaction manager with bean name [transactionManager] for test context [[TestContext@9f624a testClass = MongoDBTest, testInstance = com.app.mongodb.MongoDBTest@1ee2310, testMethod = init@MongoDBTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1400f33 testClass = MongoDBTest, locations = '{classpath:spring-conf/ApplicationContext.xml}', classes = '{}', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader']]]
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'transactionManager' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1095)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:277)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1102)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.getTransactionManager(TransactionalTestExecutionListener.java:311)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:161)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:358)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+2015-08-01 23:44:04,714 WARN org.springframework.test.context.TestContextManager.beforeTestMethod() - Caught exception while allowing TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener@344a47] to process 'before' execution of test method [public void com.app.mongodb.MongoDBTest.init()] for test instance [com.app.mongodb.MongoDBTest@1ee2310]
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'transactionManager' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1095)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:277)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1102)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.getTransactionManager(TransactionalTestExecutionListener.java:311)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:161)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:358)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+2015-08-01 23:44:04,735 INFO org.springframework.context.support.GenericApplicationContext.doClose() - Closing org.springframework.context.support.GenericApplicationContext@109ea96: startup date [Sat Aug 01 23:44:03 CST 2015]; root of context hierarchy
+2015-08-01 23:44:04,736 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons() - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@163a320: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,managerService,mongoDBService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,baseDao,diamondUserDAO,managerDAO,mongoDBBaseDao,hashFunction,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-08-01 23:45:11,264 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from class path resource [spring-conf/ApplicationContext.xml]
+2015-08-01 23:45:11,480 INFO org.springframework.context.support.GenericApplicationContext.prepareRefresh() - Refreshing org.springframework.context.support.GenericApplicationContext@1c7e2da: startup date [Sat Aug 01 23:45:11 CST 2015]; root of context hierarchy
+2015-08-01 23:45:11,641 INFO org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.loadProperties() - Loading properties file from class path resource [mysql.properties]
+2015-08-01 23:45:11,679 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@17cff66: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,managerService,mongoDBService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,baseDao,diamondUserDAO,managerDAO,mongoDBBaseDao,hashFunction,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-08-01 23:45:11,695 INFO com.mchange.v2.log.MLog.<clinit>() - MLog clients using log4j logging.
+2015-08-01 23:45:11,761 INFO com.mchange.v2.c3p0.C3P0Registry.banner() - Initializing c3p0-0.9.2-pre4 [built 16-June-2012 20:16:37 -0400; debug? true; trace: 10]
+2015-08-01 23:45:12,221 INFO com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager() - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> true, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 60000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge15x9a1swqtyh1r3wxo5|c5da6, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15x9a1swqtyh1r3wxo5|c5da6, idleConnectionTestPeriod -> 18000, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/diamonds, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 30, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2015-08-01 23:45:12,539 WARN org.springframework.test.context.transaction.TransactionalTestExecutionListener.getTransactionManager() - Caught exception while retrieving transaction manager with bean name [transactionManager] for test context [[TestContext@14f8b9a testClass = MongoDBTest, testInstance = com.app.mongodb.MongoDBTest@15669ae, testMethod = init@MongoDBTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@344a47 testClass = MongoDBTest, locations = '{classpath:spring-conf/ApplicationContext.xml}', classes = '{}', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader']]]
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'transactionManager' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1095)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:277)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1102)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.getTransactionManager(TransactionalTestExecutionListener.java:311)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:161)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:358)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+2015-08-01 23:45:12,540 WARN org.springframework.test.context.TestContextManager.beforeTestMethod() - Caught exception while allowing TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener@1114133] to process 'before' execution of test method [public void com.app.mongodb.MongoDBTest.init()] for test instance [com.app.mongodb.MongoDBTest@15669ae]
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'transactionManager' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1095)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:277)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1102)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.getTransactionManager(TransactionalTestExecutionListener.java:311)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:161)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:358)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+2015-08-01 23:45:12,552 INFO org.springframework.context.support.GenericApplicationContext.doClose() - Closing org.springframework.context.support.GenericApplicationContext@1c7e2da: startup date [Sat Aug 01 23:45:11 CST 2015]; root of context hierarchy
+2015-08-01 23:45:12,554 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons() - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@17cff66: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,managerService,mongoDBService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,baseDao,diamondUserDAO,managerDAO,mongoDBBaseDao,hashFunction,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-08-01 23:48:06,941 INFO org.springframework.web.context.ContextLoader.initWebApplicationContext() - Root WebApplicationContext: initialization started
+2015-08-01 23:48:07,046 INFO org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh() - Refreshing Root WebApplicationContext: startup date [Sat Aug 01 23:48:07 CST 2015]; root of context hierarchy
+2015-08-01 23:48:07,123 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\spring-conf\ApplicationContext.xml]
+2015-08-01 23:48:07,336 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from file [F:\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\mvc_mybat\WEB-INF\classes\spring-conf\spring-mongo.xml]
+2015-08-01 23:48:07,554 INFO org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.loadProperties() - Loading properties file from class path resource [mysql.properties]
+2015-08-01 23:48:07,609 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@718e31: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,managerService,mongoDBService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mongo,mongoTemplate,mongodao,baseDao,diamondUserDAO,managerDAO,mongoDBBaseDao,hashFunction,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-08-01 23:48:07,627 INFO com.mchange.v2.log.MLog.<clinit>() - MLog clients using log4j logging.
+2015-08-01 23:48:07,697 INFO com.mchange.v2.c3p0.C3P0Registry.banner() - Initializing c3p0-0.9.2-pre4 [built 16-June-2012 20:16:37 -0400; debug? true; trace: 10]
+2015-08-01 23:48:08,210 INFO com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager() - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> true, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 60000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge15x9a1swulpp1fj24gb|11afdf4, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15x9a1swulpp1fj24gb|11afdf4, idleConnectionTestPeriod -> 18000, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/diamonds, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 30, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2015-08-01 23:48:08,771 INFO org.springframework.web.context.ContextLoader.initWebApplicationContext() - Root WebApplicationContext: initialization completed in 1828 ms
+2015-08-01 23:48:08,830 INFO org.springframework.web.servlet.DispatcherServlet.initServletBean() - FrameworkServlet 'SpringMVC': initialization started
+2015-08-01 23:48:08,836 INFO org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh() - Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Sat Aug 01 23:48:08 CST 2015]; parent: Root WebApplicationContext
+2015-08-01 23:48:08,838 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from ServletContext resource [/WEB-INF/SpringMVC.xml]
+2015-08-01 23:48:08,896 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@f89e13: defining beans [viewResolver,org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping#0,multipartResolver,redisCacheService,commonService,diamondUserController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@718e31
+2015-08-01 23:48:08,964 INFO org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping.registerHandler() - Mapped URL path [/diamondUser] onto handler 'diamondUserController'
+2015-08-01 23:48:08,965 INFO org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping.registerHandler() - Mapped URL path [/diamondUser/*] onto handler 'diamondUserController'
+2015-08-01 23:48:09,151 INFO org.springframework.web.servlet.DispatcherServlet.initServletBean() - FrameworkServlet 'SpringMVC': initialization completed in 320 ms
+2015-08-01 23:48:20,455 INFO com.web.base.ControllerInterceptor.preHandle() - preHandle-----
+2015-08-01 23:48:20,629 DEBUG java.sql.Connection.debug() - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@f1d68a]
+2015-08-01 23:48:20,634 DEBUG java.sql.Connection.debug() - ==>  Preparing: SELECT COUNT(1) from (select ID id,ACCOUNTNO accountNo,PASSWORD password,NAME name,TEL tel,EMAIL email,COMPANY company,COMPANYADDRESS companyAddress,TTIME ttime,CONTENT content,MANAGERID managerId FROM DIAMONDUSER T WHERE 1=1) as total 
+2015-08-01 23:48:20,662 DEBUG java.sql.PreparedStatement.debug() - ==> Parameters: 
+2015-08-01 23:48:20,896 DEBUG java.sql.Connection.debug() - ==>  Preparing: select ID id,ACCOUNTNO accountNo,PASSWORD password,NAME name,TEL tel,EMAIL email,COMPANY company,COMPANYADDRESS companyAddress,TTIME ttime,CONTENT content,MANAGERID managerId FROM DIAMONDUSER T WHERE 1=1 limit 0,3 
+2015-08-01 23:48:20,896 DEBUG java.sql.PreparedStatement.debug() - ==> Parameters: 
+2015-08-01 23:48:20,935 DEBUG java.sql.Connection.debug() - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@f1d68a]
+2015-08-01 23:48:20,936 DEBUG java.sql.Connection.debug() - ==>  Preparing: select ID ,ACCOUNTNO , PASSWORD , TEL , EMAIL , QQ , LINKADDRESS , POWER from manager t where 1 = 1 and t.ID = ? 
+2015-08-01 23:48:20,937 DEBUG java.sql.PreparedStatement.debug() - ==> Parameters: 1(Integer)
+2015-08-01 23:48:20,977 DEBUG java.sql.Connection.debug() - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@f1d68a]
+2015-08-01 23:48:20,977 DEBUG java.sql.Connection.debug() - ==>  Preparing: select ID ,ACCOUNTNO , PASSWORD , TEL , EMAIL , QQ , LINKADDRESS , POWER from manager t where 1 = 1 and t.ID = ? 
+2015-08-01 23:48:20,978 DEBUG java.sql.PreparedStatement.debug() - ==> Parameters: 2(Integer)
+2015-08-01 23:48:20,980 DEBUG java.sql.Connection.debug() - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@f1d68a]
+2015-08-01 23:48:20,981 DEBUG java.sql.Connection.debug() - ==>  Preparing: select ID ,ACCOUNTNO , PASSWORD , TEL , EMAIL , QQ , LINKADDRESS , POWER from manager t where 1 = 1 and t.ID = ? 
+2015-08-01 23:48:20,981 DEBUG java.sql.PreparedStatement.debug() - ==> Parameters: 3(Integer)
+2015-08-01 23:48:20,988 INFO com.web.base.ControllerInterceptor.postHandle() - postHandle-----
+2015-08-01 23:48:21,145 INFO com.web.base.ControllerInterceptor.afterCompletion() - afterCompletion-----
+2015-08-01 23:49:07,386 INFO com.web.base.ControllerInterceptor.preHandle() - preHandle-----
+2015-08-01 23:49:07,386 DEBUG java.sql.Connection.debug() - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@16d6f3b]
+2015-08-01 23:49:07,387 DEBUG java.sql.Connection.debug() - ==>  Preparing: SELECT COUNT(1) from (select ID id,ACCOUNTNO accountNo,PASSWORD password,NAME name,TEL tel,EMAIL email,COMPANY company,COMPANYADDRESS companyAddress,TTIME ttime,CONTENT content,MANAGERID managerId FROM DIAMONDUSER T WHERE 1=1) as total 
+2015-08-01 23:49:07,388 DEBUG java.sql.PreparedStatement.debug() - ==> Parameters: 
+2015-08-01 23:49:07,389 DEBUG java.sql.Connection.debug() - ==>  Preparing: select ID id,ACCOUNTNO accountNo,PASSWORD password,NAME name,TEL tel,EMAIL email,COMPANY company,COMPANYADDRESS companyAddress,TTIME ttime,CONTENT content,MANAGERID managerId FROM DIAMONDUSER T WHERE 1=1 limit 0,3 
+2015-08-01 23:49:07,390 DEBUG java.sql.PreparedStatement.debug() - ==> Parameters: 
+2015-08-01 23:49:07,392 DEBUG java.sql.Connection.debug() - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@16d6f3b]
+2015-08-01 23:49:07,392 DEBUG java.sql.Connection.debug() - ==>  Preparing: select ID ,ACCOUNTNO , PASSWORD , TEL , EMAIL , QQ , LINKADDRESS , POWER from manager t where 1 = 1 and t.ID = ? 
+2015-08-01 23:49:07,393 DEBUG java.sql.PreparedStatement.debug() - ==> Parameters: 1(Integer)
+2015-08-01 23:49:07,396 DEBUG java.sql.Connection.debug() - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@16d6f3b]
+2015-08-01 23:49:07,396 DEBUG java.sql.Connection.debug() - ==>  Preparing: select ID ,ACCOUNTNO , PASSWORD , TEL , EMAIL , QQ , LINKADDRESS , POWER from manager t where 1 = 1 and t.ID = ? 
+2015-08-01 23:49:07,397 DEBUG java.sql.PreparedStatement.debug() - ==> Parameters: 2(Integer)
+2015-08-01 23:49:07,400 DEBUG java.sql.Connection.debug() - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@16d6f3b]
+2015-08-01 23:49:07,401 DEBUG java.sql.Connection.debug() - ==>  Preparing: select ID ,ACCOUNTNO , PASSWORD , TEL , EMAIL , QQ , LINKADDRESS , POWER from manager t where 1 = 1 and t.ID = ? 
+2015-08-01 23:49:07,401 DEBUG java.sql.PreparedStatement.debug() - ==> Parameters: 3(Integer)
+2015-08-01 23:49:07,403 INFO com.web.base.ControllerInterceptor.postHandle() - postHandle-----
+2015-08-01 23:49:07,404 INFO com.web.base.ControllerInterceptor.afterCompletion() - afterCompletion-----
+2015-08-01 23:50:12,302 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from class path resource [spring-conf/ApplicationContext.xml]
+2015-08-01 23:50:12,481 INFO org.springframework.context.support.GenericApplicationContext.prepareRefresh() - Refreshing org.springframework.context.support.GenericApplicationContext@83b1b: startup date [Sat Aug 01 23:50:12 CST 2015]; root of context hierarchy
+2015-08-01 23:50:12,608 INFO org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.loadProperties() - Loading properties file from class path resource [mysql.properties]
+2015-08-01 23:50:12,643 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1a1f370: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,managerService,mongoDBService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,baseDao,diamondUserDAO,managerDAO,mongoDBBaseDao,hashFunction,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-08-01 23:50:12,658 INFO com.mchange.v2.log.MLog.<clinit>() - MLog clients using log4j logging.
+2015-08-01 23:50:12,718 INFO com.mchange.v2.c3p0.C3P0Registry.banner() - Initializing c3p0-0.9.2-pre4 [built 16-June-2012 20:16:37 -0400; debug? true; trace: 10]
+2015-08-01 23:50:13,114 INFO com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager() - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> true, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 60000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge15x9a1swxa6e1r9w3s4|e7fd03, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15x9a1swxa6e1r9w3s4|e7fd03, idleConnectionTestPeriod -> 18000, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/diamonds, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 30, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2015-08-01 23:50:13,393 WARN org.springframework.test.context.transaction.TransactionalTestExecutionListener.getTransactionManager() - Caught exception while retrieving transaction manager with bean name [transactionManager] for test context [[TestContext@eb26e8 testClass = MongoDBTest, testInstance = com.app.mongodb.MongoDBTest@4777fa, testMethod = findAll@MongoDBTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@15c047 testClass = MongoDBTest, locations = '{classpath:spring-conf/ApplicationContext.xml}', classes = '{}', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader']]]
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'transactionManager' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1095)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:277)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1102)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.getTransactionManager(TransactionalTestExecutionListener.java:311)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:161)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:358)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+2015-08-01 23:50:13,394 WARN org.springframework.test.context.TestContextManager.beforeTestMethod() - Caught exception while allowing TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener@12a6f1f] to process 'before' execution of test method [public void com.app.mongodb.MongoDBTest.findAll()] for test instance [com.app.mongodb.MongoDBTest@4777fa]
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'transactionManager' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1095)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:277)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1102)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.getTransactionManager(TransactionalTestExecutionListener.java:311)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:161)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:358)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+2015-08-01 23:50:13,406 INFO org.springframework.context.support.GenericApplicationContext.doClose() - Closing org.springframework.context.support.GenericApplicationContext@83b1b: startup date [Sat Aug 01 23:50:12 CST 2015]; root of context hierarchy
+2015-08-01 23:50:13,407 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons() - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1a1f370: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,managerService,mongoDBService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,baseDao,diamondUserDAO,managerDAO,mongoDBBaseDao,hashFunction,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-08-01 23:51:09,045 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from class path resource [spring-conf/ApplicationContext.xml]
+2015-08-01 23:51:09,215 INFO org.springframework.context.support.GenericApplicationContext.prepareRefresh() - Refreshing org.springframework.context.support.GenericApplicationContext@d6b059: startup date [Sat Aug 01 23:51:09 CST 2015]; root of context hierarchy
+2015-08-01 23:51:09,338 INFO org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.loadProperties() - Loading properties file from class path resource [mysql.properties]
+2015-08-01 23:51:09,371 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1757337: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,managerService,mongoDBService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,baseDao,diamondUserDAO,managerDAO,mongoDBBaseDao,hashFunction,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-08-01 23:51:09,383 INFO com.mchange.v2.log.MLog.<clinit>() - MLog clients using log4j logging.
+2015-08-01 23:51:09,440 INFO com.mchange.v2.c3p0.C3P0Registry.banner() - Initializing c3p0-0.9.2-pre4 [built 16-June-2012 20:16:37 -0400; debug? true; trace: 10]
+2015-08-01 23:51:09,859 INFO com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager() - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> true, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 60000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge15x9a1swyhy51ax04ds|31d5e2, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15x9a1swyhy51ax04ds|31d5e2, idleConnectionTestPeriod -> 18000, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/diamonds, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 30, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2015-08-01 23:51:10,147 WARN org.springframework.test.context.transaction.TransactionalTestExecutionListener.getTransactionManager() - Caught exception while retrieving transaction manager with bean name [transactionManager] for test context [[TestContext@126cb1a testClass = MongoDBTest, testInstance = com.app.mongodb.MongoDBTest@1e0312b, testMethod = findAll@MongoDBTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1bc345a testClass = MongoDBTest, locations = '{classpath:spring-conf/ApplicationContext.xml}', classes = '{}', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader']]]
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'transactionManager' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1095)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:277)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1102)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.getTransactionManager(TransactionalTestExecutionListener.java:311)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:161)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:358)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+2015-08-01 23:51:10,148 WARN org.springframework.test.context.TestContextManager.beforeTestMethod() - Caught exception while allowing TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener@19b3d1b] to process 'before' execution of test method [public void com.app.mongodb.MongoDBTest.findAll()] for test instance [com.app.mongodb.MongoDBTest@1e0312b]
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'transactionManager' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1095)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:277)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1102)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.getTransactionManager(TransactionalTestExecutionListener.java:311)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:161)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:358)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+2015-08-01 23:51:10,162 INFO org.springframework.context.support.GenericApplicationContext.doClose() - Closing org.springframework.context.support.GenericApplicationContext@d6b059: startup date [Sat Aug 01 23:51:09 CST 2015]; root of context hierarchy
+2015-08-01 23:51:10,164 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons() - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1757337: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,managerService,mongoDBService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,baseDao,diamondUserDAO,managerDAO,mongoDBBaseDao,hashFunction,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-08-01 23:55:10,879 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from class path resource [spring-conf/ApplicationContext.xml]
+2015-08-01 23:55:11,036 INFO org.springframework.context.support.GenericApplicationContext.prepareRefresh() - Refreshing org.springframework.context.support.GenericApplicationContext@158f9d3: startup date [Sat Aug 01 23:55:11 CST 2015]; root of context hierarchy
+2015-08-01 23:55:11,136 INFO org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.loadProperties() - Loading properties file from class path resource [mysql.properties]
+2015-08-01 23:55:11,162 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1758500: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,managerService,mongoDBService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,baseDao,diamondUserDAO,managerDAO,mongoDBBaseDao,hashFunction,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-08-01 23:55:11,174 INFO com.mchange.v2.log.MLog.<clinit>() - MLog clients using log4j logging.
+2015-08-01 23:55:11,230 INFO com.mchange.v2.c3p0.C3P0Registry.banner() - Initializing c3p0-0.9.2-pre4 [built 16-June-2012 20:16:37 -0400; debug? true; trace: 10]
+2015-08-01 23:55:11,479 INFO com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager() - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> true, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 60000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge15x9a1sx3oikg01hpy|8f9a32, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15x9a1sx3oikg01hpy|8f9a32, idleConnectionTestPeriod -> 18000, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/diamonds, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 30, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2015-08-01 23:55:11,700 WARN org.springframework.test.context.transaction.TransactionalTestExecutionListener.getTransactionManager() - Caught exception while retrieving transaction manager with bean name [transactionManager] for test context [[TestContext@23d08b testClass = MongoDBTest, testInstance = com.app.mongodb.MongoDBTest@1508f31, testMethod = findAll@MongoDBTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1e8fa70 testClass = MongoDBTest, locations = '{classpath:spring-conf/ApplicationContext.xml}', classes = '{}', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader']]]
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'transactionManager' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1095)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:277)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1102)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.getTransactionManager(TransactionalTestExecutionListener.java:311)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:161)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:358)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+2015-08-01 23:55:11,701 WARN org.springframework.test.context.TestContextManager.beforeTestMethod() - Caught exception while allowing TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener@9cd8db] to process 'before' execution of test method [public void com.app.mongodb.MongoDBTest.findAll()] for test instance [com.app.mongodb.MongoDBTest@1508f31]
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'transactionManager' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1095)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:277)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1102)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.getTransactionManager(TransactionalTestExecutionListener.java:311)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:161)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:358)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+2015-08-01 23:55:11,706 INFO org.springframework.context.support.GenericApplicationContext.doClose() - Closing org.springframework.context.support.GenericApplicationContext@158f9d3: startup date [Sat Aug 01 23:55:11 CST 2015]; root of context hierarchy
+2015-08-01 23:55:11,707 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons() - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1758500: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,managerService,mongoDBService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,baseDao,diamondUserDAO,managerDAO,mongoDBBaseDao,hashFunction,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-08-01 23:56:14,545 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions() - Loading XML bean definitions from class path resource [spring-conf/ApplicationContext.xml]
+2015-08-01 23:56:14,745 INFO org.springframework.context.support.GenericApplicationContext.prepareRefresh() - Refreshing org.springframework.context.support.GenericApplicationContext@608760: startup date [Sat Aug 01 23:56:14 CST 2015]; root of context hierarchy
+2015-08-01 23:56:14,876 INFO org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.loadProperties() - Loading properties file from class path resource [mysql.properties]
+2015-08-01 23:56:14,905 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons() - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@18abc7b: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,managerService,mongoDBService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,baseDao,diamondUserDAO,managerDAO,mongoDBBaseDao,hashFunction,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2015-08-01 23:56:14,918 INFO com.mchange.v2.log.MLog.<clinit>() - MLog clients using log4j logging.
+2015-08-01 23:56:14,977 INFO com.mchange.v2.c3p0.C3P0Registry.banner() - Initializing c3p0-0.9.2-pre4 [built 16-June-2012 20:16:37 -0400; debug? true; trace: 10]
+2015-08-01 23:56:15,357 INFO com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager() - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> true, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 60000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge15x9a1sx51p61kvlkzq|165cebb, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15x9a1sx51p61kvlkzq|165cebb, idleConnectionTestPeriod -> 18000, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/diamonds, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 30, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2015-08-01 23:56:15,627 WARN org.springframework.test.context.transaction.TransactionalTestExecutionListener.getTransactionManager() - Caught exception while retrieving transaction manager with bean name [transactionManager] for test context [[TestContext@194d431 testClass = BaseTest, testInstance = com.BaseTest@1f71b53, testMethod = findAll@BaseTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@22f376 testClass = BaseTest, locations = '{classpath:spring-conf/ApplicationContext.xml}', classes = '{}', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader']]]
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'transactionManager' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1095)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:277)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1102)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.getTransactionManager(TransactionalTestExecutionListener.java:311)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:161)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:358)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+2015-08-01 23:56:15,627 WARN org.springframework.test.context.TestContextManager.beforeTestMethod() - Caught exception while allowing TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener@108af2a] to process 'before' execution of test method [public void com.BaseTest.findAll()] for test instance [com.BaseTest@1f71b53]
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'transactionManager' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1095)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:277)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1102)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.getTransactionManager(TransactionalTestExecutionListener.java:311)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:161)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:358)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+2015-08-01 23:56:15,638 INFO org.springframework.context.support.GenericApplicationContext.doClose() - Closing org.springframework.context.support.GenericApplicationContext@608760: startup date [Sat Aug 01 23:56:14 CST 2015]; root of context hierarchy
+2015-08-01 23:56:15,639 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons() - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@18abc7b: defining beans [propertiesConfigBean,dataSource,txManager,baseJdbcTemplate,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,diamondUserService,managerService,mongoDBService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,baseDao,diamondUserDAO,managerDAO,mongoDBBaseDao,hashFunction,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
