@@ -3,6 +3,7 @@ package com.web.user;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.vo.fp.CustomerVO;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
@@ -10,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.constants.ResponseVOStatusCode;
-import com.vo.CustomerVO;
 import com.vo.ResponseVO;
 
 @Controller
@@ -21,7 +21,7 @@ public class EvaluateController {
 	
 	@ResponseBody
 	@RequestMapping(value = "/update")
-	public Object updateEvaluateResult(CustomerVO customerVO,HttpServletRequest request) {
+	public Object updateEvaluateResult(CustomerVO customerVO, HttpServletRequest request) {
 
 		ResponseVO responseVO=new ResponseVO();
 		try {

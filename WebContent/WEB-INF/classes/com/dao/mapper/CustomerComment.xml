@@ -8,8 +8,8 @@
 	<sql id="allColumnAlias">
 			ID                       	id            	,       
 			customerId                  customerId      	,       
-			commentText                  allMoney      	,       
-			addTime                       extraMoney        
+			commentText                  commentText      	,
+			addTime                       addTime
 
 
 
@@ -67,23 +67,7 @@
 
 
 	</select>
-	
-	<select id="findPageList" parameterType="page" resultType="customerCommentVO" >
-		select
-		<include refid="allColumnAlias" /> 
-		FROM CUSTOMERCOMMENT T   
-		WHERE 1=1
 
-
-		<if test="objectT.customerId!= null">
-			AND T.CUSTOMERID  = #{objectT.customerId}
-		</if>
-
-
-
-
-	</select>
-	
 
 	<delete id="delete" parameterType="customerCommentVO" >
 		DELETE FROM CUSTOMERCOMMENT WHERE  
@@ -119,7 +103,29 @@
  
          
 	</update>
-	
+
+	<select id="findPageList" parameterType="map" resultType="customerCommentVO" >
+		select
+		<include refid="allColumnAlias" />
+		FROM CUSTOMERCOMMENT T
+		limit #{leftIndex},#{rightIndex};
+	</select>
+
+	<select id="queryTotalNum" parameterType="pageUtils" resultType="int" >
+		select
+		count(*)
+		FROM CUSTOMERCOMMENT
+	</select>
+
+	<delete id="batchDelete" parameterType="java.util.List">
+		DELETE FROM CUSTOMERCOMMENT WHERE id in (
+		<foreach collection="list" item="item" separator=",">
+			#{item}
+		</foreach>
+
+		)
+	</delete>
+
 
 
 </mapper>

@@ -1,9 +1,9 @@
 package com.dao;
 
-import java.util.List;
-
-import com.commons.page.Page;
 import com.vo.fp.FundVO;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface FundDAO extends BaseDao<FundVO>{
 
@@ -19,8 +19,10 @@ public interface FundDAO extends BaseDao<FundVO>{
 	public void delete(FundVO vo);
 
 
+	public int queryTotalNum();
 
-	public List<FundVO> findPageList(Page<FundVO> page);
+
+	public List<FundVO> findPageList(@Param("leftIndex") int leftIndex, @Param("rightIndex") int rightIndex);
 
 
 }

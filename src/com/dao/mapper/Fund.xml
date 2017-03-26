@@ -106,23 +106,7 @@
 
 
 	</select>
-	
-	<select id="findPageList" parameterType="page" resultType="fundVO" >
-		select
-		<include refid="allColumnAlias" /> 
-		FROM FUND T   
-		WHERE 1=1
 
-
-		<if test="objectT.fundName!= null">
-			AND T.FUNDNAME  = #{objectT.fundName}
-		</if>
-
-
-
-
-	</select>
-	
 
 	<delete id="delete" parameterType="fundVO" >
 		DELETE FROM FUND WHERE  
@@ -158,6 +142,28 @@
  
          
 	</update>
+
+	<delete id="batchDelete" parameterType="java.util.List">
+		DELETE FROM FUND WHERE id in (
+		<foreach collection="list" item="item" separator=",">
+			#{item}
+		</foreach>
+
+		)
+	</delete>
+
+	<select id="findPageList" parameterType="map" resultType="fundVO" >
+		select
+		<include refid="allColumnAlias" />
+		FROM FUND T
+		limit #{leftIndex},#{rightIndex};
+	</select>
+
+	<select id="queryTotalNum" parameterType="pageUtils" resultType="int" >
+		select
+		count(*)
+		FROM FUND
+	</select>
 	
 
 

@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=7" />
-<title>DWZ与Beetle结合Demo</title>
+<title>个人理财PFinance平台</title>
 <%@ include file="../taglib.jsp"%>
 <link href="themes/default/style.css" rel="stylesheet" type="text/css" media="screen"/>
 <link href="themes/css/core.css" rel="stylesheet" type="text/css" media="screen"/>
@@ -91,7 +91,7 @@ $(function(){
 					<div class="accordionContent">
 						<ul class="tree">
 							<li><a href="<%=basePath%>currency/currencyList" target="navTab" rel="currencyListView">货币型产品管理</a></li>
-							<li><a href="<%=basePath%>currency/getFundList" target="navTab" rel="fundListView">基金型产品管理</a></li>
+							<li><a href="<%=basePath%>fund/fundList" target="navTab" rel="fundListView">基金型产品管理</a></li>
 						</ul>
 					</div>
 					
@@ -100,7 +100,7 @@ $(function(){
 					</div>
 					<div class="accordionContent">
 						<ul class="tree">
-							<li><a href="getCustomerList" target="navTab" rel="customerListView">客户信息管理</a></li>
+							<li><a href="<%=basePath%>customer/customerList" target="navTab" rel="customerListView">客户信息管理</a></li>
 						</ul>
 					</div>
 					
@@ -109,7 +109,8 @@ $(function(){
 					</div>
 					<div class="accordionContent">
 						<ul class="tree">
-							<li><a href="getPurchaseList" target="navTab" rel="purchaseListView">交易信息管理</a></li>
+							<li><a href="<%=basePath%>currencyPurchase/currencyPurchaseList" target="navTab" rel="currencyPurchaseListView">货币交易信息管理</a></li>
+							<li><a href="<%=basePath%>fundPurchase/fundPurchaseList" target="navTab" rel="fundPurchaseListView">基金交易信息管理</a></li>
 						</ul>
 					</div>
 					
@@ -130,7 +131,7 @@ $(function(){
 					</div>
 					<div class="accordionContent">
 						<ul class="tree">
-							<li><a href="getNewsList" target="navTab" rel="newsListView">资讯管理</a></li>
+							<li><a href="<%=basePath%>news/newsList" target="navTab" rel="newsListView">资讯管理</a></li>
 						</ul>
 					</div>
 					
@@ -139,7 +140,7 @@ $(function(){
 					</div>
 					<div class="accordionContent">
 						<ul class="tree">
-							<li><a href="getCommentList" target="navTab" rel="commentListView">评论管理</a></li>
+							<li><a href="<%=basePath%>customerComment/customerCommentList" target="navTab" rel="customerCommentListView">评论管理</a></li>
 							<li><a href="getAdviceList" target="navTab" rel="adviceListView">意见箱</a></li>
 							<li><a href="getPurchaseList" target="navTab" rel="purchaseListView">在线咨询</a></li>
 						</ul>

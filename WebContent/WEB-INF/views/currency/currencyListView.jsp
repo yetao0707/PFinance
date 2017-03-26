@@ -31,11 +31,11 @@
             -->
             <!-- 用于数据用逗号分隔 -->
             <li><a title="确实要删除这些记录吗?" target="selectedTodo" rel="ids" postType="string"
-                   href="<%=basePath%>currency/delete?ids=${sid_user}" class="delete" target="ajaxTodo" title="确定要删除吗？"
+                   href="<%=basePath%>currency/delete?ids=${id}" class="delete" target="ajaxTodo" title="确定要删除吗？"
                    warn="请选择一个用户"><span>批量删除</span></a></li>
-            <%--<li><a class="delete" href="<%=basePath%>currency/delete?ids={sid_user}" target="ajaxTodo" title="确定要删除吗？"--%>
+            <%--<li><a class="delete" href="<%=basePath%>currency/delete?ids={id}" target="ajaxTodo" title="确定要删除吗？"--%>
                    <%--warn="请选择一个用户"><span>删除</span></a></li>--%>
-            <li><a class="edit" href="<%=basePath%>currency/update?id={sid_user}" target="dialog" mask="true"
+            <li><a class="edit" href="<%=basePath%>currency/update?id={id}" target="dialog" mask="true"
                    warn="请选择一个用户"><span>修改</span></a></li>
             <li class="line">line</li>
             <li><a class="icon" href="demo/common/dwz-team.xls" target="dwzExport" targetType="navTab"
@@ -62,7 +62,7 @@
             </thead>
             <tbody>
             <c:forEach items="${page.list}" var="pojo">
-                <tr target="sid_user" rel="${pojo.id}">
+                <tr target="id" rel="${pojo.id}">
                     <td><input name="ids" value="${pojo.id}" type="checkbox"></td>
                     <td>${pojo.id}</td>
                     <td>${pojo.currencyName}</td>

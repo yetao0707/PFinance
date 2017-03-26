@@ -67,23 +67,7 @@
 
 
 	</select>
-	
-	<select id="findPageList" parameterType="page" resultType="customerAccountVO" >
-		select
-		<include refid="allColumnAlias" /> 
-		FROM CUSTOMERACCOUNT T   
-		WHERE 1=1
 
-
-		<if test="objectT.customerId!= null">
-			AND T.CUSTOMERID  = #{objectT.customerId}
-		</if>
-
-
-
-
-	</select>
-	
 
 	<delete id="delete" parameterType="customerAccountVO" >
 		DELETE FROM CUSTOMERACCOUNT WHERE  
@@ -119,7 +103,30 @@
  
          
 	</update>
-	
+
+	<select id="findPageList" parameterType="map" resultType="customerAccountVO" >
+		select
+		<include refid="allColumnAlias" />
+		FROM CUSTOMERACCOUNT T
+		limit #{leftIndex},#{rightIndex};
+	</select>
+
+	<select id="queryTotalNum" parameterType="pageUtils" resultType="int" >
+		select
+		count(*)
+		FROM CUSTOMERACCOUNT
+	</select>
+
+	<delete id="batchDelete" parameterType="java.util.List">
+		DELETE FROM CUSTOMERACCOUNT WHERE id in (
+		<foreach collection="list" item="item" separator=",">
+			#{item}
+		</foreach>
+
+		)
+	</delete>
+
+
 
 
 </mapper>

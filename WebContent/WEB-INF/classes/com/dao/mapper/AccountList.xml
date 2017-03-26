@@ -65,23 +65,7 @@
 
 
 	</select>
-	
-	<select id="findPageList" parameterType="page" resultType="accountListVO" >
-		select
-		<include refid="allColumnAlias" /> 
-		FROM ACCOUNTLIST T   
-		WHERE 1=1
 
-
-		<if test="objectT.accountId != null">
-			AND T.ACCOUNTID  = #{objectT.accountId}
-		</if>
-
-
-
-
-	</select>
-	
 
 	<delete id="delete" parameterType="accountListVO" >
 		DELETE FROM ACCOUNTLIST WHERE  
@@ -117,7 +101,30 @@
  
          
 	</update>
-	
+
+	<select id="findPageList" parameterType="map" resultType="accountListVO" >
+		select
+		<include refid="allColumnAlias" />
+		FROM ACCOUNTLIST T
+		limit #{leftIndex},#{rightIndex};
+	</select>
+
+	<select id="queryTotalNum" parameterType="pageUtils" resultType="int" >
+		select
+		count(*)
+		FROM ACCOUNTLIST
+	</select>
+
+	<delete id="batchDelete" parameterType="java.util.List">
+		DELETE FROM ACCOUNTLIST WHERE id in (
+		<foreach collection="list" item="item" separator=",">
+			#{item}
+		</foreach>
+
+		)
+	</delete>
+
+
 
 
 </mapper>

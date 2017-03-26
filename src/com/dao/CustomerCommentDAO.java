@@ -3,7 +3,9 @@ package com.dao;
 import java.util.List;
 
 import com.commons.page.Page;
+import com.vo.fp.CustomerAccountVO;
 import com.vo.fp.CustomerCommentVO;
+import org.apache.ibatis.annotations.Param;
 
 public interface CustomerCommentDAO extends BaseDao<CustomerCommentVO>{
 
@@ -20,7 +22,10 @@ public interface CustomerCommentDAO extends BaseDao<CustomerCommentVO>{
 
 
 
-	public List<CustomerCommentVO> findPageList(Page<CustomerCommentVO> page);
 
+	public int queryTotalNum();
+
+
+	public List<CustomerCommentVO> findPageList(@Param("leftIndex") int leftIndex, @Param("rightIndex") int rightIndex);
 
 }

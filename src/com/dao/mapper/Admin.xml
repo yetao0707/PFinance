@@ -68,22 +68,7 @@
 
 	</select>
 	
-	<select id="findPageList" parameterType="page" resultType="adminVO" >
-		select
-		<include refid="allColumnAlias" /> 
-		FROM ADMIN T   
-		WHERE 1=1
 
-
-		<if test="objectT.userName != null">
-			AND T.USERNAME  = #{objectT.Nsername}
-		</if>
-
-
-
-
-	</select>
-	
 
 	<delete id="delete" parameterType="adminVO" >
 		DELETE FROM ADMIN WHERE  
@@ -119,7 +104,19 @@
  
          
 	</update>
-	
+
+	<select id="findPageList" parameterType="map" resultType="currencyVO" >
+		select
+		<include refid="allColumnAlias" />
+		FROM ADMIN T
+		limit #{leftIndex},#{rightIndex};
+	</select>
+
+	<select id="queryTotalNum" parameterType="pageUtils" resultType="int" >
+		select
+		count(*)
+		FROM ADMIN
+	</select>
 
 
 </mapper>

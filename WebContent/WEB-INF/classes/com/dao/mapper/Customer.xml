@@ -90,22 +90,7 @@
 
 	</select>
 	
-	<select id="findPageList" parameterType="page" resultType="customerVO" >
-		select
-		<include refid="allColumnAlias" /> 
-		FROM CUSTOMER T   
-		WHERE 1=1
 
-
-		<if test="objectT.userName != null">
-			AND T.USERNAME  = #{objectT.userName}
-		</if>
-
-
-
-
-	</select>
-	
 
 	<delete id="delete" parameterType="customerVO" >
 		DELETE FROM CUSTOMER WHERE  
@@ -141,7 +126,30 @@
  
          
 	</update>
-	
+
+	<select id="findPageList" parameterType="map" resultType="customerVO" >
+		select
+		<include refid="allColumnAlias" />
+		FROM CUSTOMER T
+		limit #{leftIndex},#{rightIndex};
+	</select>
+
+	<select id="queryTotalNum" parameterType="pageUtils" resultType="int" >
+		select
+		count(*)
+		FROM CUSTOMER
+	</select>
+
+	<delete id="batchDelete" parameterType="java.util.List">
+		DELETE FROM CURRENCY WHERE id in (
+		<foreach collection="list" item="item" separator=",">
+			#{item}
+		</foreach>
+
+		)
+	</delete>
+
+
 
 
 </mapper>

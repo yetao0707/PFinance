@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.commons.page.Page;
 import com.vo.fp.CustomerVO;
+import org.apache.ibatis.annotations.Param;
 
 public interface CustomerDAO extends BaseDao<CustomerVO>{
 
@@ -19,8 +20,10 @@ public interface CustomerDAO extends BaseDao<CustomerVO>{
 	public void delete(CustomerVO vo);
 
 
+	public int queryTotalNum();
 
-	public List<CustomerVO> findPageList(Page<CustomerVO> page);
+
+	public List<CustomerVO> findPageList(@Param("leftIndex") int leftIndex, @Param("rightIndex") int rightIndex);
 
 
 }

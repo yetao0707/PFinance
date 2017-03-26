@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.commons.page.Page;
 import com.vo.fp.FundPurchaseVO;
+import org.apache.ibatis.annotations.Param;
 
 public interface FundPurchaseDAO extends BaseDao<FundPurchaseVO>{
 
@@ -19,8 +20,10 @@ public interface FundPurchaseDAO extends BaseDao<FundPurchaseVO>{
 	public void delete(FundPurchaseVO vo);
 
 
+	public int queryTotalNum();
 
-	public List<FundPurchaseVO> findPageList(Page<FundPurchaseVO> page);
+
+	public List<FundPurchaseVO> findPageList(@Param("leftIndex") int leftIndex, @Param("rightIndex") int rightIndex);
 
 
 }

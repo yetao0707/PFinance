@@ -23,5 +23,5 @@ public interface CurrencyDAO extends BaseDao<CurrencyVO>{
 	public int queryTotalNum();
 
 
-	List<CurrencyVO> findPageList(@Param("leftIndex") int leftIndex, @Param("rightIndex") int rightIndex);
+	public List<CurrencyVO> findPageList(@Param("leftIndex") int leftIndex, @Param("rightIndex") int rightIndex);
 }

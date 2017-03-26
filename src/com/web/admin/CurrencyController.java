@@ -1,5 +1,6 @@
 package com.web.admin;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -12,7 +13,7 @@ import com.util.DwzAjaxUtil;
 import com.util.ParseBeanUtil;
 import com.util.bean.DwzAjaxBean;
 import com.vo.fp.CurrencyVO;
-import com.web.DTO.CurrencyDTO;
+import com.DTO.CurrencyDTO;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,8 +34,8 @@ import java.util.Map;
 @RequestMapping("currency")
 public class CurrencyController  {
 
-	@Autowired
-	private PageQueryService pageQueryService;
+	@Resource
+	private PageQueryService currencyPageQueryService;
 
 	@Autowired
 	private CurrencyDAO currencyDAO;
@@ -50,7 +51,7 @@ public class CurrencyController  {
 			pageUtils.setCurrentPage(1);
 		}
 		try {
-			Page page=pageQueryService.queryCurrencyPage(pageUtils);
+			Page page=currencyPageQueryService.queryPage(pageUtils);
             page.setList(ParseBeanUtil.parseCurrencyVO2DTO(page.getList()));
 			request.setAttribute("page",page);
 			return "currency/currencyListView";

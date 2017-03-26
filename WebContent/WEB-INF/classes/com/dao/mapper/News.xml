@@ -8,7 +8,7 @@
 	<sql id="allColumnAlias">
 			ID                       	id            	,       
 			content                  content      	,           
-			addtime                       addtime        
+			addtime                       addTime
 
 	</sql>
 
@@ -16,7 +16,7 @@
 	<sql id="allColumn">
 			id                             	,     
 			content                        ,      
-			addtime                         
+			addTime
 
 
 
@@ -36,7 +36,7 @@
 			#{id                ,jdbcType=NUMERIC},  
 			#{content                ,jdbcType=VARCHAR}, 
 		
-			#{addtime                ,jdbcType=TIMESTAMP} 
+			NOW()
 
 
 		</trim>
@@ -56,22 +56,6 @@
 		<if test="id != null">
 			AND T.ID  = #{id}
 		</if>
-
-
-
-	</select>
-	
-	<select id="findPageList" parameterType="page" resultType="newsVO" >
-		select
-		<include refid="allColumnAlias" /> 
-		FROM NEWS T   
-		WHERE 1=1
-
-
-		<if test="objectT.content!= null">
-			AND T.CONTENT  = #{objectT.content}
-		</if>
-
 
 
 
@@ -112,7 +96,28 @@
  
          
 	</update>
-	
+
+	<select id="findPageList" parameterType="map" resultType="newsVO" >
+		select
+		<include refid="allColumnAlias" />
+		FROM NEWS T
+		limit #{leftIndex},#{rightIndex};
+	</select>
+
+	<select id="queryTotalNum" parameterType="pageUtils" resultType="int" >
+		select
+		count(*)
+		FROM NEWS
+	</select>
+
+	<delete id="batchDelete" parameterType="java.util.List">
+		DELETE FROM NEWS WHERE id in (
+		<foreach collection="list" item="item" separator=",">
+			#{item}
+		</foreach>
+
+		)
+	</delete>
 
 
 </mapper>
