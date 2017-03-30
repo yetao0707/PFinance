@@ -121,7 +121,7 @@ $(function(){
 						<ul class="tree">
 							<li><a href="getPurchaseList" target="navTab" rel="purchaseListView">产品信息统计</a></li>
 							<li><a href="getPurchaseList" target="navTab" rel="purchaseListView">客户信息统计</a></li>
-							<li><a href="getPurchaseList" target="navTab" rel="purchaseListView">交易信息统计</a></li>
+							<li><a href="<%=basePath%>purchaseStatistic/index" target="navTab" rel="purchaseListView">交易信息统计</a></li>
 							<li><a href="getPurchaseList" target="navTab" rel="purchaseListView">交易报告管理</a></li>
 						</ul>
 					</div>

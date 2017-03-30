@@ -38,7 +38,7 @@
             <li><a class="edit" href="<%=basePath%>currency/update?id={id}" target="dialog" mask="true"
                    warn="请选择一个用户"><span>修改</span></a></li>
             <li class="line">line</li>
-            <li><a class="icon" href="demo/common/dwz-team.xls" target="dwzExport" targetType="navTab"
+            <li><a class="icon" href="<%=basePath%>dwz-team.xls" target="dwzExport" targetType="navTab"
                    title="实要导出这些记录吗?"><span>导出EXCEL</span></a></li>
             <li><a class="icon" href="javascript:$.printBox('w_list_print')"><span>打印</span></a></li>
         </ul>
