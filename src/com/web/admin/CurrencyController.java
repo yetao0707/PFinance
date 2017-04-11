@@ -88,7 +88,7 @@ public class CurrencyController  {
 		Gson gson=new Gson();
 		DwzAjaxBean dwzAjaxBea=new DwzAjaxBean();
 		try {
-			List<Long> list=new ArrayList<>();
+			List<Long> list=new ArrayList<Long>();
 			String [] idStr=ids.split(",");
 			for (int i=0;i<idStr.length;i++){
                 if (StringUtils.isEmpty(idStr[i])){

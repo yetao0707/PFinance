@@ -55,6 +55,10 @@
       <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/junit-4.11.jar!/" />
       <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-beans-3.2.0.M1.jar!/" />
       <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/commons-logging-api-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/javabuilder.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/test.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/yetao.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/lq.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

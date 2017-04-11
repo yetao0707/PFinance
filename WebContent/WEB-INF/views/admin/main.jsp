@@ -167,7 +167,7 @@ $(function(){
 				<div class="navTab-panel tabsPageContent layoutBox">
 					<div class="page unitBox">
 						<div class="accountInfo">
-							<p><span>Beetle J2EE开发框架</span></p>
+							<p><span>PFinance</span></p>
 						</div>
 					</div>
 					

@@ -24,7 +24,7 @@
 <div class="pageContent">
     <div class="panelBar">
         <ul class="toolBar">
-            <%--<li><a class="add" href="<%=basePath%>fund/update" target="dialog" mask="true"><span>添加</span></a></li>--%>
+            <li><a class="add" href="<%=basePath%>fund/update" target="dialog" mask="true"><span>添加</span></a></li>
             <!-- 用于数组传送数据 -->
             <!--
             <li><a title="确实要删除这些记录吗?" target="selectedTodo" rel="ids" href="user!del.action" class="delete"><span>批量删除默认方式</span></a></li>
