@@ -18,6 +18,16 @@ public class NewsDTO extends BaseVO {
     private Long id;
     private String content;
 
+    private String title;
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     private String addTime;
 
     public Long getId() {

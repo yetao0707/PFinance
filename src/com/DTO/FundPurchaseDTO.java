@@ -20,6 +20,15 @@ public class FundPurchaseDTO extends BaseVO {
     private Long customerId;
     private String purchaseDate;
     private int num;
+    private FundDTO fundDTO;
+
+    public FundDTO getFundDTO() {
+        return fundDTO;
+    }
+
+    public void setFundDTO(FundDTO fundDTO) {
+        this.fundDTO = fundDTO;
+    }
 
     public int getNum() {
         return num;

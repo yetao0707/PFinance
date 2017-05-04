@@ -1,8 +1,10 @@
 package com.util;
 
 import com.DTO.*;
+import com.constants.PInvestmentPortfolioEnum;
 import com.vo.fp.*;
 import org.apache.commons.lang.StringUtils;
+import org.apache.log4j.Logger;
 import org.springframework.beans.BeanUtils;
 import org.springframework.util.CollectionUtils;
 
@@ -17,6 +19,8 @@ import java.util.List;
  * Created by yetao on 17/3/9.
  */
 public class ParseBeanUtil {
+
+    private static Logger logger = Logger.getLogger(ParseBeanUtil.class);
 
     private static final String dateFormat="yyyy-MM-dd HH:mm:ss";
 
@@ -48,7 +52,7 @@ public class ParseBeanUtil {
         return dto;
     }
 
-    public static CurrencyVO parseCurrencyDTO2VO(CurrencyDTO dto) throws ParseException {
+    public static CurrencyVO parseCurrencyDTO2VO(CurrencyDTO dto)  {
         if (dto==null){
             return null;
         }
@@ -66,11 +70,15 @@ public class ParseBeanUtil {
         vo.setRecruitmentScale(dto.getRecruitmentScale());
         vo.setPurchaseChannel(dto.getPurchaseChannel());
         SimpleDateFormat simpleDateFormat=new SimpleDateFormat(dateFormat);
-        vo.setCashingDay(simpleDateFormat.parse(dto.getDueDate()));
-        vo.setDueDate(simpleDateFormat.parse(dto.getDueDate()));
-        vo.setFoundingDate(simpleDateFormat.parse(dto.getFoundingDate()));
-        vo.setSubscriptionEndDate(simpleDateFormat.parse(dto.getSubscriptionEndDate()));
-        vo.setSubscriptionStartDate(simpleDateFormat.parse(dto.getSubscriptionStartDate()));
+        try {
+            vo.setCashingDay(simpleDateFormat.parse(dto.getDueDate()));
+            vo.setDueDate(simpleDateFormat.parse(dto.getDueDate()));
+            vo.setFoundingDate(simpleDateFormat.parse(dto.getFoundingDate()));
+            vo.setSubscriptionEndDate(simpleDateFormat.parse(dto.getSubscriptionEndDate()));
+            vo.setSubscriptionStartDate(simpleDateFormat.parse(dto.getSubscriptionStartDate()));
+        } catch (ParseException e) {
+            logger.error("date parse failed",e);
+        }
         return vo;
     }
 
@@ -107,7 +115,7 @@ public class ParseBeanUtil {
         dto.setFundName(vo.getFundName());
         dto.setFundType(vo.getFundType());
         dto.setId(vo.getId());
-        dto.setMonthValue(vo.getMonthValue());
+//        dto.setMonthValue(vo.getMonthValue());
         dto.setNetassetValue(vo.getNetassetValue());
         dto.setObjective(vo.getObjective());
         dto.setPlanType(vo.getPlanType());
@@ -116,7 +124,7 @@ public class ParseBeanUtil {
         dto.setTotalRecruitment(vo.getTotalRecruitment());
         dto.setId(vo.getId());
         dto.setTrustee(vo.getTrustee());
-        dto.setWeekValue(vo.getWeekValue());
+//        dto.setWeekValue(vo.getWeekValue());
         SimpleDateFormat simpleDateFormat=new SimpleDateFormat(dateFormat);
         dto.setFoundingDate(simpleDateFormat.format(vo.getFoundingDate()));
         dto.setEndDate(simpleDateFormat.format(vo.getEndDate()));
@@ -125,7 +133,7 @@ public class ParseBeanUtil {
         return dto;
     }
 
-    public static FundVO parseFundDTO2VO(FundDTO dto) throws ParseException {
+    public static FundVO parseFundDTO2VO(FundDTO dto)  {
         if (dto==null){
             return null;
         }
@@ -136,7 +144,7 @@ public class ParseBeanUtil {
         vo.setFundName(dto.getFundName());
         vo.setFundType(dto.getFundType());
         vo.setId(dto.getId());
-        vo.setMonthValue(dto.getMonthValue());
+//        vo.setMonthValue(dto.getMonthValue());
         vo.setNetassetValue(dto.getNetassetValue());
         vo.setObjective(dto.getObjective());
         vo.setPlanType(dto.getPlanType());
@@ -145,12 +153,16 @@ public class ParseBeanUtil {
         vo.setTotalRecruitment(dto.getTotalRecruitment());
         vo.setId(dto.getId());
         vo.setTrustee(dto.getTrustee());
-        vo.setWeekValue(dto.getWeekValue());
+//        vo.setWeekValue(dto.getWeekValue());
         SimpleDateFormat simpleDateFormat=new SimpleDateFormat(dateFormat);
-        vo.setFoundingDate(simpleDateFormat.parse(dto.getFoundingDate()));
-        vo.setEndDate(simpleDateFormat.parse(dto.getEndDate()));
-        vo.setDuration(simpleDateFormat.parse(dto.getDuration()));
-        vo.setStartDate(simpleDateFormat.parse(dto.getStartDate()));
+        try {
+            vo.setFoundingDate(simpleDateFormat.parse(dto.getFoundingDate()));
+            vo.setEndDate(simpleDateFormat.parse(dto.getEndDate()));
+            vo.setDuration(simpleDateFormat.parse(dto.getDuration()));
+            vo.setStartDate(simpleDateFormat.parse(dto.getStartDate()));
+        } catch (ParseException e) {
+            logger.error("parse date failed",e);
+        }
         return vo;
     }
 
@@ -182,10 +194,17 @@ public class ParseBeanUtil {
         }
         CustomerDTO dto=new CustomerDTO();
         BeanUtils.copyProperties(vo,dto);
+        PInvestmentPortfolioEnum pInvestmentPortfolioEnum = PInvestmentPortfolioEnum.getPInvestmentPortfolioEnum(dto.getEvaluateResult());
+        if (pInvestmentPortfolioEnum != null) {
+            dto.setDesc(pInvestmentPortfolioEnum.getDesc());
+            dto.setShareRate(pInvestmentPortfolioEnum.getShareRate());
+            dto.setCurrencyRate(pInvestmentPortfolioEnum.getCurrencyRate());
+            dto.setBondRate(pInvestmentPortfolioEnum.getBondRate());
+        }
         return dto;
     }
 
-    public static CustomerVO parseCustomerDTO2VO(CustomerDTO dto) throws ParseException {
+    public static CustomerVO parseCustomerDTO2VO(CustomerDTO dto)  {
         if (dto==null){
             return null;
         }
@@ -230,7 +249,7 @@ public class ParseBeanUtil {
         return dto;
     }
 
-    public static CurrencyPurchaseVO parseCurrencyPurchaseDTO2VO(CurrencyPurchaseDTO dto) throws ParseException {
+    public static CurrencyPurchaseVO parseCurrencyPurchaseDTO2VO(CurrencyPurchaseDTO dto)  {
         if (dto==null){
             return null;
         }
@@ -240,11 +259,16 @@ public class ParseBeanUtil {
         vo.setCustomerId(dto.getCustomerId());
         vo.setNum(dto.getNum());
         DateFormat format=new SimpleDateFormat(dateFormat);
-        vo.setPurchaseDate(format.parse(dto.getPurchaseDate()));
+        try {
+            vo.setPurchaseDate(format.parse(dto.getPurchaseDate()));
+        } catch (ParseException e) {
+            logger.error("parseCurrencyPurchaseDTO2VO failed dto="+dto,e);
+        }
+
         return vo;
     }
 
-    public static List<CurrencyPurchaseVO> parseCurrencyPurchaseDTO2VO(List<CurrencyPurchaseDTO> list) throws ParseException {
+    public static List<CurrencyPurchaseVO> parseCurrencyPurchaseDTO2VO(List<CurrencyPurchaseDTO> list)  {
         if (CollectionUtils.isEmpty(list)){
             return Collections.emptyList();
         }
@@ -255,7 +279,7 @@ public class ParseBeanUtil {
         return result;
     }
 
-    public static List<CurrencyPurchaseDTO> parseCurrencyPurchaseVO2DTO(List<CurrencyPurchaseVO> list) throws ParseException {
+    public static List<CurrencyPurchaseDTO> parseCurrencyPurchaseVO2DTO(List<CurrencyPurchaseVO> list)  {
         if (CollectionUtils.isEmpty(list)){
             return Collections.emptyList();
         }
@@ -305,7 +329,7 @@ public class ParseBeanUtil {
         return result;
     }
 
-    public static List<FundPurchaseDTO> parseFundPurchaseVO2DTO(List<FundPurchaseVO> list) throws ParseException {
+    public static List<FundPurchaseDTO> parseFundPurchaseVO2DTO(List<FundPurchaseVO> list)  {
         if (CollectionUtils.isEmpty(list)){
             return Collections.emptyList();
         }
@@ -328,7 +352,7 @@ public class ParseBeanUtil {
         return dto;
     }
 
-    public static NewsVO parseNewsDTO2VO(NewsDTO dto) throws ParseException {
+    public static NewsVO parseNewsDTO2VO(NewsDTO dto)  {
         if (dto==null){
             return null;
         }
@@ -337,7 +361,11 @@ public class ParseBeanUtil {
         vo.setContent(dto.getContent());
         DateFormat format=new SimpleDateFormat(dateFormat);
         if (StringUtils.isNotEmpty(dto.getAddTime())){
-            vo.setAddTime(format.parse(dto.getAddTime()));
+            try {
+                vo.setAddTime(format.parse(dto.getAddTime()));
+            } catch (ParseException e) {
+                logger.error("parse date failed date="+dto.getAddTime(),e);
+            }
         }
         return vo;
     }
@@ -353,7 +381,7 @@ public class ParseBeanUtil {
         return result;
     }
 
-    public static List<NewsDTO> parseNewsVO2DTO(List<NewsVO> list) throws ParseException {
+    public static List<NewsDTO> parseNewsVO2DTO(List<NewsVO> list)  {
         if (CollectionUtils.isEmpty(list)){
             return Collections.emptyList();
         }
@@ -377,7 +405,7 @@ public class ParseBeanUtil {
         return dto;
     }
 
-    public static CustomerCommentVO parseCustomerCommentDTO2VO(CustomerCommentDTO dto) throws ParseException {
+    public static CustomerCommentVO parseCustomerCommentDTO2VO(CustomerCommentDTO dto)  {
         if (dto==null){
             return null;
         }
@@ -386,11 +414,15 @@ public class ParseBeanUtil {
         vo.setId(dto.getId());
         vo.setCommentText(dto.getCommentText());
         DateFormat format = new SimpleDateFormat(dateFormat);
-        vo.setAddtime(format.parse(dto.getAddTime()));
+        try {
+            vo.setAddtime(format.parse(dto.getAddTime()));
+        } catch (ParseException e) {
+            logger.error("parse date failed date="+dto.getAddTime(),e);
+        }
         return vo;
     }
 
-    public static List<CustomerCommentVO> parseCustomerCommentDTO2VO(List<CustomerCommentDTO> list) throws ParseException {
+    public static List<CustomerCommentVO> parseCustomerCommentDTO2VO(List<CustomerCommentDTO> list)  {
         if (CollectionUtils.isEmpty(list)){
             return Collections.emptyList();
         }
@@ -401,7 +433,7 @@ public class ParseBeanUtil {
         return result;
     }
 
-    public static List<CustomerCommentDTO> parseCustomerCommentVO2DTO(List<CustomerCommentVO> list) throws ParseException {
+    public static List<CustomerCommentDTO> parseCustomerCommentVO2DTO(List<CustomerCommentVO> list) {
         if (CollectionUtils.isEmpty(list)){
             return Collections.emptyList();
         }
@@ -421,7 +453,7 @@ public class ParseBeanUtil {
         return dto;
     }
 
-    public static CustomerAccountVO parseCustomerAccountDTO2VO(CustomerAccountDTO dto) throws ParseException {
+    public static CustomerAccountVO parseCustomerAccountDTO2VO(CustomerAccountDTO dto) {
         if (dto==null){
             return null;
         }
@@ -430,7 +462,7 @@ public class ParseBeanUtil {
         return vo;
     }
 
-    public static List<CustomerAccountVO> parseCustomerAccountDTO2VO(List<CustomerAccountDTO> list) throws ParseException {
+    public static List<CustomerAccountVO> parseCustomerAccountDTO2VO(List<CustomerAccountDTO> list)  {
         if (CollectionUtils.isEmpty(list)){
             return Collections.emptyList();
         }
@@ -441,7 +473,7 @@ public class ParseBeanUtil {
         return result;
     }
 
-    public static List<CustomerAccountDTO> parseCustomerAccountVO2DTO(List<CustomerAccountVO> list) throws ParseException {
+    public static List<CustomerAccountDTO> parseCustomerAccountVO2DTO(List<CustomerAccountVO> list)  {
         if (CollectionUtils.isEmpty(list)){
             return Collections.emptyList();
         }

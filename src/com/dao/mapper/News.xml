@@ -60,6 +60,23 @@
 
 
 	</select>
+	<select id="findList" parameterType="newsVO" resultType="newsVO" >
+		select
+		<include refid="allColumnAlias" />
+
+		FROM NEWS   T
+
+
+
+		WHERE 1=1
+
+		<if test="id != null">
+			AND T.ID  = #{id}
+		</if>
+
+
+
+	</select>
 	
 
 	<delete id="delete" parameterType="newsVO" >

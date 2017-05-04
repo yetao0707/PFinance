@@ -68,6 +68,24 @@
 
 	</select>
 
+	<select id="findList" parameterType="customerCommentVO" resultType="customerCommentVO" >
+		select
+		<include refid="allColumnAlias" />
+
+		FROM CUSTOMERCOMMENT   T
+
+
+
+		WHERE 1=1
+
+		<if test="customerId != null">
+			AND T.customerId  = #{customerId}
+		</if>
+
+
+
+	</select>
+
 
 	<delete id="delete" parameterType="customerCommentVO" >
 		DELETE FROM CUSTOMERCOMMENT WHERE  

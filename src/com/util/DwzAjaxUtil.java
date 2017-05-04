@@ -84,6 +84,17 @@ public class DwzAjaxUtil {
 		dwzAjaxBean.setForwardUrl("");
 		return dwzAjaxBean;
 	}
+
+	public static DwzAjaxBean constructUpdateSuccessBean(){
+		DwzAjaxBean dwzAjaxBean=new DwzAjaxBean();
+		dwzAjaxBean.setStatusCode(DWZ_STATUS_CODE_OK);
+		dwzAjaxBean.setMessage("修改成功!");
+		dwzAjaxBean.setNavTabId("");
+		dwzAjaxBean.setCallbackType("");
+		dwzAjaxBean.setRel("");
+		dwzAjaxBean.setForwardUrl("");
+		return dwzAjaxBean;
+	}
 	public static DwzAjaxBean constructAddSuccessBean(String navTabId){
 		DwzAjaxBean dwzAjaxBean=new DwzAjaxBean();
 		dwzAjaxBean.setStatusCode(DWZ_STATUS_CODE_OK);
@@ -94,12 +105,33 @@ public class DwzAjaxUtil {
 		dwzAjaxBean.setForwardUrl("");
 		return dwzAjaxBean;
 	}
+	public static DwzAjaxBean constructAddSuccessBean(){
+		DwzAjaxBean dwzAjaxBean=new DwzAjaxBean();
+		dwzAjaxBean.setStatusCode(DWZ_STATUS_CODE_OK);
+		dwzAjaxBean.setMessage("添加成功!");
+		dwzAjaxBean.setNavTabId("");
+		dwzAjaxBean.setCallbackType("");
+		dwzAjaxBean.setRel("");
+		dwzAjaxBean.setForwardUrl("");
+		return dwzAjaxBean;
+	}
 
 	public static DwzAjaxBean constructEditFailBean(String navTabId){
 		DwzAjaxBean dwzAjaxBean=new DwzAjaxBean();
 		dwzAjaxBean.setStatusCode(DWZ_STATUS_CODE_ERROR);
 		dwzAjaxBean.setMessage("编辑失败!");
 		dwzAjaxBean.setNavTabId(navTabId);
+		dwzAjaxBean.setCallbackType("closeCurrent");
+		dwzAjaxBean.setRel("");
+		dwzAjaxBean.setForwardUrl("");
+		return dwzAjaxBean;
+	}
+
+	public static DwzAjaxBean constructEditFailBean(){
+		DwzAjaxBean dwzAjaxBean=new DwzAjaxBean();
+		dwzAjaxBean.setStatusCode(DWZ_STATUS_CODE_ERROR);
+		dwzAjaxBean.setMessage("编辑失败!");
+		dwzAjaxBean.setNavTabId("");
 		dwzAjaxBean.setCallbackType("closeCurrent");
 		dwzAjaxBean.setRel("");
 		dwzAjaxBean.setForwardUrl("");

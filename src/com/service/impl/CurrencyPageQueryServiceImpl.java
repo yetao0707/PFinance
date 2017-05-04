@@ -40,4 +40,25 @@ public class CurrencyPageQueryServiceImpl implements PageQueryService{
         page.setList(currencyVOList);
         return page;
     }
+
+    @Override
+    public Page searchPage(PageUtils pageUtils, Object object) {
+        if (pageUtils==null){
+            return null;
+        }
+        Page<CurrencyVO> page=new Page<CurrencyVO>();
+        int totalNum=currencyDAO.searchCount((CurrencyVO) object);
+        int leftIndex=(pageUtils.getCurrentPage()-1)*pageUtils.getNumPerPage();
+        int rightIndex=pageUtils.getCurrentPage()*pageUtils.getNumPerPage();
+        if (rightIndex>totalNum){
+            rightIndex=totalNum;
+        }
+        List<CurrencyVO> currencyVOList=currencyDAO.search(leftIndex,rightIndex, (CurrencyVO) object);
+        int totalPage=pageUtils.getTotalCount()%pageUtils.getNumPerPage()==0?pageUtils.getTotalCount()/pageUtils.getNumPerPage():pageUtils.getTotalCount()/pageUtils.getNumPerPage()+1;
+        pageUtils.setTotalCount(totalNum);
+        pageUtils.setTotalPage(totalPage);
+        page.setPage(pageUtils);
+        page.setList(currencyVOList);
+        return page;
+    }
 }

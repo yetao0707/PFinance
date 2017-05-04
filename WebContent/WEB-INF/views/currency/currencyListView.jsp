@@ -14,7 +14,7 @@
 <div class="pageHeader">
     <form rel="pagerForm" onsubmit="return navTabSearch(this);" action="page.do" method="post">
         <div class="searchBar">
-            <label>登录名称:</label><input type="text" name="loginName" value="">
+            <label>基金名称:</label><input type="text" name="loginName" value="">
             <button type="submit">检索</button>
 
         </div>
@@ -88,10 +88,7 @@
             <span>显示</span>
             <select class="combox" name="numPerPage" onchange="navTabPageBreak({numPerPage:this.value})">
                 <option
-                        <c:if test="${numPerPage==1}">selected="selected"</c:if> value="1">1
-                </option>
-                <option
-                        <c:if test="${numPerPage==10}">selected="selected"</c:if> value="10">20
+                        <c:if test="${numPerPage==10}">selected="selected"</c:if> value="10">10
                 </option>
                 <option
                         <c:if test="${numPerPage==20}">selected="selected"</c:if> value="20">20

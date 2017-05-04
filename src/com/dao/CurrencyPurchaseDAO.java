@@ -11,7 +11,8 @@ public interface CurrencyPurchaseDAO extends BaseDao<CurrencyPurchaseVO>{
 	
 	
 	public CurrencyPurchaseVO find(CurrencyPurchaseVO vo);
-	
+
+	public List<CurrencyPurchaseVO> findList(CurrencyPurchaseVO vo);
 	
 	public int insert(CurrencyPurchaseVO vo);
 	

@@ -85,6 +85,12 @@
 		<if test="id != null">
 			AND T.ID  = #{id}
 		</if>
+		<if test="userName != null">
+			AND T.userName  = #{userName}
+		</if>
+		<if test="password != null">
+			AND T.password  = #{password}
+		</if>
 
 
 

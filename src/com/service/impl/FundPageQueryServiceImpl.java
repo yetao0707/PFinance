@@ -42,4 +42,25 @@ public class FundPageQueryServiceImpl implements PageQueryService{
         page.setList(list);
         return page;
     }
+
+    @Override
+    public Page searchPage(PageUtils pageUtils, Object fundVO) {
+        if (pageUtils==null){
+            return null;
+        }
+        Page<FundVO> page=new Page<FundVO>();
+        int totalNum=fundDAO.searchCount((FundVO) fundVO);
+        int leftIndex=(pageUtils.getCurrentPage()-1)*pageUtils.getNumPerPage();
+        int rightIndex=pageUtils.getCurrentPage()*pageUtils.getNumPerPage();
+        if (rightIndex>totalNum){
+            rightIndex=totalNum;
+        }
+        List<FundVO> list=fundDAO.search(leftIndex,rightIndex, (FundVO) fundVO);
+        int totalPage=pageUtils.getTotalCount()%pageUtils.getNumPerPage()==0?pageUtils.getTotalCount()/pageUtils.getNumPerPage():pageUtils.getTotalCount()/pageUtils.getNumPerPage()+1;
+        pageUtils.setTotalCount(totalNum);
+        pageUtils.setTotalPage(totalPage);
+        page.setPage(pageUtils);
+        page.setList(list);
+        return page;
+    }
 }

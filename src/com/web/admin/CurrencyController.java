@@ -69,8 +69,8 @@ public class CurrencyController  {
 				request.setAttribute("dto",vo);
 				return "currency/editCurrency";
 			}
-            vo=currencyDAO.find(vo);
-            CurrencyDTO dto=ParseBeanUtil.parseCurrencyVO2DTO(vo);
+			vo = currencyDAO.findByPK(vo);
+			CurrencyDTO dto=ParseBeanUtil.parseCurrencyVO2DTO(vo);
 			request.setAttribute("dto",dto);
 			return "currency/editCurrency";
 		} catch (Exception e){

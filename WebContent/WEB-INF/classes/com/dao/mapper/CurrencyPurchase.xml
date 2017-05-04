@@ -63,6 +63,21 @@
 
 
     </select>
+    <select id="findList" parameterType="currencyPurchaseVO" resultType="currencyPurchaseVO">
+        select
+        <include refid="allColumnAlias"/>
+
+        FROM CURRENCYPURCHASE T
+
+
+        WHERE 1=1
+
+        <if test="customerId != null">
+            AND T.customerId = #{customerId}
+        </if>
+
+
+    </select>
 
 
     <delete id="delete" parameterType="currencyPurchaseVO">

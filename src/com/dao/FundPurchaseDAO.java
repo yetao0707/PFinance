@@ -11,7 +11,9 @@ public interface FundPurchaseDAO extends BaseDao<FundPurchaseVO>{
 	
 	
 	public FundPurchaseVO find(FundPurchaseVO vo);
-	
+
+	public List<FundPurchaseVO> findList(FundPurchaseVO vo);
+
 	
 	public int insert(FundPurchaseVO vo);
 	

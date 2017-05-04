@@ -43,4 +43,9 @@ public class CustomerCommentPageQueryServiceImpl implements PageQueryService{
         page.setList(list);
         return page;
     }
+
+    @Override
+    public Page searchPage(PageUtils pageUtils, Object object) {
+        return null;
+    }
 }

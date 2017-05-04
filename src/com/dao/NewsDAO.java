@@ -11,7 +11,8 @@ public interface NewsDAO extends BaseDao<NewsVO>{
 	
 	
 	public NewsVO find(NewsVO vo);
-	
+	public List<NewsVO> findList(NewsVO vo);
+
 	
 	public int insert(NewsVO vo);
 	

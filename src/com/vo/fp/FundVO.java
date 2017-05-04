@@ -21,8 +21,8 @@ public class FundVO extends BaseVO {
     private Long fundType;
     private Double netassetValue;
     private Double accumulatedValue;
-    private Double weekValue;
-    private Double monthValue;
+//    private Double weekValue;
+//    private Double monthValue;
     private Date foundingDate;
     private Long planType;
     private String custodian;
@@ -101,30 +101,6 @@ public class FundVO extends BaseVO {
     /**
      * @return the weekValue
      */
-    public Double getWeekValue() {
-        return weekValue;
-    }
-
-    /**
-     * @param weekValue the weekValue to set
-     */
-    public void setWeekValue(Double weekValue) {
-        this.weekValue = weekValue;
-    }
-
-    /**
-     * @return the monthValue
-     */
-    public Double getMonthValue() {
-        return monthValue;
-    }
-
-    /**
-     * @param monthValue the monthValue to set
-     */
-    public void setMonthValue(Double monthValue) {
-        this.monthValue = monthValue;
-    }
 
     /**
      * @return the foundingDate
@@ -274,7 +250,6 @@ public class FundVO extends BaseVO {
         return "FundVO [id=" + id + ", fundName=" + fundName
                 + ", fundType=" + fundType + ", netassetValue="
                 + netassetValue + ", accumulatedValue=" + accumulatedValue
-                + ", weekValue=" + weekValue + ", monthValue=" + monthValue
                 + ", foundingDate=" + foundingDate + ", planType="
                 + planType + ", custodian=" + custodian + ", trustee="
                 + trustee + ", startDate=" + startDate + ", endDate="

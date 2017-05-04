@@ -66,8 +66,8 @@ public class FundController {
 				request.setAttribute("dto",vo);
 				return "fund/editFund";
 			}
-            vo=fundDAO.find(vo);
-            FundDTO dto=ParseBeanUtil.parseFundVO2DTO(vo);
+			vo = fundDAO.findByPK(vo);
+			FundDTO dto=ParseBeanUtil.parseFundVO2DTO(vo);
 			request.setAttribute("dto",dto);
 			return "fund/editFund";
 		} catch (Exception e){

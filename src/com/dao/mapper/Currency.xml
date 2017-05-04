@@ -81,7 +81,7 @@
     </insert>
 
 
-    <select id="find" parameterType="currencyVO" resultType="currencyVO">
+    <select id="findByPK" parameterType="currencyVO" resultType="currencyVO">
         select
         <include refid="allColumnAlias"/>
 
@@ -102,6 +102,27 @@
         <include refid="allColumnAlias"/>
         FROM CURRENCY T
         limit #{leftIndex},#{rightIndex};
+    </select>
+
+    <select id="search" parameterType="map" resultType="currencyVO">
+        select
+        <include refid="allColumnAlias"/>
+        FROM CURRENCY T
+        where 1=1
+        <if test="vo.currencyName != null">
+            and currencyName like concat('%',#{vo.currencyName}),'%'
+        </if>
+        limit #{leftIndex},#{risghtIndex};
+    </select>
+
+    <select id="searchCount" parameterType="map" resultType="int">
+        select
+        count(*)
+        FROM CURRENCY T
+        where 1=1
+        <if test="vo.currencyName != null">
+            and currencyName like concat('%',#{vo.currencyName}),'%'
+        </if>
     </select>
 
     <select id="queryTotalNum" parameterType="pageUtils" resultType="int">

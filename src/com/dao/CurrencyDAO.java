@@ -2,6 +2,7 @@ package com.dao;
 
 import java.util.List;
 
+import com.DTO.CurrencyDTO;
 import com.commons.page.Page;
 import com.vo.fp.CurrencyVO;
 import org.apache.ibatis.annotations.Param;
@@ -10,7 +11,7 @@ public interface CurrencyDAO extends BaseDao<CurrencyVO>{
 
 	
 	
-	public CurrencyVO find(CurrencyVO vo);
+	public CurrencyVO findByPK(CurrencyVO vo);
 
 	public List<CurrencyVO> findList(CurrencyVO vo);
 	
@@ -24,4 +25,7 @@ public interface CurrencyDAO extends BaseDao<CurrencyVO>{
 
 
 	public List<CurrencyVO> findPageList(@Param("leftIndex") int leftIndex, @Param("rightIndex") int rightIndex);
+
+	public List<CurrencyVO> search(@Param("leftIndex") int leftIndex, @Param("rightIndex") int rightIndex, @Param("vo")CurrencyVO vo);
+	public int searchCount(@Param("vo")CurrencyVO vo);
 }

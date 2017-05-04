@@ -12,7 +12,8 @@ public interface CustomerCommentDAO extends BaseDao<CustomerCommentVO>{
 	
 	
 	public CustomerCommentVO find(CustomerCommentVO vo);
-	
+	public List<CustomerCommentVO> findList(CustomerCommentVO vo);
+
 	
 	public int insert(CustomerCommentVO vo);
 	

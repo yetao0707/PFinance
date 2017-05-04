@@ -16,4 +16,6 @@ public interface PageQueryService {
 
     public Page queryPage(PageUtils pageUtils);
 
+    public Page searchPage(PageUtils pageUtils, Object object);
+
 }

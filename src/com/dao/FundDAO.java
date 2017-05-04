@@ -9,8 +9,10 @@ public interface FundDAO extends BaseDao<FundVO>{
 
 	
 	
-	public FundVO find(FundVO vo);
-	
+	public List<FundVO> find(FundVO vo);
+
+	public FundVO findByPK(FundVO vo);
+
 	
 	public int insert(FundVO vo);
 	
@@ -23,6 +25,11 @@ public interface FundDAO extends BaseDao<FundVO>{
 
 
 	public List<FundVO> findPageList(@Param("leftIndex") int leftIndex, @Param("rightIndex") int rightIndex);
+
+
+	public List<FundVO> search(@Param("leftIndex") int leftIndex, @Param("rightIndex") int rightIndex, @Param("vo") FundVO vo);
+
+	public int searchCount(@Param("vo") FundVO vo);
 
 
 }

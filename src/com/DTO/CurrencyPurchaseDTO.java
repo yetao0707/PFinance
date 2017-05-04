@@ -17,6 +17,16 @@ public class CurrencyPurchaseDTO extends BaseVO {
     private Long num;
     private String purchaseDate;
 
+    private CurrencyDTO currencyDTO;
+
+    public CurrencyDTO getCurrencyDTO() {
+        return currencyDTO;
+    }
+
+    public void setCurrencyDTO(CurrencyDTO currencyDTO) {
+        this.currencyDTO = currencyDTO;
+    }
+
     public String getPurchaseDate() {
         return purchaseDate;
     }

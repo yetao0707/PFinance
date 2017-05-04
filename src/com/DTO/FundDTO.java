@@ -26,6 +26,16 @@ public class FundDTO extends BaseVO {
     private Double purchaseAmount;
     private Double objective;
 
+    private Double recommendMoney2Buy;
+
+    public Double getRecommendMoney2Buy() {
+        return recommendMoney2Buy;
+    }
+
+    public void setRecommendMoney2Buy(Double recommendMoney2Buy) {
+        this.recommendMoney2Buy = recommendMoney2Buy;
+    }
+
     public Long getId() {
         return id;
     }

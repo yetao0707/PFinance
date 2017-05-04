@@ -17,6 +17,15 @@ public class CustomerAccountDTO extends BaseVO {
     private Long customerId;
     private Double allMoney;
     private Double extraMoney;
+    private Double allEarning;
+
+    public Double getAllEarning() {
+        return allEarning;
+    }
+
+    public void setAllEarning(Double allEarning) {
+        this.allEarning = allEarning;
+    }
 
     public Long getId() {
         return id;

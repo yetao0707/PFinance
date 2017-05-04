@@ -11,9 +11,7 @@
 			FUNDTYPE                fundType              , 
 			NETASSETVALUE           netassetValue         , 
 			ACCUMULATEDVALUE        accumulatedValue      , 
-			WEEKVALUE               weekValue             , 
-			MONTHVALUE              monthValue            , 
-			FOUNDINGDATE            foundingDate          , 
+			FOUNDINGDATE            foundingDate          ,
 			PLANTYPE                planType              , 
 			CUSTODIAN               custodian             , 
 			TRUSTEE                 trustee               , 
@@ -37,8 +35,6 @@
 			fundtype              ,
 			netassetvalue         ,
 			accumulatedvalue      ,
-			weekvalue             ,
-			monthvalue            ,
 			foundingdate          ,
 			plantype              ,
 			custodian             ,
@@ -70,8 +66,8 @@
 			#{fundType                ,jdbcType=NUMERIC}, 
 			#{netassetValue                ,jdbcType=NUMERIC}, 
 			#{accumulatedValue                ,jdbcType=NUMERIC}, 
-			#{weekValue                ,jdbcType=NUMERIC}, 
-			#{monthValue                ,jdbcType=NUMERIC}, 
+-- 			#{weekValue                ,jdbcType=NUMERIC},
+-- 			#{monthValue                ,jdbcType=NUMERIC},
 			#{foundingDate                ,jdbcType=TIMESTAMP}, 
 			#{planType                ,jdbcType=NUMERIC}, 
 			#{custodian                ,jdbcType=VARCHAR}, 
@@ -99,6 +95,24 @@
 		
 		WHERE 1=1 
 		
+		<if test="id != null">
+			AND T.ID  = #{id}
+		</if>
+
+
+
+	</select>
+
+	<select id="findByPK" parameterType="fundVO" resultType="fundVO" >
+		select
+		<include refid="allColumnAlias" />
+
+		FROM FUND   T
+
+
+
+		WHERE 1=1
+
 		<if test="id != null">
 			AND T.ID  = #{id}
 		</if>
@@ -158,6 +172,27 @@
 		FROM FUND T
 		limit #{leftIndex},#{rightIndex};
 	</select>
+
+	<select id="searchCount" parameterType="map" resultType="int" >
+		select
+		count(*)
+		FROM FUND T
+		where 1=1
+		<if test="vo.fundName!=null">
+			and fundname like concat('%',#{vo.fundName}),'%'
+		</if>
+	</select>
+	<select id="search" parameterType="map" resultType="fundVO" >
+		select
+		<include refid="allColumnAlias" />
+		FROM FUND T
+		where 1=1
+		<if test="vo.fundName!=null">
+			and fundname like concat('%',#{vo.fundName}),'%'
+		</if>
+		limit #{leftIndex},#{rightIndex};
+	</select>
+
 
 	<select id="queryTotalNum" parameterType="pageUtils" resultType="int" >
 		select

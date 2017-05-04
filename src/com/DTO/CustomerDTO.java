@@ -23,6 +23,51 @@ public class CustomerDTO extends BaseVO {
     private String adderss;
     private String idNum;
     private String evaluateResult;
+    private Double profit;
+    private double shareRate;
+    private double bondRate;
+    private double currencyRate;
+    private String desc;
+
+    public double getShareRate() {
+        return shareRate;
+    }
+
+    public void setShareRate(double shareRate) {
+        this.shareRate = shareRate;
+    }
+
+    public double getBondRate() {
+        return bondRate;
+    }
+
+    public void setBondRate(double bondRate) {
+        this.bondRate = bondRate;
+    }
+
+    public double getCurrencyRate() {
+        return currencyRate;
+    }
+
+    public void setCurrencyRate(double currencyRate) {
+        this.currencyRate = currencyRate;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
+    public Double getProfit() {
+        return profit;
+    }
+
+    public void setProfit(Double profit) {
+        this.profit = profit;
+    }
 
     public Long getId() {
         return id;

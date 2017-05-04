@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
-"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.dao.CustomerAccountDAO">
 
-	<!--此处定义所有的列，全部用大写 -->
-	<sql id="allColumnAlias">
+    <!--此处定义所有的列，全部用大写 -->
+    <sql id="allColumnAlias">
 			ID                       	id            	,       
 			customerId                  customerId      	,       
 			allMoney                  allMoney      	,       
-			extraMoney                       extraMoney        
+			extraMoney                       extraMoney      ,
+			   allearning allEarning
 
 
 
@@ -17,11 +18,12 @@
 	</sql>
 
 
-	<sql id="allColumn">
+    <sql id="allColumn">
 			id                             	,     
 			customerId                        ,     
 			allMoney                        ,     
-			extraMoney                         
+			extraMoney        ,
+			                 allearning
 
 
 
@@ -29,47 +31,41 @@
 	</sql>
 
 
+    <insert id="insert" parameterType="customerAccountVO">
+        INSERT INTO CUSTOMERACCOUNT
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <include refid="allColumn"/>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            #{id                ,jdbcType=NUMERIC},
+            #{customerId                ,jdbcType=NUMERIC},
+            #{allMoney                ,jdbcType=NUMERIC},
+
+            #{extraMoney                ,jdbcType=NUMERIC}
 
 
-
-	<insert id="insert" parameterType="customerAccountVO">
-		INSERT INTO CUSTOMERACCOUNT
-		<trim prefix="(" suffix=")" suffixOverrides=",">
-			<include refid="allColumn"/>
-		</trim>
-		<trim prefix="values (" suffix=")" suffixOverrides=",">		
-			#{id                ,jdbcType=NUMERIC},  
-			#{customerId                ,jdbcType=NUMERIC}, 
-			#{allMoney                ,jdbcType=NUMERIC}, 
-		
-			#{extraMoney                ,jdbcType=NUMERIC} 
-            
-
- 
-		</trim>
-	</insert>
-
-	
-	<select id="find" parameterType="customerAccountVO" resultType="customerAccountVO" >
-		select
-		<include refid="allColumnAlias" /> 
-
-		FROM CUSTOMERACCOUNT   T 
-
-		
-		
-		WHERE 1=1 
-		
-		<if test="id != null">
-			AND T.ID  = #{id}
-		</if>
+        </trim>
+    </insert>
 
 
+    <select id="find" parameterType="customerAccountVO" resultType="customerAccountVO">
+        select
+        <include refid="allColumnAlias"/>
 
-	</select>
+        FROM CUSTOMERACCOUNT T
 
 
-	<delete id="delete" parameterType="customerAccountVO" >
+        WHERE 1=1
+
+        <if test="id != null">
+            AND T.ID = #{id}
+        </if>
+
+
+    </select>
+
+
+    <delete id="delete" parameterType="customerAccountVO">
 		DELETE FROM CUSTOMERACCOUNT WHERE  
 		
 		
@@ -78,55 +74,46 @@
 	</delete>
 
 
-	
-
-	
-	
-	
-	<update id="update" parameterType="customerAccountVO" >
-		UPDATE CUSTOMERACCOUNT T SET 
-	
-	
-		<trim prefix="" suffix="" suffixOverrides=",">
+    <update id="update" parameterType="customerAccountVO">
+        UPDATE CUSTOMERACCOUNT T SET
 
 
-			<if test="customerId != null">
-				CUSTOMERID  = #{customerId},
-			</if>
-			
+        <trim prefix="" suffix="" suffixOverrides=",">
 
 
-			
-		</trim>
+            <if test="customerId != null">
+                CUSTOMERID = #{customerId},
+            </if>
 
-         WHERE ID=#{id}
- 
-         
-	</update>
 
-	<select id="findPageList" parameterType="map" resultType="customerAccountVO" >
-		select
-		<include refid="allColumnAlias" />
-		FROM CUSTOMERACCOUNT T
-		limit #{leftIndex},#{rightIndex};
-	</select>
+        </trim>
 
-	<select id="queryTotalNum" parameterType="pageUtils" resultType="int" >
+        WHERE ID=#{id}
+
+
+    </update>
+
+    <select id="findPageList" parameterType="map" resultType="customerAccountVO">
+        select
+        <include refid="allColumnAlias"/>
+        FROM CUSTOMERACCOUNT T
+        limit #{leftIndex},#{rightIndex};
+    </select>
+
+    <select id="queryTotalNum" parameterType="pageUtils" resultType="int">
 		select
 		count(*)
 		FROM CUSTOMERACCOUNT
 	</select>
 
-	<delete id="batchDelete" parameterType="java.util.List">
-		DELETE FROM CUSTOMERACCOUNT WHERE id in (
-		<foreach collection="list" item="item" separator=",">
-			#{item}
-		</foreach>
+    <delete id="batchDelete" parameterType="java.util.List">
+        DELETE FROM CUSTOMERACCOUNT WHERE id in (
+        <foreach collection="list" item="item" separator=",">
+            #{item}
+        </foreach>
 
-		)
-	</delete>
-
-
+        )
+    </delete>
 
 
 </mapper>

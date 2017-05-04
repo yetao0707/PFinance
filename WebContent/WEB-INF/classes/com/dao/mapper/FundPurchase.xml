@@ -63,6 +63,22 @@
 
     </select>
 
+    <select id="findList" parameterType="fundPurchaseVO" resultType="fundPurchaseVO">
+        select
+        <include refid="allColumnAlias"/>
+
+        FROM FUNDPURCHASE T
+
+
+        WHERE 1=1
+
+        <if test="customerId != null">
+            AND T.customerId = #{customerId}
+        </if>
+
+
+    </select>
+
 
     <delete id="delete" parameterType="fundPurchaseVO">
 		DELETE FROM FUNDPURCHASE WHERE  
