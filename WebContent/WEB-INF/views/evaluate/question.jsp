@@ -1,23 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ include file="../taglib.jsp"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<link rel="shortcut icon" href="../themes/default/images/favicon.png"/>
-<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="cache-control" content="no-cache" />
-<title>辽宁科技评选</title>
-<!-- 系统加载的css js文件统一写到HtmlContext.jsp中进行管理 -->
-<%@ include file="../HtmlContext.jsp"%>
-<script src="<%=basePath%>resources/js/evaluate/question.js"
-	type="text/javascript"></script>
-<style type="text/css">
 
-</style>
-</head>
-
-<body >
 	<div>
 
 		<div id="question1" class="questiondiv">

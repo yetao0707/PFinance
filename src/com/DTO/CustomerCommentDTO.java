@@ -20,6 +20,20 @@ public class CustomerCommentDTO extends BaseVO {
     private String commentText;
     private String addTime;
 
+    private String title;
+
+    public void setAddTime(String addTime) {
+        this.addTime = addTime;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     public Long getId() {
         return id;
     }

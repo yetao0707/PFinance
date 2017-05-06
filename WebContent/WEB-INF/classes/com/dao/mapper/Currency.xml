@@ -96,6 +96,21 @@
 
 
     </select>
+    <select id="findList" parameterType="currencyVO" resultType="currencyVO">
+        select
+        <include refid="allColumnAlias"/>
+
+        FROM CURRENCY T
+
+
+        WHERE 1=1
+
+        <if test="id != null">
+            AND T.ID = #{id}
+        </if>
+
+
+    </select>
 
     <select id="findPageList" parameterType="map" resultType="currencyVO">
         select
@@ -110,9 +125,9 @@
         FROM CURRENCY T
         where 1=1
         <if test="vo.currencyName != null">
-            and currencyName like concat('%',#{vo.currencyName}),'%'
+            and currencyName like concat('%',#{vo.currencyName},'%')
         </if>
-        limit #{leftIndex},#{risghtIndex};
+        limit #{leftIndex},#{rightIndex};
     </select>
 
     <select id="searchCount" parameterType="map" resultType="int">
@@ -121,7 +136,7 @@
         FROM CURRENCY T
         where 1=1
         <if test="vo.currencyName != null">
-            and currencyName like concat('%',#{vo.currencyName}),'%'
+            and currencyName like concat('%',#{vo.currencyName},'%')
         </if>
     </select>
 

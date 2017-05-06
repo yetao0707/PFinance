@@ -50,6 +50,7 @@
             <tr>
                 <th><input type="checkbox" group="ids" class="checkboxCtrl"></th>
                 <th>编号</th>
+                <th>标题</th>
                 <th>内容</th>
                 <th>添加时间</th>
                 <th>操作</th>
@@ -60,6 +61,7 @@
                 <tr target="id" rel="${pojo.id}">
                     <td><input name="ids" value="${pojo.id}" type="checkbox"></td>
                     <td>${pojo.id}</td>
+                    <td>${pojo.title}</td>
                     <td>${pojo.content}</td>
                     <td>${pojo.addTime}</td>
                     <td>

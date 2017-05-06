@@ -16,7 +16,7 @@ public class CurrencyPurchaseVO extends BaseVO {
     private Long id;
     private Long customerId;
     private Long currencyId;
-    private Long num;
+    private double num;
 
     private Date purchaseDate;
 
@@ -52,11 +52,11 @@ public class CurrencyPurchaseVO extends BaseVO {
         this.currencyId = currencyId;
     }
 
-    public Long getNum() {
+    public double getNum() {
         return num;
     }
 
-    public void setNum(Long num) {
+    public void setNum(double num) {
         this.num = num;
     }
 

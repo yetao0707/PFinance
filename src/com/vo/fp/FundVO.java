@@ -18,7 +18,7 @@ public class FundVO extends BaseVO {
 
     private Long id;
     private String fundName;
-    private Long fundType;
+    private Integer fundType;
     private Double netassetValue;
     private Double accumulatedValue;
 //    private Double weekValue;
@@ -59,14 +59,14 @@ public class FundVO extends BaseVO {
     /**
      * @return the fundType
      */
-    public Long getFundType() {
+    public Integer getFundType() {
         return fundType;
     }
 
     /**
      * @param fundType the fundType to set
      */
-    public void setFundType(Long fundType) {
+    public void setFundType(Integer fundType) {
         this.fundType = fundType;
     }
 

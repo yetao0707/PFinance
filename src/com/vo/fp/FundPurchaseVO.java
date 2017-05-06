@@ -20,13 +20,13 @@ public class FundPurchaseVO extends BaseVO {
     private Long fundId;
     private Long customerId;
     private Date purchaseDate;
-    private int num;
+    private double num;
 
-    public int getNum() {
+    public double getNum() {
         return num;
     }
 
-    public void setNum(int num) {
+    public void setNum(double num) {
         this.num = num;
     }
 

@@ -9,7 +9,6 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.util.CollectionUtils;
 
 import java.text.DateFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -76,13 +75,13 @@ public class ParseBeanUtil {
             vo.setFoundingDate(simpleDateFormat.parse(dto.getFoundingDate()));
             vo.setSubscriptionEndDate(simpleDateFormat.parse(dto.getSubscriptionEndDate()));
             vo.setSubscriptionStartDate(simpleDateFormat.parse(dto.getSubscriptionStartDate()));
-        } catch (ParseException e) {
+        } catch (Exception e) {
             logger.error("date parse failed",e);
         }
         return vo;
     }
 
-    public static List<CurrencyVO> parseCurrencyDTO2VO(List<CurrencyDTO> list) throws ParseException {
+    public static List<CurrencyVO> parseCurrencyDTO2VO(List<CurrencyDTO> list)  {
         if (CollectionUtils.isEmpty(list)){
             return Collections.emptyList();
         }
@@ -93,7 +92,7 @@ public class ParseBeanUtil {
         return result;
     }
 
-    public static List<CurrencyDTO> parseCurrencyVO2DTO(List<CurrencyVO> list) throws ParseException {
+    public static List<CurrencyDTO> parseCurrencyVO2DTO(List<CurrencyVO> list)  {
         if (CollectionUtils.isEmpty(list)){
             return Collections.emptyList();
         }
@@ -160,13 +159,13 @@ public class ParseBeanUtil {
             vo.setEndDate(simpleDateFormat.parse(dto.getEndDate()));
             vo.setDuration(simpleDateFormat.parse(dto.getDuration()));
             vo.setStartDate(simpleDateFormat.parse(dto.getStartDate()));
-        } catch (ParseException e) {
+        } catch (Exception e) {
             logger.error("parse date failed",e);
         }
         return vo;
     }
 
-    public static List<FundVO> parseFundDTO2VO(List<FundDTO> list) throws ParseException {
+    public static List<FundVO> parseFundDTO2VO(List<FundDTO> list)  {
         if (CollectionUtils.isEmpty(list)){
             return Collections.emptyList();
         }
@@ -177,7 +176,7 @@ public class ParseBeanUtil {
         return result;
     }
 
-    public static List<FundDTO> parseFundVO2DTO(List<FundVO> list) throws ParseException {
+    public static List<FundDTO> parseFundVO2DTO(List<FundVO> list)  {
         if (CollectionUtils.isEmpty(list)){
             return Collections.emptyList();
         }
@@ -213,7 +212,7 @@ public class ParseBeanUtil {
         return vo;
     }
 
-    public static List<CustomerVO> parseCustomerDTO2VO(List<CustomerDTO> list) throws ParseException {
+    public static List<CustomerVO> parseCustomerDTO2VO(List<CustomerDTO> list)  {
         if (CollectionUtils.isEmpty(list)){
             return Collections.emptyList();
         }
@@ -224,7 +223,7 @@ public class ParseBeanUtil {
         return result;
     }
 
-    public static List<CustomerDTO> parseCustomerVO2DTO(List<CustomerVO> list) throws ParseException {
+    public static List<CustomerDTO> parseCustomerVO2DTO(List<CustomerVO> list)  {
         if (CollectionUtils.isEmpty(list)){
             return Collections.emptyList();
         }
@@ -261,7 +260,7 @@ public class ParseBeanUtil {
         DateFormat format=new SimpleDateFormat(dateFormat);
         try {
             vo.setPurchaseDate(format.parse(dto.getPurchaseDate()));
-        } catch (ParseException e) {
+        } catch (Exception e) {
             logger.error("parseCurrencyPurchaseDTO2VO failed dto="+dto,e);
         }
 
@@ -304,7 +303,7 @@ public class ParseBeanUtil {
         return dto;
     }
 
-    public static FundPurchaseVO parseFundPurchaseDTO2VO(FundPurchaseDTO dto) throws ParseException {
+    public static FundPurchaseVO parseFundPurchaseDTO2VO(FundPurchaseDTO dto)  {
         if (dto==null){
             return null;
         }
@@ -314,11 +313,15 @@ public class ParseBeanUtil {
         vo.setCustomerId(dto.getCustomerId());
         vo.setNum(dto.getNum());
         DateFormat format=new SimpleDateFormat(dateFormat);
-        vo.setPurchaseDate(format.parse(dto.getPurchaseDate()));
+        try {
+            vo.setPurchaseDate(format.parse(dto.getPurchaseDate()));
+        } catch (Exception e) {
+            logger.error("parse datefailed");
+        }
         return vo;
     }
 
-    public static List<FundPurchaseVO> parseFundPurchaseDTO2VO(List<FundPurchaseDTO> list) throws ParseException {
+    public static List<FundPurchaseVO> parseFundPurchaseDTO2VO(List<FundPurchaseDTO> list)  {
         if (CollectionUtils.isEmpty(list)){
             return Collections.emptyList();
         }
@@ -347,6 +350,7 @@ public class ParseBeanUtil {
         NewsDTO dto=new NewsDTO();
         dto.setId(vo.getId());
         dto.setContent(vo.getContent());
+        dto.setTitle(vo.getTitle());
         DateFormat format=new SimpleDateFormat(dateFormat);
         dto.setAddTime(format.format(vo.getAddTime()));
         return dto;
@@ -359,18 +363,17 @@ public class ParseBeanUtil {
         NewsVO vo=new NewsVO();
         vo.setId(dto.getId());
         vo.setContent(dto.getContent());
+        vo.setTitle(dto.getTitle());
         DateFormat format=new SimpleDateFormat(dateFormat);
-        if (StringUtils.isNotEmpty(dto.getAddTime())){
-            try {
-                vo.setAddTime(format.parse(dto.getAddTime()));
-            } catch (ParseException e) {
-                logger.error("parse date failed date="+dto.getAddTime(),e);
-            }
+        try {
+            vo.setAddTime(format.parse(dto.getAddTime()));
+        } catch (Exception e) {
+            logger.error("parse date failed date=" + dto.getAddTime(), e);
         }
         return vo;
     }
 
-    public static List<NewsVO> parseNewsDTO2VO(List<NewsDTO> list) throws ParseException {
+    public static List<NewsVO> parseNewsDTO2VO(List<NewsDTO> list)  {
         if (CollectionUtils.isEmpty(list)){
             return Collections.emptyList();
         }
@@ -399,6 +402,7 @@ public class ParseBeanUtil {
         CustomerCommentDTO dto=new CustomerCommentDTO();;
         dto.setId(vo.getId());
         dto.setCommentText(vo.getCommentText());
+        dto.setTitle(vo.getTitle());
         dto.setCustomerId(vo.getCustomerId());
         DateFormat format=new SimpleDateFormat(dateFormat);
         dto.setAddtime(format.format(vo.getAddTime()));
@@ -412,11 +416,12 @@ public class ParseBeanUtil {
         CustomerCommentVO vo=new CustomerCommentVO();
         vo.setCustomerId(dto.getCustomerId());
         vo.setId(dto.getId());
+        vo.setTitle(dto.getTitle());
         vo.setCommentText(dto.getCommentText());
         DateFormat format = new SimpleDateFormat(dateFormat);
         try {
             vo.setAddtime(format.parse(dto.getAddTime()));
-        } catch (ParseException e) {
+        } catch (Exception e) {
             logger.error("parse date failed date="+dto.getAddTime(),e);
         }
         return vo;

@@ -9,6 +9,7 @@
 			ID                       	id            	,       
 			customerId                  customerId      	,       
 			commentText                  commentText      	,
+			title                  title      	,
 			addTime                       addTime
 
 
@@ -20,8 +21,9 @@
 	<sql id="allColumn">
 			id                             	,     
 			customerId                        ,     
-			commentText                        ,     
-			addTime                         
+			title                        ,
+			commentText                        ,
+			addTime
 
 
 
@@ -40,8 +42,9 @@
 		<trim prefix="values (" suffix=")" suffixOverrides=",">		
 			#{id                ,jdbcType=NUMERIC},  
 			#{customerId                ,jdbcType=NUMERIC}, 
-			#{commentText                ,jdbcType=VARCHAR}, 
-		
+			#{title                ,jdbcType=VARCHAR},
+			#{commentText                ,jdbcType=VARCHAR},
+
 			#{addTime                ,jdbcType=TIMESTAMP} 
             
 

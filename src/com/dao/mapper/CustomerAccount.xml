@@ -79,16 +79,19 @@
 
 
         <trim prefix="" suffix="" suffixOverrides=",">
-
-
-            <if test="customerId != null">
-                CUSTOMERID = #{customerId},
+            <if test="allMoney != null">
+                allMoney = #{allMoney},
             </if>
-
-
+            <if test="extraMoney != null">
+                extraMoney = #{extraMoney},
+            </if>
         </trim>
 
-        WHERE ID=#{id}
+        WHERE
+        <if test="customerId != null">
+            CUSTOMERID = #{customerId}
+        </if>
+
 
 
     </update>

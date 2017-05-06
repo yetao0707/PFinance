@@ -179,7 +179,7 @@
 		FROM FUND T
 		where 1=1
 		<if test="vo.fundName!=null">
-			and fundname like concat('%',#{vo.fundName}),'%'
+			and fundname like concat('%',#{vo.fundName},'%')
 		</if>
 	</select>
 	<select id="search" parameterType="map" resultType="fundVO" >
@@ -188,7 +188,7 @@
 		FROM FUND T
 		where 1=1
 		<if test="vo.fundName!=null">
-			and fundname like concat('%',#{vo.fundName}),'%'
+			and fundname like concat('%',#{vo.fundName},'%')
 		</if>
 		limit #{leftIndex},#{rightIndex};
 	</select>

@@ -5,7 +5,7 @@ $(document).ready(function(){
 	$("#submit").click(function(){
 		//验证
 		for(var i=1;i<28;i++){
-			if($("input[class='"+i+"answer']:checked").val()==undefined){
+			if($(".input[class='"+i+"answer']:checked").val()==undefined){
 				alert("请作答第"+i+"题！");
 				return;
 			}

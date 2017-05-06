@@ -8,6 +8,7 @@
 	<sql id="allColumnAlias">
 			ID                       	id            	,       
 			content                  content      	,           
+			title                  title      	,
 			addtime                       addTime
 
 	</sql>
@@ -16,6 +17,7 @@
 	<sql id="allColumn">
 			id                             	,     
 			content                        ,      
+			title                        ,
 			addTime
 
 
@@ -35,7 +37,8 @@
 		<trim prefix="values (" suffix=")" suffixOverrides=",">		
 			#{id                ,jdbcType=NUMERIC},  
 			#{content                ,jdbcType=VARCHAR}, 
-		
+			#{title                ,jdbcType=VARCHAR},
+
 			NOW()
 
 
@@ -102,6 +105,9 @@
 
 			<if test="content != null">
 				CONTENT  = #{content},
+			</if>
+			<if test="title != null">
+				title  = #{title},
 			</if>
 			
 

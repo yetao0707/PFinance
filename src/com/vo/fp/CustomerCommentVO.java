@@ -19,7 +19,20 @@ public class CustomerCommentVO extends BaseVO {
     private Long id;
     private Long customerId;
     private String commentText;
+    private String title;
     private Date addTime;
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setAddTime(Date addTime) {
+        this.addTime = addTime;
+    }
 
     public Long getId() {
         return id;

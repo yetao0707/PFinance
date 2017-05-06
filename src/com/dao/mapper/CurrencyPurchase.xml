@@ -42,7 +42,7 @@
             #{id                ,jdbcType=NUMERIC},
             #{customerId                ,jdbcType=NUMERIC},
             #{currencyId                ,jdbcType=NUMERIC},
-
+            #{purchaseDate                ,jdbcType=TIMESTAMP},
             #{num       		,jdbcType=NUMERIC}
         </trim>
     </insert>
