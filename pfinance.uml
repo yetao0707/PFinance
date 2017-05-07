@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.DTO.FundDTO</OriginalElement>
+  <nodes>
+    <node x="3341.7000000000003" y="1738.0">com.service.impl.FundPurchasePageQueryServiceImpl</node>
+    <node x="3940.0" y="1150.0">com.vo.fp.AdminVO</node>
+    <node x="1272.0" y="1106.0">com.DTO.CustomerDTO</node>
+    <node x="3134.0000000000005" y="2015.0">com.web.admin.FundPurchaseController</node>
+    <node x="4672.700000000001" y="1738.0">com.service.impl.NewsPageQueryServiceImpl</node>
+    <node x="3620.7000000000003" y="1738.0">com.service.impl.FundPageQueryServiceImpl</node>
+    <node x="4294.0" y="1161.0">com.DTO.FundPurchaseDTO</node>
+    <node x="1875.0" y="3032.0">com.dao.CustomerAccountDAO</node>
+    <node x="3749.0000000000005" y="2048.0">com.web.statistics.PurchaseStatisticsController</node>
+    <node x="26.5" y="2426.0">org.springframework.web.servlet.handler.HandlerInterceptorAdapter</node>
+    <node x="0.0" y="0.0">com.util.ParseBeanUtil</node>
+    <node x="2348.0" y="3032.0">com.dao.NewsDAO</node>
+    <node x="2664.0" y="1183.5">com.commons.page.PageUtils</node>
+    <node x="2484.0000000000005" y="2015.0">com.web.admin.CustomerCommentController</node>
+    <node x="999.0" y="1161.0">com.vo.fp.CustomerCommentVO</node>
+    <node x="1127.0" y="3032.0">com.dao.CustomerDAO</node>
+    <node x="506.0" y="1040.0">com.vo.fp.CurrencyVO</node>
+    <node x="672.0" y="3250.0">com.constants.DWZStatusCode</node>
+    <node x="1735.0000000000005" y="2037.0">com.web.admin.IndexController</node>
+    <node x="3923.9500000000003" y="1501.0">com.service.PageQueryService</node>
+    <node x="2992.0" y="3032.0">com.dao.CustomerCommentDAO</node>
+    <node x="273.0" y="1183.0">com.vo.fp.NewsVO</node>
+    <node x="4567.0" y="1150.5">com.util.bean.DwzAjaxBean</node>
+    <node x="3268.0" y="1183.0">com.commons.page.Page</node>
+    <node x="309.0" y="3032.0">com.dao.FundPurchaseDAO</node>
+    <node x="2171.0" y="1040.0">com.DTO.CurrencyDTO</node>
+    <node x="1898.0" y="1161.0">com.vo.fp.AccountListVO</node>
+    <node x="444.0" y="3250.0">com.constants.ResponseVOStatusCode</node>
+    <node x="3555.0" y="779.0">java.io.Serializable</node>
+    <node x="3501.0" y="1183.0">com.DTO.NewsDTO</node>
+    <node x="2663.0" y="3032.0">com.dao.AdminDAO</node>
+    <node x="584.0" y="2015.0">com.web.admin.NewsController</node>
+    <node x="4358.700000000001" y="1738.0">com.service.impl.CustomerCommentPageQueryServiceImpl</node>
+    <node x="5885.0" y="1172.0">com.DTO.CustomerAccountDTO</node>
+    <node x="1949.9500000000003" y="1683.0">org.springframework.web.bind.annotation.RequestMapping</node>
+    <node x="4027.0000000000005" y="2015.0">com.web.admin.CurrencyPurchaseController</node>
+    <node x="2881.7000000000003" y="1738.0">org.springframework.stereotype.Controller</node>
+    <node x="3734.0" y="1205.5">com.vo.ResponseVO</node>
+    <node x="0.0" y="3250.0">com.util.DwzAjaxUtil</node>
+    <node x="730.0" y="3032.0">com.dao.AccountListDAO</node>
+    <node x="3857.7000000000003" y="1738.0">com.service.impl.CustomerPageQueryServiceImpl</node>
+    <node x="1645.0" y="1172.0">com.vo.fp.CustomerAccountVO</node>
+    <node x="1496.0" y="3021.0">com.dao.CurrencyDAO</node>
+    <node x="5099.0" y="1161.0">com.DTO.AccountListDTO</node>
+    <node x="6651.0" y="1161.0">com.DTO.CurrencyPurchaseDTO</node>
+    <node x="4826.0" y="1161.0">com.DTO.CustomerCommentDTO</node>
+    <node x="2895.0" y="1106.0">com.vo.fp.CustomerVO</node>
+    <node x="36.5" y="2178.0">org.springframework.web.servlet.HandlerInterceptor</node>
+    <node x="6138.0" y="1029.0">com.vo.fp.FundVO</node>
+    <node x="4667.0" y="2037.0">com.web.user.EvaluateController</node>
+    <node x="1146.0000000000005" y="2015.0">com.web.admin.CustomerController</node>
+    <node x="26.5" y="2594.0">com.web.base.ControllerInterceptor</node>
+    <node x="6924.0" y="1161.0">com.vo.fp.FundPurchaseVO</node>
+    <node x="5372.0" y="1029.0">com.DTO.FundDTO</node>
+    <node x="3037.7000000000003" y="1738.0">com.service.impl.CurrencyPurchasePageQueryServiceImpl</node>
+    <node x="4110.700000000001" y="1738.0">com.service.impl.CurrencyPageQueryServiceImpl</node>
+    <node x="3567.5" y="859.0">com.vo.BaseVO</node>
+    <node x="1766.5" y="2757.0">com.dao.BaseDao</node>
+    <node x="3615.4500000000003" y="1501.0">org.springframework.stereotype.Component</node>
+    <node x="3483.0" y="3032.0">com.dao.CurrencyPurchaseDAO</node>
+    <node x="0.0" y="1161.0">com.vo.fp.CurrencyPurchaseVO</node>
+    <node x="1925.0000000000005" y="2015.0">com.web.admin.FundController</node>
+    <node x="0.0" y="2324.0">org.springframework.web.servlet.AsyncHandlerInterceptor</node>
+    <node x="0.0" y="3032.0">com.dao.FundDAO</node>
+    <node x="0.0" y="2015.0">com.web.admin.CurrencyController</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.web.admin.IndexController" target="org.springframework.stereotype.Controller">
+      <point x="42.5" y="-37.0" />
+      <point x="1862.5000000000005" y="1985.0" />
+      <point x="2929.3" y="1985.0" />
+      <point x="-20.399999999999977" y="26.0" />
+    </edge>
+    <edge source="com.DTO.CurrencyDTO" target="com.vo.BaseVO">
+      <point x="0.0" y="-202.5" />
+      <point x="2407.5" y="979.0" />
+      <point x="3593.586956521739" y="979.0" />
+      <point x="-13.913043478260988" y="15.0" />
+    </edge>
+    <edge source="com.web.admin.FundPurchaseController" target="org.springframework.stereotype.Controller">
+      <point x="148.75" y="-59.0" />
+      <point x="3580.2500000000005" y="1925.0" />
+      <point x="2970.1000000000004" y="1925.0" />
+      <point x="20.399999999999977" y="26.0" />
+    </edge>
+    <edge source="com.service.impl.CurrencyPageQueryServiceImpl" target="com.service.PageQueryService">
+      <point x="57.0" y="-26.0" />
+      <point x="4281.700000000001" y="1613.0" />
+      <point x="4063.4500000000003" y="1613.0" />
+      <point x="31.0" y="26.0" />
+    </edge>
+    <edge source="com.web.base.ControllerInterceptor" target="org.springframework.web.servlet.handler.HandlerInterceptorAdapter">
+      <point x="0.0" y="-59.0" />
+      <point x="0.0" y="59.0" />
+    </edge>
+    <edge source="com.vo.fp.CustomerCommentVO" target="com.vo.BaseVO">
+      <point x="0.0" y="-81.5" />
+      <point x="1125.5" y="939.0" />
+      <point x="3579.6739130434785" y="939.0" />
+      <point x="-27.82608695652152" y="15.0" />
+    </edge>
+    <edge source="com.dao.CustomerCommentDAO" target="com.dao.BaseDao">
+      <point x="0.0" y="-81.0" />
+      <point x="3227.5" y="2971.0" />
+      <point x="1973.9" y="2971.0" />
+      <point x="85.40000000000009" y="92.0" />
+    </edge>
+    <edge source="com.vo.fp.NewsVO" target="com.vo.BaseVO">
+      <point x="0.0" y="-59.5" />
+      <point x="379.5" y="919.0" />
+      <point x="3572.717391304348" y="919.0" />
+      <point x="-34.782608695652016" y="15.0" />
+    </edge>
+    <edge source="com.DTO.AccountListDTO" target="com.vo.BaseVO">
+      <point x="0.0" y="-81.5" />
+      <point x="5225.5" y="959.0" />
+      <point x="3628.3695652173915" y="959.0" />
+      <point x="20.869565217391482" y="15.0" />
+    </edge>
+    <edge source="com.web.admin.NewsController" target="org.springframework.stereotype.Controller">
+      <point x="135.5" y="-59.0" />
+      <point x="990.5" y="1965.0" />
+      <point x="2902.1000000000004" y="1965.0" />
+      <point x="-47.60000000000002" y="26.0" />
+    </edge>
+    <edge source="com.web.admin.CurrencyPurchaseController" target="org.springframework.stereotype.Controller">
+      <point x="155.0" y="-59.0" />
+      <point x="4492.0" y="1885.0" />
+      <point x="2997.3" y="1885.0" />
+      <point x="47.59999999999991" y="26.0" />
+    </edge>
+    <edge source="com.vo.fp.FundPurchaseVO" target="com.vo.BaseVO">
+      <point x="0.0" y="-81.5" />
+      <point x="7050.5" y="909.0" />
+      <point x="3645.7608695652175" y="909.0" />
+      <point x="38.26086956521749" y="15.0" />
+    </edge>
+    <edge source="com.dao.NewsDAO" target="com.dao.BaseDao">
+      <point x="0.0" y="-81.0" />
+      <point x="2495.5" y="2991.0" />
+      <point x="1925.1" y="2991.0" />
+      <point x="36.60000000000002" y="92.0" />
+    </edge>
+    <edge source="com.service.impl.CurrencyPurchasePageQueryServiceImpl" target="org.springframework.stereotype.Component">
+      <point x="-71.0" y="-26.0" />
+      <point x="3108.7000000000003" y="1623.0" />
+      <point x="3640.9500000000003" y="1623.0" />
+      <point x="-42.5" y="26.0" />
+    </edge>
+    <edge source="com.service.impl.CustomerCommentPageQueryServiceImpl" target="com.service.PageQueryService">
+      <point x="73.5" y="-26.0" />
+      <point x="4579.200000000001" y="1593.0" />
+      <point x="4094.4500000000003" y="1593.0" />
+      <point x="62.0" y="26.0" />
+    </edge>
+    <edge source="com.DTO.CustomerCommentDTO" target="com.vo.BaseVO">
+      <point x="0.0" y="-81.5" />
+      <point x="4952.5" y="969.0" />
+      <point x="3624.891304347826" y="969.0" />
+      <point x="17.391304347826008" y="15.0" />
+    </edge>
+    <edge source="com.web.admin.FundController" target="org.springframework.web.bind.annotation.RequestMapping">
+      <point x="-134.75" y="-59.0" />
+      <point x="-12.199999999999932" y="81.0" />
+    </edge>
+    <edge source="com.service.impl.FundPageQueryServiceImpl" target="org.springframework.stereotype.Component">
+      <point x="-54.25" y="-26.0" />
+      <point x="-8.5" y="26.0" />
+    </edge>
+    <edge source="org.springframework.web.servlet.AsyncHandlerInterceptor" target="org.springframework.web.servlet.HandlerInterceptor">
+      <point x="0.0" y="-26.0" />
+      <point x="0.0" y="48.0" />
+    </edge>
+    <edge source="com.vo.fp.CurrencyVO" target="com.vo.BaseVO">
+      <point x="0.0" y="-202.5" />
+      <point x="742.5" y="929.0" />
+      <point x="3576.195652173913" y="929.0" />
+      <point x="-31.304347826086996" y="15.0" />
+    </edge>
+    <edge source="com.vo.fp.CustomerAccountVO" target="com.vo.BaseVO">
+      <point x="0.0" y="-70.5" />
+      <point x="1761.5" y="959.0" />
+      <point x="3586.6304347826085" y="959.0" />
+      <point x="-20.869565217391482" y="15.0" />
+    </edge>
+    <edge source="com.service.impl.CustomerCommentPageQueryServiceImpl" target="org.springframework.stereotype.Component">
+      <point x="-73.5" y="-26.0" />
+      <point x="4432.200000000001" y="1603.0" />
+      <point x="3725.9500000000003" y="1603.0" />
+      <point x="42.5" y="26.0" />
+    </edge>
+    <edge source="com.web.admin.NewsController" target="org.springframework.web.bind.annotation.RequestMapping">
+      <point x="-135.5" y="-59.0" />
+      <point x="719.5" y="1925.0" />
+      <point x="1986.5500000000002" y="1925.0" />
+      <point x="-85.39999999999998" y="81.0" />
+    </edge>
+    <edge source="com.service.impl.CurrencyPurchasePageQueryServiceImpl" target="com.service.PageQueryService">
+      <point x="71.0" y="-26.0" />
+      <point x="3250.7000000000003" y="1643.0" />
+      <point x="3939.4500000000003" y="1643.0" />
+      <point x="-93.0" y="26.0" />
+    </edge>
+    <edge source="com.web.admin.CurrencyPurchaseController" target="org.springframework.web.bind.annotation.RequestMapping">
+      <point x="-155.0" y="-59.0" />
+      <point x="4182.0" y="1895.0" />
+      <point x="2157.3500000000004" y="1895.0" />
+      <point x="85.39999999999998" y="81.0" />
+    </edge>
+    <edge source="com.DTO.FundPurchaseDTO" target="com.vo.BaseVO">
+      <point x="0.0" y="-81.5" />
+      <point x="4420.5" y="989.0" />
+      <point x="3617.9347826086955" y="989.0" />
+      <point x="10.434782608695514" y="15.0" />
+    </edge>
+    <edge source="com.util.bean.DwzAjaxBean" target="com.vo.BaseVO">
+      <point x="0.0" y="-92.0" />
+      <point x="4686.5" y="979.0" />
+      <point x="3621.413043478261" y="979.0" />
+      <point x="13.913043478260988" y="15.0" />
+    </edge>
+    <edge source="com.DTO.CustomerAccountDTO" target="com.vo.BaseVO">
+      <point x="0.0" y="-70.5" />
+      <point x="6001.5" y="939.0" />
+      <point x="3635.326086956522" y="939.0" />
+      <point x="27.826086956521976" y="15.0" />
+    </edge>
+    <edge source="com.service.impl.CustomerPageQueryServiceImpl" target="org.springframework.stereotype.Component">
+      <point x="-58.25" y="-26.0" />
+      <point x="3915.9500000000003" y="1633.0" />
+      <point x="3691.9500000000003" y="1633.0" />
+      <point x="8.5" y="26.0" />
+    </edge>
+    <edge source="com.vo.BaseVO" target="java.io.Serializable">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.dao.AccountListDAO" target="com.dao.BaseDao">
+      <point x="0.0" y="-81.0" />
+      <point x="918.5" y="2981.0" />
+      <point x="1827.5" y="2981.0" />
+      <point x="-61.0" y="92.0" />
+    </edge>
+    <edge source="com.web.admin.IndexController" target="org.springframework.web.bind.annotation.RequestMapping">
+      <point x="-42.5" y="-37.0" />
+      <point x="1777.5000000000005" y="1945.0" />
+      <point x="2035.3500000000004" y="1945.0" />
+      <point x="-36.60000000000002" y="81.0" />
+    </edge>
+    <edge source="com.dao.FundDAO" target="com.dao.BaseDao">
+      <point x="0.0" y="-81.0" />
+      <point x="144.5" y="2961.0" />
+      <point x="1778.7" y="2961.0" />
+      <point x="-109.79999999999995" y="92.0" />
+    </edge>
+    <edge source="com.dao.CustomerAccountDAO" target="com.dao.BaseDao">
+      <point x="0.0" y="-81.0" />
+      <point x="2101.5" y="3001.0" />
+      <point x="1900.7" y="3001.0" />
+      <point x="12.200000000000045" y="92.0" />
+    </edge>
+    <edge source="com.service.impl.CurrencyPageQueryServiceImpl" target="org.springframework.stereotype.Component">
+      <point x="-57.0" y="-26.0" />
+      <point x="4167.700000000001" y="1623.0" />
+      <point x="3708.9500000000003" y="1623.0" />
+      <point x="25.5" y="26.0" />
+    </edge>
+    <edge source="com.service.impl.FundPageQueryServiceImpl" target="com.service.PageQueryService">
+      <point x="54.25" y="-26.0" />
+      <point x="3783.4500000000003" y="1663.0" />
+      <point x="4001.4500000000003" y="1663.0" />
+      <point x="-31.0" y="26.0" />
+    </edge>
+    <edge source="com.web.admin.CustomerCommentController" target="org.springframework.web.bind.annotation.RequestMapping">
+      <point x="-157.5" y="-59.0" />
+      <point x="2641.5000000000005" y="1945.0" />
+      <point x="2084.1500000000005" y="1945.0" />
+      <point x="12.200000000000045" y="81.0" />
+    </edge>
+    <edge source="com.dao.AdminDAO" target="com.dao.BaseDao">
+      <point x="0.0" y="-81.0" />
+      <point x="2817.5" y="2981.0" />
+      <point x="1949.5" y="2981.0" />
+      <point x="61.0" y="92.0" />
+    </edge>
+    <edge source="com.vo.fp.FundVO" target="com.vo.BaseVO">
+      <point x="0.0" y="-213.5" />
+      <point x="6384.5" y="929.0" />
+      <point x="3638.804347826087" y="929.0" />
+      <point x="31.304347826086996" y="15.0" />
+    </edge>
+    <edge source="com.web.statistics.PurchaseStatisticsController" target="org.springframework.web.bind.annotation.RequestMapping">
+      <point x="-64.5" y="-26.0" />
+      <point x="3813.5000000000005" y="1915.0" />
+      <point x="2132.9500000000003" y="1915.0" />
+      <point x="61.0" y="81.0" />
+    </edge>
+    <edge source="com.dao.CurrencyDAO" target="com.dao.BaseDao">
+      <point x="0.0" y="-92.0" />
+      <point x="1675.5" y="3001.0" />
+      <point x="1876.3000000000002" y="3001.0" />
+      <point x="-12.199999999999932" y="92.0" />
+    </edge>
+    <edge source="com.service.impl.FundPurchasePageQueryServiceImpl" target="org.springframework.stereotype.Component">
+      <point x="-64.75" y="-26.0" />
+      <point x="3406.4500000000003" y="1633.0" />
+      <point x="3657.9500000000003" y="1633.0" />
+      <point x="-25.5" y="26.0" />
+    </edge>
+    <edge source="com.vo.fp.AccountListVO" target="com.vo.BaseVO">
+      <point x="0.0" y="-81.5" />
+      <point x="2024.5" y="969.0" />
+      <point x="3590.108695652174" y="969.0" />
+      <point x="-17.391304347826008" y="15.0" />
+    </edge>
+    <edge source="com.vo.ResponseVO" target="com.vo.BaseVO">
+      <point x="0.0" y="-37.0" />
+      <point x="3827.0" y="1009.0" />
+      <point x="3610.978260869565" y="1009.0" />
+      <point x="3.4782608695650197" y="15.0" />
+    </edge>
+    <edge source="com.web.admin.CustomerController" target="org.springframework.stereotype.Controller">
+      <point x="142.25" y="-59.0" />
+      <point x="1572.7500000000005" y="1975.0" />
+      <point x="2915.7000000000003" y="1975.0" />
+      <point x="-34.0" y="26.0" />
+    </edge>
+    <edge source="com.dao.CustomerDAO" target="com.dao.BaseDao">
+      <point x="0.0" y="-81.0" />
+      <point x="1301.5" y="2991.0" />
+      <point x="1851.9" y="2991.0" />
+      <point x="-36.60000000000002" y="92.0" />
+    </edge>
+    <edge source="com.web.admin.CustomerController" target="org.springframework.web.bind.annotation.RequestMapping">
+      <point x="-142.25" y="-59.0" />
+      <point x="1288.2500000000005" y="1935.0" />
+      <point x="2010.9500000000003" y="1935.0" />
+      <point x="-61.0" y="81.0" />
+    </edge>
+    <edge source="com.service.impl.CustomerPageQueryServiceImpl" target="com.service.PageQueryService">
+      <point x="58.25" y="-26.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="com.vo.fp.CustomerVO" target="com.vo.BaseVO">
+      <point x="0.0" y="-136.5" />
+      <point x="3071.5" y="999.0" />
+      <point x="3600.5434782608695" y="999.0" />
+      <point x="-6.956521739130494" y="15.0" />
+    </edge>
+    <edge source="com.dao.CurrencyPurchaseDAO" target="com.dao.BaseDao">
+      <point x="0.0" y="-81.0" />
+      <point x="3708.5" y="2961.0" />
+      <point x="1998.3" y="2961.0" />
+      <point x="109.79999999999995" y="92.0" />
+    </edge>
+    <edge source="com.service.impl.NewsPageQueryServiceImpl" target="org.springframework.stereotype.Component">
+      <point x="-54.25" y="-26.0" />
+      <point x="4726.950000000001" y="1583.0" />
+      <point x="3742.9500000000003" y="1583.0" />
+      <point x="59.5" y="26.0" />
+    </edge>
+    <edge source="com.web.admin.CurrencyController" target="org.springframework.stereotype.Controller">
+      <point x="141.0" y="-59.0" />
+      <point x="423.0" y="1955.0" />
+      <point x="2888.5" y="1955.0" />
+      <point x="-61.200000000000045" y="26.0" />
+    </edge>
+    <edge source="com.commons.page.PageUtils" target="com.vo.BaseVO">
+      <point x="0.0" y="-59.0" />
+      <point x="2769.5" y="989.0" />
+      <point x="3597.0652173913045" y="989.0" />
+      <point x="-10.434782608695514" y="15.0" />
+    </edge>
+    <edge source="com.vo.fp.CurrencyPurchaseVO" target="com.vo.BaseVO">
+      <point x="0.0" y="-81.5" />
+      <point x="126.5" y="909.0" />
+      <point x="3569.2391304347825" y="909.0" />
+      <point x="-38.26086956521749" y="15.0" />
+    </edge>
+    <edge source="org.springframework.web.servlet.handler.HandlerInterceptorAdapter" target="org.springframework.web.servlet.AsyncHandlerInterceptor">
+      <point x="0.0" y="-59.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="com.vo.fp.AdminVO" target="com.vo.BaseVO">
+      <point x="0.0" y="-92.5" />
+      <point x="4107.0" y="999.0" />
+      <point x="3614.4565217391305" y="999.0" />
+      <point x="6.956521739130494" y="15.0" />
+    </edge>
+    <edge source="com.web.user.EvaluateController" target="org.springframework.stereotype.Controller">
+      <point x="117.0" y="-37.0" />
+      <point x="5018.0" y="1865.0" />
+      <point x="3010.9" y="1865.0" />
+      <point x="61.19999999999993" y="26.0" />
+    </edge>
+    <edge source="com.DTO.FundDTO" target="com.vo.BaseVO">
+      <point x="0.0" y="-213.5" />
+      <point x="5618.5" y="949.0" />
+      <point x="3631.8478260869565" y="949.0" />
+      <point x="24.347826086956502" y="15.0" />
+    </edge>
+    <edge source="com.web.admin.CurrencyController" target="org.springframework.web.bind.annotation.RequestMapping">
+      <point x="-141.0" y="-59.0" />
+      <point x="141.0" y="1915.0" />
+      <point x="1962.1500000000003" y="1915.0" />
+      <point x="-109.79999999999995" y="81.0" />
+    </edge>
+    <edge source="org.springframework.stereotype.Controller" target="org.springframework.stereotype.Component">
+      <point x="0.0" y="-26.0" />
+      <point x="2949.7000000000003" y="1613.0" />
+      <point x="3623.9500000000003" y="1613.0" />
+      <point x="-59.5" y="26.0" />
+    </edge>
+    <edge source="com.service.impl.FundPurchasePageQueryServiceImpl" target="com.service.PageQueryService">
+      <point x="64.75" y="-26.0" />
+      <point x="3535.9500000000003" y="1653.0" />
+      <point x="3970.4500000000003" y="1653.0" />
+      <point x="-62.0" y="26.0" />
+    </edge>
+    <edge source="com.commons.page.Page" target="com.vo.BaseVO">
+      <point x="0.0" y="-59.5" />
+      <point x="3374.5" y="1009.0" />
+      <point x="3604.021739130435" y="1009.0" />
+      <point x="-3.4782608695650197" y="15.0" />
+    </edge>
+    <edge source="com.web.admin.FundController" target="org.springframework.stereotype.Controller">
+      <point x="134.75" y="-59.0" />
+      <point x="2329.2500000000005" y="1995.0" />
+      <point x="2942.9000000000005" y="1995.0" />
+      <point x="-6.7999999999999545" y="26.0" />
+    </edge>
+    <edge source="com.web.admin.CustomerCommentController" target="org.springframework.stereotype.Controller">
+      <point x="157.5" y="-59.0" />
+      <point x="6.7999999999999545" y="26.0" />
+    </edge>
+    <edge source="com.dao.FundPurchaseDAO" target="com.dao.BaseDao">
+      <point x="0.0" y="-81.0" />
+      <point x="509.5" y="2971.0" />
+      <point x="1803.1" y="2971.0" />
+      <point x="-85.39999999999998" y="92.0" />
+    </edge>
+    <edge source="com.DTO.NewsDTO" target="com.vo.BaseVO">
+      <point x="0.0" y="-59.5" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.service.impl.NewsPageQueryServiceImpl" target="com.service.PageQueryService">
+      <point x="54.25" y="-26.0" />
+      <point x="4835.450000000001" y="1573.0" />
+      <point x="4125.450000000001" y="1573.0" />
+      <point x="93.0" y="26.0" />
+    </edge>
+    <edge source="com.web.statistics.PurchaseStatisticsController" target="org.springframework.stereotype.Controller">
+      <point x="64.5" y="-26.0" />
+      <point x="3942.5000000000005" y="1905.0" />
+      <point x="2983.7000000000003" y="1905.0" />
+      <point x="34.0" y="26.0" />
+    </edge>
+    <edge source="com.web.admin.FundPurchaseController" target="org.springframework.web.bind.annotation.RequestMapping">
+      <point x="-148.75" y="-59.0" />
+      <point x="3282.7500000000005" y="1935.0" />
+      <point x="2108.55" y="1935.0" />
+      <point x="36.60000000000002" y="81.0" />
+    </edge>
+    <edge source="com.DTO.CustomerDTO" target="com.vo.BaseVO">
+      <point x="0.0" y="-136.5" />
+      <point x="1448.5" y="949.0" />
+      <point x="3583.1521739130435" y="949.0" />
+      <point x="-24.347826086956502" y="15.0" />
+    </edge>
+    <edge source="com.DTO.CurrencyPurchaseDTO" target="com.vo.BaseVO">
+      <point x="0.0" y="-81.5" />
+      <point x="6777.5" y="919.0" />
+      <point x="3642.282608695652" y="919.0" />
+      <point x="34.782608695652016" y="15.0" />
+    </edge>
+    <edge source="com.web.user.EvaluateController" target="org.springframework.web.bind.annotation.RequestMapping">
+      <point x="-117.0" y="-37.0" />
+      <point x="4784.0" y="1875.0" />
+      <point x="2181.7500000000005" y="1875.0" />
+      <point x="109.80000000000007" y="81.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.8005902925336615" x="645.1415935110741" y="750.0584125282248" />
+  <SelectedNodes>
+    <node>com.DTO.FundDTO</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
