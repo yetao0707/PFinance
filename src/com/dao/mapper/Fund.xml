@@ -9,6 +9,9 @@
 			ID              				id              			, 
 			registerId                registerId              ,
 			FUNDNAME                fundName              ,
+			shareRate shareRate,
+			bondRate bondRate,
+			currencyRate currencyRate,
 			FUNDTYPE                fundType              ,
 			NETASSETVALUE           netassetValue         , 
 			ACCUMULATEDVALUE        accumulatedValue      , 
@@ -48,6 +51,9 @@
 			totalrecruitment      ,
 			purchaseamount        ,
 			expectedYield        ,
+			bondRate,
+			shareRate,
+			currencyRate,
 			objective             
 
 
@@ -83,6 +89,10 @@
 			#{totalRecruitment                ,jdbcType=NUMERIC}, 		
 			#{purchaseAmount                ,jdbcType=NUMERIC}, 
 			#{expectedYield                ,jdbcType=NUMERIC},
+			#{monthValue                ,jdbcType=NUMERIC},
+			#{bondRate                ,jdbcType=NUMERIC},
+			#{shareRate                ,jdbcType=NUMERIC},
+			#{currencyRate                ,jdbcType=NUMERIC},
             #{objective                ,jdbcType=NUMERIC}
 	
     
@@ -152,6 +162,18 @@
 
 			<if test="fundName != null">
 				FUNDNAME  = #{fundName},
+			</if>
+			<if test="bondRate != null">
+				bondRate  = #{bondRate},
+			</if>
+			<if test="shareRate != null">
+				shareRate  = #{shareRate},
+			</if>
+			<if test="currencyRate != null">
+				currencyRate  = #{currencyRate},
+			</if>
+			<if test="expectedYield != null">
+				expectedYield  = #{expectedYield},
 			</if>
 			
 

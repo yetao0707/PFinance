@@ -116,6 +116,9 @@ public class ParseBeanUtil {
         dto.setRegisterId(vo.getRegisterId());
         dto.setFundName(vo.getFundName());
         dto.setFundType(vo.getFundType());
+        dto.setBondRate(vo.getBondRate());
+        dto.setShareRate(vo.getShareRate());
+        dto.setCurrencyRate(vo.getCurrencyRate());
         dto.setId(vo.getId());
 //        dto.setMonthValue(vo.getMonthValue());
         dto.setNetassetValue(vo.getNetassetValue());
@@ -152,6 +155,9 @@ public class ParseBeanUtil {
         vo.setNetassetValue(dto.getNetassetValue());
         vo.setObjective(dto.getObjective());
         vo.setPlanType(dto.getPlanType());
+        vo.setCurrencyRate(dto.getCurrencyRate());
+        vo.setBondRate(dto.getBondRate());
+        vo.setShareRate(dto.getShareRate());
         vo.setPurchaseAmount(dto.getPurchaseAmount());
         vo.setFundType(dto.getFundType());
         vo.setTotalRecruitment(dto.getTotalRecruitment());

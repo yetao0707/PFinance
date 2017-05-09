@@ -35,6 +35,9 @@ public class FundVO extends BaseVO {
     private Double totalRecruitment;
     private Double purchaseAmount;
     private Double objective;
+    private double shareRate;
+    private double bondRate;
+    private double currencyRate;
 
     
     public String getRegisterId() {
@@ -282,6 +285,48 @@ public class FundVO extends BaseVO {
 	 */
 	public void setExpectedYield(double expectedYield) {
 		this.expectedYield = expectedYield;
+	}
+
+	/**
+	 * @return the shareRate
+	 */
+	public double getShareRate() {
+		return shareRate;
+	}
+
+	/**
+	 * @param shareRate the shareRate to set
+	 */
+	public void setShareRate(double shareRate) {
+		this.shareRate = shareRate;
+	}
+
+	/**
+	 * @return the bondRate
+	 */
+	public double getBondRate() {
+		return bondRate;
+	}
+
+	/**
+	 * @param bondRate the bondRate to set
+	 */
+	public void setBondRate(double bondRate) {
+		this.bondRate = bondRate;
+	}
+
+	/**
+	 * @return the currencyRate
+	 */
+	public double getCurrencyRate() {
+		return currencyRate;
+	}
+
+	/**
+	 * @param currencyRate the currencyRate to set
+	 */
+	public void setCurrencyRate(double currencyRate) {
+		this.currencyRate = currencyRate;
 	}
 
 

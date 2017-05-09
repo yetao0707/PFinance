@@ -15,6 +15,18 @@
 				<input type="text" name="fundName" value="${dto.fundName}" size="30" maxlength="20" class="required" />
 			</div>
 			<div class="unit">
+				<label>债券比例：</label>
+				<input type="text" name="bondRate" value="${dto.bondRate}" size="30" maxlength="20" class="required" />
+			</div>
+			<div class="unit">
+				<label>股票比例：</label>
+				<input type="text" name="shareRate" value="${dto.shareRate}" size="30" maxlength="20" class="required" />
+			</div>
+			<div class="unit">
+				<label>货币比例：</label>
+				<input type="text" name="currencyRate" value="${dto.currencyRate}" size="30" maxlength="20" class="required" />
+			</div>
+			<div class="unit">
 				<label>基金类型：</label>
 				<input type="text" name="fundType" value="${dto.fundType}" size="30" maxlength="20" class="required" />
 			</div>
@@ -25,14 +37,6 @@
 			<div class="unit">
 				<label>累计净值：</label>
 				<input type="text" name="accumulatedValue" value="${dto.accumulatedValue}" class="required" />
-			</div>
-			<div class="unit">
-				<label>周涨跌：</label>
-				<input type="text" name="weekValue" value="${dto.weekValue}" size="30" maxlength="20" class="required" />
-			</div>
-			<div class="unit">
-				<label>月涨跌：</label>
-				<input type="text" name="monthValue" value="${dto.monthValue}" size="30" maxlength="20" class="required" />
 			</div>
 			<div class="unit">
 				<label>产品成立日：</label>

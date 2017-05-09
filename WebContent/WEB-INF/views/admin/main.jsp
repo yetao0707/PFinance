@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=7"/>
     <title>个人理财PFinance平台</title>
-    <%@ include file="../taglib.jsp" %>
+    <%@ include file="../adminTaglib.jsp" %>
     <link href="themes/default/style.css" rel="stylesheet" type="text/css" media="screen"/>
     <link href="themes/css/core.css" rel="stylesheet" type="text/css" media="screen"/>
     <link href="themes/css/print.css" rel="stylesheet" type="text/css" media="print"/>

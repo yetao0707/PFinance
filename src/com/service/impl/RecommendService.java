@@ -159,10 +159,15 @@ public class RecommendService {
             singleRadio[i][2] = 1;
         }
         for (int i =0; i < fundVOs.size();i++ ) {
-            FundTypeEnum fundType = EnumUtil.getFundTypeEnum(fundVOs.get(i).getFundType());
-            singleRadio[currencyVOs.size()+i][0] = fundType.getShareRate();
-            singleRadio[currencyVOs.size()+i][1] = fundType.getBondRate();
-            singleRadio[currencyVOs.size()+i][2] = fundType.getCurrencyRate();
+//            FundTypeEnum fundType = EnumUtil.getFundTypeEnum(fundVOs.get(i).getFundType());
+//            singleRadio[currencyVOs.size()+i][0] = fundType.getShareRate();
+//            singleRadio[currencyVOs.size()+i][1] = fundType.getBondRate();
+//            singleRadio[currencyVOs.size()+i][2] = fundType.getCurrencyRate();
+        	FundVO fundVO=fundVOs.get(i);
+        	singleRadio[currencyVOs.size()+i][0]=fundVO.getShareRate();
+        	singleRadio[currencyVOs.size()+i][1]=fundVO.getBondRate();
+        	singleRadio[currencyVOs.size()+i][2]=fundVO.getCurrencyRate();
+        	
         }
         paramers[3] = singleRadio;
     }
