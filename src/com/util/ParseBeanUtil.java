@@ -3,6 +3,7 @@ package com.util;
 import com.DTO.*;
 import com.constants.PInvestmentPortfolioEnum;
 import com.vo.fp.*;
+
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.BeanUtils;
@@ -110,6 +111,7 @@ public class ParseBeanUtil {
         FundDTO dto=new FundDTO();
         dto.setPurchaseAmount(vo.getPurchaseAmount());
         dto.setAccumulatedValue(vo.getAccumulatedValue() );
+        dto.setExpectedYield(vo.getExpectedYield());
         dto.setCustodian(vo.getCustodian());
         dto.setRegisterId(vo.getRegisterId());
         dto.setFundName(vo.getFundName());
@@ -144,6 +146,7 @@ public class ParseBeanUtil {
         vo.setRegisterId(dto.getRegisterId());
         vo.setFundName(dto.getFundName());
         vo.setFundType(dto.getFundType());
+        vo.setExpectedYield(dto.getExpectedYield());
         vo.setId(dto.getId());
 //        vo.setMonthValue(dto.getMonthValue());
         vo.setNetassetValue(dto.getNetassetValue());

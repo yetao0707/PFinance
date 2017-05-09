@@ -21,6 +21,7 @@
 			DURATION                duration              , 
 			TOTALRECRUITMENT        totalRecruitment      , 
 			PURCHASEAMOUNT          purchaseAmount        , 
+			expectedYield          expectedYield        , 
 			OBJECTIVE               objective             
      
 
@@ -46,6 +47,7 @@
 			duration              ,
 			totalrecruitment      ,
 			purchaseamount        ,
+			expectedYield        ,
 			objective             
 
 
@@ -80,6 +82,7 @@
 			#{duration                ,jdbcType=TIMESTAMP}, 
 			#{totalRecruitment                ,jdbcType=NUMERIC}, 		
 			#{purchaseAmount                ,jdbcType=NUMERIC}, 
+			#{expectedYield                ,jdbcType=NUMERIC},
             #{objective                ,jdbcType=NUMERIC}
 	
     
@@ -102,6 +105,7 @@
 			AND T.ID  = #{id}
 		</if>
 
+        limit 5
 
 
 	</select>

@@ -9,6 +9,7 @@ public class FundDTO extends BaseVO {
     private static final long serialVersionUID = -7636919983263300648L;
 
     private Long id;
+    private double expectedYield;
     private String registerId;
     private String fundName;
     private Integer fundType;
@@ -29,6 +30,7 @@ public class FundDTO extends BaseVO {
 
     private Double recommendMoney2Buy;
 
+    
     public String getRegisterId() {
         return registerId;
     }
@@ -203,4 +205,18 @@ public class FundDTO extends BaseVO {
                 ", objective=" + objective +
                 '}';
     }
+
+	/**
+	 * @return the expectedyield
+	 */
+	public double getExpectedYield() {
+		return expectedYield;
+	}
+
+	/**
+	 * @param expectedyield the expectedyield to set
+	 */
+	public void setExpectedYield(double expectedyield) {
+		this.expectedYield = expectedyield;
+	}
 }

@@ -24,6 +24,7 @@ public class FundVO extends BaseVO {
     private String registerId;
 //    private Double weekValue;
 //    private Double monthValue;
+    private double expectedYield;
     private Date foundingDate;
     private Long planType;
     private String custodian;
@@ -35,6 +36,7 @@ public class FundVO extends BaseVO {
     private Double purchaseAmount;
     private Double objective;
 
+    
     public String getRegisterId() {
         return registerId;
     }
@@ -267,6 +269,21 @@ public class FundVO extends BaseVO {
                 + ", purchaseAmount=" + purchaseAmount + ", objective="
                 + objective + "]";
     }
+
+	/**
+	 * @return the expectedYield
+	 */
+	public double getExpectedYield() {
+		return expectedYield;
+	}
+
+	/**
+	 * @param expectedYield the expectedYield to set
+	 */
+	public void setExpectedYield(double expectedYield) {
+		this.expectedYield = expectedYield;
+	}
+
 
 
 }

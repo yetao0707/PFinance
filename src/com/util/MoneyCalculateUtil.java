@@ -29,11 +29,12 @@ public class MoneyCalculateUtil {
             return 0;
         }
         CurrencyDTO currencyDTO = currencyPurchaseDTO.getCurrencyDTO();
+        CurrencyVO currencyVO=ParseBeanUtil.parseCurrencyDTO2VO(currencyDTO);
 
         if (currencyDTO == null) {
             return 0;
         }
-        double price = currencyPurchaseDTO.getNum() * getSingleCurrencyPrice();
+        double price = currencyPurchaseDTO.getNum() * getSingleCurrencyPrice(currencyVO);
         return price;
     }
 
@@ -41,10 +42,10 @@ public class MoneyCalculateUtil {
         if (fundVO == null) {
             return 0;
         }
-        return fundVO.getAccumulatedValue();
+        return 1;
     }
 
-    public static double getSingleCurrencyPrice() {
+    public static double getSingleCurrencyPrice(CurrencyVO currencyVO) {
         return 1;
     }
 
@@ -52,14 +53,14 @@ public class MoneyCalculateUtil {
         if (fundVO == null) {
             return 0;
         }
-        return fundVO.getPurchaseAmount() * (fundVO.getAccumulatedValue() - fundVO.getNetassetValue());
+        return fundVO.getExpectedYield();
     }
 
     public static double getSingleExceptedCurrencyEarning(CurrencyVO currencyVO) {
         if (currencyVO == null) {
             return 0;
         }
-        return currencyVO.getProfitYield() * currencyVO.getPurchaseAmount();
+        return currencyVO.getProfitYield();
     }
 
     public static double getFundEarning(FundPurchaseDTO fundPurchaseDTO) {

@@ -33,11 +33,15 @@
             var value24=Number($("input[class=24answer']:checked").val());
             var value25=Number($("input[class=25answer']:checked").val());
 
-            var aValue=7*value2+0.5*value6+value7+value9;
+            var aValue=(-1)*value1+7*value2+0.5*value6+value7+value9;
             var bValue=value1+value2 +value4 +value5 +value6 +value7 +value9 +value13 +value15 +value17
                     +2*value19 +2*value20 +2*value22 +2*value23 +2*value24;
             var cValue=2*value3+value25;
-            var evaluateResult="";
+           
+            
+            
+            
+            evaluateResult="";
 
             if(aValue<=28){
                 evaluateResult=evaluateResult+"1";
