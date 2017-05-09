@@ -1,5 +1,5 @@
 <%@page contentType="text/html; charset=utf-8" %>
-<%@ include file="../../taglib.jsp"%>
+<%@ include file="../../taglib.jsp" %>
 <%@page session="false" %>
 <%@ page isELIgnored="false" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -12,56 +12,95 @@
     <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
+<style>
 
+    .earnYes {
+        font-size: 40px;
+        color: #dba334;
+    }
+</style>
 <div class="container">
     <div class="row">
-        <p class="text-right"><h2>17.62</h2></p>
-    </div>
-    <div class="row">
-        <p class="text-right"><h2>昨日收益</h2></p>
-    </div>
-    <div class="row">
-        <label>理财总额</label><p class="text-right"><h2>1111</h2></p>
-    </div>
-    <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-6 col-md-offset-2">
+            <div class="row earnYes text-center">
+                ${purchaseDTO.dayEarning}
+            </div>
+            <div class="row text-center" style="font-size: 30px;">
+                昨日收益
+            </div>
 
-            <div class="row">234</div>
-            <div class="row">累计收益（元）</div>
-        </div>
-        <div class="col-md-4">
-
-        </div>
-        <div class="col-md-4">
-
-            <div class="row">234</div>
-            <div class="row">七日年化（%</div>
+            <div class="row text-center">
+                <front style="font-size: 30px">理财总额:</front>
+                <front style="font-size: 30px;color: #dba334;">${purchaseDTO.purchaseSum}</front>
+            </div>
         </div>
     </div>
-    <div class="row container">
-        <table class="table">
-            <caption>预计理财收益（元）</caption>
-            <thead>
-            <tr>
-                <th>序号</th>
-                <th>产品名称</th>
-                <th>产品类型</th>
-                <th>年化收益率（%）</th>
-                <th>购买金额（元）</th>
-                <th>购买日期</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>乐观估计</td>
-                <td>Bangalore</td>
-                <td>Bangalore</td>
-                <td>Bangalore</td>
-                <td>Bangalore</td>
-                <td>Bangalore</td>
-            </tr>
-            </tbody>
-        </table>
+    <div class="row">
+        <div class="col-md-3 col-md-offset-1">
+
+            <div class="row text-center" style="font-size: 30px;color: #dba334;">234</div>
+            <div class="row text-center" style="font-size: 30px">累计收益（元）</div>
+        </div>
+        <div class="col-md-3 col-md-offset-2">
+
+            <div class="row text-center" style="font-size: 30px;color: #dba334;">6.2380</div>
+            <div class="row text-center" style="font-size: 30px">七日年化（%）</div>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col-md-10 sectionDiv">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>产品名称</th>
+                    <th>产品类型</th>
+                    <th>年化收益率（%）</th>
+                    <th>购买金额（元）</th>
+                    <th>购买日期</th>
+                </tr>
+                </thead>
+                <tbody>
+                <c:forEach items="${purchaseDTO.fundPurchaseDTOs}" var="pojo" varStatus="index">
+                    <tr>
+                        <td>${index.count}</td>
+                        <td>${pojo.fundDTO.fundName}</td>
+                        <td>
+                            <c:choose>
+                                <c:when test="${pojo.fundDTO.fundType==1}">
+                                    货币型基金
+                                </c:when>
+                                <c:when test="${pojo.fundDTO.fundType==2}">
+                                    债券型基金
+                                </c:when>
+                                <c:when test="${pojo.fundDTO.fundType==3}">
+                                    基金型基金
+                                </c:when>
+                                <c:when test="${pojo.fundDTO.fundType==4}">
+                                    混合型基金
+                                </c:when>
+                            </c:choose>
+                        </td>
+                        <td>Bangalore</td>
+                        <td>${pojo.num}</td>
+                        <td>${pojo.purchaseDate}</td>
+                    </tr>
+                </c:forEach>
+                <c:forEach items="${purchaseDTO.currencyPurchaseDTOs}" var="pojo" varStatus="index">
+                    <tr>
+                        <td>${purchaseDTO.fundPurchaseDTOs.size()+index.count}</td>
+                        <td>${pojo.currencyDTO.currencyName}</td>
+                        <td>货币型产品</td>
+                        <td>Bangalore</td>
+                        <td>${pojo.num}</td>
+                        <td>${pojo.purchaseDate}</td>
+                    </tr>
+                </c:forEach>
+
+
+                </tbody>
+            </table>
+        </div>
     </div>
 
 </div>

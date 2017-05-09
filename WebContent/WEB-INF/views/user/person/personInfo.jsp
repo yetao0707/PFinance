@@ -1,43 +1,54 @@
 <%@page contentType="text/html; charset=utf-8" %>
-<%@ include file="../../taglib.jsp"%>
+<%@ include file="../../taglib.jsp" %>
 <%@page session="false" %>
 <%@ page isELIgnored="false" %>
+<style>
 
+    .title {
+        font-size: 20px;
+        color: #5485d2;
+    }
+</style>
 <div class="container">
-    <div class="row">
-        <div class="col-md-3">
+    <div class="row sectionDiv">
+        <div class="col-md-4 text-center title">
             <div class="row">
-                <p>基本信息</p>
+                <p>个人信息</p>
             </div>
-            <div class="row">
-                <img src="3.jpg" alt=""/>
+            <div class="row" style="height: 10px">
+                <div class="row" >
+                    <img src="<%=basePath%>images/dai.jpg" alt=""
+                         class="img-responsive center-block img-circle"/>
+                </div>
             </div>
 
         </div>
-        <div class="col-md-9">
-            <label>姓名:</label><p>李小齐</p>
-            <label>性别:</label><p>李小齐</p>
-            <label>手机号:</label><p>李小齐</p>
-            <label>身份证号:</label><p>李小齐</p>
-            <label>邮箱地址:</label><p>李小齐</p>
-            <label>居住地址:</label><p>李小齐</p>
+        <div class="col-md-7">
+            <p>姓名: 李小齐</p>
+            <p>手机号: ${userDTO.phoneNum}</p>
+            <p>身份证号: ${userDTO.idNum}</p>
+            <p>邮箱地址: ${userDTO.email}</p>
+            <p>居住地址: ${userDTO.address}</p>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-3">
+    <div class="row sectionDiv">
+        <div class="col-md-4 text-center title">
             <div class="row">
                 <p>资金账户</p>
             </div>
-            <div class="row">
-                <img src="3.jpg" alt=""/>
+            <div class="row" style="height: 10px">
+            <div class="row" >
+                <img src="<%=basePath%>images/dai.jpg" alt=""
+                     class="img-responsive center-block img-circle"/>
+            </div>
             </div>
 
         </div>
-        <div class="col-md-9">
-            <label>账户总额（元）:</label><p>李小齐</p>
-            <label>活期存款（元）:</label><p>李小齐</p>
-            <label>已理财额（元）:</label><p>李小齐</p>
-            <label>昨日收益（元）:</label><p>李小齐</p>
+        <div class="col-md-7">
+            <p>账户总额（元）:100</p>
+            <p>活期存款（元）:100</p>
+            <p>已理财额（元）:100</p>
+            <p>昨日收益（元）:100</p>
         </div>
     </div>
 

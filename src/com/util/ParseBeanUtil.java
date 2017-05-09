@@ -111,6 +111,7 @@ public class ParseBeanUtil {
         dto.setPurchaseAmount(vo.getPurchaseAmount());
         dto.setAccumulatedValue(vo.getAccumulatedValue() );
         dto.setCustodian(vo.getCustodian());
+        dto.setRegisterId(vo.getRegisterId());
         dto.setFundName(vo.getFundName());
         dto.setFundType(vo.getFundType());
         dto.setId(vo.getId());
@@ -140,6 +141,7 @@ public class ParseBeanUtil {
         vo.setPurchaseAmount(dto.getPurchaseAmount());
         vo.setAccumulatedValue(dto.getAccumulatedValue() );
         vo.setCustodian(dto.getCustodian());
+        vo.setRegisterId(dto.getRegisterId());
         vo.setFundName(dto.getFundName());
         vo.setFundType(dto.getFundType());
         vo.setId(dto.getId());

@@ -23,26 +23,35 @@
         })
     });
 </script>
+<style>
+    .purchaseGroup {
+        margin-left: 300px;
+    }
+    .header {
+        margin-top: 30px;
+        font-size: 40px;
+    }
+    .recommendProjectBuyDiv {
+        size: 300px;
+    }
+</style>
 <div class="container">
-    <div class="row" >
-        <p class="=text-center">
-            <div class="input-group">
-                <span class="input-group-addon">购买金额(元):</span>
-                <input type="text" class="form-control" id="buyMoneyInput">
-                <button type="button" class="btn btn-primary btn-sm" id="singlePurchaseMoneyConfirmButton">确定</button>
-            </div>
-        </p>
-
+    <div class="row input-group col-md-6 purchaseGroup sectionDiv">
+        <span class="input-group-addon">购买金额(元):</span>
+        <input type="text" class="form-control" id="buyMoneyInput">
+        <span class="input-group-btn">
+                <button type="button" class="btn btn-primary btn-sm"
+                        id="singlePurchaseMoneyConfirmButton">确定</button>
+             </span>
     </div>
     <div class="row" id="hiddenDefaultDiv"  hidden="true">
 
-    <div class="row">
-        <p class="text-center"><h3>您将购买以下产品</h3></p>
+    <div class="row header">
+        您将购买以下产品
     </div>
     <div class="row">
 
         <table class="table">
-            <caption>基本的表格布局</caption>
             <thead>
             <tr>
                 <th>序号</th>

@@ -21,6 +21,7 @@ public class FundVO extends BaseVO {
     private Integer fundType;
     private Double netassetValue;
     private Double accumulatedValue;
+    private String registerId;
 //    private Double weekValue;
 //    private Double monthValue;
     private Date foundingDate;
@@ -33,6 +34,14 @@ public class FundVO extends BaseVO {
     private Double totalRecruitment;
     private Double purchaseAmount;
     private Double objective;
+
+    public String getRegisterId() {
+        return registerId;
+    }
+
+    public void setRegisterId(String registerId) {
+        this.registerId = registerId;
+    }
 
     public Long getId() {
         return id;

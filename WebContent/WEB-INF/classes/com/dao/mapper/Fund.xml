@@ -7,8 +7,9 @@
 	<!--此处定义所有的列，全部用大写 -->
 	<sql id="allColumnAlias">
 			ID              				id              			, 
-			FUNDNAME                fundName              , 
-			FUNDTYPE                fundType              , 
+			registerId                registerId              ,
+			FUNDNAME                fundName              ,
+			FUNDTYPE                fundType              ,
 			NETASSETVALUE           netassetValue         , 
 			ACCUMULATEDVALUE        accumulatedValue      , 
 			FOUNDINGDATE            foundingDate          ,
@@ -31,6 +32,7 @@
 
 	<sql id="allColumn">
 			id              			,
+			registerId              ,
 			fundNAME              ,
 			fundtype              ,
 			netassetvalue         ,
@@ -62,8 +64,9 @@
 		</trim>
 		<trim prefix="values (" suffix=")" suffixOverrides=",">		
 			#{id                ,jdbcType=NUMERIC},  
-			#{fundName                ,jdbcType=VARCHAR}, 
-			#{fundType                ,jdbcType=NUMERIC}, 
+			#{registerId                ,jdbcType=VARCHAR},
+			#{fundName                ,jdbcType=VARCHAR},
+			#{fundType                ,jdbcType=NUMERIC},
 			#{netassetValue                ,jdbcType=NUMERIC}, 
 			#{accumulatedValue                ,jdbcType=NUMERIC}, 
 -- 			#{weekValue                ,jdbcType=NUMERIC},

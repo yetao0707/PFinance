@@ -9,6 +9,7 @@ public class FundDTO extends BaseVO {
     private static final long serialVersionUID = -7636919983263300648L;
 
     private Long id;
+    private String registerId;
     private String fundName;
     private Integer fundType;
     private Double netassetValue;
@@ -27,6 +28,14 @@ public class FundDTO extends BaseVO {
     private Double objective;
 
     private Double recommendMoney2Buy;
+
+    public String getRegisterId() {
+        return registerId;
+    }
+
+    public void setRegisterId(String registerId) {
+        this.registerId = registerId;
+    }
 
     public Double getRecommendMoney2Buy() {
         return recommendMoney2Buy;

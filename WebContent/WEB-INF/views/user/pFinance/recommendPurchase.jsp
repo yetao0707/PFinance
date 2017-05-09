@@ -17,12 +17,13 @@
                 }
             });
             str = str.substring(0, str.length - 1);
-            alert(str);
+//            alert(str);
             localStorage.paramStr = str;
             $("#pFinanace").load("pFinanceCustomerRead");
         });
         $("#recommendPurchaseMoneyConfirmButton").on("click", function () {
             localStorage.moneyToBuy = $("#buyMoneyInput").val();
+            alert(20);
             $("#pFinanace").load("getPersonalFinance?money=" + $("#buyMoneyInput").val(), function () {
                 $("#hiddenDefaultDiv").attr("hidden", false);
             });
@@ -34,6 +35,13 @@
 <style>
     .purchaseGroup {
         margin-left: 300px;
+    }
+    .header {
+        margin-top: 30px;
+        font-size: 40px;
+    }
+    .recommendProjectBuyDiv {
+        size: 300px;
     }
 </style>
 <div class="container">
@@ -49,13 +57,12 @@
 
     <div class="row text-center" id="hiddenDefaultDiv" hidden="true">
 
-        <div class="row">
+        <div class="row header">
             <p class="text-center">您将购买以下产品</p>
         </div>
         <div class="row">
 
             <table class="table">
-                <caption>基本的表格布局</caption>
                 <thead>
                 <tr>
                     <th>序号</th>
@@ -73,7 +80,7 @@
                         <td>${pojo.currencyName}</td>
                         <td><p>货币型产品</p></td>
                         <td>${pojo.profitYield}</td>
-                        <td><p class="moneyP"></p></td>
+                        <td><p class="moneyP">${pojo.recommendMoney2Buy}</p></td>
                         <td>${pojo.durationDays}</td>
                     </tr>
                 </c:forEach>
@@ -83,7 +90,7 @@
                         <td>${pojo.fundName}</td>
                         <td><p>基金型产品</p></td>
                         <td>${pojo.id}</td>
-                        <td><p class="moneyP"></p></td>
+                        <td><p class="moneyP">${pojo.recommendMoney2Buy}</p></td>
                         <td>${pojo.duration}</td>
                     </tr>
                 </c:forEach>
@@ -92,19 +99,18 @@
             </table>
         </div>
         <div class="row">
-            <div class="row">
-                <p>请选择要购买的产品和交易顺序</p>
-            </div>
-            <div class="row">
+            <div class="row header">
                 <p>请选择要购买的产品和交易顺序</p>
             </div>
             <div class="row">
                 <c:forEach items="${recommendDTO.recommendCurrencys}" var="pojo" varStatus="index">
-                    <div class="row recommendProjectBuyDiv">
+                    <div class="row recommendProjectBuyDiv text-center">
                         <div class="col-md-3">
+                        </div >
+                        <div class="col-md-3 text-right">
                             <input type="text" class="inputMoney" id="${pojo.id}_1" value="${pojo.recommendMoney2Buy}">
-                        </div>
-                        <div class="col-md-3">
+                        </div >
+                        <div class="col-md-3 text-left">
                             <div class="checkbox">
                                 <label>
                                     <input type="checkbox" checked="checked">
@@ -112,14 +118,18 @@
                                 </label>
                             </div>
                         </div>
+                        <div class="col-md-3">
+                        </div >
                     </div>
                 </c:forEach>
                 <c:forEach items="${recommendDTO.recommendFunds}" var="pojo" varStatus="index">
                     <div class="row recommendProjectBuyDiv">
                         <div class="col-md-3">
-                            <input type="text" class="inputMoney2" id="${pojo.id}_2" value="${pojo.recommendMoney2Buy}">
-                        </div>
-                        <div class="col-md-3">
+                        </div >
+                        <div class="col-md-3 text-right">
+                            <input type="text" class="inputMoney" id="${pojo.id}_1" value="${pojo.recommendMoney2Buy}">
+                        </div >
+                        <div class="col-md-3 text-left">
                             <div class="checkbox">
                                 <label>
                                     <input type="checkbox" checked="checked">
@@ -127,6 +137,8 @@
                                 </label>
                             </div>
                         </div>
+                        <div class="col-md-3">
+                        </div >
                     </div>
                 </c:forEach>
             </div>

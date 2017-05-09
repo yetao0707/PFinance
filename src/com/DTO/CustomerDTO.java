@@ -16,6 +16,7 @@ public class CustomerDTO extends BaseVO {
     private Long id;
     private String userName;
     private String password;
+    private String name;
     private String sex;
     private Long age;
     private String phoneNum;
@@ -28,6 +29,14 @@ public class CustomerDTO extends BaseVO {
     private double bondRate;
     private double currencyRate;
     private String desc;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public double getShareRate() {
         return shareRate;

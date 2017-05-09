@@ -1,55 +1,52 @@
 <%@page contentType="text/html; charset=utf-8" %>
-<%@ include file="../../taglib.jsp"%>
+<%@ include file="../../taglib.jsp" %>
 
 <%@page session="false" %>
 <%@ page isELIgnored="false" %>
 <script>
-    $(function(){
-        $("#currencyDetailBackButton").on("click",function(){
+    $(function () {
+        $("#currencyDetailBackButton").on("click", function () {
             $("#product").load("productIndex");
         });
-        $("#currencyDetailBuyButton").on("click",function(){
+        $("#currencyDetailBuyButton").on("click", function () {
             localStorage.purchaseProductId = $("#currencyPurchaseId").val();
-            localStorage.purchaseType=1;
-            $("#product").load("singlePurchase",{
-                paramStr:localStorage.purchaseProductId+"_"+localStorage.purchaseType
+            localStorage.purchaseType = 1;
+            $("#product").load("singlePurchase", {
+                paramStr: localStorage.purchaseProductId + "_" + localStorage.purchaseType
             });
         });
     });
 </script>
+<style>
+    .borderDiv {
+        border: 1px solid rgba(147, 144, 151, 0.94);
+    }
+    .tableLeft {
+        color: #3481ff;
+    }
+</style>
 
 
-<div class="container">
-    <div class="row">
+<div class="row container">
+    <div class="row sectionDiv col-md-offset-2 col-md-8" style="background-color: #bffaff">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <p>
-                    <button type="button" class="btn btn-primary btn-sm" id="currencyDetailBackButton">返回</button>
+                    <button type="button" class="btn btn-primary btn-lg" id="currencyDetailBackButton">返回</button>
                     <input type="text" hidden="hidden" value="${dto.id}" id="currencyPurchaseId">
                 </p>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-8 text-center">
 
-                <div class="row"><p>${dto.currencyName}</p></div>
-                <div class="row"><p>${dto.registerId}</p></div>
-                <div class="row">
-                    标签: 货币型产品 管理人
+                <div class="row" style="font-size: 30px;margin-top: 20px">${dto.currencyName}</div>
+                <div class="row" style="font-size: 20px;margin-top: 20px">${dto.registerId}</div>
+                <div class="row" style="font-size: 15px;margin-top: 40px">
+                    标签: 货币型产品 管理人 : PFinance银行股份有限公司
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="row">
-                    <div class="col-md-6">
+            <div class="col-md-2">
 
-
-                    </div>
-                    <div class="col-md-6">
-                        <p>月：10.52%↑</p>
-                        <p>周：10.52%↑</p>
-                        <p>日：10.52%↑</p>
-                    </div>
-
-                </div>
-                <div>
+                <div class="text-right" style="margin-top: 160px">
                     <button type="button" class="btn btn-primary btn-sm" id="currencyDetailBuyButton">立即购买</button>
                 </div>
             </div>
@@ -57,53 +54,118 @@
         </div>
 
     </div>
-    <div class="row" style="height: 50px"></div>
-    <div>
-        <table class="table">
-            <tbody>
-            <tr>
-                <td>产品成立日</td>
-                <td><p>${dto.foundingDate}</p></td>
-            </tr>
-            <tr>
-                <td>计划类型</td>
-                <td>Mumbai</td>
-            </tr>
-            <tr>
-                <td>管理人</td>
-                <td><p></p></td>
-            </tr>
-            <tr>
-                <td>托管人</td>
-                <td><p></p></td>
-            </tr>
-            <tr>
-                <td>推广起始日</td>
-                <td><p></p></td>
-            </tr>
-            <tr>
-                <td>推广截止日</td>
-                <td><p></p></td>
-            </tr>
-            <tr>
-                <td>存续期</td>
-                <td><p></p></td>
-            </tr>
-            <tr>
-                <td>募集资金</td>
-                <td><p></p></td>
-            </tr>
-            <tr>
-                <td>最低参与金额</td>
-                <td><p></p></td>
-            </tr>
-            <tr>
-                <td>投资目标</td>
-                <td><p></p></td>
-            </tr>
-            </tbody>
-        </table>
+    <div class="row sectionDiv col-md-offset-2 col-md-8">
+        <div class="row sectionDiv">
+            <div class="row">
+                <div class="col-md-5 borderDiv text-center header3 tableLeft">
+                    PFinance银行股份有限公司
+                </div>
+                <div class="col-md-7 borderDiv text-center header3">
+                    ${dto.registerId}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 borderDiv text-center header3 tableLeft">
+                    产品类型
+                </div>
+                <div class="col-md-7 borderDiv text-center header3">
+                    <c:choose>
+                        <c:when test="${dto.productType==1}">
+                            保本浮动收益
+                        </c:when>
+                        <c:when test="${dto.productType==2}">
+                            非保本浮动收益
+                        </c:when>
+                        <c:when test="${dto.productType==3}">
+                            保本稳定收益
+                        </c:when>
+                        <c:when test="${dto.productType==4}">
+                            非保本稳定收益
+                        </c:when>
+                    </c:choose>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 borderDiv text-center header3 tableLeft">
+                    认购起始日
+                </div>
+                <div class="col-md-7 borderDiv text-center header3">
+                    ${dto.subscriptionStartDate}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 borderDiv text-center header3 tableLeft">
+                    认购结束日
+                </div>
+                <div class="col-md-7 borderDiv text-center header3">
+                    ${dto.subscriptionEndDate}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 borderDiv text-center header3 tableLeft">
+                    成立日
+                </div>
+                <div class="col-md-7 borderDiv text-center header3">
+                    ${dto.foundingDate}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 borderDiv text-center header3 tableLeft">
+                    到期兑付日
+                </div>
+                <div class="col-md-7 borderDiv text-center header3">
+                    ${dto.cashingDay}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 borderDiv text-center header3 tableLeft">
+                    起购金额（元）
+                </div>
+                <div class="col-md-7 borderDiv text-center header3">
+                    ${dto.purchaseAmount}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 borderDiv text-center header3 tableLeft">
+                    续买递增金额（元）
+                </div>
+                <div class="col-md-7 borderDiv text-center header3">
+                    ${dto.incrementalAmount}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 borderDiv text-center header3 tableLeft">
+                    客户年化参考收益率
+                </div>
+                <div class="col-md-7 borderDiv text-center header3">
+                    ${dto.cashingDay}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 borderDiv text-center header3 tableLeft">
+                    客户年化参考收益率
+                </div>
+                <div class="col-md-7 borderDiv text-center header3">
+                    ${dto.profitYield}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 borderDiv text-center header3 tableLeft">
+                    购买渠道
+                </div>
+                <div class="col-md-7 borderDiv text-center header3">
+                    ${dto.purchaseChannel}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 borderDiv text-center header3 tableLeft">
+                    拟募集规模（亿）
+                </div>
+                <div class="col-md-7 borderDiv text-center header3">
+                    ${dto.recruitmentScale}
+                </div>
+            </div>
+        </div>
     </div>
-
 </div>
 
