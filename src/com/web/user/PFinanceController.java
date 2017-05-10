@@ -14,6 +14,7 @@ import com.util.ParseBeanUtil;
 import com.vo.fp.CurrencyVO;
 import com.vo.fp.CustomerVO;
 import com.vo.fp.FundVO;
+
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
@@ -110,7 +113,7 @@ public class PFinanceController extends BaseController{
 
     @RequestMapping("saveEvaluateResult")
     @ResponseBody
-    public Object saveEvaluateResult(String evaluateResult, HttpServletRequest request) {
+    public void saveEvaluateResult(String evaluateResult, HttpServletRequest request, HttpServletResponse response) {
         CustomerDTO customerDTO = getCustomerDTO(request);
         customerDTO.setEvaluateResult(evaluateResult);
         CustomerVO customerVO = ParseBeanUtil.parseCustomerDTO2VO(customerDTO);
@@ -118,10 +121,12 @@ public class PFinanceController extends BaseController{
             customerDAO.update(customerVO);
         } catch (Exception e) {
             log.error("customerDao update result failed customerVo=" + customerVO, e);
-            return DwzAjaxUtil.constructEditFailBean();
+            writeObject(DwzAjaxUtil.constructEditFailBean(), response);
+            return ;
         }
+        customerDTO=ParseBeanUtil.parseCustomerVO2DTO(customerVO);
         refreshCustoerDTO(request,customerDTO);
-        return DwzAjaxUtil.constructUpdateSuccessBean();
+        writeObject(DwzAjaxUtil.constructUpdateSuccessBean(), response);
     }
 
     @RequestMapping("getPersonalFinance")

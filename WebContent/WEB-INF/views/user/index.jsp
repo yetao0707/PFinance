@@ -81,7 +81,182 @@
             });
         });
         $("#product").load("productIndex");
-        $("#pFinanace").load("pFinanceIndex");
+        $("#pFinanace").load("pFinanceIndex",function(){
+
+            $("#questionSubmitButton").click(function(){
+                //验证
+                var a1=0;
+                var a2=0;
+                var a3=0;
+                var b11=0;
+                var b12=0;
+                var b13=0;
+                var b21=0;
+                var b22=0;
+                var b23=0;
+                var c1=0;
+                var c2=0;
+                var c3=0;
+                var c4=0;
+                for(var i=1;i<28;i++){
+                	var a=$("input[name='"+i+"answer']:checked");
+                	var val=a.val();
+            		if(val==undefined){
+            			if(i==13||i==14){
+            				continue;
+            			}
+            			alert("请作答第"+i+"题！");
+                        return;
+            		}
+                	var div=a.parent().parent();
+                	weights=div.attr("value").split("+");
+                	if(a.attr("type")=="radio"){
+                		var value=a.val();
+                		var values=value.split("+");
+                		if(values[0]!=""){
+                			valuesDetail=values[0].split("_");
+                			a1+=Number(valuesDetail[0])*Number(weights[0]);
+                			a2+=Number(valuesDetail[1])*Number(weights[0]);
+                			a3+=Number(valuesDetail[2])*Number(weights[0]);
+                		}
+                		if(values[1]!=""){
+                			valuesDetail=values[1].split("_");
+                			b11+=Number(valuesDetail[0])*Number(weights[1]);
+                			b12+=Number(valuesDetail[1])*Number(weights[1]);
+                			b13+=Number(valuesDetail[2])*Number(weights[1]);
+                		}
+                		if(values[2]!=""){
+                			valuesDetail=values[2].split("_");
+                			b21+=Number(valuesDetail[0])*Number(weights[2]);
+                			b22+=Number(valuesDetail[1])*Number(weights[2]);
+                			b23+=Number(valuesDetail[2])*Number(weights[2]);
+                		}
+                		if(values[3]!=""){
+                			valuesDetail=values[3].split("_");
+                			c1+=Number(valuesDetail[0])*Number(weights[3]);
+                			c2+=Number(valuesDetail[1])*Number(weights[3]);
+                			c3+=Number(valuesDetail[2])*Number(weights[3]);
+                			c4+=Number(valuesDetail[3])*Number(weights[3]);
+                		}
+                	}else{
+                		var value=a.val();
+                		if(value==undefined){
+                			alert("请作答第"+i+"题！");
+                            return;
+                		}
+                		var s=''; 
+                		var ta1=0;
+        	            var ta2=0;
+        	            var ta3=0;
+        	            var tb11=0;
+        	            var tb12=0;
+        	            var tb13=0;
+        	            var tb21=0;
+        	            var tb22=0;
+        	            var tb23=0;
+        	            var tc1=0;
+        	            var tc2=0;
+        	            var tc3=0;
+        	            var tc4=0;
+                		for(var i2=0; i2<a.length; i2++){ 
+                			if(a[i2].checked) s+=a[i2].value+','; //如果选中，将value添加到变量s中 
+                		} 
+                		s=s.substring(0,s.length-1);
+                		strs=s.split(",");
+                		for(i3=0;i3<strs.length;i3++){
+                			value=strs[i3];
+                			if(value!=""){
+                				var values=value.split("+");
+                        		if(values[0]!=""){
+                        			valuesDetail=values[0].split("_");
+                        			ta1+=Number(valuesDetail[0])*Number(weights[0]);
+                        			ta2+=Number(valuesDetail[1])*Number(weights[0]);
+                        			ta3+=Number(valuesDetail[2])*Number(weights[0]);
+                        		}
+                        		if(values[1]!=""){
+                        			valuesDetail=values[1].split("_");
+                        			tb11+=Number(valuesDetail[0])*Number(weights[1]);
+                        			tb12+=Number(valuesDetail[1])*Number(weights[1]);
+                        			tb13+=Number(valuesDetail[2])*Number(weights[1]);
+                        		}
+                        		if(values[2]!=""){
+                        			valuesDetail=values[2].split("_");
+                        			b21+=Number(valuesDetail[0])*Number(weights[2]);
+                        			b22+=Number(valuesDetail[1])*Number(weights[2]);
+                        			b23+=Number(valuesDetail[2])*Number(weights[2]);
+                        		}
+                        		if(values[3]!=""){
+                        			valuesDetail=values[3].split("_");
+                        			c1+=Number(valuesDetail[0])*Number(weights[3]);
+                        			c2+=Number(valuesDetail[1])*Number(weights[3]);
+                        			c3+=Number(valuesDetail[2])*Number(weights[3]);
+                        			c4+=Number(valuesDetail[3])*Number(weights[3]);
+                        		}
+                			}
+                		}
+                		a1+=ta1/strs.length;
+                		a2+=ta2/strs.length;
+                		ta3+=ta3/strs.length;
+                		b11+=tb11/strs.length;
+                		b12+=tb12/strs.length;
+                		b13+=tb13/strs.length;
+                		b21+=tb22/strs.length;
+                		b22+=tb22/strs.length;
+                		b23+=tb23/strs.length;
+                		c1+=tc1/strs.length;
+                		c2+=tc2/strs.length;
+                		c3+=tc3/strs.length;
+                		c4+=tc2/strs.length;
+                	}
+                }
+                evaluateResult="";
+
+                if(a1>=a2 && a1>=a3){
+                    evaluateResult=evaluateResult+"1";
+                }else if(a2>=a1 && a2>=a3){
+                    evaluateResult+=2;
+                }else{
+                    evaluateResult+=3;
+                }
+
+                if(b11>=b12 && b11>=b13){
+                    evaluateResult=evaluateResult+"1";
+                }else if(b12>=b11 && b12>=b13){
+                    evaluateResult+=2;
+                }else{
+                    evaluateResult+=3;
+                }
+
+                if(c1>=c2 && c1>=c3 && c1>=c4){
+                    evaluateResult=evaluateResult+"1";
+                }else if(c2>=c1 && c2>=c3 && c2>=c4){
+                    evaluateResult+=2;
+                }else if(c3>=c1 && c3>=c2 && c3>=c4){
+                    evaluateResult+=3;
+                }else{
+                    evaluateResult+=4;
+                }
+                $.ajax({
+                    type : "post",
+                    url : "saveEvaluateResult",
+                    data : {
+                        evaluateResult : evaluateResult
+                    },
+                    dataType : "json",
+                    success : function(data) {
+                        // alert(data.statusCode);
+
+                        if (data.statusCode == "200") {
+                        	alert("测评成功");
+                            $("#pFinanace").load("pFinanceIndex");
+                            
+                        } else {
+                            alert("测评失败失败：" + data.message);
+                        }
+                    }
+                });
+            });
+        });
         $("#news").load("newsIndex");
         $("#center").load("personIndex");
         $("#comment").load("commentIndex");

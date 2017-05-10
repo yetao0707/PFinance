@@ -175,9 +175,10 @@ public class RecommendService {
     private void buildRadio(Object[] paramers, CustomerVO customerVO) {
         PInvestmentPortfolioEnum portfolioEnum = EnumUtil.getPInvestmentPortfolioEnum(customerVO.getEvaluateResult());
         double[] radio = new double[3];
-        radio[0] = portfolioEnum.getBondRate();
-        radio[1] = portfolioEnum.getCurrencyRate();
-        radio[2] = portfolioEnum.getShareRate();
+        radio[0] = portfolioEnum.getShareRate();
+        radio[1] = portfolioEnum.getBondRate();
+        radio[2] = portfolioEnum.getCurrencyRate();
+        
         paramers[2] = radio;
 
     }

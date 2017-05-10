@@ -119,8 +119,11 @@
 		<trim prefix="" suffix="" suffixOverrides=",">
 
 
-			<if test="username != null">
+			<if test="userName != null">
 				USERNAME  = #{userName},
+			</if>
+			<if test="evaluateResult != null">
+				evaluateResult  = #{evaluateResult},
 			</if>
 			
 

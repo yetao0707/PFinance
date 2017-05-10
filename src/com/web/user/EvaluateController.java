@@ -15,28 +15,32 @@ import com.vo.ResponseVO;
 
 @Controller
 @RequestMapping("evaluate")
-public class EvaluateController {
+public class EvaluateController extends BaseController{
 	
 	private Logger log = Logger.getLogger(EvaluateController.class);
 	
 	@ResponseBody
 	@RequestMapping(value = "/update")
-	public Object updateEvaluateResult(CustomerVO customerVO, HttpServletRequest request) {
+	public void updateEvaluateResult(CustomerVO customerVO, HttpServletRequest request,HttpServletResponse response) {
 
 		ResponseVO responseVO=new ResponseVO();
 		try {
 			if (StringUtils.isEmpty(customerVO.getEvaluateResult())) {
 				responseVO.setStatusCode(ResponseVOStatusCode.STATUS_ERROR);
 				responseVO.setMsg("测评结果不正确");
-				return responseVO;
+				writeObject(responseVO, response);
+				return ;
 			}
 			//TODO update
 			responseVO.setStatusCode(ResponseVOStatusCode.STATUS_OK);;
 		} catch (Exception e) {
 			log.error("EvaluateController updateEvaluateResult failed customerVo ="+customerVO.toString(), e);
 			responseVO.setStatusCode(ResponseVOStatusCode.STATUS_ERROR);
+			writeObject(responseVO, response);
+			return ;
 		}
-		return responseVO;
+		writeObject(responseVO, response);
+		return ;
 	}
 	
 	@RequestMapping("getQuestionPage")

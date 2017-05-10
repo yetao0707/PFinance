@@ -88,7 +88,26 @@
                     <tr>
                         <td>${recommendDTO.recommendCurrencys.size()+index.count}</td>
                         <td>${pojo.fundName}</td>
-                        <td><p>基金型产品</p></td>
+                        <td>
+                        <p>
+                        <c:choose>
+    <c:when test="${pojo.fundType==1 }">
+        货币型基金
+    </c:when>
+    <c:when test="${pojo.fundType==2 }">
+        债券型基金
+    </c:when>
+    
+    <c:when test="${pojo.fundType==3 }">
+        股票型基金
+    </c:when>
+    
+    <c:when test="${pojo.fundType==4 }">
+        混合型基金
+    </c:when>
+</c:choose>
+                        </p>
+                        </td>
                         <td>${pojo.id}</td>
                         <td><p class="moneyP">${pojo.recommendMoney2Buy}</p></td>
                         <td>${pojo.duration}</td>
