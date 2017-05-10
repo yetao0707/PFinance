@@ -196,7 +196,7 @@
                 		}
                 		a1+=ta1/strs.length;
                 		a2+=ta2/strs.length;
-                		ta3+=ta3/strs.length;
+                		a3+=ta3/strs.length;
                 		b11+=tb11/strs.length;
                 		b12+=tb12/strs.length;
                 		b13+=tb13/strs.length;
@@ -218,10 +218,14 @@
                 }else{
                     evaluateResult+=3;
                 }
+                b1=b11+1.5*b21;
+                b2=b12+1.5*b22;
+                b3=b13+1.5*b23;
+                
 
-                if(b11>=b12 && b11>=b13){
+                if(b1>=b2 && b1>=b3){
                     evaluateResult=evaluateResult+"1";
-                }else if(b12>=b11 && b12>=b13){
+                }else if(b2>=b1 && b2>=b3){
                     evaluateResult+=2;
                 }else{
                     evaluateResult+=3;
@@ -248,7 +252,7 @@
 
                         if (data.statusCode == "200") {
                         	alert("测评成功");
-                            $("#pFinanace").load("pFinanceIndex");
+                           // $("#pFinanace").load("pFinanceIndex");
                             
                         } else {
                             alert("测评失败失败：" + data.message);

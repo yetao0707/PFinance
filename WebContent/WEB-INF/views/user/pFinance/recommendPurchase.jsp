@@ -108,7 +108,7 @@
 </c:choose>
                         </p>
                         </td>
-                        <td>${pojo.id}</td>
+                        <td>${pojo.expectedYield}</td>
                         <td><p class="moneyP">${pojo.recommendMoney2Buy}</p></td>
                         <td>${pojo.duration}</td>
                     </tr>

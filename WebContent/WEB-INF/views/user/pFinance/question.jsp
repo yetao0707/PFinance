@@ -69,19 +69,19 @@
                 <p><input type="radio" name="6answer" value="1_3_3+1_2_3++"/><label>B、已婚</label></p>
             </div>
 
-            <div id="question7" class="questiondiv  row required" value="4+7++">
+            <div id="question7" class="questiondiv  row required" value="4+5++">
                 <p class="questionTitle">7、请问您的家庭平均每人税前月收入大约是？</p>
                 <hr/>
-                <p><input type="radio" name="7answer" value="5_3_5+1_1_3++"/><label>A、4500元以下</label></p>
-                <p><input type="radio" name="7answer" value="5_3_4+2_2_2++"/><label>B、4501-6000元</label></p>
-                <p><input type="radio" name="7answer" value="4_4_3+3_2_2++"/><label>C、6001-10000元</label></p>
-                <p><input type="radio" name="7answer" value="3_4_2+3_3_1++"/><label>D、10001-40000元</label></p>
-                <p><input type="radio" name="7answer" value="2_5_1+2_3_1++"/><label>E、40001-60000元</label></p>
-                <p><input type="radio" name="7answer" value="1_5_1+2_3_1++"/><label>F、60000-85000元</label></p>
-                <p><input type="radio" name="7answer" value="1_5_1+1_3_1++"/><label>G、85001元以上</label></p>
+                <p><input type="radio" name="7answer" value="5_3_5+1_4_7++"/><label>A、4500元以下</label></p>
+                <p><input type="radio" name="7answer" value="5_3_4+2_4_6++"/><label>B、4501-6000元</label></p>
+                <p><input type="radio" name="7answer" value="4_4_3+3_4_5++"/><label>C、6001-10000元</label></p>
+                <p><input type="radio" name="7answer" value="3_4_2+4_4_4++"/><label>D、10001-40000元</label></p>
+                <p><input type="radio" name="7answer" value="2_5_1+5_4_3++"/><label>E、40001-60000元</label></p>
+                <p><input type="radio" name="7answer" value="1_5_1+6_4_2++"/><label>F、60000-85000元</label></p>
+                <p><input type="radio" name="7answer" value="1_5_1+7_4_1++"/><label>G、85001元以上</label></p>
             </div>
 
-            <div id="question8" class="questiondiv  row" value="+6++">
+            <div id="question8" class="questiondiv  row" value="+1++">
                 <p class="questionTitle">8、请问您的家庭收入来源及占比主要是？（多选题）</p>
                 <hr/>
                 <p><input type="checkbox" name="8answer" value="+2_3_1++"/><label>A、工资性收入</label></p>
@@ -94,16 +94,16 @@
             <div id="question9" name="questiondiv  row required" value="4+4++">
                 <p class="questionTitle">9、请问您的家庭每人平均的消费支出总额每月大约是？</p>
                 <hr/>
-                <p><input type="radio" name="9answer" value="5_3_5+1_1_3++"/><label>A、1000月以下</label></p>
-                <p><input type="radio" name="9answer" value="5_3_4+2_2_2++"/><label>B、1001-3000元</label></p>
-                <p><input type="radio" name="9answer" value="4_4_3+3_2_2++"/><label>C、3001-5000元</label></p>
-                <p><input type="radio" name="9answer" value="2_4_2+3_3_1++"/><label>D、5000-10000元</label></p>
-                <p><input type="radio" name="9answer" value="2_5_1+2_3_1++"/><label>E、10001-30000元</label></p>
-                <p><input type="radio" name="9answer" value="1_5_1+2_3_1++"/><label>F、30001-50000元</label></p>
-                <p><input type="radio" name="9answer" value="1_5_1+1_3_1++"/><label>G、50001元以上</label></p>
+                <p><input type="radio" name="9answer" value="5_3_5+1_4_7++"/><label>A、1000月以下</label></p>
+                <p><input type="radio" name="9answer" value="5_3_4+2_4_6++"/><label>B、1001-3000元</label></p>
+                <p><input type="radio" name="9answer" value="4_4_3+3_4_5++"/><label>C、3001-5000元</label></p>
+                <p><input type="radio" name="9answer" value="2_4_2+4_4_4++"/><label>D、5000-10000元</label></p>
+                <p><input type="radio" name="9answer" value="2_5_1+5_4_3++"/><label>E、10001-30000元</label></p>
+                <p><input type="radio" name="9answer" value="1_5_1+6_4_2++"/><label>F、30001-50000元</label></p>
+                <p><input type="radio" name="9answer" value="1_5_1+7_4_1++"/><label>G、50001元以上</label></p>
             </div>
 
-            <div id="question10" name="questiondiv  row " value="3+3++">
+            <div id="question10" name="questiondiv  row " value="3+2++">
                 <p class="questionTitle">10、请问您当前的居住状况是？</p>
                 <hr/>
                 <p><input type="radio" name="10answer" value="1_2_3+1_2_2++"/><label>A、已有住房并且已经全额付清房款</label></p>
@@ -111,14 +111,14 @@
                 <p><input type="radio" name="10answer" value="3_1_1+3_2_1++"/><label>C、租房</label></p>
             </div>
 
-            <div id="question11" class="questiondiv  row " value="+3++">
+            <div id="question11" class="questiondiv  row " value="+2++">
                 <p class="questionTitle">11、请问您的家庭拥有自由交通工具吗？</p>
                 <hr/>
                 <p><input type="radio" name="11answer" value="+1_2_1++"/><label>A、有</label></p>
                 <p><input type="radio" name="11answer" value="+2_3_1++"/><label>B、没有</label></p>
             </div>
 
-            <div id="question12" class="questiondiv  row " value="+4++">
+            <div id="question12" class="questiondiv  row " value="+2++">
                 <p class="questionTitle">12、您的家庭每人平均的交通支出大概是？（不包括自由交通工具的费用）</p>
                 <hr/>
                 <p><input type="radio" name="12answer" value="+1_1_3++"/><label>A、300元以下</label></p>
@@ -129,7 +129,7 @@
                 <p><input type="radio" name="12answer" value="+2_3_1++"/><label>F、5001元以上</label></p>
             </div>
 
-            <div id="question13" class="questiondiv  row required" value="+4++">
+            <div id="question13" class="questiondiv  row required" value="+3++">
                 <p class="questionTitle">13、请问您退休的平均收入总额每月大约是？（不包括自由交通工具的费用）（选修题，已退休者作答）</p>
                 <hr/>
                 <p><input type="radio" name="13answer" value="+1_1_5++"/><label>A、1000元以下</label></p>
@@ -142,7 +142,7 @@
             </div>
 
 
-            <div id="question14" class="questiondiv  row " value="+4++">
+            <div id="question14" class="questiondiv  row " value="+1++">
                 <p class="questionTitle">14、请问您退休后的收入来源占比大约是？（选修题，已退休者作答）</p>
                 <hr/>
                 <p><input type="radio" name="14answer" value="+1_1_4++"/><label>A、退休工资</label></p>
@@ -156,15 +156,15 @@
             <div id="question15" class="questiondiv  row required" value="+5++">
                 <p class="questionTitle">15、请问您的家庭负债总额是多少？</p>
                 <hr/>
-                <p><input type="radio" name="15answer" value="+5_2_1++"/><label>A、1万元以下</label></p>
+                <p><input type="radio" name="15answer" value="+5_3_1++"/><label>A、1万元以下</label></p>
                 <p><input type="radio" name="15answer" value="+4_3_2++"/><label>B、1-5万元</label></p>
-                <p><input type="radio" name="15answer" value="+3_4_3++"/><label>C、5-20万元元</label></p>
-                <p><input type="radio" name="15answer" value="+2_5_4++"/><label>D、20-50万元</label></p>
-                <p><input type="radio" name="15answer" value="+1_4_5++"/><label>E、50-300万元</label></p>
+                <p><input type="radio" name="15answer" value="+3_3_3++"/><label>C、5-20万元元</label></p>
+                <p><input type="radio" name="15answer" value="+2_3_4++"/><label>D、20-50万元</label></p>
+                <p><input type="radio" name="15answer" value="+1_3_5++"/><label>E、50-300万元</label></p>
                 <p><input type="radio" name="15answer" value="+1_3_5++"/><label>F、300万元以上</label></p>
             </div>
 
-            <div id="question16" class="questiondiv row " value="+5++">
+            <div id="question16" class="questiondiv row " value="+2++">
                 <p class="questionTitle">16、请问您的家庭债务结构是怎样的？（多选题）</p>
                 <hr/>
                 <p><input type="checkbox" name="16answer" value="+2_3_1++"/><label>A、信用卡欠款</label></p>
@@ -176,15 +176,15 @@
             <div id="question17" class="questiondiv  row required" value="+6++">
                 <p class="questionTitle">17、请问您的家庭目前可投资资产总量大约是？</p>
                 <hr/>
-                <p><input type="radio" name="17answer" value="+1_2_5++"/><label>A、1万元以下</label></p>
-                <p><input type="radio" name="17answer" value="+2_3_4++"/><label>B、1-5万元</label></p>
-                <p><input type="radio" name="17answer" value="+3_3_3++"/><label>C、5-20万元元</label></p>
-                <p><input type="radio" name="17answer" value="+4_3_2++"/><label>D、20-50万元</label></p>
-                <p><input type="radio" name="17answer" value="+4_4_2++"/><label>E、50-300万元</label></p>
-                <p><input type="radio" name="17answer" value="+5_4_1++"/><label>F、300万元以上</label></p>
+                <p><input type="radio" name="17answer" value="+1_3_6++"/><label>A、1万元以下</label></p>
+                <p><input type="radio" name="17answer" value="+2_3_5++"/><label>B、1-5万元</label></p>
+                <p><input type="radio" name="17answer" value="+3_3_4++"/><label>C、5-20万元元</label></p>
+                <p><input type="radio" name="17answer" value="+4_3_3++"/><label>D、20-50万元</label></p>
+                <p><input type="radio" name="17answer" value="+5_3_2++"/><label>E、50-300万元</label></p>
+                <p><input type="radio" name="17answer" value="+6_3_1++"/><label>F、300万元以上</label></p>
             </div>
 
-            <div id="question18" class="questiondiv  row " value="++3+">
+            <div id="question18" class="questiondiv  row " value="++2+">
                 <p class="questionTitle">18、请问您目前的资产配置情况（多选题）</p>
                 <hr/>
                 <p><input type="checkbox" name="18answer" value="++1_1_5+"/><label>A、现金、活期存款（本外币）</label></p>
@@ -218,17 +218,17 @@
                 <p><input type="radio" name="20answer" value="++5_1_1+"/><label>D、希望赚钱高回报、愿意为此承担较大本金损失</label></p>
             </div>
 
-            <div id="question21" class="questiondiv  row " value="++4+">
+            <div id="question21" class="questiondiv  row " value="++2+">
                 <p class="questionTitle">21、请问您的家庭理财目标是什么？（多选题）</p>
                 <hr/>
-                <p><input type="radio" name="21answer" value="++1_3_5+"/><label>A、对抗通货膨胀</label></p>
-                <p><input type="radio" name="21answer" value="+++5_3_1"/><label>B、创造更多财富</label></p>
-                <p><input type="radio" name="21answer" value="+++3_5_2"/><label>C、提高生活质量</label></p>
-                <p><input type="radio" name="21answer" value="++3_5_2+"/><label>D、财富顺利传承</label></p>
-                <p><input type="radio" name="21answer" value="++2_3_4+"/><label>E、税务合理规划</label></p>
-                <p><input type="radio" name="21answer" value="++2_5_2+"/><label>F、保证财富安全</label></p>
-                <p><input type="radio" name="21answer" value="++1_2_5+"/><label>G、安排子女教育</label></p>
-                <p><input type="radio" name="21answer" value="++4_3_2+"/><label>H、个人事业发展</label></p>
+                <p><input type="checkbox" name="21answer" value="++1_3_5+"/><label>A、对抗通货膨胀</label></p>
+                <p><input type="checkbox" name="21answer" value="++5_3_1+"/><label>B、创造更多财富</label></p>
+                <p><input type="checkbox" name="21answer" value="++3_5_2+"/><label>C、提高生活质量</label></p>
+                <p><input type="checkbox" name="21answer" value="++3_5_2+"/><label>D、财富顺利传承</label></p>
+                <p><input type="checkbox" name="21answer" value="++2_3_4+"/><label>E、税务合理规划</label></p>
+                <p><input type="checkbox" name="21answer" value="++2_5_2+"/><label>F、保证财富安全</label></p>
+                <p><input type="checkbox" name="21answer" value="++1_2_5+"/><label>G、安排子女教育</label></p>
+                <p><input type="checkbox" name="21answer" value="++4_3_2+"/><label>H、个人事业发展</label></p>
             </div>
 
             <div id="question22" class="questiondiv  row " value="++6+">
@@ -243,9 +243,9 @@
                 <p class="questionTitle">23、下面的观点描述了投资1万美元于5种投资组合后可能的增值和损失概率，您会投资哪一种？</p>
                 <hr/>
                 <p><input type="radio" name="23answer" value="++1_2_5+"/><label>A、第一年投资组合价值可能达到10300美元，不会发生任何损失 </label></p>
-                <p><input type="radio" name="23answer" value="++2_3_4+"/><label>B、第一年投资组合价值可能达到10600美元，八年中可能有一年发生损失</label></p>
-                <p><input type="radio" name="23answer" value="++3_5_3+"/><label>C、第一年投资组合价值可能达到10900美元，六年中可能有一年发生任何损失</label></p>
-                <p><input type="radio" name="23answer" value="++4_3_2+"/><label>D、第一年投资组合价值可能达到11100美元，五年中可能有一年发生任何损失</label></p>
+                <p><input type="radio" name="23answer" value="++2_4_3+"/><label>B、第一年投资组合价值可能达到10600美元，八年中可能有一年发生损失</label></p>
+                <p><input type="radio" name="23answer" value="++3_6_3+"/><label>C、第一年投资组合价值可能达到10900美元，六年中可能有一年发生任何损失</label></p>
+                <p><input type="radio" name="23answer" value="++3_4_2+"/><label>D、第一年投资组合价值可能达到11100美元，五年中可能有一年发生任何损失</label></p>
                 <p><input type="radio" name="23answer" value="++5_2_1+"/><label>E、第一年投资组合价值可能达到11400美元，六年中可能有一年发生任何损失</label></p>
             </div>
 
@@ -254,7 +254,7 @@
                 <hr/>
                 <p><input type="radio" name="24answer" value="++1_2_5+"/><label>A、本金无损失，但收益未达到预期 </label></p>
                 <p><input type="radio" name="24answer" value="++2_3_4+"/><label>B、出现轻微本金损失</label></p>
-                <p><input type="radio" name="24answer" value="++3_5_3+"/><label>C、本金10%以内的损失</label></p>
+                <p><input type="radio" name="24answer" value="++3_6_3+"/><label>C、本金10%以内的损失</label></p>
                 <p><input type="radio" name="24answer" value="++4_3_2+"/><label>D、本金20%-50%的损失</label></p>
                 <p><input type="radio" name="24answer" value="++5_2_1+"/><label>E、本金50%以上的损失</label></p>
             </div>
@@ -266,8 +266,8 @@
                 <p><input type="radio" name="25answer" value="+++1_2_2_1"/><label>B、不能</label></p>
             </div>
 
-            <div id="question26" name="questiondiv  row required" value="+++3">
-                <p class="questionTitle">27、请问您知晓理财产品的投资或销售的渠道是？（多选题）</p>
+            <div id="question26" name="questiondiv  row required" value="+++2">
+                <p class="questionTitle">26、请问您知晓理财产品的投资或销售的渠道是？（多选题）</p>
                 <hr/>
                 <p><input type="checkbox" name="26answer" value="+++2_3_2_2"/><label>A、理财人员推荐 </label></p>
                 <p><input type="checkbox" name="26answer" value="+++3_2_3_2"/><label>B、媒体介绍</label></p>
@@ -276,7 +276,7 @@
                 <p><input type="checkbox" name="26answer" value="+++3_3_2_3"/><label>E、网络论坛、社会上的荐文</label></p>
                 <p><input type="checkbox" name="26answer" value="+++1_1_1_1"/><label>F、其他渠道</label></p>
             </div>
-            <div id="question27" name="questiondiv  row required" value="+++4">
+            <div id="question27" name="questiondiv  row required" value="+++3">
                 <p class="questionTitle">27、请问您期待得到什么样的理财产品？（多选题）</p>
                 <hr/>
                 <p><input type="checkbox" name="27answer" value="+++5_3_3_4"/><label>A、风险适中、可以促销增值的产品 </label></p>
