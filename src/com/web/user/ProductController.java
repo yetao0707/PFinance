@@ -50,7 +50,7 @@ public class ProductController {
     @RequestMapping("/fundList")
     public String fundList(PageUtils pageUtils, HttpServletRequest request, HttpServletResponse response) {
         if (pageUtils.getNumPerPage() <= 0) {
-            pageUtils.setNumPerPage(20);
+            pageUtils.setNumPerPage(9);
             pageUtils.setCurrentPage(1);
         }
         try {
@@ -83,7 +83,7 @@ public class ProductController {
     @RequestMapping("/searchFundList")
     public String searchFundList(PageUtils pageUtils, FundDTO fundDTO, HttpServletRequest request, HttpServletResponse response) {
         if (pageUtils.getNumPerPage() <= 0) {
-            pageUtils.setNumPerPage(20);
+            pageUtils.setNumPerPage(9);
             pageUtils.setCurrentPage(1);
         }
         try {
@@ -102,7 +102,7 @@ public class ProductController {
     @RequestMapping("/currencyList")
     public String currencyList(PageUtils pageUtils, HttpServletRequest request, HttpServletResponse response) {
         if (pageUtils.getNumPerPage() <= 0) {
-            pageUtils.setNumPerPage(20);
+            pageUtils.setNumPerPage(9);
             pageUtils.setCurrentPage(1);
         }
         try {
@@ -135,7 +135,7 @@ public class ProductController {
     @RequestMapping("/searchCurrencyList")
     public String searchCurrencyList(PageUtils pageUtils, CurrencyDTO currencyDTO, HttpServletRequest request, HttpServletResponse response) {
         if (pageUtils.getNumPerPage() <= 0) {
-            pageUtils.setNumPerPage(20);
+            pageUtils.setNumPerPage(9);
             pageUtils.setCurrentPage(1);
         }
         try {

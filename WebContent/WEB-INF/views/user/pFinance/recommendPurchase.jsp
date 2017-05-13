@@ -4,6 +4,7 @@
 <%@ page isELIgnored="false" %>
 <script>
     $(function () {
+        $("#buyMoneyInput").val(localStorage.moneyToBuy);
         $("#recommendPurchaseBackButton").on("click", function () {
             $("#pFinanace").load("pFinanceIndex");
 
@@ -36,10 +37,12 @@
     .purchaseGroup {
         margin-left: 300px;
     }
+
     .header {
         margin-top: 30px;
         font-size: 40px;
     }
+
     .recommendProjectBuyDiv {
         size: 300px;
     }
@@ -89,24 +92,24 @@
                         <td>${recommendDTO.recommendCurrencys.size()+index.count}</td>
                         <td>${pojo.fundName}</td>
                         <td>
-                        <p>
-                        <c:choose>
-    <c:when test="${pojo.fundType==1 }">
-        货币型基金
-    </c:when>
-    <c:when test="${pojo.fundType==2 }">
-        债券型基金
-    </c:when>
-    
-    <c:when test="${pojo.fundType==3 }">
-        股票型基金
-    </c:when>
-    
-    <c:when test="${pojo.fundType==4 }">
-        混合型基金
-    </c:when>
-</c:choose>
-                        </p>
+                            <p>
+                                <c:choose>
+                                    <c:when test="${pojo.fundType==1 }">
+                                        货币型基金
+                                    </c:when>
+                                    <c:when test="${pojo.fundType==2 }">
+                                        债券型基金
+                                    </c:when>
+
+                                    <c:when test="${pojo.fundType==3 }">
+                                        股票型基金
+                                    </c:when>
+
+                                    <c:when test="${pojo.fundType==4 }">
+                                        混合型基金
+                                    </c:when>
+                                </c:choose>
+                            </p>
                         </td>
                         <td>${pojo.expectedYield}</td>
                         <td><p class="moneyP">${pojo.recommendMoney2Buy}</p></td>
@@ -117,6 +120,9 @@
                 </tbody>
             </table>
         </div>
+        <div class="row sectionDiv">
+            <canvas id="pieChart" width="400" height="400"></canvas>
+        </div>
         <div class="row">
             <div class="row header">
                 <p>请选择要购买的产品和交易顺序</p>
@@ -125,10 +131,10 @@
                 <c:forEach items="${recommendDTO.recommendCurrencys}" var="pojo" varStatus="index">
                     <div class="row recommendProjectBuyDiv text-center">
                         <div class="col-md-3">
-                        </div >
+                        </div>
                         <div class="col-md-3 text-right">
                             <input type="text" class="inputMoney" id="${pojo.id}_1" value="${pojo.recommendMoney2Buy}">
-                        </div >
+                        </div>
                         <div class="col-md-3 text-left">
                             <div class="checkbox">
                                 <label>
@@ -138,16 +144,16 @@
                             </div>
                         </div>
                         <div class="col-md-3">
-                        </div >
+                        </div>
                     </div>
                 </c:forEach>
                 <c:forEach items="${recommendDTO.recommendFunds}" var="pojo" varStatus="index">
                     <div class="row recommendProjectBuyDiv">
                         <div class="col-md-3">
-                        </div >
+                        </div>
                         <div class="col-md-3 text-right">
                             <input type="text" class="inputMoney" id="${pojo.id}_1" value="${pojo.recommendMoney2Buy}">
-                        </div >
+                        </div>
                         <div class="col-md-3 text-left">
                             <div class="checkbox">
                                 <label>
@@ -157,7 +163,7 @@
                             </div>
                         </div>
                         <div class="col-md-3">
-                        </div >
+                        </div>
                     </div>
                 </c:forEach>
             </div>
@@ -177,4 +183,25 @@
     </div>
 
 </div>
+<script>
+    var ctx = document.getElementById("pieChart").getContext("2d");
+
+    var data = [
+        {
+            value: 30,
+            color:"#F38630"
+        },
+        {
+            value : 50,
+            color : "#E0E4CC"
+        },
+        {
+            value : 100,
+            color : "#69D2E7"
+        }
+    ]
+    var myNewChart1 =new Chart(ctx).Pie(data);
+
+//    var ctx2 = document.getElementById("myChart2").getContext("2d");
+</script>
 

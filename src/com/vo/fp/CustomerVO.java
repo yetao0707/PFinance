@@ -24,6 +24,15 @@ public class CustomerVO extends BaseVO {
     private String adderss;
     private String idNum;
     private String evaluateResult;
+    private String evaluateDetail;
+
+    public String getEvaluateDetail() {
+        return evaluateDetail;
+    }
+
+    public void setEvaluateDetail(String evaluateDetail) {
+        this.evaluateDetail = evaluateDetail;
+    }
 
     public String getName() {
         return name;

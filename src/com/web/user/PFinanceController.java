@@ -108,7 +108,7 @@ public class PFinanceController extends BaseController{
 
     @RequestMapping("questionIndex")
     public String questionIndex(HttpServletRequest httpServletRequest) {
-        return "evaluate/question";
+        return "user/pFinance/question";
     }
 
     @RequestMapping("saveEvaluateResult")

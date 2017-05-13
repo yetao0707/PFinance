@@ -8,7 +8,7 @@
             $("#news").load("newsDetail", {
                 id: $(this).attr("name")
             });
-        })
+        });
     })
 </script>
 <style>

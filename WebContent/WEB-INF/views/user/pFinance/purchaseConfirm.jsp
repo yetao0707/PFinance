@@ -60,7 +60,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-4 borderDiv text-center header3">
-                                购买金额
+                                购买金额:
                             </div>
                             <div class="col-md-8 borderDiv text-center header3">
                                     ${pojo.recommendMoney2Buy}
@@ -129,6 +129,82 @@
                         <div class="row">
                             <div class="col-md-4 borderDiv text-center header3">
                                 管理人                            </div>
+                            <div class="col-md-8 borderDiv text-center header3">
+                                PFinance银行股份有限公司
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </c:forEach>
+                <c:forEach items="${fundDTOs}" var="pojo">
+                    <div class="row sectionDiv">
+                        <div class="row">
+                            <div class="col-md-4 borderDiv text-center header3">
+                                产品名称
+                            </div>
+                            <div class="col-md-8 borderDiv text-center header3">
+                                    ${pojo.fundName}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 borderDiv text-center header3">
+                                购买金额:
+                            </div>
+                            <div class="col-md-8 borderDiv text-center header3">
+                                    ${pojo.recommendMoney2Buy}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 borderDiv text-center header3">
+                                产品登记码
+                            </div>
+                            <div class="col-md-8 borderDiv text-center header3">
+                                    ${pojo.registerId}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 borderDiv text-center header3">
+                                产品类型
+                            </div>
+                            <div class="col-md-8 borderDiv text-center header3">
+                                    ${pojo.fundType}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 borderDiv text-center header3">
+                                预期年化（%）
+                            </div>
+                            <div class="col-md-8 borderDiv text-center header3">
+                                    ${pojo.expectedYield}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 borderDiv text-center header3">
+                                推广起始日
+                            </div>
+                            <div class="col-md-8 borderDiv text-center header3">
+                                    ${pojo.startDate}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 borderDiv text-center header3">
+                                推广截止日                            </div>
+                            <div class="col-md-8 borderDiv text-center header3">
+                                    ${pojo.endDate}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 borderDiv text-center header3">
+                                管理人                            </div>
+                            <div class="col-md-8 borderDiv text-center header3">
+                                PFinance银行股份有限公司
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 borderDiv text-center header3">
+                                托管人                            </div>
                             <div class="col-md-8 borderDiv text-center header3">
                                 PFinance银行股份有限公司
                             </div>

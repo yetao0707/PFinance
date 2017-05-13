@@ -15,7 +15,8 @@
 			EMAIL                     email         	,       
 			ADDERSS                   adderss       	,       
 			IDNUM                     idNum         	,       
-			EVALUATERESULT            evaluateResult	      
+			EVALUATERESULT            evaluateResult	   ,
+			evaluateDetail            evaluateDetail
 
 
 
@@ -35,7 +36,8 @@
 			email                           ,     
 			adderss                         ,     
 			IDnum                           ,     
-			evaluateResult                     
+			evaluateResult                   ,
+			evaluateDetail
 
 
 
@@ -62,7 +64,8 @@
 			#{email                ,jdbcType=VARCHAR}, 
 			#{adderss                ,jdbcType=VARCHAR}, 
 			#{idNum                ,jdbcType=VARCHAR}, 
-			#{evaluateResult                ,jdbcType=VARCHAR} 
+			#{evaluateDetail                ,jdbcType=VARCHAR},
+			#{evaluateResult                ,jdbcType=VARCHAR}
 
 			
 			

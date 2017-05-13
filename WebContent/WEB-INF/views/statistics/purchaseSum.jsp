@@ -19,7 +19,7 @@
 
 <script type="text/javascript" charset="utf-8">
     /* Title settings */
-    title = "October Browser Statistics";
+    title = "";
     titleXpos = 390;
     titleYpos = 85;
 
@@ -27,8 +27,9 @@
     pieRadius = 130;
     pieXpos = 150;
     pieYpos = 180;
-    pieData = [1149422, 551315];
+    pieData = [1149422, 551315,132313];
     pieLegend = [
+        "%%.%% – 基金",
         "%%.%% – 基金",
         "%%.%% – 货币"];
 

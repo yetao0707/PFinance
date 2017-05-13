@@ -34,8 +34,8 @@ public class FundPageQueryServiceImpl implements PageQueryService{
         if (rightIndex>totalNum){
             rightIndex=totalNum;
         }
-        List<FundVO> list=fundDAO.findPageList(leftIndex,rightIndex);
-        int totalPage=pageUtils.getTotalCount()%pageUtils.getNumPerPage()==0?pageUtils.getTotalCount()/pageUtils.getNumPerPage():pageUtils.getTotalCount()/pageUtils.getNumPerPage()+1;
+        List<FundVO> list=fundDAO.findPageList(leftIndex,rightIndex-leftIndex);
+        int totalPage=totalNum%pageUtils.getNumPerPage()==0?totalNum/pageUtils.getNumPerPage():totalNum/pageUtils.getNumPerPage()+1;
         pageUtils.setTotalCount(totalNum);
         pageUtils.setTotalPage(totalPage);
         page.setPage(pageUtils);
@@ -55,7 +55,7 @@ public class FundPageQueryServiceImpl implements PageQueryService{
         if (rightIndex>totalNum){
             rightIndex=totalNum;
         }
-        List<FundVO> list=fundDAO.search(leftIndex,rightIndex, (FundVO) fundVO);
+        List<FundVO> list=fundDAO.search(leftIndex,rightIndex-leftIndex, (FundVO) fundVO);
         int totalPage=pageUtils.getTotalCount()%pageUtils.getNumPerPage()==0?pageUtils.getTotalCount()/pageUtils.getNumPerPage():pageUtils.getTotalCount()/pageUtils.getNumPerPage()+1;
         pageUtils.setTotalCount(totalNum);
         pageUtils.setTotalPage(totalPage);

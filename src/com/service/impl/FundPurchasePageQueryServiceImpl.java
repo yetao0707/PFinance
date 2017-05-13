@@ -36,8 +36,8 @@ public class FundPurchasePageQueryServiceImpl implements PageQueryService{
         if (rightIndex>totalNum){
             rightIndex=totalNum;
         }
-        List<FundPurchaseVO> list=fundPurchaseDAO.findPageList(leftIndex,rightIndex);
-        int totalPage=pageUtils.getTotalCount()%pageUtils.getNumPerPage()==0?pageUtils.getTotalCount()/pageUtils.getNumPerPage():pageUtils.getTotalCount()/pageUtils.getNumPerPage()+1;
+        List<FundPurchaseVO> list=fundPurchaseDAO.findPageList(leftIndex,rightIndex-leftIndex);
+        int totalPage=totalNum%pageUtils.getNumPerPage()==0?totalNum/pageUtils.getNumPerPage():totalNum/pageUtils.getNumPerPage()+1;
         pageUtils.setTotalCount(totalNum);
         pageUtils.setTotalPage(totalPage);
         page.setPage(pageUtils);

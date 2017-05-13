@@ -17,8 +17,8 @@
             </div>
             <div class="row" style="height: 10px">
                 <div class="row" >
-                    <img src="<%=basePath%>images/dai.jpg" alt=""
-                         class="img-responsive center-block img-circle"/>
+                    <img src="<%=basePath%>images/dayi.jpg" alt=""
+                         class="img-responsive center-block img-circle" width="100px"/>
                 </div>
             </div>
 
@@ -37,10 +37,7 @@
                 <p>资金账户</p>
             </div>
             <div class="row" style="height: 10px">
-            <div class="row" >
-                <img src="<%=basePath%>images/dai.jpg" alt=""
-                     class="img-responsive center-block img-circle"/>
-            </div>
+
             </div>
 
         </div>

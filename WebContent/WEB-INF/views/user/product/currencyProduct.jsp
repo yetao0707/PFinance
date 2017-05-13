@@ -9,7 +9,16 @@
             $("#product").load("currencyDetail?id=" + $(this).attr("name"));
         });
         $("#currencySearchButton").on("click",function(){
-            $("#currencyProduct").load("searchCurrencyList?currencyName=" + $(".form-control.currencyNameSearch").val());
+            $("#currencyProduct").load("searchCurrencyList",{
+                currencyName:$(".form-control.currencyNameSearch").val()
+            });
+        });
+        $(".pageButton").on("click",function(){
+            alert($(this).attr("name"));
+            $("#currencyProduct").load("currencyList" ,{
+                currentPage:$(this).attr("name"),
+                numPerPage:9
+            });
         });
     });
 </script>
@@ -56,6 +65,24 @@
 
         </c:forEach>
 
+    </div>
+    <div class="row col-md-offset-1">
+        <ul class="pagination">
+            <li>
+                <button type="button" class="btn btn-link pageButton" name="1">&laquo;</button>
+            </li>
+            <li class="active">
+                <button type="button" class="btn btn-link pageButton" name="1">1</button>
+            </li>
+            <c:forEach begin="2" end="${page.page.totalPage}" step="1" varStatus="index">
+                <li class="active">
+                    <button type="button" class="btn btn-link pageButton" name="${index.count+1}">${index.count+1}</button>
+                </li>
+            </c:forEach>
+            <li>
+                <button type="button" class="btn btn-link pageButton" name="${page.page.totalPage}">&raquo;</button>
+            </li>
+        </ul>
     </div>
 
 </div>

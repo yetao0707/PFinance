@@ -6,7 +6,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
-    <title>详情</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>用户登录</title>
     <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -26,7 +27,7 @@
                 success: function (result) {
                     if (result.code == 100) {
                         alert("登录成功");
-                        window.location.href="indexPage";
+                        window.location.href = "indexPage";
                     } else {
                         alert(result.errMsg);
                     }
@@ -38,12 +39,11 @@
 </script>
 
 <div class="container">
-    <div class="row" style="height: 300px;"></div>
-    <div class="row">
-        <div class="col-md-8">
-            <img src="<%=basePath%>images/gaosane.ejpeg" alt="" style="width: inherit"/>
+    <div class="row" style="margin-top: 250px">
+        <div class="col-md-7 col-md-offset-1" >
+            <img src="<%=basePath%>images/gaoer.jpg" alt="First slide" class="img-responsive center-block" width="304">
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" style="margin-top: 50px">
             <form role="form">
                 <div class="form-group">
                     <label for="userName">用户名</label>
@@ -53,7 +53,7 @@
                     <label for="password">密码</label>
                     <input type="password" class="form-control" id="password" placeholder="请输入密码">
                 </div>
-                <button type="submit" class="btn btn-default">提交</button>
+                <button type="submit" class="btn btn-default">登录</button>
             </form>
         </div>
     </div>

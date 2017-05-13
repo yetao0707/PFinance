@@ -63,6 +63,51 @@
         $("#homeLoginButton").on("click", function () {
             location.href = "loginIndex";
         });
+        $(".homenews").on("click",function (e) {
+            $("#news").load("newsDetail", {
+                id: $(this).attr("name")
+            });
+            a = $('#myTab a[href="#news"]');
+//                $('#myTab a:last').tab('show');
+            a.click();
+        });
+        $('#financeButton').on('click', function (e) {
+            a = $('#myTab a[href="#center"]');
+            a.click();
+        });
+        $('#charactorButton').on('click', function (e) {
+            a = $('#myTab a[href="#center"]');
+            a.click();
+//                $("#home").load("personalResult4Home");
+        });
+        $('#newsButton').on('click', function (e) {
+            e.preventDefault();
+            a = $('#myTab a[href="#news"]');
+//                $('#myTab a:last').tab('show');
+            a.click();
+        });
+        $('#productButton').on('click', function (e) {
+            e.preventDefault();
+            a = $('#myTab a[href="#product"]');
+            a.click();
+        });
+        $('.homeProductButton.currency').on('click', function (e) {
+            e.preventDefault();
+            $("#product").load("currencyDetail?id=" + $(this).attr("name"));
+            a = $('#myTab a[href="#product"]');
+            a.click();
+        });
+        $('.homeProductButton.fund').on('click', function (e) {
+            e.preventDefault();
+            $("#product").load("fundDetail?id=" + $(this).attr("name"));
+            a = $('#myTab a[href="#product"]');
+            a.click();
+        });
+        $('#homeToQuestionEvaluate').on('click', function (e) {
+            e.preventDefault();
+            a = $('#myTab a[href="#pFinanace"]');
+            a.click();
+        });
     });
 </script>
 
@@ -128,8 +173,10 @@
                         </div>
                         <div class="row profitYesterday">
                             <h4 class="text-center">
-                                昨日收益:<strong><c:if
-                                    test="${purchaseDTO!=null}">${purchaseDTO.dayEarning}</c:if></strong>
+                                <p>昨日收益:</p>
+                                <p>
+                                    <c:if test="${purchaseDTO!=null}">${purchaseDTO.dayEarning}</c:if>
+                                </p>
                             </h4>
                         </div>
                     </div>
@@ -221,7 +268,7 @@
                 <p class="text-left">预计年化：</p>
                 <p class="text-center">10%</p>
                 <p class="text-center">
-                    <button type="button" class="btn btn-primary btn-lg">立即投资</button>
+                    <button type="button" class="btn btn-primary btn-lg homeProductButton currency" name="1">立即投资</button>
                 </p>
             </div>
             <div class="col-md-2 well productRecommend">
@@ -231,7 +278,7 @@
                 <p class="text-left">预计年化：</p>
                 <p class="text-center">10%</p>
                 <p class="text-center">
-                    <button type="button" class="btn btn-primary btn-lg">立即投资</button>
+                    <button type="button" class="btn btn-primary btn-lg homeProductButton currency" name="2">立即投资</button>
                 </p>
             </div>
             <div class="col-md-2 well productRecommend">
@@ -241,7 +288,7 @@
                 <p class="text-left">预计年化：</p>
                 <p class="text-center">10%</p>
                 <p class="text-center">
-                    <button type="button" class="btn btn-primary btn-lg">立即投资</button>
+                    <button type="button" class="btn btn-primary btn-lg homeProductButton fund" name="1">立即投资</button>
                 </p>
             </div>
             <div class="col-md-2 well productRecommend">
@@ -251,7 +298,7 @@
                 <p class="text-left">预计年化：</p>
                 <p class="text-center">10%</p>
                 <p class="text-center">
-                    <button type="button" class="btn btn-primary btn-lg">立即投资</button>
+                    <button type="button" class="btn btn-primary btn-lg homeProductButton fund" name="2">立即投资</button>
                 </p>
             </div>
 
@@ -319,23 +366,23 @@
 
                     <tbody>
                     <tr>
-                        <td>【财经】14只雄安概念股明日复盘</td>
+                        <td><button type="button" class="btn btn-link homenews" name="1">【财经】14只雄安概念股明日复盘</button></td>
                         <td>2014-04-16</td>
                     </tr>
                     <tr>
-                        <td>【财经】14只雄安概念股明日复盘</td>
+                        <td><button type="button" class="btn btn-link homenews" name="1">【财经】14只雄安概念股明日复盘</button></td>
                         <td>2014-04-16</td>
                     </tr>
                     <tr>
-                        <td>【财经】14只雄安概念股明日复盘</td>
+                        <td><button type="button" class="btn btn-link homenews" name="1">【财经】14只雄安概念股明日复盘</button></td>
                         <td>2014-04-16</td>
                     </tr>
                     <tr>
-                        <td>【财经】14只雄安概念股明日复盘</td>
+                        <td><button type="button" class="btn btn-link homenews" name="1">【财经】14只雄安概念股明日复盘</button></td>
                         <td>2014-04-16</td>
                     </tr>
                     <tr>
-                        <td>【财经】14只雄安概念股明日复盘</td>
+                        <td><button type="button" class="btn btn-link homenews" name="1">【财经】14只雄安概念股明日复盘</button></td>
                         <td>2014-04-16</td>
                     </tr>
                     </tbody>

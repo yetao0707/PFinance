@@ -104,7 +104,7 @@
                     推广起始日
                 </div>
                 <div class="col-md-7 borderDiv text-center header3">
-                    ${dto.startate}
+                    ${dto.startDate}
                 </div>
             </div>
             <div class="row">
@@ -128,7 +128,7 @@
                     募集资金
                 </div>
                 <div class="col-md-7 borderDiv text-center header3">
-                    ${dto.totalecruitment}
+                    ${dto.totalRecruitment}
                 </div>
             </div>
             <div class="row">

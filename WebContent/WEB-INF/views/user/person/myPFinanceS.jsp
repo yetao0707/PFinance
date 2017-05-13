@@ -102,6 +102,68 @@
             </table>
         </div>
     </div>
+    <div class="row sectionDiv">
+        <div class="col-md-10 sectionDiv">
+
+            <table class="table">
+                <caption>历史交易</caption>
+
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>产品名称</th>
+                    <th>产品类型</th>
+                    <th>年化收益率（%）</th>
+                    <th>购买金额（元）</th>
+                    <th>购买日期</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>“天天万利宝”2016年第2期A款</td>
+                        <td>股票型基金</td>
+                        <td>8.9%</td>
+                        <td>5000</td>
+                        <td>2016-05-05 22:24:28</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>“天天万利宝”2016年第2期A款</td>
+                        <td>股票型基金</td>
+                        <td>8.9%</td>
+                        <td>5000</td>
+                        <td>2016-05-05 22:24:28</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>“天天万利宝”2016年第2期A款</td>
+                        <td>股票型基金</td>
+                        <td>8.9%</td>
+                        <td>5000</td>
+                        <td>2016-05-05 22:24:28</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>“天天万利宝”2016年第2期A款</td>
+                        <td>股票型基金</td>
+                        <td>8.9%</td>
+                        <td>5000</td>
+                        <td>2016-05-05 22:24:28</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>“天天万利宝”2016年第2期A款</td>
+                        <td>股票型基金</td>
+                        <td>8.9%</td>
+                        <td>5000</td>
+                        <td>2016-05-05 22:24:28</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
 
 </div>
 

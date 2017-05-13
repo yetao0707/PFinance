@@ -21,7 +21,8 @@
 		PROFITYIELD                profitYield              ,  
 		TRADERATE                  tradeRate                ,  
 		PURCHASECHANNEL            purchaseChannel          ,  
-		RECRUITMENTSCALE           recruitmentScale         
+		PURCHASECHANNEL            purchaseChannel          ,
+		RECRUITMENTSCALE           recruitmentScale
 
 	
 
