@@ -144,6 +144,7 @@ public class PFinanceController extends BaseController{
             log.error("parse failed ", e);
         }
         request.setAttribute("recommendDTO", dto);
+        request.setAttribute("customerDTO", customerDTO);
         return "user/pFinance/recommendPurchase";
     }
 

@@ -24,7 +24,6 @@
         });
         $("#recommendPurchaseMoneyConfirmButton").on("click", function () {
             localStorage.moneyToBuy = $("#buyMoneyInput").val();
-            alert(20);
             $("#pFinanace").load("getPersonalFinance?money=" + $("#buyMoneyInput").val(), function () {
                 $("#hiddenDefaultDiv").attr("hidden", false);
             });
@@ -120,8 +119,8 @@
                 </tbody>
             </table>
         </div>
-        <div class="row sectionDiv">
-            <canvas id="pieChart" width="400" height="400"></canvas>
+        <div class="row sectionDiv" style="width: 650px;height:410px;margin-left: 300px">
+            <div id="pieChart" style="width: 600px;height:400px;"></div>
         </div>
         <div class="row">
             <div class="row header">
@@ -180,28 +179,82 @@
             </div>
             <div class="col-md-3"></div>
         </div>
+
+    </div>
+    <div class="hiddenDiv" hidden="hidden">
+        <input type="text" class="evaluateResult" value="${customerDTO.evaluateResult}"/>
+        <input type="text" class="evaluateDetail" value="${customerDTO.evaluateDetail}"/>
+        <input type="text" class="shareRate" value="${customerDTO.shareRate}"/>
+        <input type="text" class="currencyRate" value="${customerDTO.currencyRate}"/>
+        <input type="text" class="bondRate" value="${customerDTO.bondRate}"/>
     </div>
 
 </div>
-<script>
-    var ctx = document.getElementById("pieChart").getContext("2d");
+<%--<script>--%>
+    <%--var ctx = document.getElementById("pieChart").getContext("2d");--%>
 
-    var data = [
-        {
-            value: 30,
-            color:"#F38630"
-        },
-        {
-            value : 50,
-            color : "#E0E4CC"
-        },
-        {
-            value : 100,
-            color : "#69D2E7"
-        }
-    ]
-    var myNewChart1 =new Chart(ctx).Pie(data);
+    <%--var data = [--%>
+        <%--{--%>
+            <%--value: 30,--%>
+            <%--color: "#F38630"--%>
+        <%--},--%>
+        <%--{--%>
+            <%--value: 50,--%>
+            <%--color: "#E0E4CC"--%>
+        <%--},--%>
+        <%--{--%>
+            <%--value: 100,--%>
+            <%--color: "#69D2E7"--%>
+        <%--}--%>
+    <%--]--%>
+    <%--var myNewChart1 = new Chart(ctx).Pie(data);--%>
 
-//    var ctx2 = document.getElementById("myChart2").getContext("2d");
+    <%--//    var ctx2 = document.getElementById("myChart2").getContext("2d");--%>
+<%--</script>--%>
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('pieChart'));
+
+//    alert($(".currencyRate").val());
+    option = {
+        title : {
+            text: '推荐产品比例',
+            subtext: '',
+            x:'center'
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            left: 'left',
+            data: ['股票型产品','债券型产品','货币型产品']
+        },
+        series : [
+            {
+                name: '访问来源',
+                type: 'pie',
+                radius : '55%',
+                center: ['50%', '60%'],
+                data:[
+                    {value:$(".shareRate").val(), name:'股票型产品'},
+                    {value:$(".bondRate").val(), name:'债券型产品'},
+                    {value:$(".currencyRate").val(), name:'货币型产品'}
+                ],
+                itemStyle: {
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        ]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
 </script>
+
 

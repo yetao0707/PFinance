@@ -16,7 +16,7 @@
     <script type="text/javascript" src="<%=basePath%>resources/js/dwz/chart/g.bar.js"></script>
     <script type="text/javascript" src="<%=basePath%>resources/js/dwz/chart/g.line.js"></script>
     <script type="text/javascript" src="<%=basePath%>resources/js/dwz/chart/g.pie.js"></script>
-    <script type="text/javascript" src="<%=basePath%>resources/js/dwz/chart/g.dot.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.5.4/echarts.common.js"></script>
 
 </head>
 <body>
