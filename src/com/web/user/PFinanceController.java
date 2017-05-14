@@ -71,17 +71,22 @@ public class PFinanceController extends BaseController{
             String[] strs = params[i].split("_");
             Long productId = Long.parseLong(strs[0]);
             int type = Integer.parseInt(strs[1]);
-            money += Double.parseDouble(strs[2]);
+            double m=Double.parseDouble(strs[2]);
+            money += m;
             if (type == 1) {
                 CurrencyVO vo=new CurrencyVO();
                 vo.setId(productId);
                 vo = currencyDAO.findByPK(vo);
-                currencyDTOS.add(ParseBeanUtil.parseCurrencyVO2DTO(vo));
+                CurrencyDTO currencyDTO=ParseBeanUtil.parseCurrencyVO2DTO(vo);
+                currencyDTO.setRecommendMoney2Buy(m);
+                currencyDTOS.add(currencyDTO);
             } else {
                 FundVO vo=new FundVO();
                 vo.setId(productId);
                 vo = fundDAO.findByPK(vo);
-                fundDTOs.add(ParseBeanUtil.parseFundVO2DTO(vo));
+                FundDTO fundDTO=ParseBeanUtil.parseFundVO2DTO(vo);
+                fundDTO.setRecommendMoney2Buy(m);
+                fundDTOs.add(fundDTO);
             }
         }
 

@@ -151,7 +151,7 @@
                         <div class="col-md-3">
                         </div>
                         <div class="col-md-3 text-right">
-                            <input type="text" class="inputMoney" id="${pojo.id}_1" value="${pojo.recommendMoney2Buy}">
+                            <input type="text" class="inputMoney" id="${pojo.id}_2" value="${pojo.recommendMoney2Buy}">
                         </div>
                         <div class="col-md-3 text-left">
                             <div class="checkbox">
