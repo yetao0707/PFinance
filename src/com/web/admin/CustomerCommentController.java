@@ -118,8 +118,10 @@ public class CustomerCommentController {
 				customerCommentDAO.insert(vo);
 				dwzAjaxBea= DwzAjaxUtil.constructAddSuccessBean(navTabId);
 			}else {
+				vo.setReplyBy("Admin");
 				customerCommentDAO.update(vo);
 				dwzAjaxBea= DwzAjaxUtil.constructUpdateSuccessBean(navTabId);
+				dwzAjaxBea.setMessage("回复成功");
 			}
 		} catch (Exception e){
 			log.error("CustomerCommentController del faild CustomerCommentDTO="+dto,e);

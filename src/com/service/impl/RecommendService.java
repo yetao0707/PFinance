@@ -61,18 +61,18 @@ public class RecommendService {
         String sterString=gson.toJson(paramers);
         Object[] result = new Object[2];
 
-//        PFinance pFinanaceRecommend;
-//		try {
-//			pFinanaceRecommend = new PFinance();
-//			result=pFinanaceRecommend.getResult(2,paramers);
-//		} catch (MWException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+        PFinance pFinanaceRecommend;
+		try {
+			pFinanaceRecommend = new PFinance();
+			result=pFinanaceRecommend.getResult(2,paramers);
+		} catch (MWException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         
         //TODO
 
-        buildTestData(currencyVOs.size() + fundVOs.size(), result);
+//        buildTestData(currencyVOs.size() + fundVOs.size(), result);
 
 
         RecommendResultDTO dto= buildRecommendResultDTO(currencyVOs,fundVOs,result);

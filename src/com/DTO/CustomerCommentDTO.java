@@ -3,6 +3,7 @@ package com.DTO;
 import com.vo.BaseVO;
 
 import java.util.Date;
+import java.util.List;
 
 
 public class CustomerCommentDTO extends BaseVO {
@@ -19,8 +20,46 @@ public class CustomerCommentDTO extends BaseVO {
     private Long customerId;
     private String commentText;
     private String addTime;
+    private String tag;
+    private String replyText;
+    private String replyBy;
+    private List<String> tagList;
+
+
 
     private String title;
+
+    public String getTag() {
+        return tag;
+    }
+
+    public void setTag(String tag) {
+        this.tag = tag;
+    }
+
+    public String getReplyText() {
+        return replyText;
+    }
+
+    public void setReplyText(String replyText) {
+        this.replyText = replyText;
+    }
+
+    public String getReplyBy() {
+        return replyBy;
+    }
+
+    public void setReplyBy(String replyBy) {
+        this.replyBy = replyBy;
+    }
+
+    public List<String> getTagList() {
+        return tagList;
+    }
+
+    public void setTagList(List<String> tagList) {
+        this.tagList = tagList;
+    }
 
     public void setAddTime(String addTime) {
         this.addTime = addTime;

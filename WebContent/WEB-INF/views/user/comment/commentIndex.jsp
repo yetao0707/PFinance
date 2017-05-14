@@ -7,6 +7,37 @@
         $("#myBoxButton").on("click", function () {
             $("#comment").load("myComments");
         });
+        $("#submitComment").on("click",function () {
+            a=$('input[type="checkbox"]:checked');
+            s="";
+            for (var i = 0; i < a.length; i++) {
+                if (a[i].checked) s += a[i].value + ','; //如果选中，将value添加到变量s中
+            }
+            if (s!="") {
+                s=s.substr(0,s.length-1);
+
+            }
+            $.ajax({
+                type: "POST",
+                url: "saveComment",
+                data: {
+                    title: $("#title").val(),
+                    commentText: $("#commentText").val(),
+                    tag:s
+                },
+                dataType: "json",
+                success: function (result) {
+                    if (result.statusCode == "200") {
+                        alert("保存成功");
+                        $("#title").val("");
+                        $("#commentText").val("");
+                    } else {
+                        alert(result.message);
+                    }
+                }
+            });
+
+        })
     })
 </script>
 <style>
@@ -32,44 +63,44 @@
         <div class="row">
             <form role="form">
                 <div class="form-group">
-                    <label for="name">标题</label>
-                    <input type="text" class="form-control" id="name" placeholder="请输入标题">
+                    <label for="title">标题</label>
+                    <input type="text" class="form-control" id="title" placeholder="请输入标题">
                 </div>
                 <div class="form-group">
                     <label>反馈内容输入</label>
-                    <textarea class="form-control" rows="23"></textarea>
+                    <textarea class="form-control" id="commentText" rows="23"></textarea>
                 </div>
                 <div class="row">
                     <div class="col-md-8" style="margin-left: 30px">
                         <div class="row">
                             <label class="checkbox-inline">
-                                <input type="checkbox"  value="option1">建议
+                                <input type="checkbox"  value="建议">建议
                             </label>
                             <label class="checkbox-inline">
-                                <input type="checkbox"  value="option2">投诉
+                                <input type="checkbox"  value="投诉">投诉
                             </label>
                             <label class="checkbox-inline">
-                                <input type="checkbox"  value="option3">评论
+                                <input type="checkbox"  value="评论">评论
                             </label>
                             <label class="checkbox-inline">
-                                <input type="checkbox"  value="option3">咨询
+                                <input type="checkbox"  value="咨询">咨询
                             </label>
                         </div>
                         <div class="row">
                             <label class="checkbox-inline">
-                                <input type="checkbox"  value="option1">赞美
+                                <input type="checkbox"  value="赞美">赞美
                             </label>
                             <label class="checkbox-inline">
-                                <input type="checkbox"  value="option2">吐槽
+                                <input type="checkbox"  value="吐槽">吐槽
                             </label>
                             <label class="checkbox-inline">
-                                <input type="checkbox"  value="option3">其他
+                                <input type="checkbox"  value="其他">其他
                             </label>
                         </div>
 
                     </div>
                     <div class="col-md-3 text-right">
-                        <button type="submit" class="btn btn-default">提交</button>
+                        <button type="button" class="btn btn-default" id="submitComment">提交</button>
                     </div>
                 </div>
             </form>

@@ -10,6 +10,10 @@
 			customerId                  customerId      	,       
 			commentText                  commentText      	,
 			title                  title      	,
+			tag                  tag      	,
+			replyBy                  replyBy      	,
+			replyText                  replyText      	,
+			replyText                  replyText      	,
 			addTime                       addTime
 
 
@@ -22,6 +26,7 @@
 			id                             	,     
 			customerId                        ,     
 			title                        ,
+			tag                        ,
 			commentText                        ,
 			addTime
 
@@ -43,9 +48,10 @@
 			#{id                ,jdbcType=NUMERIC},  
 			#{customerId                ,jdbcType=NUMERIC}, 
 			#{title                ,jdbcType=VARCHAR},
+			#{tag                ,jdbcType=VARCHAR},
 			#{commentText                ,jdbcType=VARCHAR},
 
-			#{addTime                ,jdbcType=TIMESTAMP} 
+			NOW()
             
 
 
@@ -113,6 +119,12 @@
 
 			<if test="customerId != null">
 				CUSTOMERID  = #{customerId},
+			</if>
+			<if test="replyBy != null">
+				replyBy  = #{replyBy},
+			</if>
+			<if test="replyText != null">
+				replyText  = #{replyText},
 			</if>
 			
 

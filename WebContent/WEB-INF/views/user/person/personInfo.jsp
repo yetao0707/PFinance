@@ -17,7 +17,7 @@
             </div>
             <div class="row" style="height: 10px">
                 <div class="row" >
-                    <img src="<%=basePath%>images/dayi.jpg" alt=""
+                    <img src="<%=basePath%>images/head.jpg" alt=""
                          class="img-responsive center-block img-circle" width="100px"/>
                 </div>
             </div>

@@ -15,8 +15,17 @@ public class PurchaseStatisticsController {
 
     private static Logger logger = Logger.getLogger(PurchaseStatisticsController.class);
 
-    @RequestMapping("index")
-    public String index(HttpServletRequest request) {
+    @RequestMapping("purchaseSum")
+    public String purchaseStatistic(HttpServletRequest request) {
         return "statistics/purchaseSum";
+    }
+
+    @RequestMapping("userSum")
+    public String userStatistic(HttpServletRequest request) {
+        return "statistics/userStatistic";
+    }
+    @RequestMapping("productSum")
+    public String productStatistic(HttpServletRequest request) {
+        return "statistics/productStatistic";
     }
 }

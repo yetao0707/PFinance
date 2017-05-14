@@ -26,7 +26,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("user")
-public class CommentController extends BaseController{
+public class CommentController extends BaseController {
 
     private Logger logger = Logger.getLogger(CommentController.class);
 
@@ -38,20 +38,20 @@ public class CommentController extends BaseController{
         return "user/comment/commentIndex";
     }
 
-    @RequestMapping("save")
+    @RequestMapping("saveComment")
     @ResponseBody
-    public Object save(CustomerCommentDTO dto, HttpServletRequest request, HttpServletResponse response) throws Exception {
-        DwzAjaxBean dwzAjaxBea=new DwzAjaxBean();
+    public void save(CustomerCommentDTO dto, HttpServletRequest request, HttpServletResponse response) throws Exception {
+        DwzAjaxBean dwzAjaxBea = new DwzAjaxBean();
         CustomerCommentVO vo = ParseBeanUtil.parseCustomerCommentDTO2VO(dto);
+        vo.setCustomerId(getCustomerId(request));
         try {
-                customerCommentDAO.insert(vo);
-                dwzAjaxBea= DwzAjaxUtil.constructAddSuccessBean();
-
-        } catch (Exception e){
-            logger.error("CustomerCommentController del faild CustomerCommentDTO="+dto,e);
-            dwzAjaxBea= DwzAjaxUtil.constructEditFailBean();
+            customerCommentDAO.insert(vo);
+            dwzAjaxBea = DwzAjaxUtil.constructAddSuccessBean();
+        } catch (Exception e) {
+            logger.error("CustomerCommentController del faild CustomerCommentDTO=" + dto, e);
+            dwzAjaxBea = DwzAjaxUtil.constructEditFailBean();
         }
-        return dwzAjaxBea;
+        writeObject(dwzAjaxBea, response);
     }
 
     @RequestMapping("myComments")

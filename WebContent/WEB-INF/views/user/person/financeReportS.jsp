@@ -283,6 +283,30 @@
                             position: 'insideRight'
                         }
                     },
+                    data: []
+                },
+                {
+                    name: '邮件营销',
+                    type: 'bar',
+                    stack: '总量',
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'insideRight'
+                        }
+                    },
+                    data: []
+                },
+                {
+                    name: '直接访问',
+                    type: 'bar',
+                    stack: '总量',
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'insideRight'
+                        }
+                    },
                     data: [$("#shareRate").val(), $("#bondRate").val(), $("#currencyRate").val()]
                 }
             ]

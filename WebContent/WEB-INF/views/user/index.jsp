@@ -19,7 +19,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.5.4/echarts.common.js"></script>
 
 </head>
-<body>
+<body style="background-color: #a1c9ff">
 <style>
     .greenDiv {
         background-color: #b7c9ff;
@@ -73,15 +73,15 @@
 </script>
 
 ​
-<div class="container">
+<div class="container" style="background-color: #a1c9ff;padding-left: 0px;padding-right: 0px;">
 
-    <nav class="navbar navbar-default" role="navigation">
+    <nav class="navbar navbar-default" role="navigation" style="background-color: #a3fff3;height: 80px;">
 
-        <div class="navbar-header">
+        <div class="navbar-header" style="background-color: #a3fff3;height: 80px;">
             <a class="navbar-brand" href="#">PFinance</a>
         </div>
-        <ul id="myTab" class="nav nav-tabs navbar-center col-md-offset-3">
-            <li class="active"><a href="#home" data-toggle="tab">首页</a></li>
+        <ul id="myTab" class="nav nav-tabs navbar-center col-md-offset-3" style="background-color: #a3fff3;height: 80px;">
+            <li class="active"><a href="#home" data-toggle="tab" style="background-color: #a3fff3;line-height: 60px;font-size: 20px">首页</a></li>
             <li><a href="#product" data-toggle="tab">理财产品</a></li>
             <li><a href="#pFinanace" data-toggle="tab">专属理财</a></li>
             <li><a href="#news" data-toggle="tab">资讯中心</a></li>

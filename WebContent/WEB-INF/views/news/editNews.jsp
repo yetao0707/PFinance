@@ -14,7 +14,8 @@
 				<label>编辑标题：</label>
 				<textarea name="title" cols="30" rows="100" value="${dto.title}"></textarea>
 			</div>
-		</div>div class="pageFormContent" layoutH="58">
+		</div>
+		<div class="pageFormContent" layoutH="58">
             <input type="hidden" name="id" value="${dto.id}"/>
 
 			<div class="unit">

@@ -46,10 +46,6 @@
         width: 335px;
     }
 
-    .imageDiv {
-        width: 800px;
-    }
-
     .profitYesterday {
         margin-top: 15px;
     }
@@ -112,11 +108,11 @@
 </script>
 
 
-<div class="container">
+<div class="container" style="background-color: #a1c9ff;">
 
-    <div class="row">
+    <div class="row" style="background-color: #9ff5ef">
 
-        <div class="col-md-7 imageDiv">
+        <div class="col-md-7 imageDiv" style=" width: 700px;">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4>PFinance银行理财，您身边的理财专家</h4>
@@ -132,15 +128,15 @@
                         <!-- 轮播（Carousel）项目 -->
                         <div class="carousel-inner" style="height: 300px">
                             <div class="item active">
-                                <img src="<%=basePath%>images/news.png" alt="First slide"
+                                <img src="<%=basePath%>images/home1.jpg" alt="First slide"
                                      class="img-responsive center-block">
                             </div>
                             <div class="item">
-                                <img src="<%=basePath%>images/news.png" alt="Second slide"
+                                <img src="<%=basePath%>images/home2.jpg" alt="Second slide"
                                      class="img-responsive center-block">
                             </div>
                             <div class="item">
-                                <img src="<%=basePath%>images/news.png" alt="Third slide"
+                                <img src="<%=basePath%>images/home3.jpg" alt="Third slide"
                                      class="img-responsive center-block">
                             </div>
                         </div>
@@ -154,12 +150,12 @@
             </div>
         </div>
 
-        <div class="col-md-4 well personInfoDiv">
+        <div class="col-md-4 well personInfoDiv" style="margin-left: 10px;">
             <c:if test="${customerDTO!=null}">
                 <div class="row personDetail">
                         <%--<div class="row">--%>
                     <div class="col-md-5">
-                        <img src="<%=basePath%>images/dasi.jpg" alt=""
+                        <img src="<%=basePath%>images/head.jpg" alt=""
                              class="img-responsive center-block img-circle"/>
                     </div>
                     <div class="col-md-7">
@@ -220,7 +216,7 @@
                     </div>
                     <div class="col-md-6">
                         <p>
-                            <button type="button" id="financeButton" class="btn btn-default btn-lg btn-block">我的理财
+                            <button type="button" id="financeButton" class="btn btn-primary btn-lg btn-block">我的理财
                             </button>
                         </p>
                     </div>
@@ -239,12 +235,8 @@
         </div>
 
     </div>
-    <div class="row" style="height: 20px;">
 
-    </div>
-
-
-    <div class="row well greenDiv">
+    <div class="row well greenDiv" style="margin-top: 30px;">
         <div class="row">
             <div class="col-md-3">
                 <p class="text-left">产品优选 </p>
@@ -330,15 +322,15 @@
                     <!-- 轮播（Carousel）项目 -->
                     <div class="carousel-inner" style="height: 200px">
                         <div class="item active">
-                            <img src="<%=basePath%>images/news.png" alt="First slide"
+                            <img src="<%=basePath%>images/news/1.png" alt="First slide"
                                  class="img-responsive center-block">
                         </div>
                         <div class="item">
-                            <img src="<%=basePath%>images/news.png" alt="Second slide"
+                            <img src="<%=basePath%>images/news/2.png" alt="Second slide"
                                  class="img-responsive center-block">
                         </div>
                         <div class="item">
-                            <img src="<%=basePath%>images/news.png" alt="Third slide"
+                            <img src="<%=basePath%>images/news/3.png" alt="Third slide"
                                  class="img-responsive center-block">
                         </div>
                     </div>

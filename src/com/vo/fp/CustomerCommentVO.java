@@ -20,7 +20,34 @@ public class CustomerCommentVO extends BaseVO {
     private Long customerId;
     private String commentText;
     private String title;
+    private String tag;
+    private String replyText;
+    private String replyBy;
     private Date addTime;
+
+    public String getTag() {
+        return tag;
+    }
+
+    public void setTag(String tag) {
+        this.tag = tag;
+    }
+
+    public String getReplyText() {
+        return replyText;
+    }
+
+    public void setReplyText(String replyText) {
+        this.replyText = replyText;
+    }
+
+    public String getReplyBy() {
+        return replyBy;
+    }
+
+    public void setReplyBy(String replyBy) {
+        this.replyBy = replyBy;
+    }
 
     public String getTitle() {
         return title;

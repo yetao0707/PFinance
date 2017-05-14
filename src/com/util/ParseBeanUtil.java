@@ -415,6 +415,17 @@ public class ParseBeanUtil {
         dto.setCommentText(vo.getCommentText());
         dto.setTitle(vo.getTitle());
         dto.setCustomerId(vo.getCustomerId());
+        dto.setTag(vo.getTag());
+        dto.setReplyBy(vo.getReplyBy());
+        dto.setReplyText(vo.getReplyText());
+        if (StringUtils.isNotEmpty(vo.getTag())) {
+            List<String> tags = new ArrayList<String>();
+            String [] strs=vo.getTag().split(",");
+            for (int i=0;i<strs.length;i++) {
+                tags.add(strs[i]);
+            }
+            dto.setTagList(tags);
+        }
         DateFormat format=new SimpleDateFormat(dateFormat);
         dto.setAddtime(format.format(vo.getAddTime()));
         return dto;
@@ -429,6 +440,9 @@ public class ParseBeanUtil {
         vo.setId(dto.getId());
         vo.setTitle(dto.getTitle());
         vo.setCommentText(dto.getCommentText());
+        vo.setReplyText(dto.getReplyText());
+        vo.setReplyBy(dto.getReplyBy());
+        vo.setTag(dto.getTag());
         DateFormat format = new SimpleDateFormat(dateFormat);
         try {
             vo.setAddtime(format.parse(dto.getAddTime()));

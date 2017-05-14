@@ -38,14 +38,6 @@
         });
     </script>
 
-    <script type="text/javascript">
-        $(document).ready(function() {
-
-            $("#yet").click(function(){
-                $.pdialog.open("http://localhost:8080/yet/index.html", 11, "fdf");
-            })
-        });
-    </script>
 </head>
 
 <body scroll="no">
@@ -149,10 +141,10 @@
                 <div class="accordionContent">
                     <ul class="tree">
                         <%--<li><a href="getPurchaseList" target="navTab" rel="purchaseListView">产品信息统计</a></li>--%>
-                        <li><a href="<%=basePath%>yet/index.html" id="yet" target="navTab" rel="purchaseListView">产品信息统计</a></li>
-                        <li><a href="getPurchaseList" target="navTab" rel="purchaseListView">客户信息统计</a></li>
-                        <li><a href="<%=basePath%>purchaseStatistic/index" target="navTab"
-                               rel="purchaseListView">交易信息统计</a></li>
+                        <li><a href="<%=basePath%>purchaseStatistic/productSum" target="navTab" rel="productSum">产品信息统计</a></li>
+                        <li><a href="<%=basePath%>purchaseStatistic/userSum" target="navTab" rel="userSum">客户信息统计</a></li>
+                        <li><a href="<%=basePath%>purchaseStatistic/purchaseSum" target="navTab"
+                               rel="purchaseSum">交易信息统计</a></li>
                     </ul>
                 </div>
 

@@ -14,7 +14,7 @@
 <div class="pageHeader">
     <form rel="pagerForm" onsubmit="return navTabSearch(this);" action="page.do" method="post">
         <div class="searchBar">
-            <label>登录名称:</label><input type="text" name="loginName" value="">
+            <label>内容:</label><input type="text" name="loginName" value="">
             <button type="submit">检索</button>
 
         </div>
@@ -36,7 +36,7 @@
             <%--<li><a class="delete" href="<%=basePath%>customerComment/delete?ids={id}" target="ajaxTodo" title="确定要删除吗？"--%>
                    <%--warn="请选择一个用户"><span>删除</span></a></li>--%>
             <li><a class="edit" href="<%=basePath%>customerComment/update?id={id}" target="dialog" mask="true"
-                   warn="请选择一个用户"><span>修改</span></a></li>
+                   warn="请选择一个用户"><span>回复</span></a></li>
             <li class="line">line</li>
             <li><a class="icon" href="demo/common/dwz-team.xls" target="dwzExport" targetType="navTab"
                    title="实要导出这些记录吗?"><span>导出EXCEL</span></a></li>
@@ -67,8 +67,8 @@
                     <td>
                         <a title="确认删除吗?" target="ajaxTodo" href="<%=basePath%>customerComment/delete?ids=${pojo.id}"
                            class="btnDel">删除</a>
-                        <%--<a title="编辑" target="dialog" mask="true" href="<%=basePath%>customerComment/update?id=${pojo.id}"--%>
-                           <%--class="btnEdit">编辑</a>--%>
+                        <a title="编辑" target="dialog" mask="true" href="<%=basePath%>customerComment/update?id=${pojo.id}"
+                           class="btnEdit">回复</a>
                     </td>
                 </tr>
             </c:forEach>
