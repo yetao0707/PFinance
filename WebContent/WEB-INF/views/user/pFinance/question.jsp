@@ -173,7 +173,7 @@
 
                     if (data.statusCode == "200") {
                         alert("测评成功");
-                        // $("#pFinanace").load("pFinanceIndex");
+                         $("#pFinanace").load("pFinanceIndex");
 
                     } else {
                         alert("测评失败失败：" + data.message);

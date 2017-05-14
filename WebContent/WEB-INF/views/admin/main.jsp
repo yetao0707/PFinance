@@ -153,7 +153,6 @@
                         <li><a href="getPurchaseList" target="navTab" rel="purchaseListView">客户信息统计</a></li>
                         <li><a href="<%=basePath%>purchaseStatistic/index" target="navTab"
                                rel="purchaseListView">交易信息统计</a></li>
-                        <li><a href="getPurchaseList" target="navTab" rel="purchaseListView">交易报告管理</a></li>
                     </ul>
                 </div>
 
@@ -173,7 +172,6 @@
                     <ul class="tree">
                         <li><a href="<%=basePath%>customerComment/customerCommentList" target="navTab"
                                rel="customerCommentListView">评论管理</a></li>
-                        <li><a href="getAdviceList" target="navTab" rel="adviceListView">意见箱</a></li>
                         <li><a href="getPurchaseList" target="navTab" rel="purchaseListView">在线咨询</a></li>
                     </ul>
                 </div>

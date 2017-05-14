@@ -32,6 +32,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <script src="<%=basePath%>resources/xheditor/xheditor-1.1.14-zh-cn.min.js" type="text/javascript"></script>
 <script src="<%=basePath%>resources/uploadify/scripts/jquery.uploadify.js" type="text/javascript"></script>
 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.5.4/echarts.common.js"></script>
+
 
 <script type="text/javascript" src="<%=basePath%>resources/js/dwz/chart/raphael.js"></script>
 <script type="text/javascript" src="<%=basePath%>resources/js/dwz/chart/g.raphael.js"></script>

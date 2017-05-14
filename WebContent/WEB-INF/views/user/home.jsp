@@ -205,16 +205,13 @@
 
                 </div>
 
-                <div class="row">
-                    <div class="col-md-12">
-                        <img src="t.jpg" alt="" class="img-responsive center-block"/>
-                    </div>
+                <%--<div class="row">--%>
+                    <%--<div class="col-md-12">--%>
+                        <%--<img src="t.jpg" alt="" class="img-responsive center-block"/>--%>
+                    <%--</div>--%>
 
-                </div>
-                <div class="row" style="height: 40px;">
-
-                </div>
-                <div class="row">
+                <%--</div>--%>
+                <div class="row" style="margin-top: 30px">
                     <div class="col-md-6">
                         <p>
                             <button type="button" id="charactorButton" class="btn btn-primary btn-lg btn-block">我的特性

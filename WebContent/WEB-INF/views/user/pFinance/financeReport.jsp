@@ -27,6 +27,7 @@
         font-size: 40px;
         margin-top: 20px;
         color: #0099ff;
+        color: #000;;
     }
 
     .personDescIndex {
@@ -56,6 +57,7 @@
 
     .textDiv {
         margin-top: 10px;
+        text-indent: 2em;
     }
 </style>
 
@@ -193,15 +195,18 @@
             labels: ["累积阶段", "巩固阶段", "支出阶段"],
             datasets: [
                 {
-                    fillColor: "rgba(220,220,220,0.5)",
-                    strokeColor: "rgba(220,220,220,1)",
-                    pointColor: "rgba(220,220,220,1)",
-                    pointStrokeColor: "#fff",
+                    fillColor: "rgba(155,154,184,0.5)",
+                    strokeColor: "rgba(0,153,255,1)",
+                    pointColor: "rgba(88,122,169,1)",
+                    pointStrokeColor: "#000",
                     data: [detail1[0], detail1[1], detail1[2]]
                 }
             ]
         }
-        var myNewChart1 = new Chart(ctx1).Radar(data1);
+        var myNewChart1 = new Chart(ctx1).Radar(data1, {
+            scaleShowLabels: true
+
+        });
 
         var ctx2 = document.getElementById("myChart2").getContext("2d");
 
@@ -209,15 +214,18 @@
             labels: ["进取型", "均衡型", "保守型"],
             datasets: [
                 {
-                    fillColor: "rgba(220,220,220,0.5)",
-                    strokeColor: "rgba(220,220,220,1)",
-                    pointColor: "rgba(220,220,220,1)",
-                    pointStrokeColor: "#fff",
+                    fillColor: "rgba(155,154,184,0.5)",
+                    strokeColor: "rgba(0,153,255,1)",
+                    pointColor: "rgba(88,122,169,1)",
+                    pointStrokeColor: "#000",
                     data: [detail2[0], detail2[1], detail2[2]]
                 }
             ]
         }
-        var myNewChart2 = new Chart(ctx2).Radar(data2);
+        var myNewChart2 = new Chart(ctx2).Radar(data2, {
+            scaleShowLabels: true
+
+        });
 
         var ctx3 = document.getElementById("myChart3").getContext("2d");
 
@@ -225,15 +233,18 @@
             labels: ["现实主义", "理想主义", "行动主义", "实用主义"],
             datasets: [
                 {
-                    fillColor: "rgba(220,220,220,0.5)",
-                    strokeColor: "rgba(220,220,220,1)",
-                    pointColor: "rgba(220,220,220,1)",
-                    pointStrokeColor: "#fff",
+                    fillColor: "rgba(155,154,184,0.5)",
+                    strokeColor: "rgba(0,153,255,1)",
+                    pointColor: "rgba(88,122,169,1)",
+                    pointStrokeColor: "#000",
                     data: [detail3[0], detail3[1], detail3[2], detail3[3]]
                 }
             ]
         }
-        var myNewChart3 = new Chart(ctx3).Radar(data3);
+        var myNewChart3 = new Chart(ctx3).Radar(data3, {
+            scaleShowLabels: true
+
+        });
     </script>
     <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
@@ -262,6 +273,30 @@
             series: [
                 {
                     name: '直接访问',
+                    type: 'bar',
+                    stack: '总量',
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'insideRight'
+                        }
+                    },
+                    data: []
+                },
+                {
+                    name: '邮件营销',
+                    type: 'bar',
+                    stack: '总量',
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'insideRight'
+                        }
+                    },
+                    data: []
+                },
+                {
+                    name: '',
                     type: 'bar',
                     stack: '总量',
                     label: {

@@ -54,6 +54,11 @@
         font-size: 30px;
         color: #7e936f;
     }
+
+    .textDiv {
+        margin-top: 10px;
+        text-indent: 2em;
+    }
 </style>
 
 <div class="container">
@@ -192,10 +197,10 @@
             labels: ["累积阶段", "巩固阶段", "支出阶段"],
             datasets: [
                 {
-                    fillColor: "rgba(220,220,220,0.5)",
-                    strokeColor: "rgba(220,220,220,1)",
-                    pointColor: "rgba(220,220,220,1)",
-                    pointStrokeColor: "#fff",
+                    fillColor: "rgba(155,154,184,0.5)",
+                    strokeColor: "rgba(0,153,255,1)",
+                    pointColor: "rgba(88,122,169,1)",
+                    pointStrokeColor: "#000",
                     data: [detail1[0], detail1[1], detail1[2]]
                 }
             ]
@@ -211,10 +216,10 @@
             labels: ["进取型", "均衡型", "保守型"],
             datasets: [
                 {
-                    fillColor: "rgba(220,220,220,0.5)",
-                    strokeColor: "rgba(220,220,220,1)",
-                    pointColor: "rgba(220,220,220,1)",
-                    pointStrokeColor: "#fff",
+                    fillColor: "rgba(155,154,184,0.5)",
+                    strokeColor: "rgba(0,153,255,1)",
+                    pointColor: "rgba(88,122,169,1)",
+                    pointStrokeColor: "#000",
                     data: [detail2[0], detail2[1], detail2[2]]
                 }
             ]
@@ -230,10 +235,10 @@
             labels: ["现实主义", "理想主义", "行动主义", "实用主义"],
             datasets: [
                 {
-                    fillColor: "rgba(220,220,220,0.5)",
-                    strokeColor: "rgba(220,220,220,1)",
-                    pointColor: "rgba(220,220,220,1)",
-                    pointStrokeColor: "#fff",
+                    fillColor: "rgba(155,154,184,0.5)",
+                    strokeColor: "rgba(0,153,255,1)",
+                    pointColor: "rgba(88,122,169,1)",
+                    pointStrokeColor: "#000",
                     data: [detail3[0], detail3[1], detail3[2], detail3[3]]
                 }
             ]

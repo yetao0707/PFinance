@@ -40,21 +40,35 @@
                     <textarea class="form-control" rows="23"></textarea>
                 </div>
                 <div class="row">
-                    <div class="col-md-8">
-                        <label class="checkbox-inline">
-                            <input type="checkbox" id="inlineCheckbox1" value="option1">建议
-                        </label>
-                        <label class="checkbox-inline">
-                            <input type="checkbox" id="inlineCheckbox2" value="option2">投诉
-                        </label>
-                        <label class="checkbox-inline">
-                            <input type="checkbox" id="inlineCheckbox3" value="option3">评论
-                        </label>
-                        <label class="checkbox-inline">
-                            <input type="checkbox" id="inlineCheckbox4" value="option3">咨询
-                        </label>
+                    <div class="col-md-8" style="margin-left: 30px">
+                        <div class="row">
+                            <label class="checkbox-inline">
+                                <input type="checkbox"  value="option1">建议
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox"  value="option2">投诉
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox"  value="option3">评论
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox"  value="option3">咨询
+                            </label>
+                        </div>
+                        <div class="row">
+                            <label class="checkbox-inline">
+                                <input type="checkbox"  value="option1">赞美
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox"  value="option2">吐槽
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox"  value="option3">其他
+                            </label>
+                        </div>
+
                     </div>
-                    <div class="col-md-4 text-right">
+                    <div class="col-md-3 text-right">
                         <button type="submit" class="btn btn-default">提交</button>
                     </div>
                 </div>

@@ -71,7 +71,7 @@
     $(function() {
         // Creates canvas
         var r = Raphael("chartHolder2");
-        var data = [[10,20,30,50],[15,25,35,50]]
+        var data = [[160000,150000,170000,200000],[220000,200000,210000,170000]]
 
         // stacked: false
         var chart1 = r.hbarchart(40, 10, 320, 220, data, options).hover(function() {
@@ -79,7 +79,7 @@
         }, function() {
             this.flag.animate({opacity: 0}, 500, ">", function () {this.remove();});
         });
-        chart1.label([["A1", "A2", "A3", "A4"],["B1",  "B2", "B3", "B4"]],true);
+        chart1.label([["基金交易", "A2", "A3", "A4"],["B1",  "B2", "B3", "B4"]],true);
 
 
         // stacked: true
@@ -100,47 +100,56 @@
 </script>
 
 
+
 <script type="text/javascript">
-    var options = {
-        axis: "0 0 1 1", // Where to put the labels (trbl)
-        axisxstep: 16, // How many x interval labels to render (axisystep does the same for the y axis)
-        shade: true, // true, false
-        smooth: false, //曲线
-        symbol: "circle",
-        colors: ["#F44"]
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('chartHolder'));
+
+    option = {
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: {
+            type: 'value'
+        },
+        yAxis: {
+            type: 'category',
+            data: ['货币性产品', '债券型产品', '股票型产品']
+        },
+        series: [
+            {
+                name: '直接访问',
+                type: 'bar',
+                stack: '总量',
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'insideRight'
+                    }
+                },
+                data: [13, 15, 22]
+            }
+        ]
     };
 
-    $(function () {
-
-        // Make the raphael object
-        var r = Raphael("chartHolder");
-
-        var lines = r.linechart(
-                20, // X start in pixels
-                10, // Y start in pixels
-                600, // Width of chart in pixels
-                400, // Height of chart in pixels
-                [.5, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5], // Array of x coordinates equal in length to ycoords
-                [7, 11, 9, 16, 3, 19, 12, 12, 15], // Array of y coordinates equal in length to xcoords
-                options // opts object
-        );
-
-        // Modify the x axis labels
-        var xText = lines.axis[0].text.items;
-        for (var i in xText) { // Iterate through the array of dom elems, the current dom elem will be i
-            var _oldLabel = (xText[i].attr('text') + "").split('.'), // Get the current dom elem in the loop, and split it on the decimal
-                    _newLabel = _oldLabel[0] + ":" + (_oldLabel[1] == undefined ? '00' : '30'); // Format the result into time strings
-            xText[i].attr({'text': _newLabel}); // Set the text of the current elem with the result
-        }
-        ;
-    });
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
 </script>
 
 
 <body>
-<div class="container">
-    <div id="chartHolder1" style="width: 650px;height: 450px"></div>
-    <div id="chartHolder2"></div>
-    <div id="chartHolder" style="width: 650px;height: 450px"></div>
+<div class="container" style="">
+    <div id="chartHolder1" style="width: 850px;height: 450px; margin-left: 300px"></div>
+    <div id="chartHolder2" style="width: 850px;height: 450px;margin-left: 300px"></div>
+    <div id="chartHolder" style="width: 850px;height: 450px;margin-left: 200px"></div>
 </div>
 </body>
