@@ -167,7 +167,7 @@
                         </div>
                         <div class="row profitYesterday">
                             <h4 class="text-center">
-                                <p>昨日收益:</p>
+                                <p>日收益:</p>
                                 <p>
                                     <c:if test="${purchaseDTO!=null}">${purchaseDTO.dayEarning}</c:if>
                                 </p>

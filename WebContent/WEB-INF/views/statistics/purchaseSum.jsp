@@ -145,7 +145,7 @@
         </div>
     </div>
     <div id="purchaseSum1" style="width: 550px;height: 350px; margin-left: 400px;margin-top: 150px;"></div>
-    <div id="purchaseSum2" style="width: 550px;height: 350px;margin-left: 300px; margin-top: 150px;"></div>
+    <div id="purchaseSum2" style="width: 550px;height: 3250px;margin-left: 300px; margin-top: 150px;"></div>
     <input type="text"  value="<%=basePath%>" name="basePath" hidden="hidden">
 </div>
 </body>

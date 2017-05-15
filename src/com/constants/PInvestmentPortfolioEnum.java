@@ -28,7 +28,7 @@ public enum PInvestmentPortfolioEnum {
     STRENGTHEN_KEEP_IDEA("232",0.4,0.4,0.2,"巩固阶段保守型理想主义"),
     STRENGTHEN_KEEP_ACTION("233",0.45,0.35,0.2,"巩固阶段保守型行动主义"),
     STRENGTHEN_KEEP_PRATICAL("234",0.4,0.3,0.3,"巩固阶段保守型实用主义"),
-    PAY_ENTERPRISE_REALITY("311",0.1,0.4,0.5,"支付阶段进取型现实主义"),
+    PAY_ENTERPRISE_REALITY("311",0.1,0.4,0.5,"支出阶段进取型现实主义"),
     PAY_ENTERPRISE_IDEA("312",0.15,0.5,0.35,"支出阶段进取型理想主义"),
     PAY_ENTERPRISE_ACTION("313",0.2,0.6,0.2,"支出阶段进取型行动主义"),
     PAY_ENTERPRISE_PRATICAL("314",0.15,0.45,0.4,"支出阶段进取型实用主义"),

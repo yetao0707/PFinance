@@ -164,7 +164,6 @@
                     <ul class="tree">
                         <li><a href="<%=basePath%>customerComment/customerCommentList" target="navTab"
                                rel="customerCommentListView">评论管理</a></li>
-                        <li><a href="getPurchaseList" target="navTab" rel="purchaseListView">在线咨询</a></li>
                     </ul>
                 </div>
 

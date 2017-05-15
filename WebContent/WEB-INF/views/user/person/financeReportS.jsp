@@ -304,7 +304,7 @@
                             position: 'insideRight'
                         }
                     },
-                    data: [$("#shareRate").val(), $("#bondRate").val(), $("#currencyRate").val()]
+                    data: [$("#currencyRate").val(), $("#bondRate").val(), $("#shareRate").val()]
                 }
             ]
         };

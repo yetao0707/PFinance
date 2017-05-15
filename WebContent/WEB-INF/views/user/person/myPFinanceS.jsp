@@ -81,7 +81,7 @@
                                 </c:when>
                             </c:choose>
                         </td>
-                        <td>Bangalore</td>
+                        <td>${pojo.fundDTO.expectedYield }</td>
                         <td>${pojo.num}</td>
                         <td>${pojo.purchaseDate}</td>
                     </tr>
@@ -91,7 +91,7 @@
                         <td>${purchaseDTO.fundPurchaseDTOs.size()+index.count}</td>
                         <td>${pojo.currencyDTO.currencyName}</td>
                         <td>货币型产品</td>
-                        <td>Bangalore</td>
+                        <td>${pojo.currencyDTO.profitYield }</</td>
                         <td>${pojo.num}</td>
                         <td>${pojo.purchaseDate}</td>
                     </tr>

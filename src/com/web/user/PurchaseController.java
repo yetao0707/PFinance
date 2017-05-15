@@ -158,7 +158,7 @@ public class PurchaseController extends BaseController{
         FundPurchaseVO purchaseVO = new FundPurchaseVO();
         purchaseVO.setCustomerId(customerDTO.getId());
         purchaseVO.setFundId((long) productId);
-        purchaseVO.setNum(money/fundVO.getAccumulatedValue());
+        purchaseVO.setNum(money);
         purchaseVO.setPurchaseDate(new Date());
         fundPurchaseDAO.insert(purchaseVO);
     }
