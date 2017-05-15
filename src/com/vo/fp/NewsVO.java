@@ -19,9 +19,18 @@ public class NewsVO extends BaseVO {
     private Long id;
     private String content;
 
+    private String img;
     private Date addTime;
 
     private String title;
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
 
     public String getTitle() {
         return title;

@@ -8,6 +8,7 @@ import com.service.impl.PurchaseService;
 import com.util.ParseBeanUtil;
 import com.vo.fp.CustomerAccountVO;
 import com.vo.fp.CustomerVO;
+import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -63,11 +64,15 @@ public class PersonalController extends BaseController{
     @RequestMapping("personalResult")
     public String personalResult(HttpServletRequest request) {
         CustomerDTO customerDTO = getCustomerDTO(request);
-        CustomerVO customerVO = ParseBeanUtil.parseCustomerDTO2VO(customerDTO);
-        customerVO = customerDAO.find(customerVO);
-        customerDTO = ParseBeanUtil.parseCustomerVO2DTO(customerVO);
-        request.setAttribute("dto", customerDTO);
-        return "user/person/financeReportS";
+        if (StringUtils.isEmpty(customerDTO.getEvaluateResult())) {
+            return "user/person/questionS";
+        } else {
+            CustomerVO customerVO = ParseBeanUtil.parseCustomerDTO2VO(customerDTO);
+            customerVO = customerDAO.find(customerVO);
+            customerDTO = ParseBeanUtil.parseCustomerVO2DTO(customerVO);
+            request.setAttribute("dto", customerDTO);
+            return "user/person/financeReportS";
+        }
     }
 
     @RequestMapping("personalProduct")

@@ -362,6 +362,7 @@ public class ParseBeanUtil {
         dto.setId(vo.getId());
         dto.setContent(vo.getContent());
         dto.setTitle(vo.getTitle());
+        dto.setImg(vo.getImg());
         DateFormat format=new SimpleDateFormat(dateFormat);
         dto.setAddTime(format.format(vo.getAddTime()));
         return dto;
@@ -373,6 +374,7 @@ public class ParseBeanUtil {
         }
         NewsVO vo=new NewsVO();
         vo.setId(dto.getId());
+        vo.setImg(dto.getImg());
         vo.setContent(dto.getContent());
         vo.setTitle(dto.getTitle());
         DateFormat format=new SimpleDateFormat(dateFormat);

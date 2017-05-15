@@ -16,11 +16,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -109,7 +113,7 @@ public class NewsController {
 
 	@RequestMapping("save")
 	@ResponseBody
-	public Object save(NewsDTO dto,HttpServletRequest request,HttpServletResponse response) throws Exception {
+	public Object save(NewsDTO dto, HttpServletRequest request, HttpServletResponse response) throws Exception {
 		Gson gson=new Gson();
 		DwzAjaxBean dwzAjaxBea=new DwzAjaxBean();
         NewsVO vo = ParseBeanUtil.parseNewsDTO2VO(dto);

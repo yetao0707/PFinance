@@ -60,6 +60,9 @@
         <if test="id != null">
             AND T.ID = #{id}
         </if>
+        <if test="customerId != null">
+            AND T.customerId = #{customerId}
+        </if>
 
 
     </select>

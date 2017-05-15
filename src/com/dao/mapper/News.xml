@@ -9,6 +9,7 @@
 			ID                       	id            	,       
 			content                  content      	,           
 			title                  title      	,
+			img                  img      	,
 			addtime                       addTime
 
 	</sql>
@@ -18,6 +19,7 @@
 			id                             	,     
 			content                        ,      
 			title                        ,
+			img                        ,
 			addTime
 
 
@@ -38,6 +40,7 @@
 			#{id                ,jdbcType=NUMERIC},  
 			#{content                ,jdbcType=VARCHAR}, 
 			#{title                ,jdbcType=VARCHAR},
+			#{img                ,jdbcType=VARCHAR},
 
 			NOW()
 
@@ -102,21 +105,19 @@
 	
 		<trim prefix="" suffix="" suffixOverrides=",">
 
-
 			<if test="content != null">
 				CONTENT  = #{content},
 			</if>
 			<if test="title != null">
 				title  = #{title},
 			</if>
-			
+			<if test="img != null">
+				img  = #{img},
+			</if>
 
-
-			
 		</trim>
 
          WHERE ID=#{id}
- 
          
 	</update>
 

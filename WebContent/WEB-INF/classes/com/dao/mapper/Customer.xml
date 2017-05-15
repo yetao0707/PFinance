@@ -128,6 +128,9 @@
 			<if test="evaluateResult != null">
 				evaluateResult  = #{evaluateResult},
 			</if>
+			<if test="evaluateDetail != null">
+				evaluateDetail  = #{evaluateDetail},
+			</if>
 			
 
 

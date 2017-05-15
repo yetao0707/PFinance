@@ -14,6 +14,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @Component("purchaseService")
@@ -50,7 +51,7 @@ public class PurchaseService {
             }
             for (FundPurchaseDTO fundPurchaseDTO : fundPurchaseDTOs) {
                 purchaseSum += MoneyCalculateUtil.getFundPurchasePrice(fundPurchaseDTO);
-                dayEarning += MoneyCalculateUtil.getFundEarning(fundPurchaseDTO);
+                dayEarning += MoneyCalculateUtil.getFundEarning(fundPurchaseDTO)/365;
             }
         }
         CurrencyPurchaseVO currencyPurchaseVO = new CurrencyPurchaseVO();
@@ -68,9 +69,11 @@ public class PurchaseService {
             }
             for (CurrencyPurchaseDTO currencyPurchaseDTO : currencyPurchaseDTOs) {
                 purchaseSum += MoneyCalculateUtil.getCurrencyPurchasePrice(currencyPurchaseDTO);
-                dayEarning += MoneyCalculateUtil.getCurrencyEarning(currencyPurchaseDTO);
+                dayEarning += MoneyCalculateUtil.getCurrencyEarning(currencyPurchaseDTO)/365;
             }
         }
+        BigDecimal b   =   new   BigDecimal(dayEarning);
+        dayEarning   =   b.setScale(2,   BigDecimal.ROUND_HALF_UP).doubleValue();
         PurchaseDTO purchaseDTO=new PurchaseDTO();
         purchaseDTO.setCustomerId(customerId);
         purchaseDTO.setCurrencyPurchaseDTOs(currencyPurchaseDTOs);

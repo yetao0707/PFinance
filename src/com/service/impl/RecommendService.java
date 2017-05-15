@@ -27,7 +27,7 @@ import java.text.ParseException;
 import java.util.Iterator;
 import java.util.List;
 
-import liqi.PFinance;
+//import liqi.PFinance;
 
 /**
  * Created by yetao on 17/4/11.
@@ -61,14 +61,14 @@ public class RecommendService {
         String sterString=gson.toJson(paramers);
         Object[] result = new Object[2];
 
-        PFinance pFinanaceRecommend;
-		try {
-			pFinanaceRecommend = new PFinance();
-			result=pFinanaceRecommend.getResult(2,paramers);
-		} catch (MWException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//        PFinance pFinanaceRecommend;
+//		try {
+//			pFinanaceRecommend = new PFinance();
+//			result=pFinanaceRecommend.getResult(2,paramers);
+//		} catch (MWException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
         
         //TODO
 

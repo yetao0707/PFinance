@@ -72,6 +72,7 @@
                     <th>产品类型</th>
                     <th>年化收益率（%）</th>
                     <th>购买金额（元）</th>
+                    <th>预计年收益（元）</th>
                     <th>投资时长（天）</th>
                 </tr>
                 </thead>
@@ -83,6 +84,7 @@
                         <td><p>货币型产品</p></td>
                         <td>${pojo.profitYield}</td>
                         <td><p class="moneyP">${pojo.recommendMoney2Buy}</p></td>
+                        <td><fmt:formatNumber type="number" value="${pojo.recommendMoney2Buy*pojo.profitYield}" maxFractionDigits="2"/></td>
                         <td>${pojo.durationDays}</td>
                     </tr>
                 </c:forEach>
@@ -112,6 +114,7 @@
                         </td>
                         <td>${pojo.expectedYield}</td>
                         <td><p class="moneyP">${pojo.recommendMoney2Buy}</p></td>
+                        <td><fmt:formatNumber type="number" value="${pojo.recommendMoney2Buy*pojo.profitYield}" maxFractionDigits="2"/></td>
                         <td>${pojo.duration}</td>
                     </tr>
                 </c:forEach>

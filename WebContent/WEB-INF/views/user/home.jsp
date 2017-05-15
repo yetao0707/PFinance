@@ -59,7 +59,7 @@
         $("#homeLoginButton").on("click", function () {
             location.href = "loginIndex";
         });
-        $(".homenews").on("click",function (e) {
+        $(".homenews").on("click", function (e) {
             $("#news").load("newsDetail", {
                 id: $(this).attr("name")
             });
@@ -110,7 +110,7 @@
 
 <div class="container" style="background-color: #a1c9ff;">
 
-    <div class="row" style="background-color: #9ff5ef">
+    <div class="row" style="background-color: #9ff5ef;padding-top: 20px;">
 
         <div class="col-md-7 imageDiv" style=" width: 700px;">
             <div class="panel panel-default">
@@ -150,13 +150,13 @@
             </div>
         </div>
 
-        <div class="col-md-4 well personInfoDiv" style="margin-left: 10px;">
+        <div class="col-md-4 well personInfoDiv" style="margin-left: 30px;width: 400px">
             <c:if test="${customerDTO!=null}">
                 <div class="row personDetail">
                         <%--<div class="row">--%>
                     <div class="col-md-5">
                         <img src="<%=basePath%>images/head.jpg" alt=""
-                             class="img-responsive center-block img-circle"/>
+                             class="img-responsive center-block img-circle" width="400px"/>
                     </div>
                     <div class="col-md-7">
                         <div class="row">
@@ -183,8 +183,8 @@
                 <div class="row">
 
 
-                    <c:if test='${empty customerDTO.evaluateResult}'>\
-                        <div class="col-md-12 ">
+                    <c:if test='${empty customerDTO.evaluateResult}'>
+                        <div class="col-md-6 col-md-offset-3" style="margin-top: 50px">
                             <p class="text-center">
                                 <button type="button" id="homeToQuestionEvaluate"
                                         class="btn btn-default btn-lg btn-block">填写问券
@@ -202,25 +202,27 @@
                 </div>
 
                 <%--<div class="row">--%>
-                    <%--<div class="col-md-12">--%>
-                        <%--<img src="t.jpg" alt="" class="img-responsive center-block"/>--%>
-                    <%--</div>--%>
+                <%--<div class="col-md-12">--%>
+                <%--<img src="t.jpg" alt="" class="img-responsive center-block"/>--%>
+                <%--</div>--%>
 
                 <%--</div>--%>
-                <div class="row" style="margin-top: 30px">
-                    <div class="col-md-6">
-                        <p>
-                            <button type="button" id="charactorButton" class="btn btn-primary btn-lg btn-block">我的特性
-                            </button>
-                        </p>
+                <c:if test='${!empty customerDTO.evaluateResult}'>
+                    <div class="row" style="margin-top: 30px">
+                        <div class="col-md-6">
+                            <p>
+                                <button type="button" id="charactorButton" class="btn btn-primary btn-lg btn-block">我的特性
+                                </button>
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>
+                                <button type="button" id="financeButton" class="btn btn-primary btn-lg btn-block">我的理财
+                                </button>
+                            </p>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <p>
-                            <button type="button" id="financeButton" class="btn btn-primary btn-lg btn-block">我的理财
-                            </button>
-                        </p>
-                    </div>
-                </div>
+                </c:if>
             </c:if>
             <c:if test="${customerDTO==null}">
                 <div class="row">
@@ -257,7 +259,8 @@
                 <p class="text-left">预计年化：</p>
                 <p class="text-center">10%</p>
                 <p class="text-center">
-                    <button type="button" class="btn btn-primary btn-lg homeProductButton currency" name="1">立即投资</button>
+                    <button type="button" class="btn btn-primary btn-lg homeProductButton currency" name="1">立即投资
+                    </button>
                 </p>
             </div>
             <div class="col-md-2 well productRecommend">
@@ -267,7 +270,8 @@
                 <p class="text-left">预计年化：</p>
                 <p class="text-center">10%</p>
                 <p class="text-center">
-                    <button type="button" class="btn btn-primary btn-lg homeProductButton currency" name="2">立即投资</button>
+                    <button type="button" class="btn btn-primary btn-lg homeProductButton currency" name="2">立即投资
+                    </button>
                 </p>
             </div>
             <div class="col-md-2 well productRecommend">
@@ -355,23 +359,33 @@
 
                     <tbody>
                     <tr>
-                        <td><button type="button" class="btn btn-link homenews" name="1">【财经】14只雄安概念股明日复盘</button></td>
+                        <td>
+                            <button type="button" class="btn btn-link homenews" name="1">【财经】14只雄安概念股明日复盘</button>
+                        </td>
                         <td>2014-04-16</td>
                     </tr>
                     <tr>
-                        <td><button type="button" class="btn btn-link homenews" name="1">【财经】14只雄安概念股明日复盘</button></td>
+                        <td>
+                            <button type="button" class="btn btn-link homenews" name="1">【财经】14只雄安概念股明日复盘</button>
+                        </td>
                         <td>2014-04-16</td>
                     </tr>
                     <tr>
-                        <td><button type="button" class="btn btn-link homenews" name="1">【财经】14只雄安概念股明日复盘</button></td>
+                        <td>
+                            <button type="button" class="btn btn-link homenews" name="1">【财经】14只雄安概念股明日复盘</button>
+                        </td>
                         <td>2014-04-16</td>
                     </tr>
                     <tr>
-                        <td><button type="button" class="btn btn-link homenews" name="1">【财经】14只雄安概念股明日复盘</button></td>
+                        <td>
+                            <button type="button" class="btn btn-link homenews" name="1">【财经】14只雄安概念股明日复盘</button>
+                        </td>
                         <td>2014-04-16</td>
                     </tr>
                     <tr>
-                        <td><button type="button" class="btn btn-link homenews" name="1">【财经】14只雄安概念股明日复盘</button></td>
+                        <td>
+                            <button type="button" class="btn btn-link homenews" name="1">【财经】14只雄安概念股明日复盘</button>
+                        </td>
                         <td>2014-04-16</td>
                     </tr>
                     </tbody>

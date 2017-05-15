@@ -123,7 +123,9 @@
     </div>
     <div class="row textDesc text-center">
         <p>综上所述，您的最佳资产配置比为：</p>
-        <p>股票型产品${dto.shareRate * 100}%，债券型产品${dto.bondRate * 100}%，货币型产品${dto.currencyRate * 100}%。</p>
+        <p>股票型产品<fmt:formatNumber type="number" value="${dto.shareRate * 100}" maxFractionDigits="2"/>%，
+            债券型产品<fmt:formatNumber type="number" value="${dto.bondRate * 100}" maxFractionDigits="2"/>%，
+            货币型产品<fmt:formatNumber type="number" value="${dto.currencyRate * 100}" maxFractionDigits="2"/>%。</p>
     </div>
     <div class="row">
         <div class="col-md-3">

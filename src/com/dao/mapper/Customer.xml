@@ -11,7 +11,7 @@
 			PASSWORD                  password      	,       
 			SEX                       sex           	,       
 			AGE                       age           	,       
-			PHONENUM                  phoneNnum      	,       
+			PHONENUM                  phoneNum      	,
 			EMAIL                     email         	,       
 			ADDERSS                   adderss       	,       
 			IDNUM                     idNum         	,       
@@ -127,6 +127,9 @@
 			</if>
 			<if test="evaluateResult != null">
 				evaluateResult  = #{evaluateResult},
+			</if>
+			<if test="evaluateDetail != null">
+				evaluateDetail  = #{evaluateDetail},
 			</if>
 			
 

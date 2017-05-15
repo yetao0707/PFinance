@@ -118,9 +118,10 @@ public class PFinanceController extends BaseController{
 
     @RequestMapping("saveEvaluateResult")
     @ResponseBody
-    public void saveEvaluateResult(String evaluateResult, HttpServletRequest request, HttpServletResponse response) {
+    public void saveEvaluateResult(String evaluateResult,String evaluateDetail, HttpServletRequest request, HttpServletResponse response) {
         CustomerDTO customerDTO = getCustomerDTO(request);
         customerDTO.setEvaluateResult(evaluateResult);
+        customerDTO.setEvaluateDetail(evaluateDetail);
         CustomerVO customerVO = ParseBeanUtil.parseCustomerDTO2VO(customerDTO);
         try {
             customerDAO.update(customerVO);
