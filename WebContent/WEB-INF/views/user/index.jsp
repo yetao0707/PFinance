@@ -95,8 +95,8 @@
 
     <nav class="navbar navbar-default" role="navigation" style="background-color: #9ff5ef;height: 80px;">
 
-        <div class="navbar-header" style="height: 80px;">
-            <a class="navbar-brand" href="#">PFinance</a>
+        <div class="navbar-header" style="color: #e99647;font-size: 40px;height: 80px;margin-right: 20px;margin-top: 5px;">
+            PFinance
         </div>
         <ul id="myTab" class="nav nav-tabs navbar-center col-md-offset-3" style="height: 80px;">
             <li class="active"><a href="#home" data-toggle="tab" style="line-height: 58px;font-size: 20px">首页</a></li>
