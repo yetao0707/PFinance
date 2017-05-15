@@ -8,7 +8,6 @@
             $("#pFinanace").load("pFinanceProtocolRead");
         });
         $("#purchaseConfirmBuyButton").on("click",function () {
-            alert(localStorage.paramStr);
             $.ajax({
                 type: "POST",
                 url: "purchase",
@@ -24,7 +23,7 @@
         })
     });
 </script>
-<div class="container">
+<div class="container" style="background-color: #9ff5ef">
     <div class="row">
         <div class="col-md-2">
 
@@ -220,11 +219,11 @@
                 <div class="col-md-3"></div>
                 <div class="col-md-6">
                     <div class="col-md-6">
-                        <button type="button" class="btn btn-primary btn-sm" id="purchaseConfirmBackButton">返回上一步
+                        <button type="button" class="btn btn-primary btn-lg" id="purchaseConfirmBackButton">返回上一步
                         </button>
                     </div>
                     <div class="col-md-6">
-                        <button type="button" class="btn btn-primary btn-sm" id="purchaseConfirmBuyButton">确认购买</button>
+                        <button type="button" class="btn btn-primary btn-lg" id="purchaseConfirmBuyButton">确认购买</button>
                     </div>
                 </div>
                 <div class="col-md-3"></div>

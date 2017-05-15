@@ -37,7 +37,7 @@
 
     }
 </style>
-<div class="container">
+<div class="container" style="background-color: #9ff5ef">
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
@@ -47,7 +47,7 @@
             <div class="row header2 text-center">
                 尊敬的客户：为了保护您的合法权益，请您在投资理财产品前认真阅读以下内容
             </div>
-            <div class="row text-center customerReadContent" style="text-indent: 2em;font-size: 15px;">
+            <div class="row customerReadContent" style="text-indent: 2em;font-size: 15px;">
                 <p>
                     （一）
                     甲方签署本协议后，即授权乙方在约定时间从约定交易账户扣划甲方本协议项下的理财款项，或进行币种转换与境外投资，无论甲方单笔投资金额较大还是购买的产品风险较高等任何情形，乙方在划款时均无须再通知甲方。

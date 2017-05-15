@@ -14,7 +14,6 @@
             });
         });
         $(".pageButton").on("click",function(){
-            alert($(this).attr("name"));
             $("#currencyProduct").load("currencyList" ,{
                 currentPage:$(this).attr("name"),
                 numPerPage:9
