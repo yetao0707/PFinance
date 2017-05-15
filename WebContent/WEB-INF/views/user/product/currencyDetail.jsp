@@ -21,9 +21,6 @@
     .borderDiv {
         border: 1px solid rgba(147, 144, 151, 0.94);
     }
-    .tableLeft {
-        color: #3481ff;
-    }
 </style>
 
 
@@ -54,13 +51,13 @@
         </div>
 
     </div>
-    <div class="row sectionDiv col-md-offset-2 col-md-8">
-        <div class="row sectionDiv">
-            <div class="row">
+    <div class="row sectionDiv col-md-offset-2 col-md-8" style="background-color: #bffaff;padding-left: 50px;padding-bottom: 50px;">
+        <div class="row sectionDiv" >
+            <div class="row" >
                 <div class="col-md-5 borderDiv text-center header3 tableLeft">
                     PFinance银行股份有限公司
                 </div>
-                <div class="col-md-7 borderDiv text-center header3">
+                <div class="col-md-6 borderDiv text-center header3">
                     ${dto.registerId}
                 </div>
             </div>
@@ -68,28 +65,15 @@
                 <div class="col-md-5 borderDiv text-center header3 tableLeft">
                     产品类型
                 </div>
-                <div class="col-md-7 borderDiv text-center header3">
-                    <c:choose>
-                        <c:when test="${dto.productType==1}">
-                            保本浮动收益
-                        </c:when>
-                        <c:when test="${dto.productType==2}">
-                            非保本浮动收益
-                        </c:when>
-                        <c:when test="${dto.productType==3}">
-                            保本稳定收益
-                        </c:when>
-                        <c:when test="${dto.productType==4}">
-                            非保本稳定收益
-                        </c:when>
-                    </c:choose>
+                <div class="col-md-6 borderDiv text-center header3">
+                    货币型产品
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-5 borderDiv text-center header3 tableLeft">
                     认购起始日
                 </div>
-                <div class="col-md-7 borderDiv text-center header3">
+                <div class="col-md-6 borderDiv text-center header3">
                     ${dto.subscriptionStartDate}
                 </div>
             </div>
@@ -97,7 +81,7 @@
                 <div class="col-md-5 borderDiv text-center header3 tableLeft">
                     认购结束日
                 </div>
-                <div class="col-md-7 borderDiv text-center header3">
+                <div class="col-md-6 borderDiv text-center header3">
                     ${dto.subscriptionEndDate}
                 </div>
             </div>
@@ -105,7 +89,7 @@
                 <div class="col-md-5 borderDiv text-center header3 tableLeft">
                     成立日
                 </div>
-                <div class="col-md-7 borderDiv text-center header3">
+                <div class="col-md-6 borderDiv text-center header3">
                     ${dto.foundingDate}
                 </div>
             </div>
@@ -113,7 +97,7 @@
                 <div class="col-md-5 borderDiv text-center header3 tableLeft">
                     到期兑付日
                 </div>
-                <div class="col-md-7 borderDiv text-center header3">
+                <div class="col-md-6 borderDiv text-center header3">
                     ${dto.cashingDay}
                 </div>
             </div>
@@ -121,7 +105,7 @@
                 <div class="col-md-5 borderDiv text-center header3 tableLeft">
                     起购金额（元）
                 </div>
-                <div class="col-md-7 borderDiv text-center header3">
+                <div class="col-md-6 borderDiv text-center header3">
                     ${dto.purchaseAmount}
                 </div>
             </div>
@@ -129,7 +113,7 @@
                 <div class="col-md-5 borderDiv text-center header3 tableLeft">
                     续买递增金额（元）
                 </div>
-                <div class="col-md-7 borderDiv text-center header3">
+                <div class="col-md-6 borderDiv text-center header3">
                     ${dto.incrementalAmount}
                 </div>
             </div>
@@ -137,7 +121,7 @@
                 <div class="col-md-5 borderDiv text-center header3 tableLeft">
                     客户年化参考收益率
                 </div>
-                <div class="col-md-7 borderDiv text-center header3">
+                <div class="col-md-6 borderDiv text-center header3">
                     ${dto.cashingDay}
                 </div>
             </div>
@@ -145,7 +129,7 @@
                 <div class="col-md-5 borderDiv text-center header3 tableLeft">
                     客户年化参考收益率
                 </div>
-                <div class="col-md-7 borderDiv text-center header3">
+                <div class="col-md-6 borderDiv text-center header3">
                     ${dto.profitYield}
                 </div>
             </div>
@@ -153,7 +137,7 @@
                 <div class="col-md-5 borderDiv text-center header3 tableLeft">
                     购买渠道
                 </div>
-                <div class="col-md-7 borderDiv text-center header3">
+                <div class="col-md-6 borderDiv text-center header3">
                     ${dto.purchaseChannel}
                 </div>
             </div>
@@ -161,7 +145,7 @@
                 <div class="col-md-5 borderDiv text-center header3 tableLeft">
                     拟募集规模（亿）
                 </div>
-                <div class="col-md-7 borderDiv text-center header3">
+                <div class="col-md-6 borderDiv text-center header3">
                     ${dto.recruitmentScale}
                 </div>
             </div>

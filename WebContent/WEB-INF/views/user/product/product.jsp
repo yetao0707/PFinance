@@ -109,21 +109,21 @@
     });
 </script>
 
-<div class="container">
-    <ul class="nav nav-tab vertical-tab" role="tablist" id="vtab">
+<div class="container" style="background-color: #9ff5ef;">
+    <ul class="nav nav-tab vertical-tab" role="tablist" id="vtab" style="width: 150px;padding-left: 0px;">
         <li role="presentation" class="active">
             <a href="#currencyProduct" aria-controls="currencyProduct" role="tab"
-               data-toggle="tab">货币型产品</a>
+               data-toggle="tab" style="line-height: 58px;font-size: 20px;width: 150px;">货币型产品</a>
         </li>
         <li role="presentation">
             <a href="#fundProduct" aria-controls="fundProduct" role="tab"
-               data-toggle="tab">基金型产品</a>
+               data-toggle="tab" style="line-height: 58px;font-size: 20px;">基金型产品</a>
         </li>
 
     </ul>
 
     <!-- Tab panes -->
-    <div class="tab-content vertical-tab-content">
+    <div class="tab-content vertical-tab-content" style="border:none;">
         <div role="tabpanel" class="tab-pane active" id="currencyProduct">
 
         </div>

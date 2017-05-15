@@ -78,6 +78,19 @@
 
 
     </select>
+    <select id="findBetweenTime" parameterType="map" resultType="currencyPurchaseVO">
+        select
+        <include refid="allColumnAlias"/>
+
+        FROM CURRENCYPURCHASE T
+
+        <![CDATA[
+        WHERE purchaseDate >= concat(#{beginDate})
+        and purchaseDate <= concat(#{endDate})
+
+        ]]>
+
+    </select>
 
 
     <delete id="delete" parameterType="currencyPurchaseVO">

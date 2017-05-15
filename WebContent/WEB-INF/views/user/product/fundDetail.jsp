@@ -22,9 +22,6 @@
     .borderDiv {
         border: 1px solid rgba(147, 144, 151, 0.94);
     }
-    .tableLeft {
-        color: #72fff8;
-    }
 </style>
 
 
@@ -55,13 +52,13 @@
         </div>
 
     </div>
-    <div class="row sectionDiv col-md-offset-2 col-md-8">
+    <div class="row sectionDiv col-md-offset-2 col-md-8" style="background-color: #bffaff;padding-left: 50px;padding-bottom: 50px;">
         <div class="row sectionDiv">
             <div class="row">
                 <div class="col-md-5 borderDiv text-center header3 tableLeft">
                     产品成立日
                 </div>
-                <div class="col-md-7 borderDiv text-center header3">
+                <div class="col-md-6 borderDiv text-center header3">
                     ${dto.foundingDate}
                 </div>
             </div>
@@ -69,7 +66,7 @@
                 <div class="col-md-5 borderDiv text-center header3 tableLeft">
                     计划类型
                 </div>
-                <div class="col-md-7 borderDiv text-center header3">
+                <div class="col-md-6 borderDiv text-center header3">
                     <c:choose>
                         <c:when test="${dto.planType==1}">
                             限定性
@@ -87,7 +84,7 @@
                 <div class="col-md-5 borderDiv text-center header3 tableLeft">
                     管理人
                 </div>
-                <div class="col-md-7 borderDiv text-center header3">
+                <div class="col-md-6 borderDiv text-center header3">
                     ${dto.custodian}
                 </div>
             </div>
@@ -95,7 +92,7 @@
                 <div class="col-md-5 borderDiv text-center header3 tableLeft">
                     托管人
                 </div>
-                <div class="col-md-7 borderDiv text-center header3">
+                <div class="col-md-6 borderDiv text-center header3">
                     ${dto.trustee}
                 </div>
             </div>
@@ -103,7 +100,7 @@
                 <div class="col-md-5 borderDiv text-center header3 tableLeft">
                     推广起始日
                 </div>
-                <div class="col-md-7 borderDiv text-center header3">
+                <div class="col-md-6 borderDiv text-center header3">
                     ${dto.startDate}
                 </div>
             </div>
@@ -111,7 +108,7 @@
                 <div class="col-md-5 borderDiv text-center header3 tableLeft">
                     推广截止日
                 </div>
-                <div class="col-md-7 borderDiv text-center header3">
+                <div class="col-md-6 borderDiv text-center header3">
                     ${dto.endDate}
                 </div>
             </div>
@@ -119,7 +116,7 @@
                 <div class="col-md-5 borderDiv text-center header3 tableLeft">
                     存续期
                 </div>
-                <div class="col-md-7 borderDiv text-center header3">
+                <div class="col-md-6 borderDiv text-center header3">
                     ${dto.duration}
                 </div>
             </div>
@@ -127,7 +124,7 @@
                 <div class="col-md-5 borderDiv text-center header3 tableLeft">
                     募集资金
                 </div>
-                <div class="col-md-7 borderDiv text-center header3">
+                <div class="col-md-6 borderDiv text-center header3">
                     ${dto.totalRecruitment}
                 </div>
             </div>
@@ -135,7 +132,7 @@
                 <div class="col-md-5 borderDiv text-center header3 tableLeft">
                     最低参与金额
                 </div>
-                <div class="col-md-7 borderDiv text-center header3">
+                <div class="col-md-6 borderDiv text-center header3">
                     ${dto.purchaseAmount}
                 </div>
             </div>
@@ -143,7 +140,7 @@
                 <div class="col-md-5 borderDiv text-center header3 tableLeft">
                     投资目标
                 </div>
-                <div class="col-md-7 borderDiv text-center header3">
+                <div class="col-md-6 borderDiv text-center header3">
                     ${dto.objective}
                 </div>
             </div>

@@ -1,5 +1,6 @@
 package com.dao;
 
+import java.util.Date;
 import java.util.List;
 
 import com.commons.page.Page;
@@ -25,5 +26,7 @@ public interface CurrencyPurchaseDAO extends BaseDao<CurrencyPurchaseVO>{
 
 
 	public List<CurrencyPurchaseVO> findPageList(@Param("leftIndex") int leftIndex, @Param("rightIndex") int rightIndex);
+
+	public List<CurrencyPurchaseVO> findBetweenTime(@Param("beginDate")String beginDate, @Param("endDate") String endDate);
 
 }

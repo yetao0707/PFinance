@@ -108,7 +108,7 @@
 </script>
 
 
-<div class="container" style="background-color: #a1c9ff;">
+<div class="container" style="background-color: rgb(253, 255, 191);">
 
     <div class="row" style="background-color: #9ff5ef;padding-top: 20px;">
 
@@ -150,19 +150,17 @@
             </div>
         </div>
 
-        <div class="col-md-4 well personInfoDiv" style="margin-left: 30px;width: 400px">
+        <div class="col-md-4 well personInfoDiv" style="margin-left: 10px;width: 400px">
             <c:if test="${customerDTO!=null}">
                 <div class="row personDetail">
                         <%--<div class="row">--%>
-                    <div class="col-md-5">
+                    <div class="col-md-5" style="margin-left: 10px;">
                         <img src="<%=basePath%>images/head.jpg" alt=""
-                             class="img-responsive center-block img-circle" width="400px"/>
+                             class="img-responsive center-block img-circle" width="300px"/>
                     </div>
-                    <div class="col-md-7">
-                        <div class="row">
-                            <h3 class="text-center">
-                                    ${customerDTO.userName}
-                            </h3>
+                    <div class="col-md-6">
+                        <div class="row text-center" style="font-size: 30px;">
+                                ${customerDTO.userName}
                         </div>
                         <div class="row" style="height: 30px;">
 
@@ -238,7 +236,7 @@
 
     </div>
 
-    <div class="row well greenDiv" style="margin-top: 30px;">
+    <div class="row well greenDiv" style="margin-top: 30px;background-color: #9ff5ef">
         <div class="row">
             <div class="col-md-3">
                 <p class="text-left">产品优选 </p>
@@ -298,7 +296,7 @@
 
         </div>
     </div>
-    <div class="row well greenDiv">
+    <div class="row well greenDiv" style="background-color: #9ff5ef">
 
         <div class="row">
             <div class="col-md-3">
@@ -319,9 +317,9 @@
 
                     <!-- 轮播（Carousel）指标 -->
                     <ol class="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarouse2" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarouse2" data-slide-to="1"></li>
+                        <li data-target="#myCarouse2" data-slide-to="2"></li>
                     </ol>
                     <!-- 轮播（Carousel）项目 -->
                     <div class="carousel-inner" style="height: 200px">

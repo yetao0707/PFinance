@@ -46,10 +46,10 @@
     </div>
     <div class="row" id="hiddenDefaultDiv"  hidden="true">
 
-    <div class="row header">
+    <div class="row header" style="font-size: 30px;">
         您将购买以下产品
     </div>
-    <div class="row">
+    <div class="row" style="font-size: 20px;margin-top: 30px;">
 
         <table class="table">
             <thead>
@@ -57,8 +57,9 @@
                 <th>序号</th>
                 <th>产品名称</th>
                 <th>产品类型</th>
-                <th>年化收益率（%）</th>
+                <th>年化收益率</th>
                 <th>购买金额（元）</th>
+                <th>预计年收益（元）</th>
                 <th>投资时长（天）</th>
             </tr>
             </thead>
@@ -69,7 +70,8 @@
                     <td>${dto.currencyName}</td>
                     <td><p>货币型产品</p></td>
                     <td>${dto.profitYield}</td>
-                    <td><p class="moneyP"></p></td>
+                    <td><p class="moneyP">${pojo.recommendMoney2Buy}</p></td>
+                    <td><fmt:formatNumber type="number" value="${(pojo.recommendMoney2Buy) * (pojo.profitYield)}" maxFractionDigits="2"/></td>
                     <td>${dto.durationDays}</td>
                 </c:if>
                 <c:if test="${type==2}">
@@ -77,7 +79,8 @@
                     <td>${dto.fundName}</td>
                     <td><p>基金型产品</p></td>
                     <td>${dto.id}</td>
-                    <td><p class="moneyP"></p></td>
+                    <td><p class="moneyP">${pojo.recommendMoney2Buy}</p></td>
+                    <td><fmt:formatNumber type="number" value="${pojo.recommendMoney2Buy * pojo.expectedYield}" maxFractionDigits="2"/></td>
                     <td>${dto.duration}</td>
                 </c:if>
             </tr>
@@ -88,10 +91,10 @@
         <div class="col-md-3"></div>
         <div class="col-md-6">
             <div class="col-md-6">
-                <button type="button" class="btn btn-primary btn-sm" id="singlePurchaseBackButton">返回</button>
+                <button type="button" class="btn btn-primary btn-lg" id="singlePurchaseBackButton" style="width: 106px;">返回</button>
             </div>
             <div class="col-md-6">
-                <button type="button" class="btn btn-primary btn-sm" id="singlePpurchaseBuyButton">开始交易</button>
+                <button type="button" class="btn btn-primary btn-lg" id="singlePpurchaseBuyButton">开始交易</button>
             </div>
         </div>
         <div class="col-md-3"></div>

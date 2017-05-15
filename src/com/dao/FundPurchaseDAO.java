@@ -1,10 +1,10 @@
 package com.dao;
 
-import java.util.List;
-
-import com.commons.page.Page;
 import com.vo.fp.FundPurchaseVO;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.Date;
+import java.util.List;
 
 public interface FundPurchaseDAO extends BaseDao<FundPurchaseVO>{
 
@@ -26,6 +26,9 @@ public interface FundPurchaseDAO extends BaseDao<FundPurchaseVO>{
 
 
 	public List<FundPurchaseVO> findPageList(@Param("leftIndex") int leftIndex, @Param("rightIndex") int rightIndex);
+
+	public List<FundPurchaseVO> findBetweenTime(@Param("beginDate")String beginDate, @Param("endDate") String endDate);
+
 
 
 }

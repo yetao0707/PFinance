@@ -7,8 +7,9 @@
 	<!--此处定义所有的列，全部用大写 -->
 	<sql id="allColumnAlias">
 			ID                       	id            	,       
-			USERNAME                  userName      	,       
-			PASSWORD                  password      	,       
+			name                  name      	,
+			USERNAME                  userName      	,
+			PASSWORD                  password      	,
 			SEX                       sex           	,       
 			AGE                       age           	,       
 			PHONENUM                  phoneNum      	,

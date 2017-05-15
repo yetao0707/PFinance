@@ -75,7 +75,7 @@
     <div class="row personCharactor well">
         <div class="col-md-2">
         </div>
-        <div class="col-md-3 text-right">
+        <div class="col-md-3 text-center  ">
             <div class="row">
                 <canvas id="myChart1" width="300" height="300"></canvas>
             </div>
@@ -87,10 +87,10 @@
 
         </div>
     </div>
-    <div class="row well personCharactor">
+    <div class="row well personCharactor text-center">
         <div class="col-md-2">
         </div>
-        <div class="col-md-3 text-right">
+        <div class="col-md-3 ">
             <div class="row">
                 <canvas id="myChart2" width="300" height="300"></canvas>
             </div>
@@ -98,7 +98,7 @@
                 <p>风险偏好维度</p>
             </div>
         </div>
-        <div class="col-md-5 textDiv" id="text2">
+        <div class="col-md-5 textDiv" id="text2" style="margin-top: 60px;">
 
             <p>
                 您处于家庭理财生命周期的累积阶段，这个阶段的你，年纪较轻，处于家庭的形成期。
@@ -107,10 +107,10 @@
                 建议核心资产配置的大致比例是以股票为主，债券和货币为辅。</p>
         </div>
     </div>
-    <div class="row personCharactor well">
+    <div class="row personCharactor well text-center">
         <div class="col-md-2">
         </div>
-        <div class="col-md-3 text-right">
+        <div class="col-md-3 ">
             <div class="row">
                 <canvas id="myChart3" width="300" height="300"></canvas>
             </div>
@@ -118,7 +118,7 @@
                 <p>个人特性维度</p>
             </div>
         </div>
-        <div class="col-md-5 textDiv" id="text3">
+        <div class="col-md-5 textDiv" id="text3" style="margin-top: 60px;">
         </div>
     </div>
     <div class="row textDesc text-center">

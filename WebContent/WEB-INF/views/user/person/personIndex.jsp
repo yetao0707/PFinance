@@ -114,25 +114,25 @@
     });
 </script>
 
-<div class="container">
+<div class="container" style="background-color: #9ff5ef;height:2500px;">
     <ul class="nav nav-tab vertical-tab" role="tablist" id="vtab">
         <li role="presentation" class="active">
             <a href="#personInfo" aria-controls="personInfo" role="tab"
-               data-toggle="tab">个人信息</a>
+               data-toggle="tab" style="line-height: 58px;font-size: 20px;width: 150px;">个人信息</a>
         </li>
         <li role="presentation">
             <a href="#personCharacter" aria-controls="personCharacter" role="tab"
-               data-toggle="tab">我的特性</a>
+               data-toggle="tab" style="line-height: 58px;font-size: 20px;width: 150px;">我的特性</a>
         </li>
         <li role="presentation">
             <a href="#personProduct" aria-controls="personProduct" role="tab"
-               data-toggle="tab">我的理财</a>
+               data-toggle="tab" style="line-height: 58px;font-size: 20px;width: 150px;">我的理财</a>
         </li>
 
     </ul>
 
     <!-- Tab panes -->
-    <div class="tab-content vertical-tab-content">
+    <div class="tab-content vertical-tab-content" style="border:none;" >>
         <div role="tabpanel" class="tab-pane active" id="personInfo">
 
         </div>

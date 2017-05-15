@@ -28,13 +28,6 @@
         padding-left: 300px;
     }
 
-    .personDescIndex {
-        font-size: 20px;
-        margin-top: 30px;
-        color: #ace795;
-        padding-left: 300px;
-
-    }
 
     .personDesc {
         color: #1400e4;
@@ -63,17 +56,17 @@
 
 <div class="container">
     <div class="row reportTitle">
-        李小齐的理财特征报告
+        ${dto.name}的理财特征报告
     </div>
-    <div class="row personDescIndex">
+    <div class="row personDescIndex" style="color: #1b223c;font-size: 25px;margin-left: 200px;" >
         <front>您属于：</front>
-        <front class="personDesc">${dto.desc}</front>
+        <front class="personDesc" style="color: rgba(245, 124, 14, 0.79);font-size: 40px;">${dto.desc}</front>
         <front>理财人格</front>
     </div>
-    <div class="row personCharactor ">
+    <div class="row personCharactor " style="background-color: #FFFFFF;width:980px;margin-left: 10px;">
         <div class="col-md-1">
         </div>
-        <div class="col-md-3 text-right">
+        <div class="col-md-3 text-center">
             <div class="row">
                 <canvas id="myChart4" width="300" height="300"></canvas>
             </div>
@@ -81,14 +74,14 @@
                 <p>家庭理财生命周期维度</p>
             </div>
         </div>
-        <div class="col-md-5 textDiv" id="text4">
+        <div class="col-md-6 textDiv" id="text4" style="margin-left: 50px;">
 
         </div>
     </div>
-    <div class="row personCharactor ">
+    <div class="row personCharactor " style="background-color: #FFFFFF;width:980px;margin-left: 10px;margin-top: 20px;">
         <div class="col-md-1">
         </div>
-        <div class="col-md-3 text-right">
+        <div class="col-md-3 text-right text-center">
             <div class="row">
                 <canvas id="myChart5" width="300" height="300"></canvas>
             </div>
@@ -96,7 +89,7 @@
                 <p>风险偏好维度</p>
             </div>
         </div>
-        <div class="col-md-5 textDiv" id="text5">
+        <div class="col-md-6 textDiv" id="text5" style="margin-left: 50px;margin-top: 40px;">
 
             <p>
                 您处于家庭理财生命周期的累积阶段，这个阶段的你，年纪较轻，处于家庭的形成期。
@@ -105,10 +98,10 @@
                 建议核心资产配置的大致比例是以股票为主，债券和货币为辅。</p>
         </div>
     </div>
-    <div class="row personCharactor">
+    <div class="row personCharactor" style="background-color: #FFFFFF;width:980px;margin-left: 10px;margin-top: 30px;">
         <div class="col-md-1">
         </div>
-        <div class="col-md-3 text-right">
+        <div class="col-md-3 text-right text-center">
             <div class="row">
                 <canvas id="myChart6" width="300" height="300"></canvas>
             </div>
@@ -116,29 +109,32 @@
                 <p>个人特性维度</p>
             </div>
         </div>
-        <div class="col-md-5 textDiv" id="text6">
+        <div class="col-md-6 textDiv" id="text6" style="margin-left: 50px;margin-top: 40px;">
         </div>
     </div>
-    <div class="row textDesc text-center">
-        <p>综上所述，您的最佳资产配置比为：</p>
-        <p>股票型产品<fmt:formatNumber type="number" value="${dto.shareRate * 100}" maxFractionDigits="2"/>%，
-            债券型产品<fmt:formatNumber type="number" value="${dto.bondRate * 100}" maxFractionDigits="2"/>%，
-            货币型产品<fmt:formatNumber type="number" value="${dto.currencyRate * 100}" maxFractionDigits="2"/>%。</p>    </div>
-    <div class="row">
-        <div class="col-md-3">
+    <div class="row" style="background-color: #FFFFFF;width:980px;margin-left: 10px;margin-top: 30px;">
+        <div class="row textDesc text-center">
+            <p>综上所述，您的最佳资产配置比为：</p>
+            <p>股票型产品<fmt:formatNumber type="number" value="${dto.shareRate * 100}" maxFractionDigits="2"/>%，
+                债券型产品<fmt:formatNumber type="number" value="${dto.bondRate * 100}" maxFractionDigits="2"/>%，
+                货币型产品<fmt:formatNumber type="number" value="${dto.currencyRate * 100}" maxFractionDigits="2"/>%。</p>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-6" style="height: 400px">
+                <div id="main1" style="width: 600px;height:400px;"></div>
+
+                <%--<canvas id="myChart" width="400" height="400"></canvas>--%>
+            </div>
+            <div class="col-md-3">
+
+            </div>
 
         </div>
-        <div class="col-md-6" style="height: 400px">
-            <div id="main1" style="width: 600px;height:400px;"></div>
-
-            <%--<canvas id="myChart" width="400" height="400"></canvas>--%>
-        </div>
-        <div class="col-md-3">
-
-        </div>
-
     </div>
-    <div class="row text-center">
+    <div class="row text-center" style="margin-top: 30px;">
         <div class="row text-center">
             <div class="col-md-offset-2 col-md-3">
                 <button type="button" class="btn btn-primary btn-lg center-block" id="reportRecommendButton2">理财推荐
@@ -299,7 +295,7 @@
                     data: []
                 },
                 {
-                    name: '直接访问',
+                    name: '',
                     type: 'bar',
                     stack: '总量',
                     label: {

@@ -143,7 +143,7 @@
                         <%--<li><a href="getPurchaseList" target="navTab" rel="purchaseListView">产品信息统计</a></li>--%>
                         <li><a href="<%=basePath%>purchaseStatistic/productSum" target="navTab" rel="productSum">产品信息统计</a></li>
                         <%--<li><a href="<%=basePath%>purchaseStatistic/userSum" target="navTab" rel="userSum">客户信息统计</a></li>--%>
-                        <li><a href="<%=basePath%>purchaseStatistic/purchaseSum" target="navTab"
+                        <li><a href="<%=basePath%>purchaseStatistic/purchaseSumIndex" target="navTab"
                                rel="purchaseSum">交易信息统计</a></li>
                     </ul>
                 </div>

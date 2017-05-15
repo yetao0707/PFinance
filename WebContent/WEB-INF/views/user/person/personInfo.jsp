@@ -23,7 +23,7 @@
             </div>
 
         </div>
-        <div class="col-md-7">
+        <div class="col-md-7" style="font-size: 20px;">
             <p>姓名: ${customerDTO.name}</p>
             <p>手机号: ${customerDTO.phoneNum}</p>
             <p>身份证号: ${customerDTO.idNum}</p>
@@ -41,10 +41,10 @@
             </div>
 
         </div>
-        <div class="col-md-7">
+        <div class="col-md-7" style="font-size: 20px;">
             <p>账户总额（元）:${customerAccountDTO.allMoney}</p>
             <p>活期存款（元）:${customerAccountDTO.extraMoney}</p>
-            <p>已理财额（元）:股票型产品<fmt:formatNumber type="number" value="${customerAccountDTO.allMoney-customerAccountDTO.extraMoney}" maxFractionDigits="2"/>%</p>
+            <p>已理财额（元）:<fmt:formatNumber type="number" value="${customerAccountDTO.allMoney-customerAccountDTO.extraMoney}" maxFractionDigits="2"/>%</p>
             <p>昨日收益（元）:${purchaseDTO.dayEarning}</p>
         </div>
     </div>

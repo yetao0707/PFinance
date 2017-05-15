@@ -19,7 +19,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.5.4/echarts.common.js"></script>
 
 </head>
-<body style="background-color: #a1c9ff">
+<body style="background-color:rgb(253, 255, 191);">
 <style>
     .greenDiv {
         background-color: #b7c9ff;
@@ -61,35 +61,53 @@
             $(this).tab('show');
         });
         $("#home").load("index");
-        $("#product").load("productIndex");
-        $("#pFinanace").load("pFinanceIndex", function () {
+//        $("#product").load("productIndex");
+//        $("#pFinanace").load("pFinanceIndex", function () {
+//        });
+//        $("#news").load("newsIndex");
+//        $("#center").load("personIndex");
+//        $("#comment").load("commentIndex");
+        $('a[data-toggle="tab"]').on('click', function (e) {
+            // 获取已激活的标签页的名称
+            var activeTab = $(e.target).attr("href");
+            if (activeTab=="#home"){
+                $("#home").load("index");
+            } else if(activeTab=="#product"){
+                $("#product").load("productIndex");
+            } else if(activeTab=="#pFinanace"){
+                $("#pFinanace").load("pFinanceIndex", function () {
+                });
+            } else if(activeTab=="#news"){
+                $("#news").load("newsIndex");
+            } else if(activeTab=="#center"){
+                $("#center").load("personIndex");
+            } else if(activeTab=="#comment"){
+                $("#comment").load("commentIndex");
+            }
         });
-        $("#news").load("newsIndex");
-        $("#center").load("personIndex");
-        $("#comment").load("commentIndex");
     });
 
 
 </script>
 
 ​
-<div class="container" style="background-color: #a1c9ff;padding-left: 0px;padding-right: 0px;">
+<div class="container" style="background-color: rgb(253, 255, 191);padding-left: 0px;padding-right: 0px;">
 
-    <nav class="navbar navbar-default" role="navigation" style="background-color: #a3fff3;height: 80px;">
+    <nav class="navbar navbar-default" role="navigation" style="background-color: #9ff5ef;height: 80px;">
 
-        <div class="navbar-header" style="background-color: #a3fff3;height: 80px;">
+        <div class="navbar-header" style="height: 80px;">
             <a class="navbar-brand" href="#">PFinance</a>
         </div>
-        <ul id="myTab" class="nav nav-tabs navbar-center col-md-offset-3" style="background-color: #a3fff3;height: 80px;">
-            <li class="active"><a href="#home" data-toggle="tab" style="background-color: #a3fff3;line-height: 60px;font-size: 20px">首页</a></li>
-            <li><a href="#product" data-toggle="tab">理财产品</a></li>
-            <li><a href="#pFinanace" data-toggle="tab">专属理财</a></li>
-            <li><a href="#news" data-toggle="tab">资讯中心</a></li>
-            <li><a href="#center" data-toggle="tab">个人中心</a></li>
-            <li><a href="#comment" data-toggle="tab">反馈小站</a></li>
-            <ul class="nav navbar-nav navbar-right">
+        <ul id="myTab" class="nav nav-tabs navbar-center col-md-offset-3" style="height: 80px;">
+            <li class="active"><a href="#home" data-toggle="tab" style="line-height: 58px;font-size: 20px">首页</a></li>
+            <li><a href="#product" data-toggle="tab" style="line-height: 58px;font-size: 20px">理财产品</a></li>
+            <li><a href="#pFinanace" data-toggle="tab" style="line-height: 58px;font-size: 20px">专属理财</a></li>
+            <li><a href="#news" data-toggle="tab" style="line-height: 58px;font-size: 20px">资讯中心</a></li>
+            <li><a href="#center" data-toggle="tab" style="line-height: 58px;font-size: 20px">个人中心</a></li>
+            <li><a href="#comment" data-toggle="tab" style="line-height: 58px;font-size: 20px">反馈小站</a></li>
+            <ul class="nav navbar-nav navbar-right" style="height: 80px;">
                 <%--<li><a href="#"><span class="glyphicon glyphicon-user"></span> 注册</a></li>--%>
-                <li><a href="loginIndex"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
+                <li><a href="loginIndex" style="line-height: 58px;font-size: 20px"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
             </ul>
         </ul>
     </nav>

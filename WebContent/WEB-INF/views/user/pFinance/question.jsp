@@ -185,8 +185,8 @@
         });
     });
 </script>
-<div class="container">
-    <div class="row">
+<div class="container" style="background-color: #9ff5ef;">
+    <div class="row" style="margin-top: 30px;font-size: 20px;">
         <div class="col-md-3">
 
         </div>
@@ -208,7 +208,7 @@
                 <p><input type="radio" name="2answer" value="0_0_4+1_1_3++"/><label>E、60岁以上</label></p>
             </div>
 
-            <div id="question3" class="qrow required" value="+++7">
+            <div id="question3" class="questiondiv row" value="+++7">
                 <p class="questionTitle">3、请问以下词组哪项更能描述您？</p>
                 <hr/>
                 <p><input type="radio" name="3answer" value="+++5_1_1_2"/><label>A、喜欢量化分析问题、保守、拘谨、理性</label></p>
@@ -217,7 +217,7 @@
                 <p><input type="radio" name="3answer" value="+++1_1_2_5"/><label>D、适应力强、易相处、谦虚、温顺、合作</label></p>
             </div>
 
-            <div id="question4" class="questiondiv  row required" value="+4++">
+            <div id="question4" class="questiondiv row" value="+4++">
                 <p class="questionTitle">4、请问您的受教育程度是？</p>
                 <hr/>
                 <p><input type="radio" name="4answer" value="+1_2_3++"/><label>A、初中及以下</label></p>
@@ -228,7 +228,7 @@
                 <p><input type="radio" name="4answer" value="+2_3_2++"/><label>F、博士及以上</label></p>
             </div>
 
-            <div id="question5" name="questiondiv  row " value="+4++">
+            <div id="question5" name="questiondiv  row" value="+4++">
                 <p class="questionTitle">5、您认为您目前工作所处的行业是？</p>
                 <hr/>
                 <p><input type="radio" name="5answer" value="+1_2_3++"/><label>A、党政机关</label></p>

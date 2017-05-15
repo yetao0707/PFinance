@@ -114,7 +114,7 @@
                         </td>
                         <td>${pojo.expectedYield}</td>
                         <td><p class="moneyP">${pojo.recommendMoney2Buy}</p></td>
-                        <td><fmt:formatNumber type="number" value="${pojo.recommendMoney2Buy*pojo.profitYield}" maxFractionDigits="2"/></td>
+                        <td><fmt:formatNumber type="number" value="${pojo.recommendMoney2Buy*pojo.expectedYield}" maxFractionDigits="2"/></td>
                         <td>${pojo.duration}</td>
                     </tr>
                 </c:forEach>

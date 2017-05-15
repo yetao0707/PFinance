@@ -79,6 +79,20 @@
 
     </select>
 
+    <select id="findBetweenTime" parameterType="map" resultType="fundPurchaseVO">
+        select
+        <include refid="allColumnAlias"/>
+
+        FROM FUNDPURCHASE T
+
+        <![CDATA[
+        WHERE purchaseDate >= concat(#{beginDate})
+        and purchaseDate <= concat(#{endDate})
+
+        ]]>
+
+    </select>
+
 
     <delete id="delete" parameterType="fundPurchaseVO">
 		DELETE FROM FUNDPURCHASE WHERE  
