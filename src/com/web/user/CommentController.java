@@ -20,9 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.PrintWriter;
 import java.util.List;
 
-/**
- * Created by yetao on 17/4/29.
- */
+
 
 @Controller
 @RequestMapping("user")

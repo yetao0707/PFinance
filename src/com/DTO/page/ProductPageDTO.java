@@ -6,9 +6,7 @@ import com.DTO.FundDTO;
 import java.io.Serializable;
 import java.util.List;
 
-/**
- * Created by yetao on 17/4/25.
- */
+
 public class ProductPageDTO implements Serializable{
 
     private static final long serialVersionUID = -696036454002517533L;

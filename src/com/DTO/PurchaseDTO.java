@@ -5,9 +5,6 @@ import com.dao.FundPurchaseDAO;
 import java.io.Serializable;
 import java.util.List;
 
-/**
- * Created by yetao on 17/4/29.
- */
 public class PurchaseDTO implements Serializable {
 
     private static final long serialVersionUID = 5516395287685567733L;

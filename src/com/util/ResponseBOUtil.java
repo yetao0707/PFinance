@@ -4,9 +4,7 @@ import com.util.bean.ResponseBO;
 
 import java.io.Serializable;
 
-/**
- * Created by yetao on 17/5/2.
- */
+
 public class ResponseBOUtil implements Serializable{
     private static final long serialVersionUID = 7183458436024970889L;
     public static final int SUCCESS=100;

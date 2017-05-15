@@ -1,8 +1,6 @@
 package com.constants;
 
-/**
- * Created by yetao on 17/4/16.
- */
+
 public enum CurrencyTypeEnum {
 
     EVEN_FLOAT(1, "保本浮动收益"),

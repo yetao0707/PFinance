@@ -1,8 +1,6 @@
 package com.constants;
 
-/**
- * Created by yetao on 17/4/16.
- */
+
 public enum PInvestmentPortfolioEnum {
     ACCUMULATE_ENTERPRISE_REALITY("111",0.75,0.05,0.2,"累积阶段进取型现实主义"),
     ACCUMULATE_ENTERPRISE_IDEA("112",0.8,0.12,0.08,"累积阶段进取型理想主义"),

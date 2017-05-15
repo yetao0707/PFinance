@@ -15,9 +15,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * Created by yetao on 17/3/9.
- */
+
 public class ParseBeanUtil {
 
     private static Logger logger = Logger.getLogger(ParseBeanUtil.class);

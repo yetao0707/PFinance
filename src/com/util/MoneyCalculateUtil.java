@@ -7,9 +7,7 @@ import com.DTO.FundPurchaseDTO;
 import com.vo.fp.CurrencyVO;
 import com.vo.fp.FundVO;
 
-/**
- * Created by yetao on 17/4/29.
- */
+
 public class MoneyCalculateUtil {
 
     public static double getFundPurchasePrice(FundPurchaseDTO fundPurchaseDTO) {

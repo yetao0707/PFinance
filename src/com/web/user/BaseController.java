@@ -9,9 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-/**
- * Created by yetao on 17/4/29.
- */
+
 public class BaseController {
 
     private Logger logger = Logger.getLogger(BaseController.class);

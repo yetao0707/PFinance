@@ -13,9 +13,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-/**
- * Created by yetao on 17/3/5.
- */
+
 @Component("currencyPurchasePageQueryService")
 public class CurrencyPurchasePageQueryServiceImpl implements PageQueryService{
 

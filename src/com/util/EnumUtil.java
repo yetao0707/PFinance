@@ -6,9 +6,7 @@ import com.constants.PInvestmentPortfolioEnum;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by yetao on 17/4/19.
- */
+
 public class EnumUtil {
 
     private volatile static Map<Integer, FundTypeEnum> fundTypeEnumMap;

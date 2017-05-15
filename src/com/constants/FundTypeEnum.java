@@ -1,8 +1,5 @@
 package com.constants;
 
-/**
- * Created by yetao on 17/4/16.
- */
 public enum FundTypeEnum {
 
     CURRENCY_TYPE(1, 0.15, 0.15, 0.7, "货币型基金"),
