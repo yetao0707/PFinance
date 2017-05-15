@@ -1,8 +1,6 @@
 package com.constants;
 
-/**
- * Created by yetao on 17/4/16.
- */
+
 public class FundTypeCode {
 
     public static final int CURRENCY_TYPE=1;

@@ -22,29 +22,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="singlePurchase.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/user/product/singlePurchase.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="51" column="61" selection-start-line="51" selection-start-column="61" selection-end-line="51" selection-end-column="61" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="customerRead.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/user/product/customerRead.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-              <folding>
-                <element signature="n#div#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="customerRead.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/user/pFinance/customerRead.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
@@ -57,11 +35,9 @@
       <file leaf-file-name="protocol.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/user/pFinance/protocol.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
+            <state relative-caret-position="360">
               <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
-              <folding>
-                <element signature="n#div#0;n#!!top" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -69,18 +45,8 @@
       <file leaf-file-name="protocol.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/user/product/protocol.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="38" column="56" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PurchaseController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/web/user/PurchaseController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="68" column="36" selection-start-line="68" selection-start-column="36" selection-end-line="68" selection-end-column="36" />
+            <state relative-caret-position="315">
+              <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="104" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -89,28 +55,8 @@
       <file leaf-file-name="PFinanceController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/web/user/PFinanceController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="73" column="12" selection-start-line="73" selection-start-column="12" selection-end-line="89" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="purchaseConfirm.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/user/product/purchaseConfirm.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="242" column="106" selection-start-line="242" selection-start-column="106" selection-end-line="242" selection-end-column="106" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/user/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="95" column="89" selection-start-line="95" selection-start-column="83" selection-end-line="95" selection-end-column="89" />
+            <state relative-caret-position="384">
+              <caret line="169" column="47" selection-start-line="169" selection-start-column="47" selection-end-line="169" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -119,10 +65,57 @@
       <file leaf-file-name="recommendPurchase.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/user/pFinance/recommendPurchase.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="85" column="24" selection-start-line="85" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
+            <state relative-caret-position="1621">
+              <caret line="193" column="0" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="singlePurchase.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/user/product/singlePurchase.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="currencyDetail.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/user/product/currencyDetail.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="795">
+              <caret line="53" column="131" selection-start-line="53" selection-start-column="57" selection-end-line="53" selection-end-column="131" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/user/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="93" column="38" selection-start-line="93" selection-start-column="38" selection-end-line="93" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="userLogin.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/user/userLogin.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/images/login.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -156,7 +149,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/DTO/NewsDTO.java" />
         <option value="$PROJECT_DIR$/src/com/util/ParseBeanUtil.java" />
         <option value="$PROJECT_DIR$/src/com/dao/mapper/News.xml" />
         <option value="$PROJECT_DIR$/config/spring-conf/ApplicationContext.xml" />
@@ -167,7 +159,6 @@
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/news/editNews.jsp" />
         <option value="$PROJECT_DIR$/src/com/service/impl/PurchaseService.java" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/user/person/myPFinanceS.jsp" />
-        <option value="$PROJECT_DIR$/src/com/web/user/PFinanceController.java" />
         <option value="$PROJECT_DIR$/src/com/dao/mapper/CustomerAccount.xml" />
         <option value="$PROJECT_DIR$/src/com/web/user/PersonalController.java" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/user/person/questionS.jsp" />
@@ -181,7 +172,6 @@
         <option value="$PROJECT_DIR$/src/com/DTO/PurchaseSumDTO.java" />
         <option value="$PROJECT_DIR$/src/com/web/statistics/PurchaseStatisticsController.java" />
         <option value="$PROJECT_DIR$/src/com/dao/mapper/Customer.xml" />
-        <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/user/index.jsp" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/user/pFinance/question.jsp" />
         <option value="$PROJECT_DIR$/src/com/dao/mapper/Fund.xml" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/user/product/product.jsp" />
@@ -199,14 +189,17 @@
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/user/product/currencyProduct.jsp" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/user/product/currencyDetail.jsp" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/user/product/fundDetail.jsp" />
-        <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/user/pFinance/recommendPurchase.jsp" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/user/product/customerRead.jsp" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/user/pFinance/protocol.jsp" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/user/product/protocol.jsp" />
         <option value="$PROJECT_DIR$/src/com/web/user/PurchaseController.java" />
-        <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/user/product/singlePurchase.jsp" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/user/product/purchaseConfirm.jsp" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/user/pFinance/customerRead.jsp" />
+        <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/user/index.jsp" />
+        <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/user/userLogin.jsp" />
+        <option value="$PROJECT_DIR$/src/com/web/user/PFinanceController.java" />
+        <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/user/pFinance/recommendPurchase.jsp" />
+        <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/user/product/singlePurchase.jsp" />
       </list>
     </option>
   </component>
@@ -1082,12 +1075,12 @@
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/WebContent/WEB-INF/views/user/news" />
-      <recent name="$PROJECT_DIR$/WebContent/WEB-INF/views/user/comment" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/WebContent/images" />
+      <recent name="$PROJECT_DIR$/WebContent/images/news" />
       <recent name="$PROJECT_DIR$/WebContent/WEB-INF/views/user/person" />
-      <recent name="$PROJECT_DIR$/WebContent/WEB-INF/views/user/product" />
-      <recent name="$PROJECT_DIR$/WebContent/WEB-INF/views/user/pFinance" />
+      <recent name="$PROJECT_DIR$/src/com/util" />
+      <recent name="$PROJECT_DIR$/WebContent/WEB-INF/lib" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.web.admin" />
@@ -1096,12 +1089,12 @@
       <recent name="com.DTO" />
       <recent name="com.web.DTO" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/WebContent/images/news" />
-      <recent name="$PROJECT_DIR$/WebContent/images" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/WebContent/WEB-INF/views/user/news" />
+      <recent name="$PROJECT_DIR$/WebContent/WEB-INF/views/user/comment" />
       <recent name="$PROJECT_DIR$/WebContent/WEB-INF/views/user/person" />
-      <recent name="$PROJECT_DIR$/src/com/util" />
-      <recent name="$PROJECT_DIR$/WebContent/WEB-INF/lib" />
+      <recent name="$PROJECT_DIR$/WebContent/WEB-INF/views/user/product" />
+      <recent name="$PROJECT_DIR$/WebContent/WEB-INF/views/user/pFinance" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Unnamed">
@@ -1723,7 +1716,7 @@
       <workItem from="1493897364024" duration="62181000" />
       <workItem from="1494148355664" duration="24025000" />
       <workItem from="1494653538132" duration="73138000" />
-      <workItem from="1494845149554" duration="6687000" />
+      <workItem from="1494845149554" duration="10892000" />
     </task>
     <servers />
   </component>
@@ -1736,7 +1729,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="370649000" />
+    <option name="totallyTimeSpent" value="374854000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1865,19 +1858,19 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/web/user/PFinanceController.java</url>
-          <line>169</line>
+          <line>188</line>
           <properties />
           <option name="timeStamp" value="119" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/web/user/PFinanceController.java</url>
-          <line>151</line>
+          <line>167</line>
           <properties />
           <option name="timeStamp" value="123" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/web/user/PFinanceController.java</url>
-          <line>143</line>
+          <line>144</line>
           <properties />
           <option name="timeStamp" value="124" />
         </line-breakpoint>
@@ -1909,22 +1902,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/web/user/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/web/admin/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/news/editNews.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
@@ -1937,14 +1914,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="14" column="87" selection-start-line="14" selection-start-column="87" selection-end-line="14" selection-end-column="87" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/user/userLogin.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="33" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -2109,13 +2078,13 @@
         <state relative-caret-position="1005">
           <caret line="132" column="30" selection-start-line="132" selection-start-column="30" selection-end-line="132" selection-end-column="30" />
           <folding>
-            <marker date="1494834439000" expanded="true" signature="3269:3433" ph="select FROM FUND" />
-            <marker date="1494834439000" expanded="true" signature="3713:3757" ph="DELETE FROM " />
-            <marker date="1494834439000" expanded="true" signature="3833:4331" ph="UPDATE FUND " />
-            <marker date="1494834439000" expanded="true" signature="4416:4531" ph="DELETE FROM " />
-            <marker date="1494834439000" expanded="true" signature="4615:4707" ph="select FROM FUND" />
-            <marker date="1494834439000" expanded="true" signature="5000:5196" ph="select FROM FUND" />
-            <marker date="1494834439000" expanded="true" signature="5286:5315" ph="select count... FUND" />
+            <marker date="1494855934000" expanded="true" signature="3269:3410" ph="select FROM FUND" />
+            <marker date="1494855934000" expanded="true" signature="3689:3733" ph="DELETE FROM " />
+            <marker date="1494855934000" expanded="true" signature="3809:4307" ph="UPDATE FUND " />
+            <marker date="1494855934000" expanded="true" signature="4392:4507" ph="DELETE FROM " />
+            <marker date="1494855934000" expanded="true" signature="4591:4683" ph="select FROM FUND" />
+            <marker date="1494855934000" expanded="true" signature="4976:5172" ph="select FROM FUND" />
+            <marker date="1494855934000" expanded="true" signature="5262:5291" ph="select count... FUND" />
           </folding>
         </state>
       </provider>
@@ -2252,26 +2221,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/user/product/currencyDetail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="53" column="131" selection-start-line="53" selection-start-column="57" selection-end-line="53" selection-end-column="131" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/user/product/fundDetail.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
           <caret line="56" column="29" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/DTO/RecommendResultDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -2292,60 +2245,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/user/pFinance/recommendPurchase.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="85" column="24" selection-start-line="85" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/user/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="95" column="89" selection-start-line="95" selection-start-column="83" selection-end-line="95" selection-end-column="89" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/user/pFinance/protocol.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
-          <folding>
-            <element signature="n#div#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/web/user/PFinanceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="73" column="12" selection-start-line="73" selection-start-column="12" selection-end-line="89" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/web/user/PurchaseController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="68" column="36" selection-start-line="68" selection-start-column="36" selection-end-line="68" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/user/product/singlePurchase.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="51" column="61" selection-start-line="51" selection-start-column="61" selection-end-line="51" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/user/product/protocol.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="38" column="56" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="56" />
           <folding />
         </state>
       </provider>
@@ -2372,6 +2275,94 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/user/pFinance/protocol.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/user/product/protocol.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="104" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/user/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="93" column="38" selection-start-line="93" selection-start-column="38" selection-end-line="93" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/images/login.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/user/userLogin.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/DTO/RecommendResultDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="28" column="27" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="27" />
+          <folding>
+            <element signature="e#568#569#0" expanded="true" />
+            <element signature="e#609#610#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/service/impl/RecommendService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="92" column="31" selection-start-line="92" selection-start-column="31" selection-end-line="92" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/web/user/PFinanceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="169" column="47" selection-start-line="169" selection-start-column="47" selection-end-line="169" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/user/pFinance/recommendPurchase.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1621">
+          <caret line="193" column="0" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/user/product/currencyDetail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="53" column="131" selection-start-line="53" selection-start-column="57" selection-end-line="53" selection-end-column="131" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/user/product/singlePurchase.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
           <folding />
         </state>
       </provider>

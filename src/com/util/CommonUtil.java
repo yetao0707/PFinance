@@ -6,9 +6,7 @@ import sun.misc.BASE64Encoder;
 import java.io.*;
 import java.util.UUID;
 
-/**
- * Created by TXL on 2017/4/20.
- */
+
 public class CommonUtil {
 
     public static String getUUID() {

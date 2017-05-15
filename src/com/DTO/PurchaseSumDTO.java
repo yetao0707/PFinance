@@ -2,9 +2,7 @@ package com.DTO;
 
 import java.io.Serializable;
 
-/**
- * Created by yetao on 17/5/15.
- */
+
 public class PurchaseSumDTO implements Serializable {
     private static final long serialVersionUID = 8396270041681575715L;
     private double shareFundNum ;

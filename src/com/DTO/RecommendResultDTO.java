@@ -5,9 +5,7 @@ import com.vo.fp.CurrencyVO;
 import java.io.Serializable;
 import java.util.List;
 
-/**
- * Created by yetao on 17/4/11.
- */
+
 public class RecommendResultDTO implements Serializable {
 
     private static final long serialVersionUID = 2223558620025950224L;

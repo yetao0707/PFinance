@@ -1,8 +1,6 @@
 package com.constants;
 
-/**
- * Created by yetao on 17/4/16.
- */
+
 public enum PurchaseChanelEnum {
     COUNTER(1, "柜面"),
     CVBER(2, "网银"),

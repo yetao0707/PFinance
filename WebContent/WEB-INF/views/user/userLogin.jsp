@@ -6,13 +6,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
     <title>用户登录</title>
     <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body style='background-image: url("<%=basePath%>images/login.png");width: 2000px;background-size: cover;'>
 <script>
     $(function () {
         $(".btn.btn-default").on('click', function (e) {
@@ -38,24 +39,20 @@
     });
 </script>
 
-<div class="container">
-    <div class="row" style="margin-top: 250px">
-        <div class="col-md-7 col-md-offset-1" >
-            <img src="<%=basePath%>images/gaoer.jpg" alt="First slide" class="img-responsive center-block" width="304">
-        </div>
-        <div class="col-md-4" style="margin-top: 50px">
-            <form role="form">
-                <div class="form-group">
-                    <label for="userName">用户名</label>
-                    <input type="text" class="form-control" id="userName" placeholder="请输入用户名">
-                </div>
-                <div class="form-group">
-                    <label for="password">密码</label>
-                    <input type="password" class="form-control" id="password" placeholder="请输入密码">
-                </div>
-                <button type="submit" class="btn btn-default">登录</button>
-            </form>
-        </div>
+<div class="row" style="margin-top: 250px">
+
+    <div class="col-md-4" style="margin-top: 50px;margin-left: 100px;">
+        <form role="form">
+            <div class="form-group">
+                <label for="userName">用户名</label>
+                <input type="text" class="form-control" id="userName" placeholder="请输入用户名">
+            </div>
+            <div class="form-group">
+                <label for="password">密码</label>
+                <input type="password" class="form-control" id="password" placeholder="请输入密码">
+            </div>
+            <button type="submit" class="btn btn-default">登录</button>
+        </form>
     </div>
 </div>
 

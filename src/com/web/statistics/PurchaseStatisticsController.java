@@ -28,9 +28,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Created by yetao on 17/3/28.
- */
+
 @Controller
 @RequestMapping("purchaseStatistic")
 public class PurchaseStatisticsController extends BaseController{

@@ -1,8 +1,6 @@
 package com.constants;
 
-/**
- * Created by yetao on 17/4/16.
- */
+
 public enum  PlanTypeEnum {
     LIMIT(1,"限定性"),
     NOT_LIMIT(2,"非限定性"),

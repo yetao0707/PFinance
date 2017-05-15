@@ -16,9 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
 
-/**
- * Created by yetao on 17/4/29.
- */
+
 @Controller
 @RequestMapping("user")
 public class PersonalController extends BaseController{

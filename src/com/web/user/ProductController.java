@@ -19,9 +19,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Created by yetao on 17/4/25.
- */
+
 @Controller
 @RequestMapping("user")
 public class ProductController {

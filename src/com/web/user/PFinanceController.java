@@ -19,6 +19,7 @@ import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -29,9 +30,7 @@ import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by yetao on 17/4/28.
- */
+
 @Controller
 @RequestMapping("user")
 public class PFinanceController extends BaseController{
@@ -149,6 +148,24 @@ public class PFinanceController extends BaseController{
         } catch (ParseException e) {
             log.error("parse failed ", e);
         }
+        double currencyNum=0;
+        double shareNum=0;
+        double bondNum=0;
+        if (!CollectionUtils.isEmpty(dto.getRecommendCurrencys())) {
+            for (CurrencyDTO currencyDTO : dto.getRecommendCurrencys()) {
+                currencyNum += currencyDTO.getRecommendMoney2Buy();
+            }
+        }
+        if (!CollectionUtils.isEmpty(dto.getRecommendFunds())) {
+            for (FundDTO fundDTO : dto.getRecommendFunds()) {
+                currencyNum += fundDTO.getRecommendMoney2Buy() * fundDTO.getCurrencyRate();
+                shareNum += fundDTO.getRecommendMoney2Buy() * fundDTO.getShareRate();
+                bondNum += fundDTO.getRecommendMoney2Buy() * fundDTO.getBondRate();
+            }
+        }
+        request.setAttribute("currencyNum", currencyNum);
+        request.setAttribute("shareNum", shareNum);
+        request.setAttribute("bondNum", bondNum);
         request.setAttribute("recommendDTO", dto);
         request.setAttribute("customerDTO", customerDTO);
         return "user/pFinance/recommendPurchase";

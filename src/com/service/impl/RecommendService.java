@@ -29,10 +29,7 @@ import java.util.List;
 
 import liqi.PFinance;
 
-/**
- * Created by yetao on 17/4/11.
- */
-@Service
+
 public class RecommendService {
 
     @Autowired
