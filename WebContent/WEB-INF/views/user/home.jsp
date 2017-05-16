@@ -65,7 +65,7 @@
             });
             a = $('#myTab a[href="#news"]');
 //                $('#myTab a:last').tab('show');
-            a.click();
+            a.tab('show');
         });
         $('#financeButton').on('click', function (e) {
             a = $('#myTab a[href="#center"]');
@@ -237,7 +237,7 @@
     </div>
 
     <div class="row well greenDiv" style="margin-top: 30px;background-color: #9ff5ef">
-        <div class="row">
+        <div class="row"  style="font-size:20px;">
             <div class="col-md-3">
                 <p class="text-left">产品优选 </p>
             </div>
@@ -245,12 +245,12 @@
             </div>
             <div class="col-md-3">
                 <p class="text-right" style="margin-right: 20px">
-                    <button type="button" class="btn btn-link" id="productButton">查看更多</button>
+                    <button type="button" class="btn btn-link" id="productButton" style="font-size:20px;">查看更多</button>
                 </p>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-3 well" style="width: 252px;margin-left: 20px;">
+            <div class="col-md-3 well" style="width: 252px;margin-left: 23px;">
                 <p class="text-center" style="font-size: 25px;">天天万利宝A款</p>
                 <p class="text-center" style="font-size: 18px;">期限(天):30</p>
                 <p class="text-center" style="font-size: 18px;">货币型产品</p>
@@ -261,7 +261,7 @@
                     </button>
                 </p>
             </div>
-            <div class="col-md-3 well" style="width: 252px;margin-left: 20px;">
+            <div class="col-md-3 well" style="width: 252px;margin-left: 23px;">
                 <p class="text-center" style="font-size: 25px;">月月盈2款</p>
                 <p class="text-center" style="font-size: 18px;">期限(天):120</p>
                 <p class="text-center" style="font-size: 18px;">货币型产品</p>
@@ -273,7 +273,7 @@
                 </p>
             </div>
 
-            <div class="col-md-3 well productRecommend" style="width: 252px;margin-left: 20px;">
+            <div class="col-md-3 well productRecommend" style="width: 252px;margin-left: 23px;">
                 <p class="text-center" style="font-size: 25px;">XY证券金麒麟1号</p>
                 <p class="text-center" style="font-size: 18px;">期限(天):365</p>
                 <p class="text-center" style="font-size: 18px;">债券型基金</p>
@@ -284,7 +284,7 @@
                     </button>
                 </p>
             </div>
-            <div class="col-md-3 well productRecommend" style="width: 252px;margin-left: 20px;">
+            <div class="col-md-3 well productRecommend" style="width: 252px;margin-left: 23px;">
                 <p class="text-center" style="font-size: 25px;">HT紫金周期轮动</p>
                 <p class="text-center" style="font-size: 18px;">期限(天):365</p>
                 <p class="text-center" style="font-size: 18px;">股票型基金</p>
@@ -301,7 +301,7 @@
     </div>
     <div class="row well greenDiv" style="background-color: #9ff5ef">
 
-        <div class="row">
+        <div class="row" style="font-size:20px;">
             <div class="col-md-3">
                 <p class="text-left">资讯中心 </p>
             </div>
@@ -309,7 +309,7 @@
             </div>
             <div class="col-md-3">
                 <p class="text-right">
-                    <button type="button" class="btn btn-link" id="newsButton">查看更多</button>
+                    <button type="button" class="btn btn-link" id="newsButton" style="font-size:20px;">查看更多</button>
                 </p>
             </div>
         </div>
@@ -354,7 +354,7 @@
 
                     <tbody>
                     <c:forEach items="${newsDTOS}" var="pojo" varStatus="var">
-                        <c:if test="${var<6}">
+                        <c:if test="${var.count<6}">
                         <tr>
                             <td>
                                 <button type="button" class="btn btn-link homenews"
@@ -364,12 +364,7 @@
                         </tr>
                         </c:if>
                     </c:forEach>
-                    <tr>
-                        <td>
-                            <button type="button" class="btn btn-link homenews" name="1">【财经】14只雄安概念股明日复盘</button>
-                        </td>
-                        <td>2014-04-16</td>
-                    </tr>
+                    
                     </tbody>
                 </table>
             </div>

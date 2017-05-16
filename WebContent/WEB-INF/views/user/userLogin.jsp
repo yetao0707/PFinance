@@ -13,7 +13,7 @@
     <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body style='background-image: url("<%=basePath%>images/login.png");width: 2000px;background-size: cover;'>
+<body style='background-image: url("<%=basePath%>images/login.png");width: 1300px;background-size: cover;'>
 <script>
     $(function () {
         $(".btn.btn-default").on('click', function (e) {
