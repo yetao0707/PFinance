@@ -251,30 +251,32 @@
         </div>
         <div class="row">
             <div class="col-md-3 well" style="width: 252px;margin-left: 20px;">
-                        <p class="text-center" style="font-size: 25px;">天天万利宝A款</p>
-                        <p class="text-center" style="font-size: 18px;">期限(天):30</p>
-                        <p class="text-center" style="font-size: 18px;">货币型产品</p>
-                        <p class="text-left" style="font-size: 18px;">预计年化：</p>
-                        <p class="text-center" style="font-size: 30px;color: #c5323d">4.4%</p>
-                        <p class="text-center">
-                            <button type="button" class="btn btn-primary btn-lg homeProductButton currency" name="1">立即投资</button>
-                        </p>
+                <p class="text-center" style="font-size: 25px;">天天万利宝A款</p>
+                <p class="text-center" style="font-size: 18px;">期限(天):30</p>
+                <p class="text-center" style="font-size: 18px;">货币型产品</p>
+                <p class="text-left" style="font-size: 18px;">预计年化：</p>
+                <p class="text-center" style="font-size: 30px;color: #c5323d">4.4%</p>
+                <p class="text-center">
+                    <button type="button" class="btn btn-primary btn-lg homeProductButton currency" name="1">立即投资
+                    </button>
+                </p>
             </div>
             <div class="col-md-3 well" style="width: 252px;margin-left: 20px;">
-                        <p class="text-center" style="font-size: 25px;">月月盈2款</p>
-                        <p class="text-center" style="font-size: 18px;">期限(天):120</p>
-                        <p class="text-center" style="font-size: 18px;">货币型产品</p>
-                        <p class="text-left" style="font-size: 18px;">预计年化：</p>
-                        <p class="text-center" style="font-size: 30px;color: #c5323d">4.6%</p>
-                        <p class="text-center">
-                            <button type="button" class="btn btn-primary btn-lg homeProductButton currency" name="7">立即投资</button>
-                        </p>
+                <p class="text-center" style="font-size: 25px;">月月盈2款</p>
+                <p class="text-center" style="font-size: 18px;">期限(天):120</p>
+                <p class="text-center" style="font-size: 18px;">货币型产品</p>
+                <p class="text-left" style="font-size: 18px;">预计年化：</p>
+                <p class="text-center" style="font-size: 30px;color: #c5323d">4.6%</p>
+                <p class="text-center">
+                    <button type="button" class="btn btn-primary btn-lg homeProductButton currency" name="7">立即投资
+                    </button>
+                </p>
             </div>
-            
+
             <div class="col-md-3 well productRecommend" style="width: 252px;margin-left: 20px;">
                 <p class="text-center" style="font-size: 25px;">XY证券金麒麟1号</p>
                 <p class="text-center" style="font-size: 18px;">期限(天):365</p>
-                <p class="text-center"  style="font-size: 18px;">债券型基金</p>
+                <p class="text-center" style="font-size: 18px;">债券型基金</p>
                 <p class="text-left" style="font-size: 18px;">预计年化：</p>
                 <p class="text-center" style="font-size: 30px;color: #c5323d">7.2%</p>
                 <p class="text-center">
@@ -285,7 +287,7 @@
             <div class="col-md-3 well productRecommend" style="width: 252px;margin-left: 20px;">
                 <p class="text-center" style="font-size: 25px;">HT紫金周期轮动</p>
                 <p class="text-center" style="font-size: 18px;">期限(天):365</p>
-                <p class="text-center"  style="font-size: 18px;">股票型基金</p>
+                <p class="text-center" style="font-size: 18px;">股票型基金</p>
                 <p class="text-left" style="font-size: 18px;">预计年化：</p>
                 <p class="text-center" style="font-size: 30px;color: #c5323d">14.3%</p>
                 <p class="text-center">
@@ -293,8 +295,6 @@
                     </button>
                 </p>
             </div>
-            
-          
 
 
         </div>
@@ -350,16 +350,19 @@
             </div>
             <div class="col-md-7">
                 <table class="table">
-                    
+
 
                     <tbody>
                     <c:forEach items="${newsDTOS}" var="pojo" varStatus="var">
-                    <tr>
-<td>
-                            <button type="button" class="btn btn-link homenews" name="${pojo.id}">${pojo.title}</button>
-                        </td>
-                        <td>${pojo.addTime}</td>
+                        <c:if test="${var<6}">
+                        <tr>
+                            <td>
+                                <button type="button" class="btn btn-link homenews"
+                                        name="${pojo.id}">${pojo.title}</button>
+                            </td>
+                            <td>${pojo.addTime}</td>
                         </tr>
+                        </c:if>
                     </c:forEach>
                     <tr>
                         <td>
