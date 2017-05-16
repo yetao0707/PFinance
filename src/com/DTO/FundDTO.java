@@ -23,7 +23,7 @@ public class FundDTO extends BaseVO {
     private String trustee;
     private String startDate;
     private String endDate;
-    private String duration;
+    private int duration;
     private Double totalRecruitment;
     private Double purchaseAmount;
     private Double objective;
@@ -156,11 +156,11 @@ public class FundDTO extends BaseVO {
         this.endDate = endDate;
     }
 
-    public String getDuration() {
+    public int getDuration() {
         return duration;
     }
 
-    public void setDuration(String duration) {
+    public void setDuration(int duration) {
         this.duration = duration;
     }
 

@@ -31,7 +31,7 @@ public class FundVO extends BaseVO {
     private String trustee;
     private Date startDate;
     private Date endDate;
-    private Date duration;
+    private int duration;
     private Double totalRecruitment;
     private Double purchaseAmount;
     private Double objective;
@@ -203,14 +203,14 @@ public class FundVO extends BaseVO {
     /**
      * @return the duration
      */
-    public Date getDuration() {
+    public int getDuration() {
         return duration;
     }
 
     /**
      * @param duration the duration to set
      */
-    public void setDuration(Date duration) {
+    public void setDuration(int duration) {
         this.duration = duration;
     }
 

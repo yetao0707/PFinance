@@ -87,7 +87,7 @@
             <tbody>
                 <c:forEach items="${newsDTOS}" var="pojo" varStatus="status">
                     <tr>
-                        <td><p class="text-center"><button type="button" class="btn btn-link newsDetailButton" name="${pojo.id}" style="font-size: 25px;">${pojo.title}</button></p></td>
+                        <td><p class="text-left"><button type="button" class="btn btn-link newsDetailButton" name="${pojo.id}" style="font-size: 25px;">${pojo.title}</button></p></td>
                         <td><p class="text-center">${pojo.addTime}</p></td>
                     </tr>
                 </c:forEach>

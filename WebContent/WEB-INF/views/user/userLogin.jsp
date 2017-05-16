@@ -41,7 +41,7 @@
 
 <div class="row" style="margin-top: 250px">
 
-    <div class="col-md-4" style="margin-top: 50px;margin-left: 100px;">
+    <div class="col-md-3" style="margin-top: 150px;margin-left: 100px;">
         <form role="form">
             <div class="form-group">
                 <label for="userName">用户名</label>

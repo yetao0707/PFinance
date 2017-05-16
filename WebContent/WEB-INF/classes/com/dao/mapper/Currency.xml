@@ -177,7 +177,9 @@
             <if test="currencyName != null">
                 CURRENCYNAME = #{currencyName},
             </if>
-
+            <if test="durationDays != null">
+                durationDays = #{durationDays},
+            </if>
 
         </trim>
 

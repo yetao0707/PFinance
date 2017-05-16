@@ -29,7 +29,7 @@ import java.util.List;
 
 import liqi.PFinance;
 
-
+@Service
 public class RecommendService {
 
     @Autowired

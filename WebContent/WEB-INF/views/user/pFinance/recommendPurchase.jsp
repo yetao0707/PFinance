@@ -187,9 +187,9 @@
     <div class="hiddenDiv" hidden="hidden">
         <input type="text" class="evaluateResult" value="${customerDTO.evaluateResult}"/>
         <input type="text" class="evaluateDetail" value="${customerDTO.evaluateDetail}"/>
-        <input type="text" class="shareRate" value="${shareRate}"/>
-        <input type="text" class="currencyRate" value="${currencyRate}"/>
-        <input type="text" class="bondRate" value="${bondRate}"/>
+        <input type="text" class="shareRate" value="${shareNum}"/>
+        <input type="text" class="currencyRate" value="${currencyNum}"/>
+        <input type="text" class="bondRate" value="${bondNum}"/>
     </div>
 
 </div>

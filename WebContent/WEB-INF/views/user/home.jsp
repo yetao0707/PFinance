@@ -250,48 +250,51 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-2 well productRecommend " style="margin-left: 10px">
-                <p class="text-center">dfsdf</p>
-                <p class="text-center">期限(天):20</p>
-                <p class="text-center">货币型 非保本浮动收益</p>
-                <p class="text-left">预计年化：</p>
-                <p class="text-center">10%</p>
+            <div class="col-md-3 well" style="width: 252px;margin-left: 20px;">
+                        <p class="text-center" style="font-size: 25px;">天天万利宝A款</p>
+                        <p class="text-center" style="font-size: 18px;">期限(天):30</p>
+                        <p class="text-center" style="font-size: 18px;">货币型产品</p>
+                        <p class="text-left" style="font-size: 18px;">预计年化：</p>
+                        <p class="text-center" style="font-size: 30px;color: #c5323d">4.4%</p>
+                        <p class="text-center">
+                            <button type="button" class="btn btn-primary btn-lg homeProductButton currency" name="1">立即投资</button>
+                        </p>
+            </div>
+            <div class="col-md-3 well" style="width: 252px;margin-left: 20px;">
+                        <p class="text-center" style="font-size: 25px;">月月盈2款</p>
+                        <p class="text-center" style="font-size: 18px;">期限(天):120</p>
+                        <p class="text-center" style="font-size: 18px;">货币型产品</p>
+                        <p class="text-left" style="font-size: 18px;">预计年化：</p>
+                        <p class="text-center" style="font-size: 30px;color: #c5323d">4.6%</p>
+                        <p class="text-center">
+                            <button type="button" class="btn btn-primary btn-lg homeProductButton currency" name="7">立即投资</button>
+                        </p>
+            </div>
+            
+            <div class="col-md-3 well productRecommend" style="width: 252px;margin-left: 20px;">
+                <p class="text-center" style="font-size: 25px;">XY证券金麒麟1号</p>
+                <p class="text-center" style="font-size: 18px;">期限(天):365</p>
+                <p class="text-center"  style="font-size: 18px;">债券型基金</p>
+                <p class="text-left" style="font-size: 18px;">预计年化：</p>
+                <p class="text-center" style="font-size: 30px;color: #c5323d">7.2%</p>
                 <p class="text-center">
-                    <button type="button" class="btn btn-primary btn-lg homeProductButton currency" name="1">立即投资
+                    <button type="button" class="btn btn-primary btn-lg homeProductButton fund" name="1">立即投资
                     </button>
                 </p>
             </div>
-            <div class="col-md-2 well productRecommend">
-                <p class="text-center">dfsdf</p>
-                <p class="text-center">期限(天):20</p>
-                <p class="text-center">货币型 非保本浮动收益</p>
-                <p class="text-left">预计年化：</p>
-                <p class="text-center">10%</p>
+            <div class="col-md-3 well productRecommend" style="width: 252px;margin-left: 20px;">
+                <p class="text-center" style="font-size: 25px;">HT紫金周期轮动</p>
+                <p class="text-center" style="font-size: 18px;">期限(天):365</p>
+                <p class="text-center"  style="font-size: 18px;">股票型基金</p>
+                <p class="text-left" style="font-size: 18px;">预计年化：</p>
+                <p class="text-center" style="font-size: 30px;color: #c5323d">14.3%</p>
                 <p class="text-center">
-                    <button type="button" class="btn btn-primary btn-lg homeProductButton currency" name="2">立即投资
+                    <button type="button" class="btn btn-primary btn-lg homeProductButton fund" name="1">立即投资
                     </button>
                 </p>
             </div>
-            <div class="col-md-2 well productRecommend">
-                <p class="text-center">dfsdf</p>
-                <p class="text-center">期限(天):20</p>
-                <p class="text-center">货币型 非保本浮动收益</p>
-                <p class="text-left">预计年化：</p>
-                <p class="text-center">10%</p>
-                <p class="text-center">
-                    <button type="button" class="btn btn-primary btn-lg homeProductButton fund" name="1">立即投资</button>
-                </p>
-            </div>
-            <div class="col-md-2 well productRecommend">
-                <p class="text-center">dfsdf</p>
-                <p class="text-center">期限(天):20</p>
-                <p class="text-center">货币型 非保本浮动收益</p>
-                <p class="text-left">预计年化：</p>
-                <p class="text-center">10%</p>
-                <p class="text-center">
-                    <button type="button" class="btn btn-primary btn-lg homeProductButton fund" name="2">立即投资</button>
-                </p>
-            </div>
+            
+          
 
 
         </div>
@@ -347,39 +350,17 @@
             </div>
             <div class="col-md-7">
                 <table class="table">
-                    <c:forEach items="${newsDTOs}" var="pojo">
-                        <tr>
-                            <td>${pojo.title}</td>
-                            <td>${pojo.addTime}</td>
-                        </tr>
-                        </tr>
-                    </c:forEach>
+                    
 
                     <tbody>
+                    <c:forEach items="${newsDTOS}" var="pojo" varStatus="var">
                     <tr>
-                        <td>
-                            <button type="button" class="btn btn-link homenews" name="1">【财经】14只雄安概念股明日复盘</button>
+<td>
+                            <button type="button" class="btn btn-link homenews" name="${pojo.id}">${pojo.title}</button>
                         </td>
-                        <td>2014-04-16</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <button type="button" class="btn btn-link homenews" name="1">【财经】14只雄安概念股明日复盘</button>
-                        </td>
-                        <td>2014-04-16</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <button type="button" class="btn btn-link homenews" name="1">【财经】14只雄安概念股明日复盘</button>
-                        </td>
-                        <td>2014-04-16</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <button type="button" class="btn btn-link homenews" name="1">【财经】14只雄安概念股明日复盘</button>
-                        </td>
-                        <td>2014-04-16</td>
-                    </tr>
+                        <td>${pojo.addTime}</td>
+                        </tr>
+                    </c:forEach>
                     <tr>
                         <td>
                             <button type="button" class="btn btn-link homenews" name="1">【财经】14只雄安概念股明日复盘</button>

@@ -131,7 +131,7 @@ public class ParseBeanUtil {
         SimpleDateFormat simpleDateFormat=new SimpleDateFormat(dateFormat);
         dto.setFoundingDate(simpleDateFormat.format(vo.getFoundingDate()));
         dto.setEndDate(simpleDateFormat.format(vo.getEndDate()));
-        dto.setDuration(simpleDateFormat.format(vo.getDuration()));
+        dto.setDuration(vo.getDuration());
         dto.setStartDate(simpleDateFormat.format(vo.getStartDate()));
         return dto;
     }
@@ -161,12 +161,13 @@ public class ParseBeanUtil {
         vo.setTotalRecruitment(dto.getTotalRecruitment());
         vo.setId(dto.getId());
         vo.setTrustee(dto.getTrustee());
+
+        vo.setDuration(dto.getDuration());
 //        vo.setWeekValue(dto.getWeekValue());
         SimpleDateFormat simpleDateFormat=new SimpleDateFormat(dateFormat);
         try {
             vo.setFoundingDate(simpleDateFormat.parse(dto.getFoundingDate()));
             vo.setEndDate(simpleDateFormat.parse(dto.getEndDate()));
-            vo.setDuration(simpleDateFormat.parse(dto.getDuration()));
             vo.setStartDate(simpleDateFormat.parse(dto.getStartDate()));
         } catch (Exception e) {
             logger.error("parse date failed",e);
